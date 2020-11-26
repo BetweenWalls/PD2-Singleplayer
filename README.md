@@ -4,14 +4,14 @@ This collection aims to include everything you'd want for singleplayer testing i
 ## Inclusions
 * level 99 characters for each class with accurate stats and skill points
 * all unique/set items
-* PD2-specific items (maps, worldstone shards, dclone materials, etc.)
+* PD2-specific items (maps, worldstone shards, puzzleboxes, dclone materials, etc.)
 * stacks of all runes/gems
 * variety of jewels/charms
 * many examples of runewords, and additional item bases for making your own
 * many magic, rare, and crafted items
 
 ## Setup Guide
-This uses a simple mod called PlugY that implements a shared stash so that items can be organized and transferred between characters. Download [PlugY 11.02](http://plugy.free.fr/) (zip version) before beginning. PlugY also has some other useful quality-of-life features, so make sure to check out its readme file sometime.
+This uses a singleplayer mod called PlugY that implements a shared stash so that items can be organized and transferred between characters. Download [PlugY 11.02](http://plugy.free.fr/) (zip version) before beginning. PlugY also has some other useful quality-of-life features, so make sure to check out its readme file sometime.
 
 1. Install Diablo II LoD
 2. Install PD2
