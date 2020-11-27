@@ -1,6 +1,8 @@
 # PD2-Singleplayer
 This collection aims to include everything you'd want for singleplayer testing in [Project D2](https://www.projectdiablo2.com/).
 
+### [Download](https://github.com/BetweenWalls/PD2-Singleplayer/archive/main.zip)
+
 ## Inclusions
 * level 99 characters for each class with accurate stats and skill points
 * all unique/set items
