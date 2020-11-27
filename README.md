@@ -13,7 +13,7 @@ This collection aims to include everything you'd want for singleplayer testing i
 * many magic, rare, and crafted items
 
 ## Setup Guide
-This uses a singleplayer mod called PlugY that implements a shared stash so that items can be organized and transferred between characters. Download [PlugY 11.02](http://plugy.free.fr/) (zip version) before beginning. PlugY also has some other useful quality-of-life features, so make sure to check out its readme file sometime.
+The singleplayer PlugY mod adds stash pages for all the items. Download [PlugY 11.02](http://plugy.free.fr/) (zip version) before beginning.
 
 1. Install Diablo II LoD
 2. Install PD2
@@ -48,3 +48,10 @@ The shared stash has multiple pages and can be navigated in increments of 1, 10,
 * (70-89) **Uniques - Armor**
 * (90-129) **Uniques - Weapons**
 * (130-169) **Sets**
+
+There are in-game commands for renaming stash pages and moving stash pages around - checkout the PlugY readme.
+
+## Editing
+The included blank characters can be edited with [Hero Editor](https://www.moddb.com/games/diablo-2-lod/downloads/hero-editor-v-104) or other editors, but only until they're loaded in-game. Once you play as a character and save it, the character's file will be formatted differently. If you're making many edits, make sure to make copies of the unplayed character files before entering the game with them.
+
+Note that while most statlines can be edited normally, some have been changed in PD2 and will prevent the character from being played.
