@@ -24,7 +24,7 @@ The singleplayer PlugY mod adds stash pages for all the items. Download [PlugY 1
 * * Replace PlugY.ini in your *Diablo II\ProjectD2* directory with the version included here
 * * Copy the files from the included Save folder to your *Diablo II\Save* directory
 5. Run PD2 as you would normally to get the latest patch/update
-6. Run PlugY.exe for singleplayer
+6. Run PlugY.exe as administrator
 
 ## Stash Organization
 The shared stash has multiple pages and can be navigated in increments of 1, 10, or 100 pages at a time. So far, the stash is organized as follows:
@@ -48,10 +48,13 @@ The shared stash has multiple pages and can be navigated in increments of 1, 10,
 * (70-89) **Uniques - Armor**
 * (90-129) **Uniques - Weapons**
 * (130-169) **Sets**
+* (200+) **Misc**
+* * unidentified items
+* * corrupted items
 
 There are in-game commands for renaming stash pages and moving stash pages around - checkout the PlugY readme.
 
 ## Editing
-The included blank characters can be edited with [Hero Editor](https://www.moddb.com/games/diablo-2-lod/downloads/hero-editor-v-104) or other editors, but only until they're loaded in-game. Once you play as a character and save it, the character's file will be formatted differently. If you're making many edits, make sure to make copies of the unplayed character files before entering the game with them.
+The included blank characters can be edited with [Hero Editor](https://www.moddb.com/games/diablo-2-lod/downloads/hero-editor-v-104) or other editors, but only until they're loaded in-game. Once you play a character and save it, the character's file will be formatted differently. If you're making many edits, create copies of the unplayed character files before entering the game with them.
 
-Note that while most statlines can be edited normally, some have been changed in PD2 and will prevent the character from being played.
+Note that while most statlines can be edited normally, some have been changed in PD2 and will prevent the character from loading properly.
