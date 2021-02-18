@@ -9,11 +9,11 @@ This collection aims to include everything you'd want for singleplayer testing i
 * PD2-specific items (maps, worldstone shards, puzzleboxes, dclone materials, etc.)
 * stacks of all runes/gems
 * variety of jewels/charms
-* many examples of runewords, and additional item bases for making your own
-* many magic, rare, and crafted items
+* examples of all runewords, and additional item bases for making your own
+* some magic, rare, and crafted items
 
 ## Setup Guide
-The singleplayer PlugY mod adds stash pages for all the items. Download [PlugY 11.02](http://plugy.free.fr/) (zip version) before beginning.
+The singleplayer PlugY mod adds stash pages for all the items. A copy of [PlugY 11.02](http://plugy.free.fr/) is included in the files.
 
 1. Install Diablo II LoD
 2. Install PD2
@@ -33,12 +33,10 @@ The shared stash has multiple pages and can be navigated in increments of 1, 10,
 * * empty page (for dumping items quickly or storing whatever's currently being tested)
 * * workstation (maps, uber materials, corrupting materials)
 * * runes & gems
-* * special items (unique charms, cubes, tokens, etc.)
-* * amulets & rings
-* * jewels
+* * unique amulets/rings/jewels/charms
+* * quest items & miscellaneous
 * (10-39) **Charms**
-* * resistance charms
-* * damage charms
+* * resistance, damage, and mana charms
 * * skillers for each class
 * (40-49) **Base Items**
 * (50-59) **Example Items**
@@ -48,9 +46,8 @@ The shared stash has multiple pages and can be navigated in increments of 1, 10,
 * (70-89) **Uniques - Armor**
 * (90-129) **Uniques - Weapons**
 * (130-169) **Sets**
-* (200+) **Misc**
-* * unidentified items
-* * corrupted items
+* (190-199) **Corrupted Items**
+* (200-239) **Unidentified Items**
 
 There are in-game commands for renaming stash pages and moving stash pages around - checkout the PlugY readme.
 
