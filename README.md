@@ -26,6 +26,8 @@ The singleplayer PlugY mod adds stash pages for all the items. A copy of [PlugY 
 5. Run PD2 as you would normally to get the latest patch/update
 6. Run PlugY.exe as administrator
 
+If you need to revert to an older version of PD2, (to drop maps or Standard of Heroes from season 1 characters) you can use the included patch_d2.mpq file.
+
 ## Stash Organization
 The shared stash has multiple pages and can be navigated in increments of 1, 10, or 100 pages at a time. So far, the stash is organized as follows:
 
