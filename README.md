@@ -4,13 +4,14 @@ This collection aims to include everything you'd want for singleplayer testing i
 ### [Download](https://github.com/BetweenWalls/PD2-Singleplayer/archive/main.zip)
 
 ## Inclusions
-* level 99 characters for each class with accurate stats and skill points
+* level 99 characters for each class with accurate stats and skill points (level 30 & level 90 characters in subfolders)
 * all unique/set items
 * PD2-specific items (maps, worldstone shards, puzzleboxes, dclone materials, etc.)
 * stacks of all runes/gems
 * variety of jewels/charms
 * examples of all runewords, and additional item bases for making your own
 * some magic, rare, and crafted items
+* all regular items
 
 ## Setup Guide
 The singleplayer PlugY mod adds stash pages for all the items. A copy of [PlugY 11.02](http://plugy.free.fr/) is included in the files.
@@ -26,30 +27,35 @@ The singleplayer PlugY mod adds stash pages for all the items. A copy of [PlugY 
 5. Run PD2 as you would normally to get the latest patch/update
 6. Run PlugY.exe as administrator
 
-If you need to revert to an older version of PD2, (to drop maps or Standard of Heroes from season 1 characters) you can use the included patch_d2.mpq file.
+If you need to revert to an older version of PD2 (to drop maps or other incompatible items) you can use the patch_d2.mpq files included in the *Patches* folder. I've also made a character converter that can update your older character files to the most recent season: [PD2-Converter](https://github.com/BetweenWalls/PD2-Converter#simple-character-converter-for-pd2)
+
+If you also want to install Basemod, see this [reddit post](https://www.reddit.com/r/ProjectDiablo2/comments/otnk61/season_3_single_player_plugybasemod_item_pack/) by Swoosh. Switching to a different item pack is as easy as copying the desired *_LOD_SharedStashSave.sss* to your *Diablo II\Save* directory.
 
 ## Stash Organization
-The shared stash has multiple pages and can be navigated in increments of 1, 10, or 100 pages at a time. So far, the stash is organized as follows:
+The shared stash has multiple pages and can be navigated in increments of 1, 10, or 100 pages at a time. The stash is organized as follows:
 
 * (1-9) **Common Stuff**
 * * empty page (for dumping items quickly or storing whatever's currently being tested)
-* * workstation (maps, uber materials, corrupting materials)
-* * runes & gems
+* * workstation (runes, gems, uber materials, corrupting materials)
+* * maps
+* * crafting jewels, rejuvs, quest items, etc
+* (10-19) **Unique Jewelry & Example Items**
 * * unique amulets/rings/jewels/charms
-* * quest items & miscellaneous
-* (10-39) **Charms**
+* * useful magic jewels
+* * magic, rare, & crafted items
+* (20-29) **Uniques - Class-Specific**
+* (30-49) **Uniques - Armor**
+* (50-79) **Uniques - Weapons**
+* (80-89) **Sets**
+* (90-99) **Runewords - Armor**
+* (100-109) **Runewords - Weapons**
+* (110-139) **Charms**
 * * resistance, damage, and mana charms
 * * skillers for each class
-* (40-49) **Base Items**
-* (50-59) **Example Items**
-* * magic, rare, & crafted items
-* * runewords
-* (60-69) **Uniques - Class-Specific**
-* (70-89) **Uniques - Armor**
-* (90-129) **Uniques - Weapons**
-* (130-169) **Sets**
-* (190-199) **Corrupted Items**
-* (200-239) **Unidentified Items**
+* * various testing charms
+* (140-149) **Base Items**
+* (150-169) **Random Magic Items for Crafting**
+* (170-199) **All Regular Items**
 
 There are in-game commands for renaming stash pages and moving stash pages around - checkout the PlugY readme.
 
