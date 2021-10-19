@@ -39,16 +39,15 @@ The shared stash has multiple pages and can be navigated in increments of 1, 10,
 * * workstation (runes, gems, uber materials, corrupting materials)
 * * maps
 * * crafting jewels, rejuvs, quest items, etc
-* (10-19) **Unique Jewelry & Example Items**
-* * unique amulets/rings/jewels/charms
+* (10-19) **Unique Jewelry & Misc**
+* * unique amulets/rings, charms, jewels
 * * useful magic jewels
 * * magic, rare, & crafted items
 * (20-29) **Uniques - Class-Specific**
 * (30-49) **Uniques - Armor**
 * (50-79) **Uniques - Weapons**
 * (80-89) **Sets**
-* (90-99) **Runewords - Armor**
-* (100-109) **Runewords - Weapons**
+* (90-109) **Runewords**
 * (110-139) **Charms**
 * * resistance, damage, and mana charms
 * * skillers for each class
