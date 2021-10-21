@@ -4,7 +4,7 @@ This collection aims to include everything you'd want for singleplayer testing i
 ### [Download](https://github.com/BetweenWalls/PD2-Singleplayer/archive/main.zip)
 
 ## Inclusions
-* level 99 characters for each class with accurate stats and skill points (level 30 & level 90 characters in subfolders)
+* level 99 characters for each class with accurate stats and skill points (lower level characters in subfolders)
 * all unique/set items
 * PD2-specific items (maps, worldstone shards, puzzleboxes, dclone materials, etc.)
 * stacks of all runes/gems
@@ -62,3 +62,30 @@ There are in-game commands for renaming stash pages and moving stash pages aroun
 The included blank characters can be edited with [Hero Editor](https://www.moddb.com/games/diablo-2-lod/downloads/hero-editor-v-104) or other editors, but only until they're loaded in-game. Once you play a character and save it, the character's file will be formatted differently. If you're making many edits, create copies of the unplayed character files before entering the game with them.
 
 Note that while most statlines can be edited normally, some have been changed in PD2 and will prevent the character from loading properly.
+
+<!-- Notes
+Some generated rare/crafted items have incorrect required levels
+Some generated runeword item bases are missing certain stats, such as 10-50% FCR for staves
+Some generated item bases may have incorrect armor values - they should be verified
+
+Missing items:
+* Non-Ethereal version of Wraith Flight
+* Ormus' Robes with Combustion
+* Ethereal versions of various skill-specific items such as Spirit Keeper, Ormus' Robes, and Spirit Ward
+* Examples of popular low-level dueling (LLD) charms and other items
+* Unique/Set items with variable inventory graphics - Rings, Amulets, Rainbow Facets, Gheed's Fortune
+* Some useful item bases, especially elite ethereal weapons such as Legend Sword
+* More examples of item bases with different pointmods, or Amazon weapons with +3 skills
+* More examples of useful magic items such as +3 skill amulets, +6 Amazon javelins, +6 pointmod items, or even vanilla classics like JMoD
+
+Item discrepancies (may just be game bugs):
+* Laying of Hands has 250% Damage to Demons, range is 150-200
+* Ribcracker doesn't have 30% faster cast rate like the S3 patch notes say it does
+* Wraith Flight doesn't have the 50-150 magic damage that was mentioned in the S3 patch notes
+* Demonhorn's Edge has 20% IAS rather than 30% as mentioned in the S3 patch notes
+* Heavenly Garb only has +1 to Magic Skills instead of a range of 1-2 (from S2 patch notes)
+* The Iron Jang Bong has 40-60% FCR instead of 30-50% as mentioned in the S3 patch notes
+* Haemosu's Adamant only has +255 Defense vs. Melee instead of the max of 400 - not sure if that's actually the max, or if it just didn't generate with the max value
+* Doom runeword only has a chance to cast level 18 Molten Boulder in non-staves, rather than level 28 in staves (difference wasn't mentioned in S3 patch notes)
+
+-->
