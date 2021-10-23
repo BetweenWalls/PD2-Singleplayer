@@ -27,7 +27,7 @@ The singleplayer PlugY mod adds stash pages for all the items. A copy of [PlugY 
 5. Run PD2 as you would normally to get the latest patch/update
 6. Run PlugY.exe as administrator
 
-If you need to revert to an older version of PD2 (to drop maps or other incompatible items) you can use the patch_d2.mpq files included in the *Patches* folder. I've also made a character converter that can update your older character files to the most recent season: [PD2-Converter](https://github.com/BetweenWalls/PD2-Converter#simple-character-converter-for-pd2)
+If you need to revert to an older version of PD2 (to drop maps or other incompatible items) you can use the patch_d2.mpq files included in the *Patches* folder. I've also made a character/stash conversion program that can update files to the most recent season: [PD2-Converter](https://github.com/BetweenWalls/PD2-Converter#simple-character-converter-for-pd2)
 
 If you also want to install Basemod, see this [reddit post](https://www.reddit.com/r/ProjectDiablo2/comments/otnk61/season_3_single_player_plugybasemod_item_pack/) by Swoosh. Switching to a different item pack is as easy as copying the desired *_LOD_SharedStashSave.sss* to your *Diablo II\Save* directory.
 
@@ -38,7 +38,7 @@ The shared stash has multiple pages and can be navigated in increments of 1, 10,
 * * empty page (for dumping items quickly or storing whatever's currently being tested)
 * * workstation (runes, gems, uber materials, corrupting materials)
 * * maps
-* * crafting jewels, rejuvs, quest items, etc
+* * crafting jewels, rejuvs, quest items, tokens, etc
 * (10-19) **Unique Jewelry & Misc**
 * * unique amulets/rings, charms, jewels
 * * useful magic jewels
