@@ -14,20 +14,20 @@ This collection aims to include everything you'd want for singleplayer testing i
 * all regular items
 
 ## Setup Guide
-The singleplayer PlugY mod adds stash pages for all the items. A copy of [PlugY 11.02](http://plugy.free.fr/) is included in the files.
+The singleplayer PlugY mod adds stash pages for all the items. A copy of [PlugY 11.02](http://plugy.free.fr/) is included in the files, but any later version will work too.
 
 1. Install Diablo II LoD
 2. Install PD2
-3. Install PlugY
-* * copy PlugY.dll, PlugY.exe, PlugY.ini, and the PlugY 'readme' text file to your *Diablo II\ProjectD2* directory
-* * copy the PlugY folder and its contents (11 files) to your *Diablo II* directory
-4. Install this collection
+3. Add PlugY
+* * copy PlugY.dll, PlugY.exe, and PlugY.ini to your *Diablo II\ProjectD2* directory, as well the Readme text file in your preferred language if you want to be able to reference it later
+* * copy the PlugY folder to your *Diablo II* directory (it'll be *Diablo II\PlugY* will 11 files inside)
+4. Add this collection
 * * Replace PlugY.ini in your *Diablo II\ProjectD2* directory with the version included here
 * * Copy the files from the included Save folder to your *Diablo II\Save* directory
 5. Run PD2 as you would normally to get the latest patch/update
 6. Run PlugY.exe as administrator
 
-If you need to revert to an older version of PD2 (to drop maps or other incompatible items) you can use the patch_d2.mpq files included in the *Patches* folder. I've also made a character/stash conversion program that can update files to the most recent season: [PD2-Converter](https://github.com/BetweenWalls/PD2-Converter#simple-character-converter-for-pd2)
+If you need to revert to an older version of PD2 (to drop maps or other incompatible items) you can use the patch_d2.mpq files included in the *Patches* folder. You can also update old files to the most recent season with [PD2-Converter](https://github.com/BetweenWalls/PD2-Converter#simple-characterstash-converter-for-pd2).
 
 If you also want to install Basemod, see this [reddit post](https://www.reddit.com/r/ProjectDiablo2/comments/otnk61/season_3_single_player_plugybasemod_item_pack/) by Swoosh. Switching to a different item pack is as easy as copying the desired *_LOD_SharedStashSave.sss* to your *Diablo II\Save* directory.
 
