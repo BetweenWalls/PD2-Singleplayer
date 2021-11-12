@@ -14,7 +14,7 @@ This collection aims to include everything you'd want for singleplayer testing i
 * all regular items
 
 ## Setup Guide
-The singleplayer PlugY mod adds stash pages for all the items. A copy of [PlugY 11.02](http://plugy.free.fr/) is included in the files, but any later version will work too.
+The singleplayer [PlugY mod](http://plugy.free.fr/) adds stash pages for all the items. A copy of PlugY 11.02 is included in the files, but any later version will work too.
 
 1. Install Diablo II LoD
 2. Install PD2
@@ -29,7 +29,7 @@ The singleplayer PlugY mod adds stash pages for all the items. A copy of [PlugY 
 
 If you need to revert to an older version of PD2 (to drop maps or other incompatible items) you can use the patch_d2.mpq files included in the *Patches* folder. You can also update old files to the most recent season with [PD2-Converter](https://github.com/BetweenWalls/PD2-Converter#simple-characterstash-converter-for-pd2).
 
-If you also want to install Basemod, see this [reddit post](https://www.reddit.com/r/ProjectDiablo2/comments/otnk61/season_3_single_player_plugybasemod_item_pack/) by Swoosh. Switching to a different item pack is as easy as copying the desired *_LOD_SharedStashSave.sss* to your *Diablo II\Save* directory.
+If you want to add Basemod or a newer version of PlugY, see this [reddit post](https://www.reddit.com/r/ProjectDiablo2/comments/otnk61/season_3_single_player_plugybasemod_item_pack/) by Swoosh. Switching to a different item pack is as easy as copying the desired *_LOD_SharedStashSave.sss* to your *Diablo II\Save* directory. Note that PlugY v11.02 doesn't spawn minions correctly in Uber Tristram and PlugY v14.03 doesn't handle some stash features correctly such as shared gold and indexing/navigation for personal stashes.
 
 ## Stash Organization
 The shared stash has multiple pages and can be navigated in increments of 1, 10, or 100 pages at a time. The stash is organized as follows:
@@ -48,13 +48,13 @@ The shared stash has multiple pages and can be navigated in increments of 1, 10,
 * (50-79) **Uniques - Weapons**
 * (80-89) **Sets**
 * (90-109) **Runewords**
-* (110-139) **Charms**
+* (110-129) **Charms**
 * * resistance, damage, and mana charms
 * * skillers for each class
 * * various testing charms
-* (140-149) **Base Items**
-* (150-169) **Random Magic Items for Crafting**
-* (170-199) **All Regular Items**
+* (130-139) **Base Items**
+* (140-159) **Random Magic Items for Crafting**
+* (160-189) **All Regular Items**
 
 There are in-game commands for renaming stash pages and moving stash pages around - checkout the PlugY readme.
 
@@ -71,7 +71,8 @@ Some generated item bases may have incorrect armor values - they should be verif
 Missing items:
 * Non-Ethereal version of Wraith Flight
 * Ormus' Robes with Combustion
-* Ethereal versions of various skill-specific items such as Spirit Keeper, Ormus' Robes, and Spirit Ward
+* Extra versions of Spirit Ward have the incorrect level of Lesser Fade (level 8 instead of level 10)
+* Ethereal versions of certain skill-specific items (Spirit Keeper, Ormus' Robes, Spirit Ward)
 * Examples of popular low-level dueling (LLD) charms and other items
 * Unique/Set items with variable inventory graphics - Rings, Amulets, Rainbow Facets, Gheed's Fortune
 * Some useful item bases, especially elite ethereal weapons such as Legend Sword
