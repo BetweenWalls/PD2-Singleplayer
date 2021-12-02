@@ -22,7 +22,6 @@ The singleplayer [PlugY mod](http://plugy.free.fr/) adds stash pages for all the
 * * copy PlugY.dll, PlugY.exe, and PlugY.ini to your *Diablo II\ProjectD2* directory, as well the Readme text file in your preferred language if you want to be able to reference it later
 * * copy the PlugY folder to your *Diablo II* directory (it'll be *Diablo II\PlugY* will 11 files inside)
 4. Add this collection
-* * Replace PlugY.ini in your *Diablo II\ProjectD2* directory with the version included here
 * * Copy the files from the included Save folder to your *Diablo II\Save* directory
 5. Run PD2 as you would normally to get the latest patch/update
 6. Run PlugY.exe as administrator
