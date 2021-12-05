@@ -37,7 +37,7 @@ The shared stash has multiple pages and can be navigated in increments of 1, 10,
 * * empty page (for dumping items quickly or storing whatever's currently being tested)
 * * workstation (runes, gems, uber materials, corrupting materials)
 * * maps
-* * crafting jewels, rejuvs, quest items, tokens, etc
+* * rejuvs, quest items, tokens, etc
 * (10-19) **Unique Jewelry & Misc**
 * * unique amulets/rings, charms, jewels
 * * useful magic jewels
