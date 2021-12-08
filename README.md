@@ -19,7 +19,7 @@ The singleplayer [PlugY mod](http://plugy.free.fr/) adds stash pages for all the
 1. Install Diablo II LoD
 2. Install PD2
 3. Add PlugY
-* * copy PlugY.dll, PlugY.exe, and PlugY.ini to your *Diablo II\ProjectD2* directory, as well the Readme text file in your preferred language if you want to be able to reference it later
+* * copy PlugY.dll, PlugY.exe, and PlugY.ini to your *Diablo II\ProjectD2* directory, as well the Readme text file in your preferred language if you want to be able to reference it later (note that PlugY.ini has custom settings suited for PD2)
 * * copy the PlugY folder to your *Diablo II* directory (it'll be *Diablo II\PlugY* will 11 files inside)
 4. Add this collection
 * * Copy the files from the included Save folder to your *Diablo II\Save* directory
@@ -68,24 +68,10 @@ Some generated runeword item bases are missing certain stats, such as 10-50% FCR
 Some generated item bases may have incorrect armor values - they should be verified
 
 Missing items:
-* Non-Ethereal version of Wraith Flight
-* Ormus' Robes with Combustion
-* Extra versions of Spirit Ward have the incorrect level of Lesser Fade (level 8 instead of level 10)
 * Ethereal versions of certain skill-specific items (Spirit Keeper, Ormus' Robes, Spirit Ward)
 * Examples of popular low-level dueling (LLD) charms and other items
 * Unique/Set items with variable inventory graphics - Rings, Amulets, Rainbow Facets, Gheed's Fortune
 * Some useful item bases, especially elite ethereal weapons such as Legend Sword
 * More examples of item bases with different pointmods, or Amazon weapons with +3 skills
 * More examples of useful magic items such as +3 skill amulets, +6 Amazon javelins, +6 pointmod items, or even vanilla classics like JMoD
-
-Item discrepancies (may just be game bugs):
-* Laying of Hands has 250% Damage to Demons, range is 150-200
-* Ribcracker doesn't have 30% faster cast rate like the S3 patch notes say it does
-* Wraith Flight doesn't have the 50-150 magic damage that was mentioned in the S3 patch notes
-* Demonhorn's Edge has 20% IAS rather than 30% as mentioned in the S3 patch notes
-* Heavenly Garb only has +1 to Magic Skills instead of a range of 1-2 (from S2 patch notes)
-* The Iron Jang Bong has 40-60% FCR instead of 30-50% as mentioned in the S3 patch notes
-* Haemosu's Adamant only has +255 Defense vs. Melee instead of the max of 400 - not sure if that's actually the max, or if it just didn't generate with the max value
-* Doom runeword only has a chance to cast level 18 Molten Boulder in non-staves, rather than level 28 in staves (difference wasn't mentioned in S3 patch notes)
-
 -->
