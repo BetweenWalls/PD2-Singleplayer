@@ -24,8 +24,6 @@ The singleplayer [PlugY mod](http://plugy.free.fr/) adds stash pages for all the
 
 If you need to revert to an older version of PD2 (to drop maps or other incompatible items) you can use the patch_d2.mpq files included in the *Patches* folder. You can also update old files to the most recent season with [PD2-Converter](https://github.com/BetweenWalls/PD2-Converter#simple-characterstash-converter-for-pd2).
 
-If you want to add Basemod or a newer version of PlugY, see this [reddit post](https://www.reddit.com/r/ProjectDiablo2/comments/otnk61/season_3_single_player_plugybasemod_item_pack/) by Swoosh. Switching to a different item pack is as easy as copying the desired *_LOD_SharedStashSave.sss* to your *Diablo II\Save* directory. Note that PlugY v11.02 doesn't spawn minions correctly in Uber Tristram and PlugY v14.03 doesn't handle some stash features correctly such as shared gold and indexing/navigation for personal stashes.
-
 ## Stash Organization
 The shared stash has multiple pages and can be navigated in increments of 1, 10, or 100 pages at a time. The stash is organized as follows:
 
