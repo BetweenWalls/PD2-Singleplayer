@@ -92,3 +92,5 @@ Some generated rare/crafted items have incorrect required levels
 Some generated runeword item bases are missing certain stats, such as 10-50% FCR for staves
 Some generated item bases may have incorrect armor values - they should be verified
 -->
+
+**Note:** There is currently a bug with shared gold which prevents certain oskills (like those from Call to Arms) from working correctly - the skills work fine if there is no shared gold in the stash.
