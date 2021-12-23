@@ -22,9 +22,9 @@ The singleplayer [PlugY mod](http://plugy.free.fr/) adds stash pages for all the
 4. Run PD2 as you would normally to get the latest patch/update
 5. Run PlugY.exe as administrator
 
-When this collection is updated, getting the newest [shared stash](https://github.com/BetweenWalls/PD2-Singleplayer/blob/main/Diablo%20II/Save/_LOD_SharedStashSave.sss) only requires replacing the old version with the new one, although there may be other updated files too. You can see which files were updated from the [commits page](https://github.com/BetweenWalls/PD2-Singleplayer/commits/main).
+When this collection is updated, getting the newest [shared stash](https://github.com/BetweenWalls/PD2-Singleplayer/blob/main/Diablo%20II/Save/_LOD_SharedStashSave.sss) only requires replacing the old version with the new one, although there may be other updated files that you may want as well. You can see which files were updated from the [commits page](https://github.com/BetweenWalls/PD2-Singleplayer/commits/main).
 
-If you need to revert to an older version of PD2 (to drop maps or other incompatible items) you can use the **patch_d2.mpq** files included in the **Patches** folder. You can also update old files to the most recent season with [PD2-Converter](https://github.com/BetweenWalls/PD2-Converter#simple-characterstash-converter-for-pd2).
+If you want to update old character/stash files, see [PD2-Converter](https://github.com/BetweenWalls/PD2-Converter#simple-characterstash-converter-for-pd2).
 
 ## Stash Organization
 The shared stash has multiple pages and can be navigated in increments of 1, 10, or 100 pages at a time. The stash is organized as follows:
@@ -69,11 +69,13 @@ Note that while many attributes can be edited normally, the following have been 
 
 New affixes such as "Melee Attacks Deal Splash Damage" cannot be edited in this way at all without an advanced understanding of hex editing.
 
+**Note:** Included characters are *not* currently Andariel-bugged. This can be changed by resetting the quest in Hero Editor and doing the bug in-game.
+
 ## Modification
 If you would like to improve this collection with additional items, or just want to share feedback about how it could be improved, you can message me on reddit ([u/BetweenWalls](https://www.reddit.com/message/compose/?to=BetweenWalls)) or discord (@BetweenWalls#2390). You can also just open an [issue](https://github.com/BetweenWalls/PD2-Singleplayer/issues) here.
 
 Potential Improvements:
-* The Rathma-related items (Trang-Oul's Jawbone, Splinter of the Void, Voidstone, Tainted Worldstone Shard) will be added when the Rathma fight is enabled in singleplayer
+* The Rathma-related items (Ancient Bone Fragments, Trang-Oul's Jawbone, Splinter of the Void, Voidstone, Tainted Worldstone Shard) will be added when the Rathma fight is enabled in singleplayer
 * The uncommon Rathma rewards (The Third Eye, Band of Skulls, Cage of the Unsullied, unlimited TP/ID tomes) will be added when all 5 have been found from the live servers
 * Ethereal versions of certain skill-specific items (Spirit Keeper, Ormus' Robes, Spirit Ward)
 * Examples of popular low-level dueling (LLD) charms and other PvP-relevant items
