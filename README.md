@@ -30,23 +30,23 @@ If you want to update old character/stash files, see [PD2-Converter](https://git
 The shared stash has multiple pages and can be navigated in increments of 1, 10, or 100 pages at a time. The stash is organized as follows:
 
 * (1-9) **Common Stuff**
-* * empty landing page (for dumping items quickly or storing whatever's currently being tested)
-* * workstation (runes, gems, uber materials, corrupting materials)
-* * maps
-* * rejuvs, quest items, miscellaneous items
+  * empty landing page (for dumping items quickly or storing whatever's currently being tested)
+  * workstation (runes, gems, uber materials, corrupting materials)
+  * maps
+  * rejuvs, quest items, miscellaneous items
 * (10-19) **Unique Jewelry & Magic/Rare/Crafted Items**
-* * unique amulets/rings, charms, jewels
-* * useful magic jewels
-* * magic, rare, & crafted items
+  * unique amulets/rings, charms, jewels
+  * useful magic jewels
+  * magic, rare, & crafted items
 * (20-29) **Uniques - Class-Specific**
 * (30-49) **Uniques - Armor**
 * (50-79) **Uniques - Weapons**
 * (80-89) **Sets**
 * (90-109) **Runewords**
 * (110-129) **Charms**
-* * resistance, damage, life, and mana charms
-* * skillers for each class
-* * various testing charms
+  * resistance, damage, life, and mana charms
+  * skillers for each class
+  * various testing charms
 * (130-139) **Popular Base Items**
 
 Additionally, the **Bases** assassin character has a personal stash with ethereal and non-ethereal versions of all regular/magic items, so you can get exactly the desired item needed for crafting or runewords. They're separated from the shared stash to improve load times. 
