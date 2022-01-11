@@ -69,14 +69,16 @@ Note that while many attributes can be edited normally, the following have been 
 
 New affixes such as "Melee Attacks Deal Splash Damage" cannot be edited in this way at all without an advanced understanding of hex editing.
 
-**Note:** Included characters are *not* currently Andariel-bugged. This can be changed by resetting the quest in Hero Editor and doing the bug in-game.
+**Notes:**
+* Included characters are *not* currently Andariel-bugged. This can be changed by resetting the quest in Hero Editor and doing the bug in-game.
+* There is currently a bug with shared gold which prevents certain oskills (like those from Call to Arms) from working correctly - the skills work fine if there is no shared gold in the stash.
 
 ## Modification
 If you would like to improve this collection with additional items, or just want to share feedback about how it could be improved, you can message me on reddit ([u/BetweenWalls](https://www.reddit.com/message/compose/?to=BetweenWalls)) or discord (@BetweenWalls#2390). You can also just open an [issue](https://github.com/BetweenWalls/PD2-Singleplayer/issues) here.
 
 Potential Improvements:
 * The Rathma-related items (Ancient Bone Fragments, Trang-Oul's Jawbone, Splinter of the Void, Voidstone, Tainted Worldstone Shard) will be added when the Rathma fight is enabled in singleplayer
-* The uncommon Rathma rewards (The Third Eye, Band of Skulls, Cage of the Unsullied, unlimited TP/ID tomes) will be added when all 5 have been found from the live servers
+* The uncommon Rathma rewards (The Third Eye, Band of Skulls, Cage of the Unsullied, unlimited TP/ID tomes) will be added when they've all been found from the live servers
 * Ethereal versions of certain skill-specific items (Spirit Keeper, Ormus' Robes, Spirit Ward)
 * Examples of popular low-level dueling (LLD) charms and other PvP-relevant items
 * Unique/Set items with variable inventory graphics - Rings, Amulets, Rainbow Facets
@@ -95,4 +97,12 @@ Some generated runeword item bases are missing certain stats, such as 10-50% FCR
 Some generated item bases may have incorrect armor values - they should be verified
 -->
 
-**Note:** There is currently a bug with shared gold which prevents certain oskills (like those from Call to Arms) from working correctly - the skills work fine if there is no shared gold in the stash.
+If the items in this collection are insufficient for your purposes and importing items via an editor wouldn't help, you may want to look into [text modding](https://d2mods.info/forum/viewtopic.php?f=4&t=34455). By modifying the game's text files, you can spawn items via custom cube recipes, adjust the ranges for affixes that can appear on items, and much more. Here are the basic steps:
+1. Extract the game's text files from *patch_d2.mpq* (found in *Diablo II/ProjectD2*) using an [MPQ editor and D2 listfile](http://www.zezula.net/en/mpq/download.html) - the text files will be in */data/global/excel*
+2. Edit whichever files you want (for example, *CubeMain.txt* includes the cube recipes)
+3. Copy the edited files to your game directory inside a new folder structure: *Diablo II/ProjectD2/data/global/excel*
+4. Create (and run) a new shortcut for PlugY.exe with additional commands in the target field so that the game uses your edited text files: -direct -txt
+
+After getting whatever items you want, simply run the original PlugY.exe file to make the game run without your modifications.
+
+If you get items that could be useful to others, consider sharing them so that this collection can be improved.
