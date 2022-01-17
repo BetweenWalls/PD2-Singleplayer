@@ -57,6 +57,8 @@ Additionally, the **Bases** assassin character has a personal stash with etherea
 * (50-69) **Magic Armor**
 * (70-99) **Magic Weapons**
 
+Items can be duplicated by making a file backup of the shared stash and transfering items from the stash to a character before restoring the stash file, or vice versa. Files can also be set as "read only" to eliminate the need to backup and restore them for each transfer.
+
 There are in-game commands for renaming stash pages and moving stash pages around, as well as some other useful commands such as renaming characters - checkout the PlugY Readme file.
 
 ## Editing
