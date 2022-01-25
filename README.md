@@ -79,8 +79,6 @@ New affixes such as "Melee Attacks Deal Splash Damage" cannot be edited in this 
 If you would like to improve this collection with additional items, or just want to share feedback about how it could be improved, you can message me on reddit ([u/BetweenWalls](https://www.reddit.com/message/compose/?to=BetweenWalls)) or discord (@BetweenWalls#2390). You can also just open an [issue](https://github.com/BetweenWalls/PD2-Singleplayer/issues) here.
 
 Potential Improvements:
-* The Rathma-related items (Ancient Bone Fragments, Trang-Oul's Jawbone, Splinter of the Void, Voidstone, Tainted Worldstone Shard) will be added when the Rathma fight is enabled in singleplayer
-* The uncommon Rathma rewards (The Third Eye, Band of Skulls, Cage of the Unsullied, unlimited TP/ID tomes) will be added when they've all been found from the live servers
 * Ethereal versions of certain skill-specific items (Spirit Keeper, Ormus' Robes, Spirit Ward)
 * Examples of popular low-level dueling (LLD) charms and other PvP-relevant items
 * Unique/Set items with variable inventory graphics - Rings, Amulets, Rainbow Facets
