@@ -54,8 +54,10 @@ Additionally, the **Bases** assassin character has a personal stash with etherea
 * (1) **Empty Landing Page**
 * (2-19) **Regular Armor**
 * (20-49) **Regular Weapons**
-* (50-69) **Magic Armor**
-* (70-99) **Magic Weapons**
+* (50-69) **Superior Armor**
+* (70-99) **Superior Weapons**
+* (100-19) **Magic Armor**
+* (120-149) **Magic Weapons**
 
 Items can be duplicated by making a file backup of the shared stash and transfering items from the stash to a character before restoring the stash file, or vice versa. Files can also be set as "read only" to eliminate the need to backup and restore them for each transfer.
 
@@ -82,8 +84,6 @@ Potential Improvements:
 * Ethereal versions of certain skill-specific items (Spirit Keeper, Ormus' Robes, Spirit Ward)
 * Examples of popular low-level dueling (LLD) charms and other PvP-relevant items
 * Unique/Set items with variable inventory graphics - Rings, Amulets, Rainbow Facets
-* Regular ethereal armor with maximum defense values (they currently just have random values within the correct range)
-* Regular superior weapons/armor with +15% ED
 * More examples of regular item bases with different pointmods
 * More examples of useful magic items such as +3 skill amulets, +6 Amazon javelins, +6 pointmod items, or even vanilla classics like JMoD
 * More examples of rare/crafted items
