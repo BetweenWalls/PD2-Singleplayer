@@ -3,16 +3,6 @@ This collection aims to include everything you'd want for singleplayer testing i
 
 ### [Download](https://github.com/BetweenWalls/PD2-Singleplayer/archive/main.zip)
 
-## Inclusions
-* level 99 characters for each class with accurate stats and skill points (lower level characters in subfolders)
-* all unique/set items
-* PD2-specific items (maps, worldstone shards, puzzleboxes, dclone materials, etc.)
-* stacks of all runes/gems
-* variety of jewels/charms
-* examples of all runewords, and additional item bases for making your own
-* all regular and magic equipment items
-* some rare and crafted items
-
 ## Setup Guide
 The singleplayer [PlugY mod](http://plugy.free.fr/) adds stash pages for all the items. A copy of PlugY v14.03 is included in the files.
 
@@ -25,6 +15,16 @@ The singleplayer [PlugY mod](http://plugy.free.fr/) adds stash pages for all the
 When this collection is updated, getting the newest [shared stash](https://github.com/BetweenWalls/PD2-Singleplayer/blob/main/Diablo%20II/Save/_LOD_SharedStashSave.sss) only requires replacing the old version with the new one, although there may be other updated files that you may want as well. You can see which files were updated from the [commits page](https://github.com/BetweenWalls/PD2-Singleplayer/commits/main).
 
 If you want to update old character/stash files, see [PD2-Converter](https://github.com/BetweenWalls/PD2-Converter#simple-characterstash-converter-for-pd2).
+
+## Inclusions
+* level 99 characters for each class with accurate stats and skill points (lower level characters in subfolders)
+* all unique/set items
+* PD2-specific items (maps, worldstone shards, puzzleboxes, dclone materials, etc.)
+* stacks of all runes/gems
+* variety of jewels/charms
+* examples of all runewords, and additional item bases for making your own
+* all regular and magic equipment items
+* some rare and crafted items
 
 ## Stash Organization
 The shared stash has multiple pages and can be navigated in increments of 1, 10, or 100 pages at a time. The stash is organized as follows:
