@@ -95,6 +95,10 @@ Potential Improvements:
 Some generated rare/crafted items have incorrect required levels
 Some generated runeword item bases are missing certain stats, such as 10-50% FCR for staves
 Some generated item bases may have incorrect armor values - they should be verified
+eth Vampire Gaze defense is 182 when it should be 378
+eth Quetzalcoatl defense is 18 when it should be 42
+eth Jalal's Mane defense is 327 when it should be 445
+...many other eth uniques seem to have incorrect defense values, often even being lower than the non-eth version - the ethereal defense equation seems to be wrong, since regenerating these items doesn't fix them
 -->
 
 If the items in this collection are insufficient for your purposes and importing items via an editor wouldn't help, you may want to look into [text modding](https://d2mods.info/forum/viewtopic.php?f=4&t=34455). By modifying the game's text files, you can spawn items via custom cube recipes, adjust the ranges for affixes that can appear on items, and much more. Here are the basic steps:
