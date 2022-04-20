@@ -8,11 +8,9 @@ The singleplayer [PlugY mod](http://plugy.free.fr/) adds stash pages for all the
 
 1. Install Diablo II LoD
 2. Install PD2
-3. Add PlugY and this item/character pack by copying the *contents* of the **Diablo II** folder included here into your Diablo II directory
-4. Run PD2 as you would normally to get the latest patch/update
+3. Add PlugY and this item/character pack - copy the *Diablo II* folder included here into *Program Files* (or wherever your *Diablo II* folder is)
+4. Run PD2 via the launcher to get the latest patch/update
 5. Run PlugY.exe as administrator
-
-When this collection is updated, getting the newest [shared stash](https://github.com/BetweenWalls/PD2-Singleplayer/blob/main/Diablo%20II/Save/_LOD_SharedStashSave.sss) only requires replacing the old version with the new one, although there may be other updated files that you may want as well. You can see which files were updated from the [commits page](https://github.com/BetweenWalls/PD2-Singleplayer/commits/main).
 
 If you want to update old character/stash files, see [PD2-Converter](https://github.com/BetweenWalls/PD2-Converter#simple-characterstash-converter-for-pd2).
 
@@ -25,6 +23,8 @@ If you want to update old character/stash files, see [PD2-Converter](https://git
 * examples of all runewords, and additional item bases for making your own
 * all regular and magic equipment items
 * some rare and crafted items
+
+**Note:** Included characters are *not* currently Andariel-quest-bugged, which is something that can only occur in singleplayer. To quest-bug a character, reset their Andariel quest in Hero Editor and do the bug in-game.
 
 ## Stash Organization
 The shared stash has multiple pages and can be navigated in increments of 1, 10, or 100 pages at a time. The stash is organized as follows:
@@ -63,6 +63,12 @@ Items can be duplicated by making a file backup of the shared stash and transfer
 
 There are in-game commands for renaming stash pages and moving stash pages around, as well as some other useful commands such as renaming characters - checkout the PlugY Readme file.
 
+## Bugs
+See the wiki for a full list of [bugs](https://wiki.projectdiablo2.com/wiki/Bugs#Singleplayer-Only_Bugs). Singleplayer-specific bugs include:
+* Having too many items in a stash page with many affixes (e.g. maps) can cause a crash if that page is the most recently visited stash page
+* Having gold in the shared stash can cause issues, preventing oskills and other stats from working correctly
+* Andariel quest bug
+
 ## Editing
 The included blank characters can be edited with [Hero Editor](https://www.moddb.com/games/diablo-2-lod/downloads/hero-editor-v-104) or other editors, but only until they're loaded in-game. Once you play a character and save it, the character's file will be formatted differently. If you're making many edits, create copies of the unplayed character files before entering the game with them. The [PD2-Converter](https://github.com/BetweenWalls/PD2-Converter#simple-characterstash-converter-for-pd2) may also be useful for converting certain files from PD2 to vanilla in order to edit them, although it was primarily designed for converting files in the opposite direction.
 
@@ -73,23 +79,19 @@ Note that while many attributes can be edited normally, the following have been 
 
 New affixes such as "Melee Attacks Deal Splash Damage" cannot be edited in this way at all without an advanced understanding of hex editing.
 
-**Notes:**
-* Included characters are *not* currently Andariel-bugged. This can be changed by resetting the quest in Hero Editor and doing the bug in-game.
-* There is currently a bug with shared gold which prevents certain oskills (like those from Call to Arms) from working correctly - the skills work fine if there is no shared gold in the stash.
-
-## Modification
+## Feedback & Modification
 If you would like to improve this collection with additional items, or just want to share feedback about how it could be improved, you can message me on reddit ([u/BetweenWalls](https://www.reddit.com/message/compose/?to=BetweenWalls)) or discord (@BetweenWalls#2390). You can also just open an [issue](https://github.com/BetweenWalls/PD2-Singleplayer/issues) here.
 
 Potential Improvements:
-* Ethereal versions of certain skill-specific items (Spirit Keeper, Ormus' Robes, Spirit Ward)
-* Examples of popular low-level dueling (LLD) charms and other PvP-relevant items
-* Unique/Set items with variable inventory graphics - Rings, Amulets, Rainbow Facets
-* More examples of regular item bases with different pointmods
-* More examples of useful magic items such as +3 skill amulets, +6 Amazon javelins, +6 pointmod items, or even vanilla classics like JMoD
-* More examples of rare/crafted items
 * Testing charms with individual stats that have more granular values
 * Testing charms with individual corruption effects
 * Characters of each class pre-loaded with various build-relevant items in their personal stashes (1 page per build?) to help getting started with testing easier
+* More examples of regular item bases with different pointmods
+* More examples of useful magic items such as +3 skill amulets, +6 Amazon javelins, +6 pointmod items, or even vanilla classics like JMoD
+* More examples of rare/crafted items
+* Examples of popular low-level dueling (LLD) charms and other PvP-relevant items
+* Ethereal versions of certain skill-specific items (Spirit Keeper, Ormus' Robes, Spirit Ward)
+* Unique/Set items with variable inventory graphics - Rings, Amulets, Rainbow Facets
 
 <!-- Notes
 Some generated rare/crafted items have incorrect required levels
@@ -109,4 +111,5 @@ If the items in this collection are insufficient for your purposes and importing
 
 After getting whatever items you want, simply run the original PlugY.exe file to make the game run without your modifications.
 
-If you get items that could be useful to others, consider sharing them so that this collection can be improved.
+
+In the future, I may include some files pre-modified to make testing easier with changes such as: all items can be rerolled (including unique/set items), crafted items can be used as crafting recipe ingredients, specific numbers of sockets can be added to items, regular/magic items can be ugpraded, etc.
