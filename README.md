@@ -104,12 +104,19 @@ eth Jalal's Mane defense is 327 when it should be 445
 -->
 
 If the items in this collection are insufficient for your purposes and importing items via an editor wouldn't help, you may want to look into [text modding](https://d2mods.info/forum/viewtopic.php?f=4&t=34455). By modifying the game's text files, you can spawn items via custom cube recipes, adjust the ranges for affixes that can appear on items, and much more. Here are the basic steps:
-1. Extract the game's text files from *patch_d2.mpq* (found in *Diablo II/ProjectD2*) using an [MPQ editor and D2 listfile](http://www.zezula.net/en/mpq/download.html) - the text files will be in */data/global/excel*
+
+1. Extract the game's text files from *patch_d2.mpq* (found in *Diablo II/ProjectD2*) using an [MPQ editor and D2 listfile](http://www.zezula.net/en/mpq/download.html) - the text files will be in */data/global/excel* 
 2. Edit whichever files you want (for example, *CubeMain.txt* includes the cube recipes)
 3. Copy the edited files to your game directory inside a new folder structure: *Diablo II/ProjectD2/data/global/excel*
 4. Create (and run) a new shortcut for PlugY.exe with additional commands in the target field so that the game uses your edited text files: -direct -txt
 
-After getting whatever items you want, simply run the original PlugY.exe file to make the game run without your modifications.
+Note that these steps are essentially pre-completed for this collection - the game's text files are in *Diablo II\ProjectD2\data\global\excel\mods* along with a modified *CubeMain.txt* file in the above folder so if your Diablo II installation is in *C:\Program Files (x86)*, you'll only need to launch the *PlugY.exe (modded)* shortcut to get access to several useful cube recipes, such as:
+* reroll any non-crafted item with Horadrim Orb
+* use crafted items as ingredients for crafting recipes
+* upgrade regular/magic item bases with Zakarum Orb
+* make items ethereal with Cartographer's Orb
+* upgrade regular item quality with Arcane Orb, and downgrade with Orb of Destruction
+* safely remove socketed gems/runes/jewels with Hel Rune
+* set the number of sockets with runes #1-6 based on the number of the rune used
 
-
-In the future, I may include some files pre-modified to make testing easier with changes such as: all items can be rerolled (including unique/set items), crafted items can be used as crafting recipe ingredients, specific numbers of sockets can be added to items, regular/magic items can be ugpraded, etc.
+After getting whatever items you want, simply run the original PlugY.exe file to make the game run normally.

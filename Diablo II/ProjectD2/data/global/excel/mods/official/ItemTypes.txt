@@ -1,0 +1,207 @@
+ItemType	Code	Equiv1	Equiv2	Repair	Body	BodyLoc1	BodyLoc2	Shoots	Quiver	Throwable	Reload	ReEquip	AutoStack	Magic	Rare	Normal	Charm	Gem	Beltable	MaxSock1	MaxSock25	MaxSock40	TreasureClass	Rarity	StaffMods	CostFormula	Class	VarInvGfx	InvGfx1	InvGfx2	InvGfx3	InvGfx4	InvGfx5	InvGfx6	StorePage	*eol
+None				0	0					0	0	0	0			0	0	0	0	0	0	0	0	3		0		0								0
+None				0	0					0	0	0	0			0	0	0	0	0	0	0	0	3		0		0								0
+Shield	shie	shld		1	1	rarm	larm			0	0	0	0		1	0	0	0	0	3	3	4	0	3		1		0							armo	0
+Armor	tors	armo		1	1	tors	tors			0	0	0	0		1	0	0	0	0	3	4	6	0	3		1		0							armo	0
+Gold	gold	misc		0	0					0	0	0	0			1	0	0	0	0	0	0	0	3		0		0								0
+Bow Quiver	bowq	misl		0	1	rarm	larm		bow	0	0	0	0		1	0	0	0	0	0	0	0	0	3		0		0							misc	0
+Crossbow Quiver	xboq	misl		0	1	rarm	larm		xbow	0	0	0	0		1	0	0	0	0	0	0	0	0	3		0		0							misc	0
+Player Body Part	play	misc		0	0					0	0	0	0			1	1	0	0	0	0	0	0	3		0		0							misc	0
+Herb	herb	misc		0	0					0	0	0	0			0	0	0	0	0	0	0	0	3		0		0							misc	0
+Potion	poti	misc		0	0					0	0	0	0			1	0	0	1	0	0	0	0	3		0		0							misc	0
+Ring	ring	misc		0	1	rrin	lrin			0	0	0	0	1	1	0	0	0	0	0	0	0	0	3		0		5	invrin1	invrin2	invrin3	invrin4	invrin5		misc	0
+Elixir	elix	misc		0	0					0	0	0	0			0	0	0	1	0	0	0	0	3		0		0							misc	0
+Amulet	amul	misc		0	1	neck	neck			0	0	0	0	1	1	0	0	0	0	0	0	0	0	3		0		3	invamu1	invamu2	invamu3				misc	0
+Charm	char	misc		0	0					0	0	0	0	1		0	1	0	0	0	0	0	0	3		0		3	invch1	invch4	invch7				misc	0
+Not Used				0	0					0	0	0	0			0	0	0	0	0	0	0	0	3		0		0								0
+Boots	boot	armo		1	1	feet	feet			0	0	0	0		1	0	0	0	0	0	0	0	0	3		1		0							armo	0
+Gloves	glov	armo		1	1	glov	glov			0	0	0	0		1	0	0	0	0	0	0	0	0	3		1		0							armo	0
+Not Used				0	0					0	0	0	0			0	0	0	0	0	0	0	0	3		0		0								0
+Book	book	misc		0	0					0	0	0	0			1	0	0	0	0	0	0	0	3		0		0							misc	0
+Belt	belt	armo		1	1	belt	belt			0	0	0	0		1	0	0	0	0	0	0	0	0	3		1		0							armo	0
+Gem	gem	sock	ggm	0	0					0	0	0	0			1	0	1	0	0	0	0	0	3		0		0							misc	0
+Torch	torc	misc		0	1					0	0	0	0			1	0	0	0	0	0	0	0	3		0		0							misc	0
+Scroll	scro	misc		0	0					0	0	0	0			1	0	0	1	0	0	0	0	3		0		0							misc	0
+Not Used				0	0					0	0	0	0			0	0	0	0	0	0	0	0	3		0		0								0
+Scepter	scep	rod	gen	1	1	rarm	larm			0	0	0	0		1	0	0	0	0	3	5	6	0	1	pal	0		0							weap	0
+Wand	wand	rod		1	1	rarm	larm			0	0	0	0		1	0	0	0	0	2	2	2	0	1	nec	0		0							weap	0
+Staff	staf	rod		1	1	rarm	larm			0	0	0	0		1	0	0	0	0	5	6	6	0	1	sor	0		0							weap	0
+Bow	bow	miss		0	1	rarm	larm	bowq		0	0	0	0		1	0	0	0	0	3	4	6	1	3		0		0							weap	0
+Axe	axe	mele	gen	1	1	rarm	larm			0	0	0	0		1	0	0	0	0	4	5	6	0	3		0		0							weap	0
+Club	club	blun	gen	1	1	rarm	larm			0	0	0	0		1	0	0	0	0	3	4	6	0	3	dru	0		0							weap	0
+Sword	swor	mele	gen	1	1	rarm	larm			0	0	0	0		1	0	0	0	0	3	4	6	0	3		0		0							weap	0
+Hammer	hamm	blun	gen	1	1	rarm	larm			0	0	0	0		1	0	0	0	0	3	4	6	0	3		0		0							weap	0
+Knife	knif	mele	asm	1	1	rarm	larm			0	0	0	0		1	0	0	0	0	2	3	3	0	3		0		0							weap	0
+Spear	spea	mele	pas	1	1	rarm	larm			0	0	0	0		1	0	0	0	0	3	4	6	0	3		0		0							weap	0
+Polearm	pole	mele	pas	1	1	rarm	larm			0	0	0	0		1	0	0	0	0	3	4	6	0	3		0		0							weap	0
+Crossbow	xbow	miss		1	1	rarm	larm	xboq		0	0	0	0		1	0	0	0	0	3	4	6	0	3		0		0							weap	0
+Mace	mace	blun	gen	1	1	rarm	larm			0	0	0	0		1	0	0	0	0	3	4	6	0	3		0		0							weap	0
+Helm	helm	armo		1	1	head	head			0	0	0	0		1	0	0	0	0	2	2	3	0	3		1		0							armo	0
+Missile Potion	tpot	thro		0	1	rarm	larm			1	1	1	1			1	0	0	0	0	0	0	0	3		0		0							misc	0
+Quest	ques			0	0					0	0	0	1			0	0	0	0	0	0	0	0	3		0		0								0
+Body Part	body	misc		0	0					0	0	0	0			1	0	0	0	0	0	0	0	3		2		0							misc	0
+Key	key	misc		0	0					0	0	0	1			1	0	0	0	0	0	0	0	3		0		0							misc	0
+Throwing Knife	tkni	comb	knif	1	1	rarm	larm			1	0	0	0		1	0	0	0	0	0	0	0	0	3		0		0							misc	0
+Throwing Axe	taxe	comb	axe	1	1	rarm	larm			1	0	0	0		1	0	0	0	0	0	0	0	0	3		0		0							misc	0
+Javelin	jave	comb	spea	1	1	rarm	larm			1	0	0	0		1	0	0	0	0	0	0	0	0	3		0		0							misc	0
+Weapon	weap			0	0					0	0	0	0		1	0	0	0	0	0	0	0	1	3		0		0								0
+Melee Weapon	mele	weap		0	0					0	0	0	0		1	0	0	0	0	0	0	0	1	3		0		0								0
+Missile Weapon	miss	weap		0	0					0	0	0	0		1	0	0	0	0	0	0	0	0	3		0		0								0
+Thrown Weapon	thro	weap		0	0					1	0	0	0		1	0	0	0	0	0	0	0	0	3		0		0								0
+Combo Weapon	comb	mele	thro	0	0					1	0	0	0		1	0	0	0	0	0	0	0	0	3		0		0								0
+Any Armor	armo			0	0					0	0	0	0		1	0	0	0	0	0	0	0	1	3		0		0								0
+Any Shield	shld	armo	seco	0	0					0	0	0	0		1	0	0	0	0	0	0	0	0	3		0		0								0
+Miscellaneous	misc			0	0					0	0	0	0		1	0	0	0	0	0	0	0	0	3		0		0								0
+Socket Filler	sock	misc		0	0					0	0	0	0			0	0	0	0	0	0	0	0	3		0		0								0
+Second Hand	seco			0	0					0	0	0	0		1	0	0	0	0	0	0	0	0	3		0		0								0
+Staves And Rods	rod	blun		0	0					0	0	0	0		1	0	0	0	0	0	0	0	0	3		0		0								0
+Missile	misl	misc		0	0					0	0	0	0			0	0	0	0	0	0	0	0	3		0		0								0
+Blunt	blun	mele	gen	0	0					0	0	0	0		1	0	0	0	0	0	0	0	0	3		0		0								0
+Expansion																																				0
+Jewel	jewl	sock	jewg	0	0					0	0	0	0	1	1	0	0	1	0	0	0	0	0	3		0		6	invjw1	invjw2	invjw3	invjw4	invjw5	invjw6	misc	0
+Class Specific	clas			0	0					0	0	0	0		1	0	0	0	0	0	0	0	0	3		0		0								0
+Amazon Item	amaz	clas		0	0					0	0	0	0		1	0	0	0	0	0	0	0	0	1		0	ama	0								0
+Barbarian Item	barb	clas		0	0					0	0	0	0		1	0	0	0	0	0	0	0	0	1		0	bar	0								0
+Necromancer Item	necr	clas		0	0					0	0	0	0		1	0	0	0	0	0	0	0	0	1		0	nec	0								0
+Paladin Item	pala	clas		0	0					0	0	0	0		1	0	0	0	0	0	0	0	0	1		0	pal	0								0
+Sorceress Item	sorc	clas		0	0					0	0	0	0		1	0	0	0	0	0	0	0	0	1		0	sor	0								0
+Assassin Item	assn	clas	asm	0	0					0	0	0	0		1	0	0	0	0	0	0	0	0	2		0	ass	0								0
+Druid Item	drui	clas		0	0					0	0	0	0		1	0	0	0	0	0	0	0	0	1		0	dru	0								0
+Hand to Hand	h2h	mele	assn	1	1	rarm	larm			0	0	0	0		1	0	0	0	0	2	3	3	0	2	ass	0	ass	0							weap	0
+Orb	orb	weap	sorc	1	1	rarm	larm			0	0	0	0		1	0	0	0	0	2	3	3	0	1	sor	0	sor	0							weap	0
+Voodoo Heads	head	shld	necr	1	1	rarm	larm			0	0	0	0		1	0	0	0	0	2	3	3	0	1	nec	0	nec	0							armo	0
+Auric Shields	ashd	shld	pala	1	1	rarm	larm			0	0	0	0		1	0	0	0	0	3	4	4	0	1		0	pal	0							armo	0
+Primal Helm	phlm	helm	barb	1	1	head	head			0	0	0	0		1	0	0	0	0	2	3	3	0	1	bar	0	bar	0							armo	0
+Pelt	pelt	helm	drui	1	1	head	head			0	0	0	0		1	0	0	0	0	2	3	3	0	1	dru	0	dru	0							armo	0
+Cloak	cloa	tors	assn	1	1	tors	tors			0	0	0	0		1	0	0	0	0	0	0	0	0	1	ass	0	ass	0							armo	0
+Rune	rune	sock		0	0					0	0	0	0			1	0	0	0	0	0	0	0	3		0		0							misc	0
+Circlet	circ	helm		1	1	head	head			0	0	0	0		1	0	0	0	0	1	2	3	0	3		1		0							armo	0
+Healing Potion	hpot	poti		0	0					0	0	0	0			1	0	0	1	0	0	0	0	3		0		0							misc	0
+Mana Potion	mpot	poti		0	0					0	0	0	0			1	0	0	1	0	0	0	0	3		0		0							misc	0
+Rejuv Potion	rpot	hpot	mpot	0	0					0	0	0	0			1	0	0	1	0	0	0	0	3		0		0							misc	0
+Stamina Potion	spot	poti		0	0					0	0	0	0			1	0	0	1	0	0	0	0	3		0		0							misc	0
+Antidote Potion	apot	poti		0	0					0	0	0	0			1	0	0	1	0	0	0	0	3		0		0							misc	0
+Thawing Potion	wpot	poti		0	0					0	0	0	0			1	0	0	1	0	0	0	0	3		0		0							misc	0
+Small Charm	scha	char		0	0					0	0	0	0	1		0	1	0	0	0	0	0	0	3		0		3	invch1	invch4	invch7				misc	0
+Medium Charm	mcha	char		0	0					0	0	0	0	1		0	1	0	0	0	0	0	0	3		0		3	invch2	invch5	invch8				misc	0
+Large Charm	lcha	char		0	0					0	0	0	0	1		0	1	0	0	0	0	0	0	3		0		3	invch3	invch6	invch9				misc	0
+Amazon Bow	abow	bow	amaz	0	1	rarm	larm	bowq		0	0	0	0		1	0	0	0	0	3	4	5	1	1		0	ama	0							weap	0
+Amazon Spear	aspe	spea	amaz	1	1	rarm	larm			0	0	0	0		1	0	0	0	0	3	4	6	0	1		0	ama	0							weap	0
+Amazon Javelin	ajav	jave	amaz	1	1	rarm	larm			1	1	1	1		1	0	0	0	0	0	0	0	0	1		0	ama	0							misc	0
+Hand to Hand 2	h2h2	h2h		1	1	rarm	larm			0	0	0	0		1	0	0	0	0	2	3	3	0	2	ass	0	ass	0							weap	0
+Magic Bow Quiv	mboq	bowq		0	1	rarm	larm		bow	0	1	0	0	1	1	0	0	0	0	0	0	0	0	3		0		0							misc	0
+Magic Xbow Quiv	mxbq	xboq		0	1	rarm	larm		xbow	0	1	0	0	1	1	0	0	0	0	0	0	0	0	3		0		0							misc	0
+Assassin Mastery	asm			1	1	rarm	larm			0	0	0	0		1	0	0	0	0	2	3	3	0	2		0	ass	0							weap	0
+Chipped Gem	gem0	gem		0	0					0	0	0	0			1	0	1	0	0	0	0	0	3		0		0							misc	0
+Flawed Gem	gem1	gem		0	0					0	0	0	0			1	0	1	0	0	0	0	0	3		0		0							misc	0
+Standard Gem	gem2	gem		0	0					0	0	0	0			1	0	1	0	0	0	0	0	3		0		0							misc	0
+Flawless Gem	gem3	gem	ggm3	0	0					0	0	0	0			1	0	1	0	0	0	0	0	3		0		0							misc	0
+Perfect Gem	gem4	gem	ggm4	0	0					0	0	0	0			1	0	1	0	0	0	0	0	3		0		0							misc	0
+Amethyst	gema	gem	ggma	0	0					0	0	0	0			1	0	1	0	0	0	0	0	3		0		0							misc	0
+Diamond	gemd	gem	ggmd	0	0					0	0	0	0			1	0	1	0	0	0	0	0	3		0		0							misc	0
+Emerald	geme	gem	ggme	0	0					0	0	0	0			1	0	1	0	0	0	0	0	3		0		0							misc	0
+Ruby	gemr	gem	ggmr	0	0					0	0	0	0			1	0	1	0	0	0	0	0	3		0		0							misc	0
+Sapphire	gems	gem	ggms	0	0					0	0	0	0			1	0	1	0	0	0	0	0	3		0		0							misc	0
+Topaz	gemt	gem	ggmt	0	0					0	0	0	0			1	0	1	0	0	0	0	0	3		0		0							misc	0
+Skull	gemz	gem	ggmz	0	0					0	0	0	0			1	0	1	0	0	0	0	0	3		0		0							misc	0
+Worldstone Shard	corr			0	0					0	0	0	1			1	0	0	0	0	0	0	0	3		0		0								0
+Map	map			0	0					0	0	0	0		1	0	0	0	0	0	0	0	0	3		0		0							misc	0
+Map T1	t1m	map		0	0					0	0	0	0		1	0	0	0	0	0	0	0	0	3		0		0							misc	0
+Map T2	t2m	t1m		0	0					0	0	0	0		1	0	0	0	0	0	0	0	0	3		0		0							misc	0
+Map T3	t3m	t2m		0	0					0	0	0	0		1	0	0	0	0	0	0	0	0	3		0		0							misc	0
+Map T4	t4m	t3m		0	0					0	0	0	0		1	0	0	0	0	0	0	0	0	3		0		0							misc	0
+Map T1 exc	t1me	map		0	0					0	0	0	0		1	0	0	0	0	0	0	0	0	3		0		0							misc	0
+Map T2 exc	t2me	map		0	0					0	0	0	0		1	0	0	0	0	0	0	0	0	3		0		0							misc	0
+Map T3 exc	t3me	map		0	0					0	0	0	0		1	0	0	0	0	0	0	0	0	3		0		0							misc	0
+Map T4 exc	t4me	map		0	0					0	0	0	0		1	0	0	0	0	0	0	0	0	3		0		0							misc	0
+2Handed Melee Weapon	2han			1	1	rarm	larm			0	0	0	0		1	0	0	0	0	0	0	0	1	3		0		0								0
+General Weapon	gen			1	1					0	0	0	0		1	0	0	0	0	0	0	0	1	3		0		0								0
+Polearm and Spear	pas			1	1					0	0	0	0		1	0	0	0	0	0	0	0	1	3		0		0								0
+Box	box			0	0					0	0	0	0			1	0	0	0	0	0	0	0	1		0		0								0
+ImbueMag	imma			0	0					0	0	0	1			1	0	0	0	0	0	0	0	3		0		0							misc	0
+ImbueRandom	imrn			0	0					0	0	0	1			1	0	0	0	0	0	0	0	3		0		0							misc	0
+ImbueRare	imra			0	0					0	0	0	1			1	0	0	0	0	0	0	0	3		0		0							misc	0
+RerollRare	rera			0	0					0	0	0	1			1	0	0	0	0	0	0	0	3		0		0							misc	0
+Scour	scou			0	0					0	0	0	1			1	0	0	0	0	0	0	0	3		0		0							misc	0
+UpgradeMag	upma			0	0					0	0	0	1			1	0	0	0	0	0	0	0	3		0		0							misc	0
+Upgrade Map	upmp			0	0					0	0	0	1			1	0	0	0	0	0	0	0	3		0		0							misc	0
+Dungeon Scarab	scrb			0	0					0	0	0	1			1	0	0	0	0	0	0	0	3		0		0								0
+Puzzlebox	lbox			0	0					0	0	0	1			1	0	0	0	0	0	0	0	3		0		0								0
+Stack gem	gsm	ggm		0	0					0	0	0	1			1	0	0	0	0	0	0	0	3		0		0								0
+Stack Flawless Gem	gsm3	gsm	ggm3	0	0					0	0	0	1			1	0	0	0	0	0	0	0	3		0		0								0
+Stack Perfect Gem	gsm4	gsm	ggm4	0	0					0	0	0	1			1	0	0	0	0	0	0	0	3		0		0								0
+Stack Amethyst	gsma	gsm	ggma	0	0					0	0	0	1			1	0	0	0	0	0	0	0	3		0		0								0
+Stack Diamond	gsmd	gsm	ggmd	0	0					0	0	0	1			1	0	0	0	0	0	0	0	3		0		0								0
+Stack Emerald	gsme	gsm	ggme	0	0					0	0	0	1			1	0	0	0	0	0	0	0	3		0		0								0
+Stack Ruby	gsmr	gsm	ggmr	0	0					0	0	0	1			1	0	0	0	0	0	0	0	3		0		0								0
+Stack Sapphire	gsms	gsm	ggms	0	0					0	0	0	1			1	0	0	0	0	0	0	0	3		0		0								0
+Stack Topaz	gsmt	gsm	ggmt	0	0					0	0	0	1			1	0	0	0	0	0	0	0	3		0		0								0
+Stack Skull	gsmz	gsm	ggmz	0	0					0	0	0	1			1	0	0	0	0	0	0	0	3		0		0								0
+Stack Rune	runs			0	0					0	0	0	1			1	0	0	0	0	0	0	0	3		0		0								0
+Generic Gem	ggm			0	0					0	0	0	1			1	0	0	0	0	0	0	0	3		0		0								0
+Generic Flawless Gem	ggm3	ggm		0	0					0	0	0	1			1	0	0	0	0	0	0	0	3		0		0								0
+Generic Perfect Gem	ggm4	ggm		0	0					0	0	0	1			1	0	0	0	0	0	0	0	3		0		0								0
+Generic Amethyst	ggma	ggm		0	0					0	0	0	1			1	0	0	0	0	0	0	0	3		0		0								0
+Generic Diamond	ggmd	ggm		0	0					0	0	0	1			1	0	0	0	0	0	0	0	3		0		0								0
+Generic Emerald	ggme	ggm		0	0					0	0	0	1			1	0	0	0	0	0	0	0	3		0		0								0
+Generic Ruby	ggmr	ggm		0	0					0	0	0	1			1	0	0	0	0	0	0	0	3		0		0								0
+Generic Sapphire	ggms	ggm		0	0					0	0	0	1			1	0	0	0	0	0	0	0	3		0		0								0
+Generic Topaz	ggmt	ggm		0	0					0	0	0	1			1	0	0	0	0	0	0	0	3		0		0								0
+Generic Skull	ggmz	ggm		0	0					0	0	0	1			1	0	0	0	0	0	0	0	3		0		0								0
+Generic Rune	rung			0	0					0	0	0	1			1	0	0	0	0	0	0	0	3		0		0								0
+Generic F Amethyst	gg3a	ggma	ggm3	0	0					0	0	0	1			1	0	0	0	0	0	0	0	3		0		0								0
+Generic F Diamond	gg3d	ggmd	ggm3	0	0					0	0	0	1			1	0	0	0	0	0	0	0	3		0		0								0
+Generic F Emerald	gg3e	ggme	ggm3	0	0					0	0	0	1			1	0	0	0	0	0	0	0	3		0		0								0
+Generic F Ruby	gg3r	ggmr	ggm3	0	0					0	0	0	1			1	0	0	0	0	0	0	0	3		0		0								0
+Generic F Sapphire	gg3s	ggms	ggm3	0	0					0	0	0	1			1	0	0	0	0	0	0	0	3		0		0								0
+Generic F Topaz	gg3t	ggmt	ggm3	0	0					0	0	0	1			1	0	0	0	0	0	0	0	3		0		0								0
+Generic F Skull	gg3z	ggmz	ggm3	0	0					0	0	0	1			1	0	0	0	0	0	0	0	3		0		0								0
+Generic P Amethyst	gg4a	ggma	ggm4	0	0					0	0	0	1			1	0	0	0	0	0	0	0	3		0		0								0
+Generic P Diamond	gg4d	ggmd	ggm4	0	0					0	0	0	1			1	0	0	0	0	0	0	0	3		0		0								0
+Generic P Emerald	gg4e	ggme	ggm4	0	0					0	0	0	1			1	0	0	0	0	0	0	0	3		0		0								0
+Generic P Ruby	gg4r	ggmr	ggm4	0	0					0	0	0	1			1	0	0	0	0	0	0	0	3		0		0								0
+Generic P Sapphire	gg4s	ggms	ggm4	0	0					0	0	0	1			1	0	0	0	0	0	0	0	3		0		0								0
+Generic P Topaz	gg4t	ggmt	ggm4	0	0					0	0	0	1			1	0	0	0	0	0	0	0	3		0		0								0
+Generic P Skull	gg4z	ggmz	ggm4	0	0					0	0	0	1			1	0	0	0	0	0	0	0	3		0		0								0
+El Rune Generic	r01g	rung		0	0					0	0	0	1			1	0	0	0	0	0	0	0	3		0		0								0
+Eld Rune Generic	r02g	rung		0	0					0	0	0	1			1	0	0	0	0	0	0	0	3		0		0								0
+Tir Rune Generic	r03g	rung		0	0					0	0	0	1			1	0	0	0	0	0	0	0	3		0		0								0
+Nef Rune Generic	r04g	rung		0	0					0	0	0	1			1	0	0	0	0	0	0	0	3		0		0								0
+Eth Rune Generic	r05g	rung		0	0					0	0	0	1			1	0	0	0	0	0	0	0	3		0		0								0
+Ith Rune Generic	r06g	rung		0	0					0	0	0	1			1	0	0	0	0	0	0	0	3		0		0								0
+Tal Rune Generic	r07g	rung		0	0					0	0	0	1			1	0	0	0	0	0	0	0	3		0		0								0
+Ral Rune Generic	r08g	rung		0	0					0	0	0	1			1	0	0	0	0	0	0	0	3		0		0								0
+Ort Rune Generic	r09g	rung		0	0					0	0	0	1			1	0	0	0	0	0	0	0	3		0		0								0
+Thul Rune Generic	r10g	rung	r1pg	0	0					0	0	0	1			1	0	0	0	0	0	0	0	3		0		0								0
+Amn Rune Generic	r11g	rung	r1pg	0	0					0	0	0	1			1	0	0	0	0	0	0	0	3		0		0								0
+Sol Rune Generic	r12g	rung	r1pg	0	0					0	0	0	1			1	0	0	0	0	0	0	0	3		0		0								0
+Shael Rune Generic	r13g	rung	r1pg	0	0					0	0	0	1			1	0	0	0	0	0	0	0	3		0		0								0
+Dol Rune Generic	r14g	rung	r1pg	0	0					0	0	0	1			1	0	0	0	0	0	0	0	3		0		0								0
+Hel Rune Generic	r15g	rung	r1pg	0	0					0	0	0	1			1	0	0	0	0	0	0	0	3		0		0								0
+Io Rune Generic	r16g	rung	r1pg	0	0					0	0	0	1			1	0	0	0	0	0	0	0	3		0		0								0
+Lum Rune Generic	r17g	rung	r1pg	0	0					0	0	0	1			1	0	0	0	0	0	0	0	3		0		0								0
+Ko Rune Generic	r18g	rung	r1pg	0	0					0	0	0	1			1	0	0	0	0	0	0	0	3		0		0								0
+Fal Rune Generic	r19g	rung	r1pg	0	0					0	0	0	1			1	0	0	0	0	0	0	0	3		0		0								0
+Lem Rune Generic	r20g	rung	r1pg	0	0					0	0	0	1			1	0	0	0	0	0	0	0	3		0		0								0
+Pul Rune Generic	r21g	rung	r1pg	0	0					0	0	0	1			1	0	0	0	0	0	0	0	3		0		0								0
+Um Rune Generic	r22g	rung	r1pg	0	0					0	0	0	1			1	0	0	0	0	0	0	0	3		0		0								0
+Mal Rune Generic	r23g	rung	r1pg	0	0					0	0	0	1			1	0	0	0	0	0	0	0	3		0		0								0
+Ist Rune Generic	r24g	rung	r1pg	0	0					0	0	0	1			1	0	0	0	0	0	0	0	3		0		0								0
+Gul Rune Generic	r25g	rung	r1pg	0	0					0	0	0	1			1	0	0	0	0	0	0	0	3		0		0								0
+Vex Rune Generic	r26g	rung	r1pg	0	0					0	0	0	1			1	0	0	0	0	0	0	0	3		0		0								0
+Ohm Rune Generic	r27g	rung	r1pg	0	0					0	0	0	1			1	0	0	0	0	0	0	0	3		0		0								0
+Lo Rune Generic	r28g	rung	r1pg	0	0					0	0	0	1			1	0	0	0	0	0	0	0	3		0		0								0
+Sur Rune Generic	r29g	rung	r1pg	0	0					0	0	0	1			1	0	0	0	0	0	0	0	3		0		0								0
+Ber Rune Generic	r30g	rung	r1pg	0	0					0	0	0	1			1	0	0	0	0	0	0	0	3		0		0								0
+Jah Rune Generic	r31g	rung	r1pg	0	0					0	0	0	1			1	0	0	0	0	0	0	0	3		0		0								0
+Cham Rune Generic	r32g	rung	r1pg	0	0					0	0	0	1			1	0	0	0	0	0	0	0	3		0		0								0
+Zod Rune Generic	r33g	rung	r1pg	0	0					0	0	0	1			1	0	0	0	0	0	0	0	3		0		0								0
+Rune ten plus Generic	r1pg			0	0					0	0	0	1			1	0	0	0	0	0	0	0	3		0		0								0
+Uber	ubr			0	0					0	0	0	1			1	0	0	0	0	0	0	0	3		0		0								0
+UberOrgan	ubor			0	0					0	0	0	1			1	0	0	0	0	0	0	0	3		0		0								0
+Pvp Map	pvpm			0	0					0	0	0	0			1	0	0	0	0	0	0	0	3		0		0							misc	0
+Belt [S]	bels	belt		1	1	belt	belt			0	0	0	0			0	0	0	0	1	1	1	0	0		1		0							armo	0
+Amulet [S]	amus	amul		0	1	neck	neck			0	0	0	0			0	0	0	0	1	1	1	0	0		0		3	invamu1	invamu2	invamu3				misc	0
+Jewel Generic	jewg			0	0					0	0	0	0			0	0	0	0	0	0	0	0	0		0		0								0
+Jewel Fragments	jewf	jewg		0	0					0	0	0	1			1	0	0	0	0	0	0	0	0		0		0								0
+Scythe Type	sc9	pole		1	1	rarm	larm			0	0	0	0		1	0	0	0	0	3	4	6	0	3		0		0							weap	0
