@@ -113,6 +113,7 @@ If the items in this collection are insufficient for your purposes and importing
 Note that these steps are essentially pre-completed for this collection - the game's text files are in *Diablo II\ProjectD2\data\global\excel\mods* along with a modified *CubeMain.txt* file in the above folder so if your Diablo II installation is in *C:\Program Files (x86)*, you'll only need to launch the *PlugY.exe (modded)* shortcut to get access to several useful cube recipes, such as:
 * reroll any non-crafted item with Horadrim Orb
 * use crafted items as ingredients for crafting recipes
+* generate set/unique items of a given base with Rancid (green) or Oil (gold) Potions
 * upgrade regular/magic item bases with Zakarum Orb
 * make items ethereal with Cartographer's Orb
 * upgrade regular item quality with Arcane Orb, and downgrade with Orb of Destruction

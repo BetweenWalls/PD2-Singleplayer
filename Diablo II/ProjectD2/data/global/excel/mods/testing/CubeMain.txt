@@ -1725,12 +1725,12 @@ reroll non-eth rare weap	1			100					2	weap,rar,noe	rera,qty=1						usetype,rar,
 reroll non-eth rare armor	1			100					2	armo,rar,noe	rera,qty=1						usetype,rar,noe			100																										rera,qty=1																																																										0
 reroll rare ring	1			100					2	rin,rar	rera,qty=1						usetype,rar			100																										rera,qty=1																																																										0
 reroll rare amulet	1			100					2	amu,rar	rera,qty=1						usetype,rar			100																										rera,qty=1																																																										0
-reroll eth magic weap	1			100					2	weap,rar,eth	rera,qty=1						usetype,rar,eth			100																										rera,qty=1																																																										0
-reroll eth magic armor	1			100					2	armo,rar,eth	rera,qty=1						usetype,rar,eth			100																										rera,qty=1																																																										0
-reroll non-eth magic weap	1			100					2	weap,rar,noe	rera,qty=1						usetype,rar,noe			100																										rera,qty=1																																																										0
-reroll non-eth magic armor	1			100					2	armo,rar,noe	rera,qty=1						usetype,rar,noe			100																										rera,qty=1																																																										0
-reroll magic ring	1			100					2	rin,rar	rera,qty=1						usetype,rar			100																										rera,qty=1																																																										0
-reroll magic amulet	1			100					2	amu,rar	rera,qty=1						usetype,rar			100																										rera,qty=1																																																										0
+reroll eth magic weap	1			100					2	weap,mag,eth	rera,qty=1						usetype,mag,eth			100																										rera,qty=1																																																										0
+reroll eth magic armor	1			100					2	armo,mag,eth	rera,qty=1						usetype,mag,eth			100																										rera,qty=1																																																										0
+reroll non-eth magic weap	1			100					2	weap,mag,noe	rera,qty=1						usetype,mag,noe			100																										rera,qty=1																																																										0
+reroll non-eth magic armor	1			100					2	armo,mag,noe	rera,qty=1						usetype,mag,noe			100																										rera,qty=1																																																										0
+reroll magic ring	1			100					2	rin,mag	rera,qty=1						usetype,mag			100																										rera,qty=1																																																										0
+reroll magic amulet	1			100					2	amu,mag	rera,qty=1						usetype,mag			100																										rera,qty=1																																																										0
 reroll eth superior weapon	1			100					2	weap,hiq,eth	rera,qty=1						usetype,hiq,eth			100																										rera,qty=1																																																										0
 reroll eth superior armor	1			100					2	armo,hiq,eth	rera,qty=1						usetype,hiq,eth			100																										rera,qty=1																																																										0
 reroll non-eth superior weapon	1			100					2	weap,hiq,noe	rera,qty=1						usetype,hiq,noe			100																										rera,qty=1																																																										0
@@ -1867,27 +1867,21 @@ set 5 sockets weapon	1			100					2	weap	r05g,qty=1						useitem			100	sock	100		
 set 5 sockets armor	1			100					2	armo	r05g,qty=1						useitem			100	sock	100		5	5																					r05s,qty=1																																																										0
 set 6 sockets weapon	1			100					2	weap	r06g,qty=1						useitem			100	sock	100		6	6																					r06s,qty=1																																																										0
 set 6 sockets armor	1			100					2	armo	r06g,qty=1						useitem			100	sock	100		6	6																					r06s,qty=1																																																										0
-upgrade basic magic weapon (staff)	1			100					2	staf,bas,mag	imra,qty=1						useitem,mod,exc				cast2	100		20	20																																																																															0
-upgrade basic magic weapon	1			100					2	weap,bas,mag	imra,qty=1						useitem,mod,exc																																																																																							0
-upgrade basic magic armor	1			100					2	armo,bas,mag	imra,qty=1						useitem,mod,exc																																																																																							0
-upgrade exceptional magic weapon (staff)	1			100					2	staf,exc,mag	imra,qty=1						useitem,mod,eli				cast2	100		20	20																																																																															0
-upgrade exceptional magic weapon	1			100					2	weap,exc,mag	imra,qty=1						useitem,mod,eli																																																																																							0
-upgrade exceptional magic armor	1			100					2	armo,exc,mag	imra,qty=1						useitem,mod,eli																																																																																							0
-upgrade basic superior weapon (staff)	1			100					2	staf,bas,hiq	imra,qty=1						useitem,mod,exc				cast2	100		20	20																																																																															0
-upgrade basic superior weapon	1			100					2	weap,bas,hiq	imra,qty=1						useitem,mod,exc																																																																																							0
-upgrade basic superior armor	1			100					2	armo,bas,hiq	imra,qty=1						useitem,mod,exc																																																																																							0
-upgrade exceptional superior weapon (staff)	1			100					2	staf,exc,hiq	imra,qty=1						useitem,mod,eli				cast2	100		20	20																																																																															0
-upgrade exceptional superior weapon	1			100					2	weap,exc,hiq	imra,qty=1						useitem,mod,eli																																																																																							0
-upgrade exceptional superior armor	1			100					2	armo,exc,hiq	imra,qty=1						useitem,mod,eli																																																																																							0
-upgrade basic standard weapon (staff)	1			100					2	staf,bas,nor	imra,qty=1						useitem,mod,exc				cast2	100		20	20																																																																															0
-upgrade basic standard weapon	1			100					2	weap,bas,nor	imra,qty=1						useitem,mod,exc																																																																																							0
-upgrade basic standard armor	1			100					2	armo,bas,nor	imra,qty=1						useitem,mod,exc																																																																																							0
-upgrade exceptional standard weapon (staff)	1			100					2	staf,exc,nor	imra,qty=1						useitem,mod,eli				cast2	100		20	20																																																																															0
-upgrade exceptional standard weapon	1			100					2	weap,exc,nor	imra,qty=1						useitem,mod,eli																																																																																							0
-upgrade exceptional standard armor	1			100					2	armo,exc,nor	imra,qty=1						useitem,mod,eli																																																																																							0
-upgrade basic inferior weapon (staff)	1			100					2	staf,bas,low	imra,qty=1						useitem,mod,exc				cast2	100		20	20																																																																															0
-upgrade basic inferior weapon	1			100					2	weap,bas,low	imra,qty=1						useitem,mod,exc																																																																																							0
-upgrade basic inferior armor	1			100					2	armo,bas,low	imra,qty=1						useitem,mod,exc																																																																																							0
-upgrade exceptional inferior weapon (staff)	1			100					2	staf,exc,low	imra,qty=1						useitem,mod,eli				cast2	100		20	20																																																																															0
-upgrade exceptional inferior weapon	1			100					2	weap,exc,low	imra,qty=1						useitem,mod,eli																																																																																							0
-upgrade exceptional inferior armor	1			100					2	armo,exc,low	imra,qty=1						useitem,mod,eli																																																																																							0
+upgrade basic weapon (staff)	1			100					2	staf,bas	imra,qty=1						useitem,mod,exc			100	cast2	100		20	20																					imra,qty=1																																																										0
+upgrade basic weapon	1			100					2	weap,bas	imra,qty=1						useitem,mod,exc			100																										imra,qty=1																																																										0
+upgrade basic armor	1			100					2	armo,bas	imra,qty=1						useitem,mod,exc			100																										imra,qty=1																																																										0
+upgrade exceptional weapon (staff)	1			100					2	staf,exc	imra,qty=1						useitem,mod,eli			100	cast2	100		20	20																					imra,qty=1																																																										0
+upgrade exceptional weapon	1			100					2	weap,exc	imra,qty=1						useitem,mod,eli			100																										imra,qty=1																																																										0
+upgrade exceptional armor	1			100					2	armo,exc	imra,qty=1						useitem,mod,eli			100																										imra,qty=1																																																										0
+generate set weapon of same type	1			100					2	weap	gps						usetype,set	99		100																										gps																																																										0
+generate set armor of same type	1			100					2	armo	gps						usetype,set	99		100																										gps																																																										0
+generate set ring	1			100					2	rin	gps						rin,set	99		100																										gps																																																										0
+generate set amulet	1			100					2	amu	gps						amu,set	99		100																										gps																																																										0
+generate unique weapon of same type	1			100					2	weap	ops						usetype,uni	99		100																										ops																																																										0
+generate unique armor of same type	1			100					2	armo	ops						usetype,uni	99		100																										ops																																																										0
+generate unique ring	1			100					2	rin	ops						rin,uni	99		100																										ops																																																										0
+generate unique amulet	1			100					2	amu	ops						amu,uni	99		100																										ops																																																										0
+generate unique jewel	1			100					2	jew	ops						jew,uni	99		100																										ops																																																										0
+generate unique small charm	1			100					2	cm1	ops						cm1,uni	99		100																										ops																																																										0
+generate unique large charm	1			100					2	cm2	ops						cm2,uni	99		100																										ops																																																										0
+generate unique grand charm	1			100					2	cm3	ops						cm3,uni	99		100																										ops																																																										0
