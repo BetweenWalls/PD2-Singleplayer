@@ -6,11 +6,11 @@ This collection aims to include everything you'd want for singleplayer testing i
 ## Setup Guide
 The singleplayer [PlugY mod](http://plugy.free.fr/) adds stash pages for all the items. A copy of PlugY v14.03 is included in the files.
 
-1. Install Diablo II LoD
-2. Install PD2
-3. Add PlugY and this item/character pack - copy the *Diablo II* folder included here into *Program Files* (or wherever your *Diablo II* folder is)
-4. Run PD2 via the launcher to get the latest patch/update
-5. Run PlugY.exe as administrator
+1. Pre-Setup - Ensure you have *Diablo II LoD* and *PD2* installed
+2. Add PlugY and this item/character pack - copy the *Diablo II* folder included here into *Program Files* (or wherever your *Diablo II* folder is)
+3. Run PlugY.exe as administrator
+
+You'll still need to run PD2 via the launcher occasionally to get the latest patch/update.
 
 If you want to update old character/stash files, see [PD2-Converter](https://github.com/BetweenWalls/PD2-Converter#simple-characterstash-converter-for-pd2).
 
@@ -41,7 +41,8 @@ The shared stash has multiple pages and can be navigated in increments of 1, 10,
 * (20-29) **Uniques - Class-Specific**
 * (30-49) **Uniques - Armor**
 * (50-79) **Uniques - Weapons**
-* (80-89) **Sets**
+* (80-88) **Sets**
+* (89) **Exclusive DClone/Rathma Items**
 * (90-109) **Runewords**
 * (110-129) **Charms**
   * resistance, damage, life, and mana charms
