@@ -1,6 +1,8 @@
 # PD2-Singleplayer
 This collection aims to include everything you'd want for singleplayer testing in [Project D2](https://www.projectdiablo2.com/).
 
+If you're just looking for PlugY without the item pack or characters, see [PD2-PlugY](https://github.com/BetweenWalls/PD2-PlugY#pd2-plugy).
+
 ### [Download](https://github.com/BetweenWalls/PD2-Singleplayer/archive/main.zip)
 
 ## Setup Guide
@@ -86,15 +88,16 @@ If you would like to improve this collection with additional items, or just want
 Potential Improvements:
 * Testing charms with individual stats that have more granular values
 * Testing charms with individual corruption effects
-* Characters of each class pre-loaded with various build-relevant items in their personal stashes (1 page per build?) to help getting started with testing easier
-* More examples of regular item bases with different pointmods
-* More examples of useful magic items such as +3 skill amulets, +6 Amazon javelins, +6 pointmod items, or even vanilla classics like JMoD
+* More examples of regular item bases with different +3 pointmods
+* More examples of useful magic items like +3 skill tree & +3 pointmod items or vanilla classics like JMoD
 * More examples of rare/crafted items
 * Examples of popular low-level dueling (LLD) charms and other PvP-relevant items
+
+<!-- Notes
+Low Priority Improvements
 * Ethereal versions of certain skill-specific items (Spirit Keeper, Ormus' Robes, Spirit Ward)
 * Unique/Set items with variable inventory graphics - Rings, Amulets, Rainbow Facets
 
-<!-- Notes
 Some generated rare/crafted items have incorrect required levels
 Some generated runeword item bases are missing certain stats, such as 10-50% FCR for staves
 Some generated item bases may have incorrect armor values - they should be verified
