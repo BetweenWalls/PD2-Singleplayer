@@ -510,7 +510,7 @@ of Frozen Armor		100			14		14		sor	1	1	44	charged	40	-20	-6											knif	tors	
 of Static Field		100			12		12		sor	6	1	44	charged	42	-30	-8											staf	orb													0																																	
 of Static Field		100			24		24		sor	6	1	44	charged	42	-20	-5											hamm	mace	scep	ring	circ										0																																	
 of Telekinesis		100		1	12		12		sor	6	1	44	charged	43	-30	-8											staf	orb													0																																	
-of Telekinesis		100		1	24		24		sor	6	1	44	charged	43	-20	-5											hamm	mace	scep	ring	circ										0																																	
+of Telekinesis	1	100	1	1	24		24		sor	6	1	44	charged	43	-20	-5											ring														0																																	
 of Frost Novas		100		1	12		12		sor	6	1	44	charged	44	-30	-8											staf	orb													0																																	
 of Frost Novas		100		1	24		24		sor	6	1	44	charged	44	-20	-5											knif	amul	circ												0																																	
 of Ice Blasts		100		1	12		12		sor	6	1	44	charged	45	-30	-8											staf	orb													0																																	
@@ -577,8 +577,8 @@ of Raise Skeletal Mages		100			18		18		nec	12	1	44	charged	80	-60	-7											w
 of Raise Skeletal Mages		100			36		36		nec	12	1	44	charged	80	-20	-4											amul	circ													0																																	
 of Confusion		100		1	24		24		nec	18	1	44	charged	81	-60	-6											wand	knif	head												0																																	
 of Confusion		100		1	48		48		nec	18	1	44	charged	81	-20	-3											ring	circ													0																																	
-of Life Tap		100	1	1	24		24		nec	18	1	44	charged	445	-60	-6											wand	knif	head												0																																	
-of Life Tap		100	1	1	48		48		nec	18	1	44	charged	445	-20	-3											axe														0																																	
+of Life Tap		100	1	1	24		24		nec	18	1	44	charged	445	-60	1											wand	knif	head												0																																	
+of Life Tap		100	1	1	48		48		nec	18	1	44	charged	445	-20	1											axe														0																																	
 of Poison Explosion		100			24		24		nec	18	1	44	charged	83	-60	-6											wand	knif	head												0																																	
 of Poison Explosion		100			48		48		nec	18	1	44	charged	83	-20	-3											blun														0																																	
 of Bone Spears		100		1	24		24		nec	18	1	44	charged	84	-60	-6											wand	knif	head												0																																	
@@ -593,8 +593,8 @@ of Bone Imprisonment		100			30		30		nec	24	1	44	charged	88	-60	-5											wand
 of Bone Imprisonment		100			60		60		nec	24	1	44	charged	88	-20	-2											mace	scep													0																																	
 of Iron Golem Creation		100			30		30		nec	24	1	44	charged	90	-60	-5											wand	knif	head												0																																	
 of Iron Golem Creation		100			60		60		nec	24	1	44	charged	90	-20	-2											swor														0																																	
-of Lower Resistance		100	1	1	36		36		nec	30	1	44	charged	447	-60	-3											wand	knif	head												0																																	
-of Lower Resistance		100	1	1	72		72		nec	30	1	44	charged	447	-20	-1											staf														0																																	
+of Lower Resistance		100	1	1	36		36		nec	30	1	44	charged	447	-28	15											wand	knif	head												0																																	
+of Lower Resistance		100	1	1	72		72		nec	30	1	44	charged	447	-28	15											staf														0																																	
 of Poison Novas		100		1	36		36		nec	30	1	44	charged	92	-60	-3											wand	knif	head												0																																	
 of Poison Novas		100		1	72		72		nec	30	1	44	charged	92	-20	-1											glov														0																																	
 of Bone Spirits		100		1	36		36		nec	30	1	44	charged	93	-60	-3											wand	knif	head												0																																	
@@ -681,54 +681,54 @@ of Maiming		100	1		71		63				4	14	dmg-max		3	4											lcha														0
 of Craftsmanship		100	1	1	26		19				4	14	dmg-max		1	1											mcha														0																																	
 of Quality		100	1		56		48				4	14	dmg-max		2	2											mcha														0																																	
 of Craftsmanship		100	1	1	85		77				4	14	dmg-max		1	1											scha														0																																	
-of Blight		100	1	1	1		1				2	16	dmg-pois	75	21	21											lcha														0																																	
-of Venom		100	1	1	6		4				1	16	dmg-pois	100	39	39											lcha														0																																	
-of Pestilence		100	1	1	14		10				1	16	dmg-pois	125	52	52									1	dgrn	lcha														0																																	
-of Anthrax		100	1		21		15				1	16	dmg-pois	150	86	86									1	dgrn	lcha														0																																	
-of Blight		100	1	1	5		3				2	16	dmg-pois	75	21	21											mcha														0																																	
-of Venom		100	1	1	13		9				1	16	dmg-pois	100	39	39											mcha														0																																	
-of Pestilence		100	1	1	23		17				1	16	dmg-pois	125	52	52									1	dgrn	mcha														0																																	
-of Anthrax		100	1		33		25				1	16	dmg-pois	150	86	86									1	dgrn	mcha														0																																	
-of Blight		100	1	1	9		6				2	16	dmg-pois	75	21	21											scha														0																																	
-of Venom		100	1	1	20		15				1	16	dmg-pois	100	39	39											scha														0																																	
-of Pestilence		100	1	1	32		24				1	16	dmg-pois	125	52	52											scha														0																																	
-of Anthrax		100	1		44		36				1	16	dmg-pois	150	86	86											scha														0																																	
-of Frost		100	1	1	5		3				2	10	cold-min		1	1	cold-max		2	2	cold-len		25	25			lcha														0																																	
-of the Icicle		100	1	1	8		6				1	10	cold-min		2	2	cold-max		3	4	cold-len		25	25			lcha														0																																	
-of the Glacier		100	1	1	15		11				1	10	cold-min		3	3	cold-max		5	7	cold-len		25	25	1	dblu	lcha														0																																	
-of Winter		100	1		23		17				1	10	cold-min		4	6	cold-max		8	11	cold-len		25	25	1	dblu	lcha														0																																	
-of Frost		100	1	1	9		6				2	10	cold-min		1	1	cold-max		2	3	cold-len		25	25			mcha														0																																	
-of the Icicle		100	1	1	15		11				1	10	cold-min		2	2	cold-max		4	5	cold-len		25	25			mcha														0																																	
-of the Glacier		100	1	1	25		18				1	10	cold-min		3	3	cold-max		6	8	cold-len		25	25	1	dblu	mcha														0																																	
-of Winter		100	1		35		27				1	10	cold-min		4	6	cold-max		9	12	cold-len		25	25	1	dblu	mcha														0																																	
-of Frost		100	1	1	14		10				2	10	cold-min		1	1	cold-max		2	2	cold-len		25	25			scha														0																																	
-of the Icicle		100	1	1	21		15				1	10	cold-min		2	2	cold-max		3	4	cold-len		25	25			scha														0																																	
-of the Glacier		100	1	1	33		25				1	10	cold-min		3	3	cold-max		5	6	cold-len		25	25			scha														0																																	
-of Winter		100	1		46		38				1	10	cold-min		4	5	cold-max		7	9	cold-len		25	25			scha														0																																	
-of Flame		100	1	1	3		2				2	12	fire-min		1	1	fire-max		2	2							lcha														0																																	
-of Fire		100	1	1	8		6				1	12	fire-min		1	2	fire-max		3	3							lcha														0																																	
-of Burning		100	1	1	14		10				1	12	fire-min		2	3	fire-max		4	7					1	dred	lcha														0																																	
-of Incineration		100	1		22		16				1	12	fire-min		4	7	fire-max		8	14					1	dred	lcha														0																																	
-of Flame		100	1	1	7		5				2	12	fire-min		1	1	fire-max		2	2							mcha														0																																	
-of Fire		100	1	1	14		10				1	12	fire-min		2	2	fire-max		3	5							mcha														0																																	
-of Burning		100	1	1	24		18				1	12	fire-min		3	5	fire-max		6	11					1	dred	mcha														0																																	
-of Incineration		100	1		34		26				1	12	fire-min		6	10	fire-max		12	17					1	dred	mcha														0																																	
-of Flame		100	1	1	11		8				2	12	fire-min		1	1	fire-max		2	2							scha														0																																	
-of Fire		100	1	1	20		15				1	12	fire-min		2	2	fire-max		3	4							scha														0																																	
-of Burning		100	1	1	32		24				1	12	fire-min		3	4	fire-max		5	8							scha														0																																	
-of Incineration		100	1		45		37				1	12	fire-min		5	7	fire-max		9	13							scha														0																																	
-of Shock		100	1	1	4		3				2	13	ltng-min		1	1	ltng-max		2	3							lcha														0																																	
-of Lightning		100	1	1	7		5				1	13	ltng-min		1	1	ltng-max		4	7							lcha														0																																	
-of Thunder		100	1	1	15		11				1	13	ltng-min		1	1	ltng-max		8	21					1	dyel	lcha														0																																	
-of Storms		100	1		22		16				1	13	ltng-min		1	1	ltng-max		22	33					1	dyel	lcha														0																																	
-of Shock		100	1	1	7		5				2	13	ltng-min		1	1	ltng-max		3	5							mcha														0																																	
-of Lightning		100	1	1	14		10				1	13	ltng-min		1	1	ltng-max		6	13							mcha														0																																	
-of Thunder		100	1	1	24		18				1	13	ltng-min		1	1	ltng-max		14	25					1	dyel	mcha														0																																	
-of Storms		100	1		34		26				1	13	ltng-min		1	1	ltng-max		26	38					1	dyel	mcha														0																																	
-of Shock		100	1	1	12		9				2	13	ltng-min		1	1	ltng-max		3	6							scha														0																																	
-of Lightning		100	1	1	21		15				1	13	ltng-min		1	1	ltng-max		7	10							scha														0																																	
-of Thunder		100	1	1	33		25				1	13	ltng-min		1	1	ltng-max		11	18							scha														0																																	
-of Storms		100	1		45		37				1	13	ltng-min		1	1	ltng-max		19	28							scha														0																																	
+of Blight		100	1	1	9		6				2	16	dmg-pois	50	55	55											lcha														0																																	
+of Venom		100	1	1	20		15				1	16	dmg-pois	50	95	95											lcha														0																																	
+of Pestilence		100	1	1	32		24				1	16	dmg-pois	50	165	165									1	dgrn	lcha														0																																	
+of Anthrax		100	1		44		36				1	16	dmg-pois	50	790	790									1	dgrn	lcha														0																																	
+of Blight		100	1	1	5		3				2	16	dmg-pois	50	40	40											mcha														0																																	
+of Venom		100	1	1	13		9				1	16	dmg-pois	50	70	70											mcha														0																																	
+of Pestilence		100	1	1	23		17				1	16	dmg-pois	50	135	135									1	dgrn	mcha														0																																	
+of Anthrax		100	1		33		25				1	16	dmg-pois	50	215	215									1	dgrn	mcha														0																																	
+of Blight		100	1	1	1		1				2	16	dmg-pois	50	20	20											scha														0																																	
+of Venom		100	1	1	6		4				1	16	dmg-pois	50	35	35											scha														0																																	
+of Pestilence		100	1	1	14		10				1	16	dmg-pois	50	65	65											scha														0																																	
+of Anthrax		100	1		21		15				1	16	dmg-pois	50	105	105											scha														0																																	
+of Frost		100	1	1	14		10				2	10	cold-min		3	3	cold-max		4	5	cold-len		25	25			lcha														0																																	
+of the Icicle		100	1	1	21		15				1	10	cold-min		5	5	cold-max		8	13	cold-len		25	25			lcha														0																																	
+of the Glacier		100	1	1	33		25				1	10	cold-min		11	11	cold-max		16	22	cold-len		25	25	1	dblu	lcha														0																																	
+of Winter		100	1		46		38				1	10	cold-min		16	19	cold-max		27	35	cold-len		25	25	1	dblu	lcha														0																																	
+of Frost		100	1	1	9		6				2	10	cold-min		2	2	cold-max		3	4	cold-len		25	25			mcha														0																																	
+of the Icicle		100	1	1	15		11				1	10	cold-min		4	4	cold-max		6	10	cold-len		25	25			mcha														0																																	
+of the Glacier		100	1	1	25		18				1	10	cold-min		8	8	cold-max		12	16	cold-len		25	25	1	dblu	mcha														0																																	
+of Winter		100	1		35		27				1	10	cold-min		12	14	cold-max		20	26	cold-len		25	25	1	dblu	mcha														0																																	
+of Frost		100	1	1	5		3				2	10	cold-min		1	1	cold-max		2	2	cold-len		25	25			scha														0																																	
+of the Icicle		100	1	1	8		6				1	10	cold-min		2	2	cold-max		3	5	cold-len		25	25			scha														0																																	
+of the Glacier		100	1	1	15		11				1	10	cold-min		4	4	cold-max		6	8	cold-len		25	25			scha														0																																	
+of Winter		100	1		23		17				1	10	cold-min		6	7	cold-max		10	13	cold-len		25	25			scha														0																																	
+of Flame		100	1	1	11		8				2	12	fire-min		2	3	fire-max		5	6							lcha														0																																	
+of Fire		100	1	1	20		15				1	12	fire-min		5	5	fire-max		8	13							lcha														0																																	
+of Burning		100	1	1	32		24				1	12	fire-min		9	15	fire-max		19	24					1	dred	lcha														0																																	
+of Incineration		100	1		45		37				1	12	fire-min		16	22	fire-max		27	41					1	dred	lcha														0																																	
+of Flame		100	1	1	7		5				2	12	fire-min		2	2	fire-max		4	4							mcha														0																																	
+of Fire		100	1	1	14		10				1	12	fire-min		4	4	fire-max		6	10							mcha														0																																	
+of Burning		100	1	1	24		18				1	12	fire-min		6	10	fire-max		14	18					1	dred	mcha														0																																	
+of Incineration		100	1		34		26				1	12	fire-min		12	16	fire-max		20	30					1	dred	mcha														0																																	
+of Flame		100	1	1	3		2				2	12	fire-min		1	1	fire-max		2	2							scha														0																																	
+of Fire		100	1	1	8		6				1	12	fire-min		2	2	fire-max		3	5							scha														0																																	
+of Burning		100	1	1	14		10				1	12	fire-min		3	5	fire-max		7	9							scha														0																																	
+of Incineration		100	1		22		16				1	12	fire-min		6	8	fire-max		10	15							scha														0																																	
+of Shock		100	1	1	12		9				2	13	ltng-min		1	1	ltng-max		8	14							lcha														0																																	
+of Lightning		100	1	1	21		15				1	13	ltng-min		1	1	ltng-max		16	32							lcha														0																																	
+of Thunder		100	1	1	33		25				1	13	ltng-min		1	1	ltng-max		27	43					1	dyel	lcha														0																																	
+of Storms		100	1		45		37				1	13	ltng-min		1	1	ltng-max		46	68					1	dyel	lcha														0																																	
+of Shock		100	1	1	7		5				2	13	ltng-min		1	1	ltng-max		6	10							mcha														0																																	
+of Lightning		100	1	1	14		10				1	13	ltng-min		1	1	ltng-max		12	18							mcha														0																																	
+of Thunder		100	1	1	24		18				1	13	ltng-min		1	1	ltng-max		20	32					1	dyel	mcha														0																																	
+of Storms		100	1		34		26				1	13	ltng-min		1	1	ltng-max		34	50					1	dyel	mcha														0																																	
+of Shock		100	1	1	4		3				2	13	ltng-min		1	1	ltng-max		3	5							scha														0																																	
+of Lightning		100	1	1	7		5				1	13	ltng-min		1	1	ltng-max		6	9							scha														0																																	
+of Thunder		100	1	1	15		11				1	13	ltng-min		1	1	ltng-max		10	16							scha														0																																	
+of Storms		100	1		22		16				1	13	ltng-min		1	1	ltng-max		17	25							scha														0																																	
 of Dexterity		1	1	1	1	12	1				4	17	dex		1	1											boot	glov													0																																	
 of Dexterity		1	1	1	1	5	1				4	17	dex		1	1											ring														0																																	
 of Strength		1	1	1	1	11	1				4	31	str		1	1											glov														0																																	
@@ -796,10 +796,10 @@ of Disintegration		1	1	1	1		1				1	165	map-play-ac%		-50	-40	map-glob-density		3
 of Fumbling		1	1	1	1		1				1	314	map-play-block		-20	-10	map-glob-density		25	35	map-play-mag-gold%		15	20			t1m	t2m	t3m	t4m											0																																	
 of Bumbling		1	1	1	1		1				1	314	map-play-block		-30	-20	map-glob-density		35	45	map-play-mag-gold%		30	35			t2m	t3m	t4m												0																																	
 of Blundering		1	1	1	1		1				1	314	map-play-block		-40	-30	map-glob-density		45	50	map-play-mag-gold%		40	50			t3m	t4m													0																																	
-of Defending		100	1	1	45		20				1	251	red-dmg%		5	10											tors	shld													200000																																	
-of Defending		100	1	1	65		40				1	251	red-dmg%		5	10											belt														200000																																	
-of Protecting		100	1	1	65		40				1	251	red-dmg%		10	15											tors	shld													350000																																	
-of Guardianship		100	1	1	85		60				1	251	red-dmg%		15	20											tors	shld													650000																																	
+of Defending		100	1	1	45		20				1	251	red-dmg%		5	10											tors	shld													20000																																	
+of Defending		100	1	1	65		40				1	251	red-dmg%		5	10											belt														20000																																	
+of Protecting		100	1	1	65		40				1	251	red-dmg%		10	15											tors	shld													35000																																	
+of Guardianship		100	1	1	85		60				1	251	red-dmg%		15	20											tors	shld													65000																																	
 of Savagery		100	1	1	18		15				2	252	deadly		5	10											weap	misl						staf	wand	orb					0																																	
 of Devastation		100	1	1	28		25				2	252	deadly		10	15											weap	misl						staf	wand	orb					0																																	
 of Havoc		100	1	1	38		35				2	252	deadly		15	20											weap	misl						staf	wand	orb					0																																	
@@ -815,9 +815,9 @@ of Crumbling		100	1	1	28		25				2	252	crush		10	15											weap	misl						staf
 of Breaking		100	1	1	38		35				2	252	crush		15	20											weap	misl						staf	wand	orb					0																																	
 of Crushing		100	1	1	48		45				2	252	crush		20	25											weap	misl						staf	wand	orb					0																																	
 of Pulverizing		100	1	1	58		55				2	252	crush		25	30											weap	misl						staf	wand	orb					0																																	
-of the Apprentice		1	1	1	17		20				4	9	cast1		10	10											tors	shld	ashd												100000																																	
-of the Apprentice		1	1	1	25		29				4	9	cast1		10	10											glov	belt													350000																																	
-of the Magus		1	1	1	25		29				2	9	cast3		20	20											tors	shld	ashd												650000																																	
+of the Apprentice		1	1	1	17		20				4	9	cast1		10	10											tors	shld	ashd												10000																																	
+of the Apprentice		1	1	1	25		29				4	9	cast1		10	10											glov	belt													35000																																	
+of the Magus		1	1	1	25		29				2	9	cast3		20	20											tors	shld	ashd												65000																																	
 of the Squid		100	1	1	40		30				3	26	hp		61	80									1	cred	tors	belt	phlm	circ	shld										0																																	
 of the Whale		100	1	1	50		37				3	26	hp		81	100									1	cred	tors	belt	phlm	circ	shld										0																																	
 of the Kraken		100	1	1	20		1				1	41	hp/lvl	6											1	cred	tors	pelt	phlm	shld											0																																	

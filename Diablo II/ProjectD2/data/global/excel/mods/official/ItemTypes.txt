@@ -27,15 +27,15 @@ Scepter	scep	rod	gen	1	1	rarm	larm			0	0	0	0		1	0	0	0	0	3	5	6	0	1	pal	0		0						
 Wand	wand	rod		1	1	rarm	larm			0	0	0	0		1	0	0	0	0	2	2	2	0	1	nec	0		0							weap	0
 Staff	staf	rod		1	1	rarm	larm			0	0	0	0		1	0	0	0	0	5	6	6	0	1	sor	0		0							weap	0
 Bow	bow	miss		0	1	rarm	larm	bowq		0	0	0	0		1	0	0	0	0	3	4	6	1	3		0		0							weap	0
-Axe	axe	mele	gen	1	1	rarm	larm			0	0	0	0		1	0	0	0	0	4	5	6	0	3		0		0							weap	0
-Club	club	blun	gen	1	1	rarm	larm			0	0	0	0		1	0	0	0	0	3	4	6	0	3	dru	0		0							weap	0
-Sword	swor	mele	gen	1	1	rarm	larm			0	0	0	0		1	0	0	0	0	3	4	6	0	3		0		0							weap	0
-Hammer	hamm	blun	gen	1	1	rarm	larm			0	0	0	0		1	0	0	0	0	3	4	6	0	3		0		0							weap	0
-Knife	knif	mele	asm	1	1	rarm	larm			0	0	0	0		1	0	0	0	0	2	3	3	0	3		0		0							weap	0
+Axe	axe	mgen		1	1	rarm	larm			0	0	0	0		1	0	0	0	0	4	5	6	0	3		0		0							weap	0
+Club	club	blun		1	1	rarm	larm			0	0	0	0		1	0	0	0	0	3	4	6	0	3	dru	0		0							weap	0
+Sword	swor	mgen		1	1	rarm	larm			0	0	0	0		1	0	0	0	0	3	4	6	0	3		0		0							weap	0
+Hammer	hamm	blun		1	1	rarm	larm			0	0	0	0		1	0	0	0	0	3	4	6	0	3		0		0							weap	0
+Knife	knif	mgen	asm	1	1	rarm	larm			0	0	0	0		1	0	0	0	0	2	3	3	0	3		0		0							weap	0
 Spear	spea	mele	pas	1	1	rarm	larm			0	0	0	0		1	0	0	0	0	3	4	6	0	3		0		0							weap	0
 Polearm	pole	mele	pas	1	1	rarm	larm			0	0	0	0		1	0	0	0	0	3	4	6	0	3		0		0							weap	0
 Crossbow	xbow	miss		1	1	rarm	larm	xboq		0	0	0	0		1	0	0	0	0	3	4	6	0	3		0		0							weap	0
-Mace	mace	blun	gen	1	1	rarm	larm			0	0	0	0		1	0	0	0	0	3	4	6	0	3		0		0							weap	0
+Mace	mace	blun		1	1	rarm	larm			0	0	0	0		1	0	0	0	0	3	4	6	0	3		0		0							weap	0
 Helm	helm	armo		1	1	head	head			0	0	0	0		1	0	0	0	0	2	2	3	0	3		1		0							armo	0
 Missile Potion	tpot	thro		0	1	rarm	larm			1	1	1	1			1	0	0	0	0	0	0	0	3		0		0							misc	0
 Quest	ques			0	0					0	0	0	1			0	0	0	0	0	0	0	0	3		0		0								0
@@ -56,7 +56,7 @@ Socket Filler	sock	misc		0	0					0	0	0	0			0	0	0	0	0	0	0	0	3		0		0								0
 Second Hand	seco			0	0					0	0	0	0		1	0	0	0	0	0	0	0	0	3		0		0								0
 Staves And Rods	rod	blun		0	0					0	0	0	0		1	0	0	0	0	0	0	0	0	3		0		0								0
 Missile	misl	misc		0	0					0	0	0	0			0	0	0	0	0	0	0	0	3		0		0								0
-Blunt	blun	mele	gen	0	0					0	0	0	0		1	0	0	0	0	0	0	0	0	3		0		0								0
+Blunt	blun	mgen		0	0					0	0	0	0		1	0	0	0	0	0	0	0	0	3		0		0								0
 Expansion																																				0
 Jewel	jewl	sock	jewg	0	0					0	0	0	0	1	1	0	0	1	0	0	0	0	0	3		0		6	invjw1	invjw2	invjw3	invjw4	invjw5	invjw6	misc	0
 Class Specific	clas			0	0					0	0	0	0		1	0	0	0	0	0	0	0	0	3		0		0								0
@@ -205,3 +205,5 @@ Amulet [S]	amus	amul		0	1	neck	neck			0	0	0	0			0	0	0	0	1	1	1	0	0		0		3	invamu1	
 Jewel Generic	jewg			0	0					0	0	0	0			0	0	0	0	0	0	0	0	0		0		0								0
 Jewel Fragments	jewf	jewg		0	0					0	0	0	1			1	0	0	0	0	0	0	0	0		0		0								0
 Scythe Type	sc9	pole		1	1	rarm	larm			0	0	0	0		1	0	0	0	0	3	4	6	0	3		0		0							weap	0
+Puzzlepiece	lpp			0	0					0	0	0	1			1	0	0	0	0	0	0	0	3		0		0								0
+General Melee	mgen	mele	gen	1	1					0	0	0	0		1	0	0	0	0	0	0	0	1	3		0		0								0

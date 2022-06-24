@@ -14,7 +14,7 @@ quillrat8																															thorns			15	20																										
 druidhawk	att-skill	100	387	100	1																										att-skill	100	387	100	1																										att-skill	100	387	100	1																										0
 druidbear	att-skill	100	358	100	1																										att-skill	100	358	100	1																										att-skill	100	358	100	1																										0
 claygolem	att-skill	100	389	100	1																										att-skill	100	389	100	1																										att-skill	100	389	100	1																										0
-fenris	openwounds	10	62	10	10																										openwounds	10	62	10	10																										openwounds	10	62	10	10																										0
+fenris	att-skill	100	393	100	1	inc_splash_radius	100		-60	-60																					att-skill	100	393	100	1	inc_splash_radius	100		-60	-60																					att-skill	100	393	100	1	inc_splash_radius	100		-60	-60																					0
 necroskeleton	att-skill	100	393	100	1																										att-skill	100	393	100	1																										att-skill	100	393	100	1																										0
 willowispboss	aura	100	395	1	1																										aura	100	395	1	1																										aura	100	395	1	1																										0
 willowispminion	aura	100	396	1	1																										aura	100	396	1	1																										aura	100	396	1	1																										0
@@ -40,3 +40,8 @@ treasurefallenprop	state	100	175	1	1																										state	100	175	1	1	
 bloodgolemow	openwounds	100	62	100	100																										openwounds	100	62	100	100																										openwounds	100	62	100	100																										0
 rathmaminion																																																													curse-res	100		100	100	res-pois-len	100		50	50																					0
 mendelnbloodgolem																																																													curse-res	100		100	100																										0
+ubertalic	aura	100	479	22	22																										aura	100	479	22	22																										aura	100	479	22	22																										0
+uberkorlic	leapspeed	100		20	20	aura	100	532	1	1																					leapspeed	100		20	20	aura	100	532	1	1																					leapspeed	100		20	20	aura	100	532	1	1																					0
+shadowmonprop	state	100	220	1	1	move1			20	20																					state	100	220	1	1	move1			20	20																					state	100	220	1	1	move1			20	20																					0
+libraryboss	aura	100	99	15	15																										aura	100	99	15	15																										aura	100	99	15	15																										
+cursereduction																																																													curse-res	100		75	75																										

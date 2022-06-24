@@ -4700,3 +4700,6 @@ music_quest_nihlathak	4697	act5\nihlathakmusic.wav	200	0	0	0	125	1	0	0	0	0	0	0	0
 music_quest_shenk	4698	act5\shenkmusic.wav	255	0	0	0	125	1	0	0	0	0	0	0	0	255	1	1	0	0	0	-1	-1	-1
 fallen_rakanishu	4699	monster\fallen\warcry1.wav	225	0	0	0	0	1	0	0	0	1	1	0	0	80	0	0	1	0	0	-1	-1	-1
 butcher_freshmeat	4700	act1\monster\butcher.wav	225	0	0	0	0	1	0	0	0	1	1	0	0	80	0	0	1	0	0	-1	-1	-1
+leoric_taunt	4701	pd2\leoric\leoric_remaster.wav	255	0	0	0	0	1	0	0	0	1	1	0	0	80	0	0	1	0	0	-1	-1	-1
+leoric_death	4702	pd2\leoric\golumded_remaster.wav	200	0	0	0	0	1	0	0	0	1	1	0	0	80	0	0	1	0	0	-1	-1	-1
+leoric_swing	4703	pd2\leoric\swing_remaster.wav	190	0	0	0	0	1	0	0	0	1	1	0	0	80	0	0	1	0	0	-1	-1	-1

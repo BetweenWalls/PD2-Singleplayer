@@ -262,6 +262,101 @@ LevelName	TileName	Style	StartSequence	EndSequence	Type1	Cel1	Type2	Cel2	Type2	C
 1 Catacombs	fl	21	1	1	FLE 1 R	42		-1		-1		-1
 1 Catacombs	fl	21	2	2	FLE 2 L	40		-1		-1		-1
 1 Catacombs	fl	21	3	3	FLE 3 B	43		-1		-1		-1
+1 Catacombs	wre	0	1	1	WRE B - PD2 START	31		-1		-1		-1
+1 Catacombs	wre	0	0	0	WRE A	30		-1		-1		-1
+1 Catacombs	wre	1	1	1	WRE B	31		-1		-1		-1
+1 Catacombs	wre	1	0	0	WRE A	30		-1		-1		-1
+1 Catacombs	wle	0	1	1	WLE B	33		-1		-1		-1
+1 Catacombs	wle	0	0	0	WLE A	32		-1		-1		-1
+1 Catacombs	wle	1	1	1	WLE B	33		-1		-1		-1
+1 Catacombs	wle	1	0	0	WLE A	32		-1		-1		-1
+1 Catacombs	wr	4	-1	-1	WR A	20		-1		-1		-1
+1 Catacombs	wl	4	-1	-1	WL A	21		-1		-1		-1
+1 Catacombs	wtlr	4	-1	-1	WTLL	24		-1		-1		-1
+1 Catacombs	wtll	4	-1	-1	WTLL	24		-1		-1		-1
+1 Catacombs	wbr	4	-1	-1	WBR	25		-1		-1		-1
+1 Catacombs	wtr	4	-1	-1	WTR	23		-1		-1		-1
+1 Catacombs	wbl	4	-1	-1	WBL	22		-1		-1		-1
+1 Catacombs	co	4	-1	-1	WBR	25		-1		-1		-1
+1 Catacombs	wrd	4	-1	-1	WRD B	27		-1		-1		-1
+1 Catacombs	wrd	4	-1	-1	WRD A	26		-1		-1		-1
+1 Catacombs	wld	4	-1	-1	WLD B	29		-1		-1		-1
+1 Catacombs	wld	4	-1	-1	WLD A	28		-1		-1		-1
+1 Catacombs	wrd	5	0	0	WRD B	27		-1		-1		-1
+1 Catacombs	wrd	5	1	1	WRD A	26		-1		-1		-1
+1 Catacombs	wld	5	1	1	WLD B	29		-1		-1		-1
+1 Catacombs	wld	5	0	0	WLD A	28		-1		-1		-1
+1 Catacombs	wld	5	2	2	WL A	21		-1		-1		-1
+1 Catacombs	wr	5	-1	-1	WR A	20		-1		-1		-1
+1 Catacombs	wl	5	-1	-1	WL A	21		-1		-1		-1
+1 Catacombs	wtlr	5	-1	-1	WTLL	24		-1		-1		-1
+1 Catacombs	wtll	5	-1	-1	WTLL	24		-1		-1		-1
+1 Catacombs	wbr	5	-1	-1	WBR	25		-1		-1		-1
+1 Catacombs	wtr	5	-1	-1	WTR	23		-1		-1		-1
+1 Catacombs	wbl	5	-1	-1	WBL	22		-1		-1		-1
+1 Catacombs	co	5	-1	-1	WBR	25		-1		-1		-1
+1 Catacombs	wr	7	-1	-1	WR A	20		-1		-1		-1
+1 Catacombs	wl	7	-1	-1	WL A	21		-1		-1		-1
+1 Catacombs	wtlr	7	-1	-1	WTLL	24		-1		-1		-1
+1 Catacombs	wtll	7	-1	-1	WTLL	24		-1		-1		-1
+1 Catacombs	wbr	7	-1	-1	WBR	25		-1		-1		-1
+1 Catacombs	wtr	7	-1	-1	WTR	23		-1		-1		-1
+1 Catacombs	wbl	7	-1	-1	WBL	22		-1		-1		-1
+1 Catacombs	wrd	7	0	0	WRD A	26		-1		-1		-1
+1 Catacombs	wrd	7	1	1	WRD B	27		-1		-1		-1
+1 Catacombs	wld	7	1	1	WLD A	28		-1		-1		-1
+1 Catacombs	wld	7	0	0	WLD B	29		-1		-1		-1
+1 Catacombs	wr	10	7	7	Crypt_11	436		-1		-1		-1
+1 Catacombs	wr	10	9	9	Crypt_12	437		-1		-1		-1
+1 Catacombs	wr	10	12	12	Crypt_21	438		-1		-1		-1
+1 Catacombs	wl	10	13	13	Crypt_22	439		-1		-1		-1
+1 Catacombs	wr	10	2	2	WBL	22		-1		-1		-1
+1 Catacombs	wr	10	0	1	WR A	20		-1		-1		-1
+1 Catacombs	wr	10	3	6	WR A	20		-1		-1		-1
+1 Catacombs	wr	10	13	-1	WR A	20		-1		-1		-1
+1 Catacombs	wl	10	2	2	WTR	23		-1		-1		-1
+1 Catacombs	wl	10	0	1	WL A	21		-1		-1		-1
+1 Catacombs	wl	10	3	12	WL A	21		-1		-1		-1
+1 Catacombs	wl	10	14	-1	WL A	21		-1		-1		-1
+1 Catacombs	wtlr	10	-1	-1	WTLL	24		-1		-1		-1
+1 Catacombs	wtll	10	-1	-1	WTLL	24		-1		-1		-1
+1 Catacombs	wbr	10	-1	-1	WBR	25		-1		-1		-1
+1 Catacombs	wtr	10	-1	-1	WTR	23		-1		-1		-1
+1 Catacombs	wbl	10	-1	-1	WBL	22		-1		-1		-1
+1 Catacombs	wrd	10	0	0	WBR	25		-1		-1		-1
+1 Catacombs	wld	10	1	1	WLE B	33		-1		-1		-1
+1 Catacombs	wld	10	0	0	WLE A	32		-1		-1		-1
+1 Catacombs	wre	10	1	1	Cave M BCT	159		-1		-1		-1
+1 Catacombs	wre	10	3	3	Cave M RWS D	158		-1		-1		-1
+1 Catacombs	wre	10	0	0	G_WLE A BROKE	86		-1		-1		-1
+1 Catacombs	wr	0	-1	-1	WR A	20	WR B	38		-1		-1
+1 Catacombs	wl	0	-1	-1	WL A	21	WL B	39		-1		-1
+1 Catacombs	wtlr	0	-1	-1	WTLL	24		-1		-1		-1
+1 Catacombs	wtll	0	-1	-1	WTLL	24		-1		-1		-1
+1 Catacombs	wbr	0	-1	-1	WBR	25		-1		-1		-1
+1 Catacombs	wtr	0	-1	-1	WTR	23		-1		-1		-1
+1 Catacombs	wbl	0	-1	-1	WBL	22		-1		-1		-1
+1 Catacombs	wrd	0	0	0	WRD B	27		-1		-1		-1
+1 Catacombs	wrd	0	1	1	WRD A	26		-1		-1		-1
+1 Catacombs	wld	0	1	1	WLD B	29		-1		-1		-1
+1 Catacombs	wld	0	0	0	WLD A	28		-1		-1		-1
+1 Catacombs	wre	0	0	0	WRE A	30		-1		-1		-1
+1 Catacombs	wre	0	1	1	WRE B	31		-1		-1		-1
+1 Catacombs	wle	1	0	0	WLE A	32		-1		-1		-1
+1 Catacombs	wle	1	1	1	WLE B	33		-1		-1		-1
+1 Catacombs	co	1	0	3	WBR	25		-1		-1		-1
+1 Catacombs	wr	2	-1	-1	WR A	20	WR B	38		-1		-1
+1 Catacombs	wl	2	-1	-1	WL A	21	WL B	39		-1		-1
+1 Catacombs	wtlr	2	-1	-1	WTLL	24		-1		-1		-1
+1 Catacombs	wtll	2	-1	-1	WTLL	24		-1		-1		-1
+1 Catacombs	wbr	2	-1	-1	WBR	25		-1		-1		-1
+1 Catacombs	wtr	2	-1	-1	WTR	23		-1		-1		-1
+1 Catacombs	wbl	2	-1	-1	WBL	22		-1		-1		-1
+1 Catacombs	wrd	2	0	0	WRD A	26		-1		-1		-1
+1 Catacombs	wrd	2	1	1	WRD B	27		-1		-1		-1
+1 Catacombs	wld	2	1	1	WLD A	28		-1		-1		-1
+1 Catacombs	wld	2	0	0	WLD B	29		-1		-1		-1
+1 Catacombs	wre	10	2	2	G_WLE B - PD2 END	87		-1		-1		-1
 1 Crypt	wr	0	-1	-1	WR A	20	WR B	38		-1		-1
 1 Crypt	wl	0	-1	-1	WL A	21	WL B	39		-1		-1
 1 Crypt	wtlr	0	-1	-1	WTLL	24		-1		-1		-1
@@ -3064,6 +3159,10 @@ LevelName	TileName	Style	StartSequence	EndSequence	Type1	Cel1	Type2	Cel2	Type2	C
 4 Lava	fl	33	7	7	Penta 33 07	1159		-1		-1		-1
 4 Lava	fl	33	13	13	Penta 33 13	1157		-1		-1		-1
 4 Lava	fl	33	15	15	Penta 33 15	1158		-1		-1		-1
+4 Lava	wr	6	8	8	PD2 SoS - Wall right	1212		-1		-1		-1
+4 Lava	wl	6	8	8	PD2 SoS - Wall left	1213		-1		-1		-1
+4 Lava	fl	10	48	48	PD2 SoS - Wall right (pathways)	1213		-1		-1		-1
+4 Lava	fl	10	42	42	PD2 SoS - Wall right (pathways)	1213		-1		-1		-1
 Expansion												
 5 Siege	wr	2	3	6	WR A	20		-1		-1		-1
 5 Siege	wr	2	12	12	WBR	25		-1		-1		-1
@@ -3757,3 +3856,29 @@ Expansion
 5 Lava	wl	40	1	1	chariot1 40 1	1489		-1		-1		-1
 5 Lava	wl	40	3	3	chariot2 40 3	1490		-1		-1		-1
 5 Lava	wl	40	5	5	chariot2 40 5	1491		-1		-1		-1
+36	fl	11	42	42	PD2 - Stairs	1338		-1		-1		-1
+36	fl	2	26	26	PD2 - Automap Hack - WR	1212		-1		-1		-1
+36	fl	2	27	27	PD2 - Automap Hack - WL	1213		-1		-1		-1
+36	fl	14	53	53	PD2 - Stairs	1338		-1		-1		-1
+36	fl	14	45	46	PD2 - Stairs	1338		-1		-1		-1
+36	fl	12	37	38	PD2 - Stairs	1338		-1		-1		-1
+36	fl	12	27	28	PD2 - Stairs	1338		-1		-1		-1
+36	fl	12	34	35	PD2 - Stairs	1338		-1		-1		-1
+36	fl	12	22	23	PD2 - Stairs	1338		-1		-1		-1
+36	fl	12	8	9	PD2 - Stairs	1338		-1		-1		-1
+36	fl	14	26	26	PD2 - Stairs	1338		-1		-1		-1
+36	fl	11	50	51	PD2 - Stairs	1338		-1		-1		-1
+36	wbl	1	0	4	PD2 - Wall Left	1212		-1		-1		-1
+36	wbl	2	2	20	PD2 - Cemetary wall left	1257		-1		-1		-1
+36	wl	2	2	23	PD2 - Cemetary wall left	1256		-1		-1		-1
+36	wr	2	2	23	PD2 - Cemetary wal right	1257		-1		-1		-1
+36	wtlr	2	2	20	PD2 - Cemeteray wall left	1255		-1		-1		-1
+36	wtll	2	2	20	PD2 - Cemetary Wall left	1255		-1		-1		-1
+36	wtr	2	2	20	PD2 - Cemetary wall right	1256		-1		-1		-1
+36	wr	26	0	5	PD2 - Spike wall right	1212		-1		-1		-1
+36	wl	26	0	4	PD2 - spike wall left	1213		-1		-1		-1
+36	wtr	1	0	0	PD2 - WTR	1213		-1		-1		-1
+36	wbr	1	0	2	PD2 - WBR	1226		-1		-1		-1
+36	wtlr	1	0	2	PD2 - WTLR	1226		-1		-1		-1
+36	wl	1	0	2	PD2 - Wall Left	1213		-1		-1		-1
+36	wr	1	0	2	PD2 - Wall Right	1212		-1		-1		-1

@@ -589,3 +589,9 @@ xactportal_ghostly	#1	0
 xactportal_gold	#2	0
 empty	PP	0
 sparklechest	yf	0
+UberAncientStatue1	61	0
+UberAncientStatue2	62	0
+UberAncientStatue3	60	0
+UberAncientAltar	4A	0
+TaintedSunMapEventAltar	OB	0
+empty_eventmarker	ZZ	0

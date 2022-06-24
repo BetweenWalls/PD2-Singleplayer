@@ -1121,3 +1121,10 @@ Necropolis Void	1117	163	1	0	1	0	1	1	0	0	0	1	0	0	1	Expansion/Map/necropolis_3.ds
 Realm Of Torment	1118	164	1	0	0	0	1	1	0	0	0	1	0	-4	3	Expansion/Map/RealmOfTorment1.ds1	Expansion/Map/RealmOfTorment2.ds1	Expansion/Map/RealmOfTorment3.ds1	0	0	0	24575	0	1
 Pit Of Despair	1119	165	1	0	0	0	1	1	0	0	0	1	0	-4	1	Expansion/Map/HoleOfTerror.ds1	0	0	0	0	0	24575	0	1
 BR Arena	1120	166	1	0	1	0	0	1	0	0	0	1	2	-4	1	Expansion/Map/BRArena.ds1	0	0	0	0	0	536870655	1	0
+Library Map	1121	167	1	1	1	0	1	1	0	0	0	1	0	-4	3	Expansion/Map/Library.ds1	Expansion/Map/Library_v2.ds1	Expansion/Map/Library_v3.ds1	0	0	0	262143	0	1
+Uber Ancients Map	1122	168	1	0	0	0	1	1	0	0	0	1	0	0	1	Expansion/Map/UberAncients.ds1	0	0	0	0	0	29360148	0	1
+Westmarch Map	1123	169	1	1	1	0	1	1	0	0	0	1	0	-4	3	Expansion/Map/ShadowsOfWestmarchV1.ds1	Expansion/Map/ShadowsOfWestmarchV3.ds1	Expansion/Map/ShadowsOfWestmarchV3.ds1	0	0	0	2097151	0	1
+Crypts Map	1124	170	1	1	0	0	1	1	0	0	0	1	0	0	3	Expansion/Map/RoyalCrypts.ds1	Expansion/Map/RoyalCryptsV2.ds1	Expansion/Map/RoyalCryptsV3.ds1	0	0	0	16383	1	0
+Sanctuary of Sin Map	1125	171	1	1	1	0	1	1	0	0	0	1	0	-4	3	Expansion/Map/SanctuaryOfSin.ds1	Expansion/Map/SanctuaryOfSinV2.ds1	Expansion/Map/SanctuaryOfSinV3.ds1	0	0	0	524287	0	1
+Black Abyss Map	1126	172	1	1	1	0	1	1	0	0	0	1	0	-4	1	Expansion/Map/BlackAbyss.ds1	0	0	0	0	0	524287	0	1
+Butcher Event Map	1127	173	1	0	1	0	1	1	0	0	0	1	0	-4	1	Expansion/Map/butcher1.ds1	0	0	0	0	0	53256	0	1

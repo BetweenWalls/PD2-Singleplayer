@@ -12,3 +12,5 @@ kill	killed something
 killed	killed by something
 absorbdamage	dealt damage
 levelup	gain a level
+corpsefinish	finish transition to corpse
+dospellcast	do skill that uses mode SC

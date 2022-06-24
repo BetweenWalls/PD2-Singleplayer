@@ -50,8 +50,8 @@ Act	Place
 1	MausBoss
 1	willowispboss
 1	fingermageboss
-1	place_nothing
-1	place_nothing
+1	leoricMapBoss
+1	doomknight3LibraryBoss
 1	place_nothing
 1	place_nothing
 1	place_nothing
@@ -215,6 +215,7 @@ Act	Place
 4	duntrappedsoul
 4	willowispboss
 4	archerBoss
+4	siegebeastMapBoss
 5	larzuk
 5	drehya
 5	malah
@@ -271,7 +272,7 @@ Act	Place
 5	SiegeBoss
 5	IceBoss
 5	CanyonBoss
-5	place_nothing
+5	westmarchMapBoss
 5	place_nothing
 5	place_nothing
 5	place_nothing

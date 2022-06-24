@@ -6,14 +6,14 @@ golem	3		0	1		1	1	1	StrUI0	1	2	earthgolumicon	290	bloodgolumicon	291	metalgolumi
 skeleton	4		0	1		1	1	1	StrUI1	1	2	skeletonicon									0
 skeletonmage	5		0	1		1	1	1	StrUI2	1	2	skeletonmageicon									0
 revive	6		0	1		1	1	1	StrUI3	1	2	revivedicon									0
-hireable	7		1	1		1		1		1		rogueicon	338	act2hireableicon	359	act3hireableicon	561	barbhirable_icon			0
+hireable	7		1	1		1		1		1		barbhirable_icon	271	rogueicon	338	act2hireableicon	359	act3hireableicon			0
 dopplezon	8		0				1	1		1											0
 invis	9		0	1																	0
 raven	10		0	1					strUI5		2	raven									0
 spiritwolf	11		0	1		1	1	1	strUI6	1	2	wolf									0
 fenris	12		0	1		1	1	1	UIFenirsui	1	2	wolf									0
-totem	13		0	1		1	1	1	strUI14	1	2	oaksage	423	heartofwolverine	422	spiritofbarbs					0
-vine	14		0	1		1	1	1	strUI13	1	3	cycleoflife	427	vines							0
+totem	13		0	1		1	1	1	strUI14		2	oaksage	423	heartofwolverine	422	spiritofbarbs					0
+vine	14		0	1		1	1	1	Carrion		2	cycleoflife	427								0
 grizzly	15		0	1		1	1	1	strUI7	1	2	bear									0
 shadowwarrior	16		0	1		1	1	1	UiShadowUI	1	1	shadowassassin									0
 assassintrap	17		0		1																0
@@ -23,6 +23,7 @@ bladesent	20		0		1																0
 skeletonarcher	21		0	1		1	1	1	StrUIArcher	1	2	skeletonarchericon									0
 desecrate	22		0																		0
 dclonesummon	23		0																		0
-PoisonCreeper	24		0	1		1	1	1	strUI13	1	2	plaguepoppy	426								0
+PoisonCreeper	24		0	1		1	1	1	Creeper		2	plaguepoppy	426								0
 rathmasummon	25		0																		0
 dopplezonnew	26		0		1		1	1	DopplezonNew	1	2	rogueicon									0
+vine2	27		0	1		1	1	1	Solar		2	vines	427								0

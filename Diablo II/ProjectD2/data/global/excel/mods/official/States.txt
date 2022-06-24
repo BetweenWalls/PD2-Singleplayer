@@ -205,7 +205,7 @@ immune_give	202					1				1							1	1	1																																lightresis
 immune_get	203					1				1							1	1	1																																lightresist																				0
 cowset	204	3			1							1																																																					1	391					0
 bloodwarp	205																																																																						0
-poison_weakness	206																																											poison_weakness																											0
+poison_weakness	206																											1																poison_weakness																											0
 merc_passive_mastery	207																																																																						0
 player_stun	208																						1																					stun							velocitypercent																				0
 dcloneset	209																																											dclone_aura																											0
@@ -218,3 +218,5 @@ dopplezonnew	215																														1	1			1														dopllezon_app
 blinddimvision	216						1																																					cursedimvision					curse_hit														necromancer_dimvision								0
 butchermap	217					1																																						aura_magicgoldfind																			paladin_aura_purification								0
 rathmaset	218																																											rathma_aura																											0
+vengeance	219																																																vengeance_hit														paladin_sacrifice								0
+black	220																														1	1			1																							101	99	255	255	255									0

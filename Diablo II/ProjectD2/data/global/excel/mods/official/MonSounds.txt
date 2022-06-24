@@ -143,3 +143,5 @@ diabloclone	diablo_attack_1	weapon_giant_1	0	6	100	120	diablo_attack_1	weapon_gi
 treasurefallen	fallen_attack_1	weapon_punch_1	0	5	60	160	fallen_attack_1	weapon_punch_1	0	5	60	160	fallen_hit_1	fallen_death_1	2	1	fallenshaman_resurrect	fallen_warcry_1			light_walk_dirt_1		2	0	100	fallen_rakanishu	50		fallen_warcry_1	fallen_flee_1										0
 darkwandererMap	diablo_attack_1	weapon_giant_1	0	6	100	120	diablo_attack_1	weapon_giant_1	0	10	100	120	diablo_hit_1	monster_diablo_taunt_1	2	0			diablo_boneprison_cast	diablo_yell	heavy_walk_dirt_1		2	0	100	monster_diablo_taunt_ex	150		monster_diablo_taunt_ex											0
 Butcher	smith_attack_1	weapon_2hs_large_1	0	2	80	170	smith_attack_1	weapon_2hs_large_1	0	2	80	170	smith_hit_1	smith_death	2	1					heavy_walk_dirt_1		2	0	100	butcher_freshmeat	900		butcher_freshmeat											0
+izualnotaunt	izual_attack_1		0		100		izual_attack_1		0		100		izual_hit_1	izual_death	2	1					medium_walk_dirt_1		2	0	100															0
+leoric		leoric_swing		3		230	leoric_swing	weapon_1hs_large_1		6		255	skeleton_hit_1	leoric_death	0	0					heavy_walk_dirt_1	skeleton_walk_1	2	0	100		0		leoric_taunt											0

@@ -182,8 +182,8 @@ attack_vs_montype	179			9	10										19	14	1024		3	0	9		10											1					108	
 damage_vs_montype	180			9	10										27	17	1024		3	0	9		10											1					106	22	1	Moditemdamvsm	Moditemdamvsm									0
 fade	181	1		7															14	0	3																															0
 armor_override_percent	182	1	1	8															14	0																																0
-unused183	183																		14	0																																0
-unused184	184																		14	0																																0
+equipped_eth	183		1	1													1024		7	0	1																															0
+missing_hp	184																		14	0																																0
 unused185	185																		14	0																																0
 unused186	186																		14	0																																0
 unused187	187																		14	0																																0
@@ -199,7 +199,7 @@ item_skillonkill	196		1	7	16						1			2	85	19	1024		21	0	7	0	16											1	kill
 item_skillondeath	197		1	7	16						1			2	11	9	1024		21	0	7	0	16												killed	30			160	15		Moditemskondeath	Moditemskondeath									0
 item_skillonhit	198		1	7	16						1			2	190	256	1024		21	0	7	0	16											1	domeleedamage	20	domissiledamage	20	160	15		ItemExpansiveChanc1	ItemExpansiveChanc1									0
 item_skillonlevelup	199		1	7	16						1			2	7	6	1024		21	0	7	0	16												levelup	30			160	15		ModitemskonLevel	ModitemskonLevel									0
-unused200	200																1024		21	0																																0
+item_skilloncast	200		1	7	16						1			2	190	256	1024		21	0	7	0	16												dospellcast	30			160	15		ModItemSkOnCast	ModItemSkOnCast									0
 item_skillongethit	201		1	7	16						1			2	190	256	1024		21	0	7	0	16												damagedinmelee	21	damagedbymissile	21	160	15		ItemExpansiveChanc2	ItemExpansiveChanc2									0
 unused202	202																1024		21	0																																0
 unused203	203																1024		21	0																																0
@@ -359,8 +359,8 @@ questitemdifficulty	356																1024				2	0																														
 passive_mag_mastery	357		1	12											1211	431	1024		8	0	9	50																	88	4	1	ModitemdamMagisk	ModitemdamMagisk									0
 passive_mag_pierce	358		1	9												2812	1024		8	0	8	0																														0
 item_splashonhit	359		1	7	16						1			2	190	256	1024		21	0	7	0	16											1	domeleedamage	20			160	15	0	splash3	splash3									0
-corrupted	360			10	10										54	204	1024		8	0	10	0	10																254	3	0	StrCorrupted	StrCorrupted									0
-corruptor	361			1	16											54	1024				12	0																	253	0	0	StrCorruptNum	StrCorruptNum									0
+corrupted	360			10	10										54	204	1024		8	0	10	0	10																246	3	0	StrCorrupted	StrCorrupted									0
+corruptor	361			1	16											54	1024				12	0																	245	0	0	StrCorruptNum	StrCorruptNum									0
 item_elemskill_cold	362		1	3	3						1				76	1024	1024		4	0	3	0	3																157	1	1	ModStrColdskills	ModStrColdskills									0
 item_elemskill_fire	363		1	3	3						1				76	1024	1024		4	0	3	0	3																157	1	1	ModStrFireskills	ModStrFireskills									0
 item_elemskill_lightning	364		1	3	3						1				76	1024	1024		4	0	3	0	3																157	1	1	ModStrLightningskills	ModStrLightningskills									0
@@ -368,7 +368,7 @@ item_elemskill_poison	365		1	3	3						1				76	1024	1024		4	0	3	0	3														
 item_elemskill_magic	366		1	3	3						1				76	1024	1024		4	0	3	0	3																157	1	1	ModStrMagicskills	ModStrMagicskills									0
 skill_cold_enchant	367		1	12													1024																																			0
 max_curses	368		1	3													1024		3		3																		160	3	0	StrToMaxCurses	StrToMaxCurses									0
-map_defense	369			1	16												1024				12	0																	253	2	1	StrCorruptNum	StrCorruptNum									0
+map_defense	369			1	16												1024				12	0																	244	2	1	StrCorruptNum	StrCorruptNum									0
 map_play_magicbonus	370		1	9											577	102	1080		8	100	8	100																	210	4	2	MapGlobMF	MapGlobMF		6	4	2	MapGlobMFGF	MapGlobMFGF			0
 map_play_goldbonus	371		1	10											187	34	1079		9	100	9	100																	210	4	2	MapGlobGF	MapGlobGF		6	4	2	MapGlobMFGF	MapGlobMFGF			0
 map_glob_density	372			1	16											54	2000				12	0																	211	4	2	MapGlobDensity	MapGlobDensity									0
@@ -424,7 +424,7 @@ map_play_maxpoisonresist	421		1	9											526	256	1046		5	0	5	0															
 item_replenish_charges	422		1	5											106	256	1024		5	0	6	0																	1	3	0	ModStrRepCharge1	ModStrRepCharge1	ModStrRepCharge2								0
 item_leap_speed	423		1	5													1024		5		5																		120	4	1	ModLeapSpeed	ModLeapSpeed									0
 item_healafterhit	424		1	7							1				30	101	1024		3	0	7	0													domeleedamage	28	domissiledamage	28	16	1	1	ModItemHPaH	ModItemHPaH									0
-passive_phys_pierce	425		1	9													1024		8	0	8	0																	250	20	1	ModPhysPierce	ModPhysPierce									0
+passive_phys_pierce	425		1	9													1024		8	0	8	0																	158	20	1	ModPhysPierce	ModPhysPierce									0
 map_mon_ed%	426		1	16											15	10	0025		10		10													1					115	8	2	MapMonHave	MapMonHave	MapEnhancedDmg								0
 map_mon_splash	427		1	7	16						1			2	190	256	0359		21	0	7	0	16											1	domeleedamage	20			160	9	0	MapMon	MapMon	MapMonSplash								0
 map_play_fireresist	428		1	9											584	256	1039		14	60	14	60																	204	7	2	MapPlayHave	MapPlayHave	ModStr1j	3	7	2	MapPlayHave	MapPlayHave	MapPlayAllRes		0
@@ -457,13 +457,13 @@ map_play_maxhp_percent	454		1	16											32093	204	1076		6	10	6	10			11			maxh
 map_play_maxmana_percent	455		1	16											56452	204	1077		6	10	6	10			11			maxmana											54	7	2	MapPlayHave	MapPlayHave	ModStr2h								0
 map_play_damageresist	456		1	9											152	68	1036		8	0	8	0																	22	7	2	MapPlayHave	MapPlayHave	ModStr2u								0
 map_play_velocitypercent	457	1	1	10		1											1067		7	30	7	30																		7	2	MapPlayHave	MapPlayHave	ModVelocity								0
-heroic	458			3											54	204	1024		8	0	3	0																	255	3	0	StrHeroic	StrHeroic									0
+heroic	458			3											54	204	1024		8	0	3	0																	249	3	0	StrHeroic	StrHeroic									0
 extra_spirits	459		1	5													1024		5		5																		68	9	2	StrExtraRevives	StrExtraRevives	StrExtraSpirits								0
 gustreduction	460		1	5													1024		6		6																		150	3	0	GustReduction	GustReduction									0
 extra_skele_war	461		1	5													1024		6		5																		150	9	2	YouMaySummon	YouMaySummon	ExtraSkeleWar								0
 extra_skele_mage	462		1	5													1024		6		5																		150	9	2	YouMaySummon	YouMaySummon	ExtraSkeleMage								0
-extra_hydra	463		1	5													1024		6		5																		250	9	2	YouMaySummon	YouMaySummon	ExtraHydra								0
-extra_valk	464		1	5													1024		6		5																		250	9	2	YouMaySummon	YouMaySummon	ExtraValk								0
+extra_hydra	463		1	5													1024		6		5																		240	9	2	YouMaySummon	YouMaySummon	ExtraHydra								0
+extra_valk	464		1	5													1024		6		5																		240	9	2	YouMaySummon	YouMaySummon	ExtraValk								0
 joustreduction	465		1	5													1024		6		6																		150	3	0	joustreduction	joustreduction									0
 grims_extra_skele_mage	466		1	5													1024		6		5																		150	3	0	ExtraSkeleMageGrim	ExtraSkeleMageGrim									0
 map_play_lightradius	467		1	10											451	410	1089		14	120	14	120																	196	9	2	MapPlayHave	MapPlayHave	StrMapLightRadius								0
@@ -482,3 +482,11 @@ item_numsockets_textonly	479		1	4													1024		4	0	4	0																	1	3	
 rathma_clout	480			3											54	204	1024		8	0	3	0																	255	3	0	RathmaClout	RathmaClout									0
 extra_holybolts	481		1	5													1024		5		5																															0
 pvp_cd	482		1	5													1024		5		5																															0
+dragonflightreduction	483		1	5													1024		6		6																		159	3	0	dragonflightreduction	dragonflightreduction									0
+item_dmgpercent_pereth	484		1	6													1024		6	0	6	0			4	0	equipped_eth	item_maxdamage_percent	item_mindamage_percent					1					158	8	1	ModStrEnhancedDamage	ModStrEnhancedDamage	increaseswithequippedeth								0
+corpseexplosionradius	485		1	5													1024		6		6																		159	3	0	corpseexplosionradius	corpseexplosionradius									0
+mirrored	486			10	10												1024		8	0	10	0	10																250	3	0	StrMirrored	StrMirrored									0
+item_dmgpercent_permissinghppercent	487		1	6													1024		6		6				4	0	missing_hp	item_maxdamage_percent	item_mindamage_percent					1					158	8	1	ModStrEnhancedDamage	ModStrEnhancedDamage	increaseswithmissinghp								0
+lifedrain_percentcap	488		1	7													1024		7		7																		159	7	2	ModStrLifeStealCap	ModStrLifeStealCap	ofmaximumhp								0
+inc_splash_radius_permissinghp	489		1	6													1024		6		6																		158	8	1	ModStrIncSplashRadius	ModStrIncSplashRadius	incsplashwithmissinghp								0
+eaglehorn_raven	490			11													1024		6		11																		255	3	0	EaglehornRaven	EaglehornRaven									0

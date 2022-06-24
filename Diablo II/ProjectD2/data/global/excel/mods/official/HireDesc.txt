@@ -9,3 +9,5 @@ Fire Spells	fire	0
 Cold Spells	cold	0
 Lightning Spells	ltng	0
 Might Merc	mght	0
+Frenzy Merc	frnz	0
+Whirlwind Merc	wwnd	0

@@ -1021,3 +1021,112 @@ seq_dopplestrafe	A1	8			0
 seq_dopplestrafe	A1	9			0
 seq_dopplestrafe	A1	10			0
 seq_dopplestrafe	A1	11			0
+seq_uberancient1_sc	SC	0			0
+seq_uberancient1_sc	SC	5			0
+seq_uberancient1_sc	SC	4			0
+seq_uberancient1_sc	SC	3			0
+seq_uberancient1_sc	SC	2		2	0
+seq_uberancient1_sc	SC	4			0
+seq_uberancient1_sc	SC	5			0
+seq_uberancient2_a2	A1	0			0
+seq_uberancient2_a2	A1	1			0
+seq_uberancient2_a2	A1	2			0
+seq_uberancient2_a2	A1	3			0
+seq_uberancient2_a2	A1	4			0
+seq_uberancient2_a2	A1	5			0
+seq_uberancient2_a2	A1	6			0
+seq_uberancient2_a2	A1	7			0
+seq_uberancient2_a2	A1	8		2	0
+seq_uberancient2_a2	A1	9			0
+seq_uberancient2_a2	A1	10			0
+seq_uberancient2_a2	A1	11			0
+seq_uberancient2_a2	A1	12			0
+seq_uberancient2_a2	A1	13			0
+seq_uberancient2_a2	A1	14			0
+seq_uberancient2_a2	A1	15			0
+seq_uberancient3_sc	SC	1			0
+seq_uberancient3_sc	SC	6			0
+seq_uberancient3_sc	SC	5			0
+seq_uberancient3_sc	SC	4			0
+seq_uberancient3_sc	SC	3			0
+seq_uberancient3_sc	SC	2		2	0
+seq_uberancient3_sc	SC	4			0
+seq_uberancient3_sc	SC	5			0
+seq_uberancient3_charge	WL	0		1	0
+seq_uberancient3_charge	WL	1		1	0
+seq_uberancient3_charge	WL	2		1	0
+seq_uberancient3_charge	WL	3		1	0
+seq_uberancient3_charge	WL	4		1	0
+seq_uberancient3_charge	WL	5		1	0
+seq_uberancient3_charge	WL	6		1	0
+seq_uberancient3_charge	WL	7		1	0
+seq_uberancient3_charge	WL	8		1	0
+seq_uberancient3_charge	A2	1			0
+seq_uberancient3_charge	A2	1			0
+seq_uberancient3_charge	A2	3			0
+seq_uberancient3_charge	A2	3			0
+seq_uberancient3_charge	A2	5			0
+seq_uberancient3_charge	A2	5			0
+seq_uberancient3_charge	A2	6			0
+seq_uberancient3_charge	A2	7			0
+seq_uberancient3_charge	A2	8		1	0
+seq_uberancient3_charge	A2	9			0
+seq_uberancient3_charge	A2	10			0
+seq_uberancient3_charge	A2	12			0
+seq_uberancient3_charge	A2	13			0
+seq_uberancient3_charge	A2	14			0
+seq_uberancient3_charge	A2	15			0
+seq_uberancient3_charge	A2	16			0
+seq_uberancient3_charge	A2	17			0
+seq_leoriccharge	WL	0		1	0
+seq_leoriccharge	WL	1		1	0
+seq_leoriccharge	WL	3		1	0
+seq_leoriccharge	WL	5		1	0
+seq_leoriccharge	WL	8		1	0
+seq_leoriccharge	WL	10		1	0
+seq_leoriccharge	WL	12		1	0
+seq_leoriccharge	WL	15		1	0
+seq_leoriccharge	WL	17		1	0
+seq_leoriccharge	A2	3			0
+seq_leoriccharge	A2	6			0
+seq_leoriccharge	A2	7			0
+seq_leoriccharge	A2	8		1	0
+seq_leoriccharge	A2	9			0
+seq_leoriccharge	A2	11			0
+seq_leoriccharge	A2	13			0
+seq_leoriccharge	A2	14			0
+seq_leoriccharge	A2	15			0
+seq_leoriccharge	A2	16			0
+seq_leoricjab	A1	1			0
+seq_leoricjab	A1	2			0
+seq_leoricjab	A1	3			0
+seq_leoricjab	A1	4			0
+seq_leoricjab	A1	5			0
+seq_leoricjab	A1	6			0
+seq_leoricjab	A1	6			0
+seq_leoricjab	A1	7			0
+seq_leoricjab	A1	8		1	0
+seq_leoricjab	A1	12			0
+seq_leoricjab	A2	8			0
+seq_leoricjab	A2	6			0
+seq_leoricjab	A2	8			0
+seq_leoricjab	A2	9		1	0
+seq_leoricjab	A1	12			0
+seq_leoricjab	A1	7			0
+seq_leoricjab	A1	6			0
+seq_leoricjab	A1	7			0
+seq_leoricjab	A1	8		1	0
+seq_leoricjab	A2	14			0
+seq_leoricjab	A2	16			0
+seq_leoricjab	A2	17			0
+seq_leoricjab	A2	19			0
+seq_siegebeastsc	GH	3			0
+seq_siegebeastsc	GH	3			0
+seq_siegebeastsc	GH	2			0
+seq_siegebeastsc	GH	2			0
+seq_siegebeastsc	GH	1			0
+seq_siegebeastsc	GH	1			0
+seq_siegebeastsc	GH	0		2	0
+seq_siegebeastsc	GH	0			0
+seq_siegebeastsc	GH	2			0
+seq_siegebeastsc	GH	3			0
