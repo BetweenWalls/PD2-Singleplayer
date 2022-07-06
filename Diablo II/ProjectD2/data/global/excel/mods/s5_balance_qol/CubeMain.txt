@@ -2,6 +2,7 @@ description	enabled	ladder	min diff	version	op	param	value	class	numinputs	input
 Staff of Kings + Viper amulet -> Horadric Staff	1			0	28				2	msf	vip						hst																																																																																							0
 Khalim Flail + Khalim Heart + Khalim Eye + Khalim Brain -> Super Khalim Flail	1			0	28				4	qf1	qhr	qey	qbr				qf2																																																																																							0
 1 Wirt's leg + 1 town portal book -> portal to cow lvl	1			0	28				2	leg	tbk						Cow Portal																																																																																							0
+1 Wirt's leg + 1 rathma tp book -> portal to cow lvl + rathma tp book	1			100	28				2	leg	rtp						Cow Portal																													rtp																																																										0
 3 health potions + 3 mana potions + 1 standard gem -> full rejuvenate potion	1			0					3	hpot,qty=3	mpot,qty=3	gem2					rvl																																																																																							0
 3 health potions +  3 mana potions + 1 chipped gem -> rejuvenate potion	1			0					3	hpot,qty=3	mpot,qty=3	gem0					rvs																																																																																							0
 3 small rejuvs -> one large	1			0					3	rvs,qty=3							rvl																																																																																							0
@@ -29,303 +30,399 @@ Khalim Flail + Khalim Heart + Khalim Eye + Khalim Brain -> Super Khalim Flail	1	
 3 chipped amethysts -> flawed amethyst	1			0					3	gcv,qty=3							gfv																																																																																							0
 3 flawed amethysts -> standard amethyst	1			0					3	gfv,qty=3							gsv																																																																																							0
 3 standard amethysts -> flawless amethyst	1			0					3	gsv,qty=3							gzv																																																																																							0
-3 flawless amethysts -> perfect amethyst	1			0					4	gzv,qty=3	key,qty=1						gpv																																																																																							0
+3 flawless amethysts -> perfect amethyst	1			0					4	key,qty=1	gzv,qty=3						useitem			100																										gpv																																																										0
 3 chipped rubies -> flawed ruby	1			0					3	gcr,qty=3							gfr																																																																																							0
 3 flawed rubies -> standard ruby	1			0					3	gfr,qty=3							gsr																																																																																							0
 3 standard rubies -> flawless ruby	1			0					3	gsr,qty=3							glr																																																																																							0
-3 flawless rubies -> perfect ruby	1			0					4	glr,qty=3	key,qty=1						gpr																																																																																							0
+3 flawless rubies -> perfect ruby	1			0					4	key,qty=1	glr,qty=3						useitem			100																										gpr																																																										0
 3 chipped sapphires -> flawed sapphire	1			0					3	gcb,qty=3							gfb																																																																																							0
 3 flawed sapphires -> standard sapphire	1			0					3	gfb,qty=3							gsb																																																																																							0
 3 standard sapphires -> flawless sapphire	1			0					3	gsb,qty=3							glb																																																																																							0
-3 flawless sapphires -> perfect sapphire	1			0					4	glb,qty=3	key,qty=1						gpb																																																																																							0
+3 flawless sapphires -> perfect sapphire	1			0					4	key,qty=1	glb,qty=3						useitem			100																										gpb																																																										0
 3 chipped topazes -> flawed topaz	1			0					3	gcy,qty=3							gfy																																																																																							0
 3 flawed topazes -> standard topaz	1			0					3	gfy,qty=3							gsy																																																																																							0
 3 standard topazes -> flawless topaz	1			0					3	gsy,qty=3							gly																																																																																							0
-3 flawless topazes -> perfect topaz	1			0					4	gly,qty=3	key,qty=1						gpy																																																																																							0
+3 flawless topazes -> perfect topaz	1			0					4	key,qty=1	gly,qty=3						useitem			100																										gpy																																																										0
 3 chipped emeralds -> flawed emerald	1			0					3	gcg,qty=3							gfg																																																																																							0
 3 flawed emeralds -> standard emerald	1			0					3	gfg,qty=3							gsg																																																																																							0
 3 standard emeralds -> flawless emerald	1			0					3	gsg,qty=3							glg																																																																																							0
-3 flawless emeralds -> perfect emerald	1			0					4	glg,qty=3	key,qty=1						gpg																																																																																							0
+3 flawless emeralds -> perfect emerald	1			0					4	key,qty=1	glg,qty=3						useitem			100																										gpg																																																										0
 3 chipped diamonds -> flawed diamond	1			0					3	gcw,qty=3							gfw																																																																																							0
 3 flawed diamonds -> standard diamond	1			0					3	gfw,qty=3							gsw																																																																																							0
 3 standard diamonds -> flawless diamond	1			0					3	gsw,qty=3							glw																																																																																							0
-3 flawless diamonds -> perfect diamond	1			0					4	glw,qty=3	key,qty=1						gpw																																																																																							0
+3 flawless diamonds -> perfect diamond	1			0					4	key,qty=1	glw,qty=3						useitem			100																										gpw																																																										0
 3 chipped skulls -> flawed skull	1			0					3	skc,qty=3							skf																																																																																							0
 3 flawed skulls -> standard skull	1			0					3	skf,qty=3							sku																																																																																							0
 3 standard skulls -> flawless skull	1			0					3	sku,qty=3							skl																																																																																							0
-3 flawless skulls -> perfect skull	1			0					4	skl,qty=3	key,qty=1						skz																																																																																							0
-flawless amethysts -> perfect amethysts (16)	1			100					2	gzvs,qty=48	key,qty=1						gpvs,qty=16																																																																																							0
-flawless amethysts -> perfect amethysts (15)	1			100					2	gzvs,qty=45	key,qty=1						gpvs,qty=15																																																																																							0
-flawless amethysts -> perfect amethysts (14)	1			100					2	gzvs,qty=42	key,qty=1						gpvs,qty=14																																																																																							0
-flawless amethysts -> perfect amethysts (13)	1			100					2	gzvs,qty=39	key,qty=1						gpvs,qty=13																																																																																							0
-flawless amethysts -> perfect amethysts (12)	1			100					2	gzvs,qty=36	key,qty=1						gpvs,qty=12																																																																																							0
-flawless amethysts -> perfect amethysts (11)	1			100					2	gzvs,qty=33	key,qty=1						gpvs,qty=11																																																																																							0
-flawless amethysts -> perfect amethysts (10)	1			100					2	gzvs,qty=30	key,qty=1						gpvs,qty=10																																																																																							0
-flawless amethysts -> perfect amethysts (9)	1			100					2	gzvs,qty=27	key,qty=1						gpvs,qty=9																																																																																							0
-flawless amethysts -> perfect amethysts (8)	1			100					2	gzvs,qty=24	key,qty=1						gpvs,qty=8																																																																																							0
-flawless amethysts -> perfect amethysts (7)	1			100					2	gzvs,qty=21	key,qty=1						gpvs,qty=7																																																																																							0
-flawless amethysts -> perfect amethysts (6)	1			100					2	gzvs,qty=18	key,qty=1						gpvs,qty=6																																																																																							0
-flawless amethysts -> perfect amethysts (5)	1			100					2	gzvs,qty=15	key,qty=1						gpvs,qty=5																																																																																							0
-flawless amethysts -> perfect amethysts (4)	1			100					2	gzvs,qty=12	key,qty=1						gpvs,qty=4																																																																																							0
-flawless amethysts -> perfect amethysts (3)	1			100					2	gzvs,qty=9	key,qty=1						gpvs,qty=3																																																																																							0
-flawless amethysts -> perfect amethysts (2)	1			100					2	gzvs,qty=6	key,qty=1						gpvs,qty=2																																																																																							0
-flawless amethysts -> perfect amethysts (1)	1			100					2	gzvs,qty=3	key,qty=1						gpvs,qty=1																																																																																							0
-flawless rubies -> perfect rubies (16)	1			100					2	glrs,qty=48	key,qty=1						gprs,qty=16																																																																																							0
-flawless rubies -> perfect rubies (15)	1			100					2	glrs,qty=45	key,qty=1						gprs,qty=15																																																																																							0
-flawless rubies -> perfect rubies (14)	1			100					2	glrs,qty=42	key,qty=1						gprs,qty=14																																																																																							0
-flawless rubies -> perfect rubies (13)	1			100					2	glrs,qty=39	key,qty=1						gprs,qty=13																																																																																							0
-flawless rubies -> perfect rubies (12)	1			100					2	glrs,qty=36	key,qty=1						gprs,qty=12																																																																																							0
-flawless rubies -> perfect rubies (11)	1			100					2	glrs,qty=33	key,qty=1						gprs,qty=11																																																																																							0
-flawless rubies -> perfect rubies (10)	1			100					2	glrs,qty=30	key,qty=1						gprs,qty=10																																																																																							0
-flawless rubies -> perfect rubies (9)	1			100					2	glrs,qty=27	key,qty=1						gprs,qty=9																																																																																							0
-flawless rubies -> perfect rubies (8)	1			100					2	glrs,qty=24	key,qty=1						gprs,qty=8																																																																																							0
-flawless rubies -> perfect rubies (7)	1			100					2	glrs,qty=21	key,qty=1						gprs,qty=7																																																																																							0
-flawless rubies -> perfect rubies (6)	1			100					2	glrs,qty=18	key,qty=1						gprs,qty=6																																																																																							0
-flawless rubies -> perfect rubies (5)	1			100					2	glrs,qty=15	key,qty=1						gprs,qty=5																																																																																							0
-flawless rubies -> perfect rubies (4)	1			100					2	glrs,qty=12	key,qty=1						gprs,qty=4																																																																																							0
-flawless rubies -> perfect rubies (3)	1			100					2	glrs,qty=9	key,qty=1						gprs,qty=3																																																																																							0
-flawless rubies -> perfect rubies (2)	1			100					2	glrs,qty=6	key,qty=1						gprs,qty=2																																																																																							0
-flawless rubies -> perfect rubies (1)	1			100					2	glrs,qty=3	key,qty=1						gprs,qty=1																																																																																							0
-flawless sapphires -> perfect sapphires (16)	1			100					2	glbs,qty=48	key,qty=1						gpbs,qty=16																																																																																							0
-flawless sapphires -> perfect sapphires (15)	1			100					2	glbs,qty=45	key,qty=1						gpbs,qty=15																																																																																							0
-flawless sapphires -> perfect sapphires (14)	1			100					2	glbs,qty=42	key,qty=1						gpbs,qty=14																																																																																							0
-flawless sapphires -> perfect sapphires (13)	1			100					2	glbs,qty=39	key,qty=1						gpbs,qty=13																																																																																							0
-flawless sapphires -> perfect sapphires (12)	1			100					2	glbs,qty=36	key,qty=1						gpbs,qty=12																																																																																							0
-flawless sapphires -> perfect sapphires (11)	1			100					2	glbs,qty=33	key,qty=1						gpbs,qty=11																																																																																							0
-flawless sapphires -> perfect sapphires (10)	1			100					2	glbs,qty=30	key,qty=1						gpbs,qty=10																																																																																							0
-flawless sapphires -> perfect sapphires (9)	1			100					2	glbs,qty=27	key,qty=1						gpbs,qty=9																																																																																							0
-flawless sapphires -> perfect sapphires (8)	1			100					2	glbs,qty=24	key,qty=1						gpbs,qty=8																																																																																							0
-flawless sapphires -> perfect sapphires (7)	1			100					2	glbs,qty=21	key,qty=1						gpbs,qty=7																																																																																							0
-flawless sapphires -> perfect sapphires (6)	1			100					2	glbs,qty=18	key,qty=1						gpbs,qty=6																																																																																							0
-flawless sapphires -> perfect sapphires (5)	1			100					2	glbs,qty=15	key,qty=1						gpbs,qty=5																																																																																							0
-flawless sapphires -> perfect sapphires (4)	1			100					2	glbs,qty=12	key,qty=1						gpbs,qty=4																																																																																							0
-flawless sapphires -> perfect sapphires (3)	1			100					2	glbs,qty=9	key,qty=1						gpbs,qty=3																																																																																							0
-flawless sapphires -> perfect sapphires (2)	1			100					2	glbs,qty=6	key,qty=1						gpbs,qty=2																																																																																							0
-flawless sapphires -> perfect sapphires (1)	1			100					2	glbs,qty=3	key,qty=1						gpbs,qty=1																																																																																							0
-flawless topazes -> perfect topazes (16)	1			100					2	glys,qty=48	key,qty=1						gpys,qty=16																																																																																							0
-flawless topazes -> perfect topazes (15)	1			100					2	glys,qty=45	key,qty=1						gpys,qty=15																																																																																							0
-flawless topazes -> perfect topazes (14)	1			100					2	glys,qty=42	key,qty=1						gpys,qty=14																																																																																							0
-flawless topazes -> perfect topazes (13)	1			100					2	glys,qty=39	key,qty=1						gpys,qty=13																																																																																							0
-flawless topazes -> perfect topazes (12)	1			100					2	glys,qty=36	key,qty=1						gpys,qty=12																																																																																							0
-flawless topazes -> perfect topazes (11)	1			100					2	glys,qty=33	key,qty=1						gpys,qty=11																																																																																							0
-flawless topazes -> perfect topazes (10)	1			100					2	glys,qty=30	key,qty=1						gpys,qty=10																																																																																							0
-flawless topazes -> perfect topazes (9)	1			100					2	glys,qty=27	key,qty=1						gpys,qty=9																																																																																							0
-flawless topazes -> perfect topazes (8)	1			100					2	glys,qty=24	key,qty=1						gpys,qty=8																																																																																							0
-flawless topazes -> perfect topazes (7)	1			100					2	glys,qty=21	key,qty=1						gpys,qty=7																																																																																							0
-flawless topazes -> perfect topazes (6)	1			100					2	glys,qty=18	key,qty=1						gpys,qty=6																																																																																							0
-flawless topazes -> perfect topazes (5)	1			100					2	glys,qty=15	key,qty=1						gpys,qty=5																																																																																							0
-flawless topazes -> perfect topazes (4)	1			100					2	glys,qty=12	key,qty=1						gpys,qty=4																																																																																							0
-flawless topazes -> perfect topazes (3)	1			100					2	glys,qty=9	key,qty=1						gpys,qty=3																																																																																							0
-flawless topazes -> perfect topazes (2)	1			100					2	glys,qty=6	key,qty=1						gpys,qty=2																																																																																							0
-flawless topazes -> perfect topazes (1)	1			100					2	glys,qty=3	key,qty=1						gpys,qty=1																																																																																							0
-flawless emeralds -> perfect emeralds (16)	1			100					2	glgs,qty=48	key,qty=1						gpgs,qty=16																																																																																							0
-flawless emeralds -> perfect emeralds (15)	1			100					2	glgs,qty=45	key,qty=1						gpgs,qty=15																																																																																							0
-flawless emeralds -> perfect emeralds (14)	1			100					2	glgs,qty=42	key,qty=1						gpgs,qty=14																																																																																							0
-flawless emeralds -> perfect emeralds (13)	1			100					2	glgs,qty=39	key,qty=1						gpgs,qty=13																																																																																							0
-flawless emeralds -> perfect emeralds (12)	1			100					2	glgs,qty=36	key,qty=1						gpgs,qty=12																																																																																							0
-flawless emeralds -> perfect emeralds (11)	1			100					2	glgs,qty=33	key,qty=1						gpgs,qty=11																																																																																							0
-flawless emeralds -> perfect emeralds (10)	1			100					2	glgs,qty=30	key,qty=1						gpgs,qty=10																																																																																							0
-flawless emeralds -> perfect emeralds (9)	1			100					2	glgs,qty=27	key,qty=1						gpgs,qty=9																																																																																							0
-flawless emeralds -> perfect emeralds (8)	1			100					2	glgs,qty=24	key,qty=1						gpgs,qty=8																																																																																							0
-flawless emeralds -> perfect emeralds (7)	1			100					2	glgs,qty=21	key,qty=1						gpgs,qty=7																																																																																							0
-flawless emeralds -> perfect emeralds (6)	1			100					2	glgs,qty=18	key,qty=1						gpgs,qty=6																																																																																							0
-flawless emeralds -> perfect emeralds (5)	1			100					2	glgs,qty=15	key,qty=1						gpgs,qty=5																																																																																							0
-flawless emeralds -> perfect emeralds (4)	1			100					2	glgs,qty=12	key,qty=1						gpgs,qty=4																																																																																							0
-flawless emeralds -> perfect emeralds (3)	1			100					2	glgs,qty=9	key,qty=1						gpgs,qty=3																																																																																							0
-flawless emeralds -> perfect emeralds (2)	1			100					2	glgs,qty=6	key,qty=1						gpgs,qty=2																																																																																							0
-flawless emeralds -> perfect emeralds (1)	1			100					2	glgs,qty=3	key,qty=1						gpgs,qty=1																																																																																							0
-flawless diamonds -> perfect diamonds (16)	1			100					2	glws,qty=48	key,qty=1						gpws,qty=16																																																																																							0
-flawless diamonds -> perfect diamonds (15)	1			100					2	glws,qty=45	key,qty=1						gpws,qty=15																																																																																							0
-flawless diamonds -> perfect diamonds (14)	1			100					2	glws,qty=42	key,qty=1						gpws,qty=14																																																																																							0
-flawless diamonds -> perfect diamonds (13)	1			100					2	glws,qty=39	key,qty=1						gpws,qty=13																																																																																							0
-flawless diamonds -> perfect diamonds (12)	1			100					2	glws,qty=36	key,qty=1						gpws,qty=12																																																																																							0
-flawless diamonds -> perfect diamonds (11)	1			100					2	glws,qty=33	key,qty=1						gpws,qty=11																																																																																							0
-flawless diamonds -> perfect diamonds (10)	1			100					2	glws,qty=30	key,qty=1						gpws,qty=10																																																																																							0
-flawless diamonds -> perfect diamonds (9)	1			100					2	glws,qty=27	key,qty=1						gpws,qty=9																																																																																							0
-flawless diamonds -> perfect diamonds (8)	1			100					2	glws,qty=24	key,qty=1						gpws,qty=8																																																																																							0
-flawless diamonds -> perfect diamonds (7)	1			100					2	glws,qty=21	key,qty=1						gpws,qty=7																																																																																							0
-flawless diamonds -> perfect diamonds (6)	1			100					2	glws,qty=18	key,qty=1						gpws,qty=6																																																																																							0
-flawless diamonds -> perfect diamonds (5)	1			100					2	glws,qty=15	key,qty=1						gpws,qty=5																																																																																							0
-flawless diamonds -> perfect diamonds (4)	1			100					2	glws,qty=12	key,qty=1						gpws,qty=4																																																																																							0
-flawless diamonds -> perfect diamonds (3)	1			100					2	glws,qty=9	key,qty=1						gpws,qty=3																																																																																							0
-flawless diamonds -> perfect diamonds (2)	1			100					2	glws,qty=6	key,qty=1						gpws,qty=2																																																																																							0
-flawless diamonds -> perfect diamonds (1)	1			100					2	glws,qty=3	key,qty=1						gpws,qty=1																																																																																							0
-flawless skulls -> perfect skulls (16)	1			100					2	skls,qty=48	key,qty=1						skzs,qty=16																																																																																							0
-flawless skulls -> perfect skulls (15)	1			100					2	skls,qty=45	key,qty=1						skzs,qty=15																																																																																							0
-flawless skulls -> perfect skulls (14)	1			100					2	skls,qty=42	key,qty=1						skzs,qty=14																																																																																							0
-flawless skulls -> perfect skulls (13)	1			100					2	skls,qty=39	key,qty=1						skzs,qty=13																																																																																							0
-flawless skulls -> perfect skulls (12)	1			100					2	skls,qty=36	key,qty=1						skzs,qty=12																																																																																							0
-flawless skulls -> perfect skulls (11)	1			100					2	skls,qty=33	key,qty=1						skzs,qty=11																																																																																							0
-flawless skulls -> perfect skulls (10)	1			100					2	skls,qty=30	key,qty=1						skzs,qty=10																																																																																							0
-flawless skulls -> perfect skulls (9)	1			100					2	skls,qty=27	key,qty=1						skzs,qty=9																																																																																							0
-flawless skulls -> perfect skulls (8)	1			100					2	skls,qty=24	key,qty=1						skzs,qty=8																																																																																							0
-flawless skulls -> perfect skulls (7)	1			100					2	skls,qty=21	key,qty=1						skzs,qty=7																																																																																							0
-flawless skulls -> perfect skulls (6)	1			100					2	skls,qty=18	key,qty=1						skzs,qty=6																																																																																							0
-flawless skulls -> perfect skulls (5)	1			100					2	skls,qty=15	key,qty=1						skzs,qty=5																																																																																							0
-flawless skulls -> perfect skulls (4)	1			100					2	skls,qty=12	key,qty=1						skzs,qty=4																																																																																							0
-flawless skulls -> perfect skulls (3)	1			100					2	skls,qty=9	key,qty=1						skzs,qty=3																																																																																							0
-flawless skulls -> perfect skulls (2)	1			100					2	skls,qty=6	key,qty=1						skzs,qty=2																																																																																							0
-flawless skulls -> perfect skulls (1)	1			100					2	skls,qty=3	key,qty=1						skzs,qty=1																																																																																							0
-3 rune 01 -> rune 02	1			100					4	r01,qty=3	key,qty=1						r02																																																																																							0
-3 rune 02 -> rune 03	1			100					4	r02,qty=3	key,qty=1						r03																																																																																							0
-3 rune 03 -> rune 04	1			100					4	r03,qty=3	key,qty=1						r04																																																																																							0
-3 rune 04 -> rune 05	1			100					4	r04,qty=3	key,qty=1						r05																																																																																							0
-3 rune 05 -> rune 06	1			100					4	r05,qty=3	key,qty=1						r06																																																																																							0
-3 rune 06 -> rune 07	1			100					4	r06,qty=3	key,qty=1						r07																																																																																							0
-3 rune 07 -> rune 08	1			100					4	r07,qty=3	key,qty=1						r08																																																																																							0
-3 rune 08 -> rune 09	1			100					4	r08,qty=3	key,qty=1						r09																																																																																							0
-3 rune 09 -> rune 10	1			100					4	r09,qty=3	key,qty=1						r10																																																																																							0
-3 rune 10 -> rune 11	1			100					4	r10,qty=3	key,qty=1						r11																																																																																							0
-3 rune 11 -> rune 12	1			100					4	r11,qty=3	key,qty=1						r12																																																																																							0
-3 rune 12 -> rune 13	1			100					4	r12,qty=3	key,qty=1						r13																																																																																							0
-3 rune 13 -> rune 14	1			100					4	r13,qty=3	key,qty=1						r14																																																																																							0
-3 rune 14 -> rune 15	1			100					4	r14,qty=3	key,qty=1						r15																																																																																							0
-3 rune 15 -> rune 16	1			100					4	r15,qty=3	key,qty=1						r16																																																																																							0
-3 rune 16 -> rune 17	1			100					4	r16,qty=3	key,qty=1						r17																																																																																							0
-3 rune 17 -> rune 18	1			100					4	r17,qty=3	key,qty=1						r18																																																																																							0
-3 rune 18 -> rune 19	1			100					4	r18,qty=3	key,qty=1						r19																																																																																							0
-3 rune 19 -> rune 20	1			100					4	r19,qty=3	key,qty=1						r20																																																																																							0
-3 rune 20 -> rune 21	1			100					4	r20,qty=3	key,qty=1						r21																																																																																							0
-2 rune 21 -> rune 22	1			100					3	r21,qty=2	key,qty=1						r22																																																																																							0
-2 rune 22 -> rune 23	1			100					3	r22,qty=2	key,qty=1						r23																																																																																							0
-2 rune 23 -> rune 24	1			100					3	r23,qty=2	key,qty=1						r24																																																																																							0
-2 rune 24 -> rune 25	1			100					3	r24,qty=2	key,qty=1						r25																																																																																							0
-2 rune 25 -> rune 26	1			100					3	r25,qty=2	key,qty=1						r26																																																																																							0
-2 rune 26 -> rune 27	1			100					3	r26,qty=2	key,qty=1						r27																																																																																							0
-2 rune 27 -> rune 28	1			100					3	r27,qty=2	key,qty=1						r28																																																																																							0
-2 rune 28 -> rune 29	1			100					3	r28,qty=2	key,qty=1						r29																																																																																							0
-2 rune 29 -> rune 30	1			100					3	r29,qty=2	key,qty=1						r30																																																																																							0
-2 rune 30 -> rune 31	1			100					3	r30,qty=2	key,qty=1						r31																																																																																							0
-2 rune 31 -> rune 32	1			100					3	r31,qty=2	key,qty=1						r32																																																																																							0
-2 rune 32 -> rune 33	1			100					3	r32,qty=2	key,qty=1						r33																																																																																							0
-3 rune 01s -> rune 02s	1			100					2	r01s,qty=3	key,qty=1						r02s																																																																																							0
-3 rune 02s -> rune 03s	1			100					2	r02s,qty=3	key,qty=1						r03s																																																																																							0
-3 rune 03s -> rune 04s	1			100					2	r03s,qty=3	key,qty=1						r04s																																																																																							0
-3 rune 04s -> rune 05s	1			100					2	r04s,qty=3	key,qty=1						r05s																																																																																							0
-3 rune 05s -> rune 06s	1			100					2	r05s,qty=3	key,qty=1						r06s																																																																																							0
-3 rune 06s -> rune 07s	1			100					2	r06s,qty=3	key,qty=1						r07s																																																																																							0
-3 rune 07s -> rune 08s	1			100					2	r07s,qty=3	key,qty=1						r08s																																																																																							0
-3 rune 08s -> rune 09s	1			100					2	r08s,qty=3	key,qty=1						r09s																																																																																							0
-3 rune 09s -> rune 10s	1			100					2	r09s,qty=3	key,qty=1						r10s																																																																																							0
-3 rune 10s -> rune 11s	1			100					2	r10s,qty=3	key,qty=1						r11s																																																																																							0
-3 rune 11s -> rune 12s	1			100					2	r11s,qty=3	key,qty=1						r12s																																																																																							0
-3 rune 12s -> rune 13s	1			100					2	r12s,qty=3	key,qty=1						r13s																																																																																							0
-3 rune 13s -> rune 14s	1			100					2	r13s,qty=3	key,qty=1						r14s																																																																																							0
-3 rune 14s -> rune 15s	1			100					2	r14s,qty=3	key,qty=1						r15s																																																																																							0
-3 rune 15s -> rune 16s	1			100					2	r15s,qty=3	key,qty=1						r16s																																																																																							0
-3 rune 16s -> rune 17s	1			100					2	r16s,qty=3	key,qty=1						r17s																																																																																							0
-3 rune 17s -> rune 18s	1			100					2	r17s,qty=3	key,qty=1						r18s																																																																																							0
-3 rune 18s -> rune 19s	1			100					2	r18s,qty=3	key,qty=1						r19s																																																																																							0
-3 rune 19s -> rune 20s	1			100					2	r19s,qty=3	key,qty=1						r20s																																																																																							0
-3 rune 20s -> rune 21s	1			100					2	r20s,qty=3	key,qty=1						r21s																																																																																							0
-2 rune 21s -> rune 22s	1			100					2	r21s,qty=2	key,qty=1						r22s																																																																																							0
-2 rune 22s -> rune 23s	1			100					2	r22s,qty=2	key,qty=1						r23s																																																																																							0
-2 rune 23s -> rune 24s	1			100					2	r23s,qty=2	key,qty=1						r24s																																																																																							0
-2 rune 24s -> rune 25s	1			100					2	r24s,qty=2	key,qty=1						r25s																																																																																							0
-2 rune 25s -> rune 26s	1			100					2	r25s,qty=2	key,qty=1						r26s																																																																																							0
-2 rune 26s -> rune 27s	1			100					2	r26s,qty=2	key,qty=1						r27s																																																																																							0
-2 rune 27s -> rune 28s	1			100					2	r27s,qty=2	key,qty=1						r28s																																																																																							0
-2 rune 28s -> rune 29s	1			100					2	r28s,qty=2	key,qty=1						r29s																																																																																							0
-2 rune 29s -> rune 30s	1			100					2	r29s,qty=2	key,qty=1						r30s																																																																																							0
-2 rune 30s -> rune 31s	1			100					2	r30s,qty=2	key,qty=1						r31s																																																																																							0
-2 rune 31s -> rune 32s	1			100					2	r31s,qty=2	key,qty=1						r32s																																																																																							0
-2 rune 32s -> rune 33s	1			100					2	r32s,qty=2	key,qty=1						r33s																																																																																							0
-craft hitpower helm	1			200					4	helm,mag,noe	jewg,qty=1	r06g,qty=1	gg4s,qty=1				usetype,crf		50	50	gethit-skill		44	5	4	balance1			10	20	att			100	200																																																																					0
-craft hitpower helm (eth)	1			200					4	helm,mag,eth	jewg,qty=1	r06g,qty=1	gg4s,qty=1				usetype,crf		50	50	gethit-skill		44	5	4	balance1			10	20	att			100	200	ethereal	100		1	1																																																																0
-craft hitpower boots	1			100					4	boot,mag,noe	jewg,qty=1	r08g,qty=1	gg4s,qty=1				usetype,crf		50	50	gethit-skill		44	5	4	balance1			10	10	ac-hth			25	60																																																																					0
-craft hitpower boots (eth)	1			100					4	boot,mag,eth	jewg,qty=1	r08g,qty=1	gg4s,qty=1				usetype,crf		50	50	gethit-skill		44	5	4	balance1			10	10	ac-hth			25	60	ethereal	100		1	1																																																																0
-craft hitpower gloves	1			100					4	glov,mag,noe	jewg,qty=1	r09g,qty=1	gg4s,qty=1				usetype,crf		50	50	gethit-skill		44	5	4	reduce-ac			10	20	knock			1	1																																																																					0
-craft hitpower gloves (eth)	1			100					4	glov,mag,eth	jewg,qty=1	r09g,qty=1	gg4s,qty=1				usetype,crf		50	50	gethit-skill		44	5	4	reduce-ac			10	20	knock			1	1	ethereal	100		1	1																																																																0
-craft hitpower belt	1			100					4	belt,mag,noe	jewg,qty=1	r07g,qty=1	gg4s,qty=1				usetype,crf		50	50	gethit-skill		44	5	4	balance1			10	20	dmg-to-mana			5	10																																																																					0
-craft hitpower belt (eth)	1			100					4	belt,mag,eth	jewg,qty=1	r07g,qty=1	gg4s,qty=1				usetype,crf		50	50	gethit-skill		44	5	4	balance1			10	20	dmg-to-mana			5	10	ethereal	100		1	1																																																																0
-craft hitpower shield	1			100					4	shld,mag,noe	jewg,qty=1	r05g,qty=1	gg4s,qty=1				usetype,crf		50	50	gethit-skill		44	5	4	block2			20	30	block			10	20																																																																					0
-craft hitpower shield (eth)	1			100					4	shld,mag,eth	jewg,qty=1	r05g,qty=1	gg4s,qty=1				usetype,crf		50	50	gethit-skill		44	5	4	block2			20	30	block			10	20	ethereal	100		1	1																																																																0
-craft hitpower chest	1			100					4	tors,mag,noe	jewg,qty=1	r04g,qty=1	gg4s,qty=1				usetype,crf		50	50	gethit-skill		44	5	4	ac%			25	50	balance1			20	40																																																																					0
-craft hitpower chest (eth)	1			100					4	tors,mag,eth	jewg,qty=1	r04g,qty=1	gg4s,qty=1				usetype,crf		50	50	gethit-skill		44	5	4	ac%			25	50	balance1			20	40	ethereal	100		1	1																																																																0
-craft hitpower amulet	1			100					4	amul,mag	jewg,qty=1	r10g,qty=1	gg4s,qty=1				usetype,crf		50	50	gethit-skill		44	5	4	att			150	250	balance1			10	20																																																																					0
-craft hitpower ring	1			100					4	ring,mag	jewg,qty=1	r11g,qty=1	gg4s,qty=1				usetype,crf		50	50	gethit-skill		44	5	4	dmg-max			1	4	dex			5	10																																																																					0
-craft hitpower weapon	1			100					4	weap,mag,noe	jewg,qty=1	r03g,qty=1	gg4s,qty=1				usetype,crf		50	50	gethit-skill		44	5	4	reduce-ac			10	20	dmg%			50	80																																																																					0
-craft hitpower weapon (eth)	1			100					4	weap,mag,eth	jewg,qty=1	r03g,qty=1	gg4s,qty=1				usetype,crf		50	50	gethit-skill		44	5	4	reduce-ac			10	20	dmg%			50	80	ethereal	100		1	1																																																																0
-craft blood helm	1			200					4	helm,mag,noe	jewg,qty=1	r08g,qty=1	gg4r,qty=1				usetype,crf		50	50	lifesteal			2	4	hp			10	20	crush			10	20																																																																					0
-craft blood helm (eth)	1			200					4	helm,mag,eth	jewg,qty=1	r08g,qty=1	gg4r,qty=1				usetype,crf		50	50	lifesteal			2	4	hp			10	20	crush			10	20	ethereal	100		1	1																																																																0
-craft blood boots	1			100					4	boot,mag,noe	jewg,qty=1	r05g,qty=1	gg4r,qty=1				usetype,crf		50	50	lifesteal			2	4	hp			10	20	regen			15	30																																																																					0
-craft blood boots (eth)	1			100					4	boot,mag,eth	jewg,qty=1	r05g,qty=1	gg4r,qty=1				usetype,crf		50	50	lifesteal			2	4	hp			10	20	regen			15	30	ethereal	100		1	1																																																																0
-craft blood gloves	1			100					4	glov,mag,noe	jewg,qty=1	r04g,qty=1	gg4r,qty=1				usetype,crf		50	50	lifesteal			2	4	hp			10	20	crush			5	10																																																																					0
-craft blood gloves (eth)	1			100					4	glov,mag,eth	jewg,qty=1	r04g,qty=1	gg4r,qty=1				usetype,crf		50	50	lifesteal			2	4	hp			10	20	crush			5	10	ethereal	100		1	1																																																																0
-craft blood belt	1			100					4	belt,mag,noe	jewg,qty=1	r07g,qty=1	gg4r,qty=1				usetype,crf		50	50	lifesteal			3	6	hp			10	20	openwounds			10	20																																																																					0
-craft blood belt (eth)	1			100					4	belt,mag,eth	jewg,qty=1	r07g,qty=1	gg4r,qty=1				usetype,crf		50	50	lifesteal			3	6	hp			10	20	openwounds			10	20	ethereal	100		1	1																																																																0
-craft blood shield	1			100					4	shld,mag,noe	jewg,qty=1	r06g,qty=1	gg4r,qty=1				usetype,crf		50	50	lifesteal			3	6	hp			10	20	block			10	20																																																																					0
-craft blood shield (eth)	1			100					4	shld,mag,eth	jewg,qty=1	r06g,qty=1	gg4r,qty=1				usetype,crf		50	50	lifesteal			3	6	hp			10	20	block			10	20	ethereal	100		1	1																																																																0
-craft blood chest	1			100					4	tors,mag,noe	jewg,qty=1	r10g,qty=1	gg4r,qty=1				usetype,crf		50	50	lifesteal			3	6	hp			20	40	heal-kill			3	6																																																																					0
-craft blood chest (eth)	1			100					4	tors,mag,eth	jewg,qty=1	r10g,qty=1	gg4r,qty=1				usetype,crf		50	50	lifesteal			3	6	hp			20	40	heal-kill			3	6	ethereal	100		1	1																																																																0
-craft blood amulet	1			100					4	amul,mag	jewg,qty=1	r11g,qty=1	gg4r,qty=1				usetype,crf		50	50	heal-kill			3	6	hp			10	20	move1			10	10																																																																					0
-craft blood ring	1			100					4	ring,mag	jewg,qty=1	r12g,qty=1	gg4r,qty=1				usetype,crf		50	50	lifesteal			1	3	hp			10	20	str			5	10																																																																					0
-craft blood weapon	1			100					4	weap,mag,noe	jewg,qty=1	r09g,qty=1	gg4r,qty=1				usetype,crf		50	50	lifesteal			3	6	hp			10	20	dmg%			50	80																																																																					0
-craft blood weapon (eth)	1			100					4	weap,mag,eth	jewg,qty=1	r09g,qty=1	gg4r,qty=1				usetype,crf		50	50	lifesteal			3	6	hp			10	20	dmg%			50	80	ethereal	100		1	1																																																																0
-craft caster helm	1			200					4	helm,mag,noe	jewg,qty=1	r04g,qty=1	gg4a,qty=1				usetype,crf		50	50	cast2			5	10	mana			10	20	regen-mana			4	10																																																																					0
-craft caster helm (eth)	1			200					4	helm,mag,eth	jewg,qty=1	r04g,qty=1	gg4a,qty=1				usetype,crf		50	50	cast2			5	10	mana			10	20	regen-mana			4	10	ethereal	100		1	1																																																																0
-craft caster boots	1			100					4	boot,mag,noe	jewg,qty=1	r10g,qty=1	gg4a,qty=1				usetype,crf		50	50	regen-mana			4	10	mana			10	20	mana%			5	10																																																																					0
-craft caster boots (eth)	1			100					4	boot,mag,eth	jewg,qty=1	r10g,qty=1	gg4a,qty=1				usetype,crf		50	50	regen-mana			4	10	mana			10	20	mana%			5	10	ethereal	100		1	1																																																																0
-craft caster gloves	1			100					4	glov,mag,noe	jewg,qty=1	r09g,qty=1	gg4a,qty=1				usetype,crf		50	50	cast2			5	10	mana			10	20	mana-kill			1	3																																																																					0
-craft caster gloves (eth)	1			100					4	glov,mag,eth	jewg,qty=1	r09g,qty=1	gg4a,qty=1				usetype,crf		50	50	cast2			5	10	mana			10	20	mana-kill			1	3	ethereal	100		1	1																																																																0
-craft caster belt	1			100					4	belt,mag,noe	jewg,qty=1	r06g,qty=1	gg4a,qty=1				usetype,crf		50	50	regen-mana			4	10	mana			10	20	cast1			10	10																																																																					0
-craft caster belt (eth)	1			100					4	belt,mag,eth	jewg,qty=1	r06g,qty=1	gg4a,qty=1				usetype,crf		50	50	regen-mana			4	10	mana			10	20	cast1			10	10	ethereal	100		1	1																																																																0
-craft caster shield	1			100					4	shld,mag,noe	jewg,qty=1	r05g,qty=1	gg4a,qty=1				usetype,crf		50	50	cast1			5	10	mana			10	20	block			10	20																																																																					0
-craft caster shield (eth)	1			100					4	shld,mag,eth	jewg,qty=1	r05g,qty=1	gg4a,qty=1				usetype,crf		50	50	cast1			5	10	mana			10	20	block			10	20	ethereal	100		1	1																																																																0
-craft caster chest	1			100					4	tors,mag,noe	jewg,qty=1	r07g,qty=1	gg4a,qty=1				usetype,crf		50	50	cast1			5	10	mana			10	20	mana-kill			2	6																																																																					0
-craft caster chest (eth)	1			100					4	tors,mag,eth	jewg,qty=1	r07g,qty=1	gg4a,qty=1				usetype,crf		50	50	cast1			5	10	mana			10	20	mana-kill			2	6	ethereal	100		1	1																																																																0
-craft caster amulet	1			100					4	amul,mag	jewg,qty=1	r08g,qty=1	gg4a,qty=1				usetype,crf		50	50	regen-mana			4	10	mana			10	20	cast1			5	10																																																																					0
-craft caster ring	1			100					4	ring,mag	jewg,qty=1	r11g,qty=1	gg4a,qty=1				usetype,crf		50	50	mana-kill			1	2	mana			10	20	enr			5	10																																																																					0
-craft caster weapon	1			100					4	weap,mag,noe	jewg,qty=1	r03g,qty=1	gg4a,qty=1				usetype,crf		50	50	allskills			1	1	mana			10	20	cast1			10	20																																																																					0
-craft caster weapon (eth)	1			100					4	weap,mag,eth	jewg,qty=1	r03g,qty=1	gg4a,qty=1				usetype,crf		50	50	allskills			1	1	mana			10	20	cast1			10	20	ethereal	100		1	1																																																																0
-craft safety helm	1			200					4	helm,mag,noe	jewg,qty=1	r06g,qty=1	gg4e,qty=1				usetype,crf		50	50	red-dmg%			5	10	res-ltng			10	20	ac%			20	60																																																																					0
-craft safety helm (eth)	1			200					4	helm,mag,eth	jewg,qty=1	r06g,qty=1	gg4e,qty=1				usetype,crf		50	50	red-dmg%			5	10	res-ltng			10	20	ac%			20	60	ethereal	100		1	1																																																																0
-craft safety boots	1			100					4	boot,mag,noe	jewg,qty=1	r09g,qty=1	gg4e,qty=1				usetype,crf		50	50	red-dmg			2	5	red-mag			2	5	res-fire			10	20	ac%			20	60																																																																0
-craft safety boots (eth)	1			100					4	boot,mag,eth	jewg,qty=1	r09g,qty=1	gg4e,qty=1				usetype,crf		50	50	red-dmg			2	5	red-mag			2	5	res-fire			10	20	ac%			20	60	ethereal	100		1	1																																																											0
-craft safety gloves	1			100					4	glov,mag,noe	jewg,qty=1	r08g,qty=1	gg4e,qty=1				usetype,crf		50	50	red-dmg			2	5	red-mag			2	5	res-cold			10	20	ac%			20	60																																																																0
-craft safety gloves (eth)	1			100					4	glov,mag,eth	jewg,qty=1	r08g,qty=1	gg4e,qty=1				usetype,crf		50	50	red-dmg			2	5	red-mag			2	5	res-cold			10	20	ac%			20	60	ethereal	100		1	1																																																											0
-craft safety belt	1			100					4	belt,mag,noe	jewg,qty=1	r07g,qty=1	gg4e,qty=1				usetype,crf		50	50	red-dmg			2	5	red-mag			2	5	res-pois			10	20	ac%			20	60																																																																0
-craft safety belt (eth)	1			100					4	belt,mag,eth	jewg,qty=1	r07g,qty=1	gg4e,qty=1				usetype,crf		50	50	red-dmg			2	5	red-mag			2	5	res-pois			10	20	ac%			20	60	ethereal	100		1	1																																																											0
-craft safety shield	1			100					4	shld,mag,noe	jewg,qty=1	r04g,qty=1	gg4e,qty=1				usetype,crf		50	50	red-dmg%			5	10	ac%			20	60																																																																										0
-craft safety shield (eth)	1			100					4	shld,mag,eth	jewg,qty=1	r04g,qty=1	gg4e,qty=1				usetype,crf		50	50	red-dmg%			5	10	ac%			20	60	ethereal	100		1	1																																																																					0
-craft safety chest	1			100					4	tors,mag,noe	jewg,qty=1	r05g,qty=1	gg4e,qty=1				usetype,crf		50	50	red-dmg%			5	10	half-freeze			1	1	ac%			20	60																																																																					0
-craft safety chest (eth)	1			100					4	tors,mag,eth	jewg,qty=1	r05g,qty=1	gg4e,qty=1				usetype,crf		50	50	red-dmg%			5	10	half-freeze			1	1	ac%			20	60	ethereal	100		1	1																																																																0
-craft safety amulet	1			100					4	amul,mag	jewg,qty=1	r10g,qty=1	gg4e,qty=1				usetype,crf		50	50	red-dmg			2	5	red-mag			2	5	block			10	10																																																																					0
-craft safety ring	1			100					4	ring,mag	jewg,qty=1	r11g,qty=1	gg4e,qty=1				usetype,crf		50	50	red-dmg			2	5	red-mag			2	5	vit			5	10																																																																					0
-craft safety weapon	1			100					4	miss,mag,noe	jewg,qty=1	r12g,qty=1	gg4e,qty=1				usetype,crf		50	50	red-dmg			2	5	red-mag			2	5	dmg%			70	140	swing2			10	20																																																																0
-craft safety weapon (eth)	0			100					4	miss,mag,eth	jewg,qty=1	r12g,qty=1	gg4e,qty=1				usetype,crf		50	50	red-dmg			2	5	red-mag			2	5	dmg%			70	140	swing2			10	20	ethereal	100		1	1																																																											0
-craft vampiric helm	1			200					4	helm,mag,noe	jewg,qty=1	r17g,qty=1	gg4z,qty=1				usetype,crf		50	50	manasteal			2	4	deadly			10	20	regen			5	10																																																																					0
-craft vampiric helm (eth)	1			200					4	helm,mag,eth	jewg,qty=1	r17g,qty=1	gg4z,qty=1				usetype,crf		50	50	manasteal			2	4	deadly			10	20	regen			5	10	ethereal	100		1	1																																																																0
-craft vampiric boots	1			100					4	boot,mag,noe	jewg,qty=1	r01g,qty=1	gg4z,qty=1				usetype,crf		50	50	manasteal			2	4	res-pois-len			10	20	regen			5	10																																																																					0
-craft vampiric boots (eth)	1			100					4	boot,mag,eth	jewg,qty=1	r01g,qty=1	gg4z,qty=1				usetype,crf		50	50	manasteal			2	4	res-pois-len			10	20	regen			5	10	ethereal	100		1	1																																																																0
-craft vampiric gloves	1			100					4	glov,mag,noe	jewg,qty=1	r16g,qty=1	gg4z,qty=1				usetype,crf		50	50	manasteal			2	4	deadly			5	10	regen			5	10																																																																					0
-craft vampiric gloves (eth)	1			100					4	glov,mag,eth	jewg,qty=1	r16g,qty=1	gg4z,qty=1				usetype,crf		50	50	manasteal			2	4	deadly			5	10	regen			5	10	ethereal	100		1	1																																																																0
-craft vampiric belt	1			100					4	belt,mag,noe	jewg,qty=1	r02g,qty=1	gg4z,qty=1				usetype,crf		50	50	manasteal			3	6	dmg-to-mana			10	20	regen			5	10																																																																					0
-craft vampiric belt (eth)	1			100					4	belt,mag,eth	jewg,qty=1	r02g,qty=1	gg4z,qty=1				usetype,crf		50	50	manasteal			3	6	dmg-to-mana			10	20	regen			5	10	ethereal	100		1	1																																																																0
-craft vampiric shield	1			100					4	shld,mag,noe	jewg,qty=1	r12g,qty=1	gg4z,qty=1				usetype,crf		50	50	manasteal			3	6	ease			-20	-30	block			10	20																																																																					0
-craft vampiric shield (eth)	1			100					4	shld,mag,eth	jewg,qty=1	r12g,qty=1	gg4z,qty=1				usetype,crf		50	50	manasteal			3	6	ease			-20	-30	block			10	20	ethereal	100		1	1																																																																0
-craft vampiric chest	1			100					4	tors,mag,noe	jewg,qty=1	r03g,qty=1	gg4z,qty=1				usetype,crf		50	50	manasteal			3	6	ease			-20	-30	ac%			25	50																																																																					0
-craft vampiric chest (eth)	1			100					4	tors,mag,eth	jewg,qty=1	r03g,qty=1	gg4z,qty=1				usetype,crf		50	50	manasteal			3	6	ease			-20	-30	ac%			25	50	ethereal	100		1	1																																																																0
-craft vampiric amulet	1			100					4	amul,mag	jewg,qty=1	r14g,qty=1	gg4z,qty=1				usetype,crf		50	50	manasteal			3	6	curse-res			5	10	regen			5	10																																																																					0
-craft vampiric ring	1			100					4	ring,mag	jewg,qty=1	r15g,qty=1	gg4z,qty=1				usetype,crf		50	50	manasteal			1	3	res-pois-len			10	20	regen			5	10																																																																					0
-craft vampiric weapon	1			100					4	weap,mag,noe	jewg,qty=1	r13g,qty=1	gg4z,qty=1				usetype,crf		50	50	manasteal			3	6	regen			5	10	dmg-undead			75	120	dmg-demon			75	120																																																																0
-craft vampiric weapon (eth)	1			100					4	weap,mag,eth	jewg,qty=1	r13g,qty=1	gg4z,qty=1				usetype,crf		50	50	manasteal			3	6	regen			5	10	dmg-undead			75	120	dmg-demon			75	120	ethereal	100		1	1																																																											0
-craft bountiful helm	1			200					4	helm,mag,noe	jewg,qty=1	r03g,qty=1	gg4t,qty=1				usetype,crf		50	50	mag%			20	30	light			1	3	ac%			25	50																																																																					0
-craft bountiful helm (eth)	1			200					4	helm,mag,eth	jewg,qty=1	r03g,qty=1	gg4t,qty=1				usetype,crf		50	50	mag%			20	30	light			1	3	ac%			25	50	ethereal	100		1	1																																																																0
-craft bountiful boots	1			100					4	boot,mag,noe	jewg,qty=1	r16g,qty=1	gg4t,qty=1				usetype,crf		50	50	mag%			15	25	light			1	3	ac%			25	50																																																																					0
-craft bountiful boots (eth)	1			100					4	boot,mag,eth	jewg,qty=1	r16g,qty=1	gg4t,qty=1				usetype,crf		50	50	mag%			15	25	light			1	3	ac%			25	50	ethereal	100		1	1																																																																0
-craft bountiful gloves	1			100					4	glov,mag,noe	jewg,qty=1	r15g,qty=1	gg4t,qty=1				usetype,crf		50	50	mag%			15	25	light			1	3	ac%			25	50																																																																					0
-craft bountiful gloves (eth)	1			100					4	glov,mag,eth	jewg,qty=1	r15g,qty=1	gg4t,qty=1				usetype,crf		50	50	mag%			15	25	light			1	3	ac%			25	50	ethereal	100		1	1																																																																0
-craft bountiful belt	1			100					4	belt,mag,noe	jewg,qty=1	r01g,qty=1	gg4t,qty=1				usetype,crf		50	50	mag%			20	30	light			1	3	ac%			25	50																																																																					0
-craft bountiful belt (eth)	1			100					4	belt,mag,eth	jewg,qty=1	r01g,qty=1	gg4t,qty=1				usetype,crf		50	50	mag%			20	30	light			1	3	ac%			25	50	ethereal	100		1	1																																																																0
-craft bountiful shield	1			100					4	shld,mag,noe	jewg,qty=1	r14g,qty=1	gg4t,qty=1				usetype,crf		50	50	mag%			20	30	light			1	3	block			10	20																																																																					0
-craft bountiful shield (eth)	1			100					4	shld,mag,eth	jewg,qty=1	r14g,qty=1	gg4t,qty=1				usetype,crf		50	50	mag%			20	30	light			1	3	block			10	20	ethereal	100		1	1																																																																0
-craft bountiful chest	1			100					4	tors,mag,noe	jewg,qty=1	r02g,qty=1	gg4t,qty=1				usetype,crf		50	50	mag%			20	30	light			1	3	ac%			25	50																																																																					0
-craft bountiful chest (eth)	1			100					4	tors,mag,eth	jewg,qty=1	r02g,qty=1	gg4t,qty=1				usetype,crf		50	50	mag%			20	30	light			1	3	ac%			25	50	ethereal	100		1	1																																																																0
-craft bountiful amulet	1			100					4	amul,mag	jewg,qty=1	r18g,qty=1	gg4t,qty=1				usetype,crf		50	50	mag%			20	30	light			1	3	vit			10	20																																																																					0
-craft bountiful ring	1			100					4	ring,mag	jewg,qty=1	r17g,qty=1	gg4t,qty=1				usetype,crf		50	50	mag%			10	15	light			1	3	vit			5	10																																																																					0
-craft bountiful weapon	1			100					4	weap,mag,noe	jewg,qty=1	r13g,qty=1	gg4t,qty=1				usetype,crf		50	50	mag%			20	30	light			1	3	dmg%			55	80																																																																					0
-craft bountiful weapon (eth)	1			100					4	weap,mag,eth	jewg,qty=1	r13g,qty=1	gg4t,qty=1				usetype,crf		50	50	mag%			20	30	light			1	3	dmg%			55	80	ethereal	100		1	1																																																																0
+3 flawless skulls -> perfect skull	1			0					4	key,qty=1	skl,qty=3						useitem			100																										skz																																																										0
+flawless amethysts -> perfect amethysts (16)	1			0					2	key,qty=1	gzvs,qty=48						useitem			100																										gpvs,qty=16																																																										0
+flawless amethysts -> perfect amethysts (15)	1			0					2	key,qty=1	gzvs,qty=45						useitem			100																										gpvs,qty=15																																																										0
+flawless amethysts -> perfect amethysts (14)	1			0					2	key,qty=1	gzvs,qty=42						useitem			100																										gpvs,qty=14																																																										0
+flawless amethysts -> perfect amethysts (13)	1			0					2	key,qty=1	gzvs,qty=39						useitem			100																										gpvs,qty=13																																																										0
+flawless amethysts -> perfect amethysts (12)	1			0					2	key,qty=1	gzvs,qty=36						useitem			100																										gpvs,qty=12																																																										0
+flawless amethysts -> perfect amethysts (11)	1			0					2	key,qty=1	gzvs,qty=33						useitem			100																										gpvs,qty=11																																																										0
+flawless amethysts -> perfect amethysts (10)	1			0					2	key,qty=1	gzvs,qty=30						useitem			100																										gpvs,qty=10																																																										0
+flawless amethysts -> perfect amethysts (9)	1			0					2	key,qty=1	gzvs,qty=27						useitem			100																										gpvs,qty=9																																																										0
+flawless amethysts -> perfect amethysts (8)	1			0					2	key,qty=1	gzvs,qty=24						useitem			100																										gpvs,qty=8																																																										0
+flawless amethysts -> perfect amethysts (7)	1			0					2	key,qty=1	gzvs,qty=21						useitem			100																										gpvs,qty=7																																																										0
+flawless amethysts -> perfect amethysts (6)	1			0					2	key,qty=1	gzvs,qty=18						useitem			100																										gpvs,qty=6																																																										0
+flawless amethysts -> perfect amethysts (5)	1			0					2	key,qty=1	gzvs,qty=15						useitem			100																										gpvs,qty=5																																																										0
+flawless amethysts -> perfect amethysts (4)	1			0					2	key,qty=1	gzvs,qty=12						useitem			100																										gpvs,qty=4																																																										0
+flawless amethysts -> perfect amethysts (3)	1			0					2	key,qty=1	gzvs,qty=9						useitem			100																										gpvs,qty=3																																																										0
+flawless amethysts -> perfect amethysts (2)	1			0					2	key,qty=1	gzvs,qty=6						useitem			100																										gpvs,qty=2																																																										0
+flawless amethysts -> perfect amethysts (1)	1			0					2	key,qty=1	gzvs,qty=3						useitem			100																										gpvs,qty=1																																																										0
+flawless rubies -> perfect rubies (16)	1			0					2	key,qty=1	glrs,qty=48						useitem			100																										gprs,qty=16																																																										0
+flawless rubies -> perfect rubies (15)	1			0					2	key,qty=1	glrs,qty=45						useitem			100																										gprs,qty=15																																																										0
+flawless rubies -> perfect rubies (14)	1			0					2	key,qty=1	glrs,qty=42						useitem			100																										gprs,qty=14																																																										0
+flawless rubies -> perfect rubies (13)	1			0					2	key,qty=1	glrs,qty=39						useitem			100																										gprs,qty=13																																																										0
+flawless rubies -> perfect rubies (12)	1			0					2	key,qty=1	glrs,qty=36						useitem			100																										gprs,qty=12																																																										0
+flawless rubies -> perfect rubies (11)	1			0					2	key,qty=1	glrs,qty=33						useitem			100																										gprs,qty=11																																																										0
+flawless rubies -> perfect rubies (10)	1			0					2	key,qty=1	glrs,qty=30						useitem			100																										gprs,qty=10																																																										0
+flawless rubies -> perfect rubies (9)	1			0					2	key,qty=1	glrs,qty=27						useitem			100																										gprs,qty=9																																																										0
+flawless rubies -> perfect rubies (8)	1			0					2	key,qty=1	glrs,qty=24						useitem			100																										gprs,qty=8																																																										0
+flawless rubies -> perfect rubies (7)	1			0					2	key,qty=1	glrs,qty=21						useitem			100																										gprs,qty=7																																																										0
+flawless rubies -> perfect rubies (6)	1			0					2	key,qty=1	glrs,qty=18						useitem			100																										gprs,qty=6																																																										0
+flawless rubies -> perfect rubies (5)	1			0					2	key,qty=1	glrs,qty=15						useitem			100																										gprs,qty=5																																																										0
+flawless rubies -> perfect rubies (4)	1			0					2	key,qty=1	glrs,qty=12						useitem			100																										gprs,qty=4																																																										0
+flawless rubies -> perfect rubies (3)	1			0					2	key,qty=1	glrs,qty=9						useitem			100																										gprs,qty=3																																																										0
+flawless rubies -> perfect rubies (2)	1			0					2	key,qty=1	glrs,qty=6						useitem			100																										gprs,qty=2																																																										0
+flawless rubies -> perfect rubies (1)	1			0					2	key,qty=1	glrs,qty=3						useitem			100																										gprs,qty=1																																																										0
+flawless sapphires -> perfect sapphires (16)	1			0					2	key,qty=1	glbs,qty=48						useitem			100																										gpbs,qty=16																																																										0
+flawless sapphires -> perfect sapphires (15)	1			0					2	key,qty=1	glbs,qty=45						useitem			100																										gpbs,qty=15																																																										0
+flawless sapphires -> perfect sapphires (14)	1			0					2	key,qty=1	glbs,qty=42						useitem			100																										gpbs,qty=14																																																										0
+flawless sapphires -> perfect sapphires (13)	1			0					2	key,qty=1	glbs,qty=39						useitem			100																										gpbs,qty=13																																																										0
+flawless sapphires -> perfect sapphires (12)	1			0					2	key,qty=1	glbs,qty=36						useitem			100																										gpbs,qty=12																																																										0
+flawless sapphires -> perfect sapphires (11)	1			0					2	key,qty=1	glbs,qty=33						useitem			100																										gpbs,qty=11																																																										0
+flawless sapphires -> perfect sapphires (10)	1			0					2	key,qty=1	glbs,qty=30						useitem			100																										gpbs,qty=10																																																										0
+flawless sapphires -> perfect sapphires (9)	1			0					2	key,qty=1	glbs,qty=27						useitem			100																										gpbs,qty=9																																																										0
+flawless sapphires -> perfect sapphires (8)	1			0					2	key,qty=1	glbs,qty=24						useitem			100																										gpbs,qty=8																																																										0
+flawless sapphires -> perfect sapphires (7)	1			0					2	key,qty=1	glbs,qty=21						useitem			100																										gpbs,qty=7																																																										0
+flawless sapphires -> perfect sapphires (6)	1			0					2	key,qty=1	glbs,qty=18						useitem			100																										gpbs,qty=6																																																										0
+flawless sapphires -> perfect sapphires (5)	1			0					2	key,qty=1	glbs,qty=15						useitem			100																										gpbs,qty=5																																																										0
+flawless sapphires -> perfect sapphires (4)	1			0					2	key,qty=1	glbs,qty=12						useitem			100																										gpbs,qty=4																																																										0
+flawless sapphires -> perfect sapphires (3)	1			0					2	key,qty=1	glbs,qty=9						useitem			100																										gpbs,qty=3																																																										0
+flawless sapphires -> perfect sapphires (2)	1			0					2	key,qty=1	glbs,qty=6						useitem			100																										gpbs,qty=2																																																										0
+flawless sapphires -> perfect sapphires (1)	1			0					2	key,qty=1	glbs,qty=3						useitem			100																										gpbs,qty=1																																																										0
+flawless topazes -> perfect topazes (16)	1			0					2	key,qty=1	glys,qty=48						useitem			100																										gpys,qty=16																																																										0
+flawless topazes -> perfect topazes (15)	1			0					2	key,qty=1	glys,qty=45						useitem			100																										gpys,qty=15																																																										0
+flawless topazes -> perfect topazes (14)	1			0					2	key,qty=1	glys,qty=42						useitem			100																										gpys,qty=14																																																										0
+flawless topazes -> perfect topazes (13)	1			0					2	key,qty=1	glys,qty=39						useitem			100																										gpys,qty=13																																																										0
+flawless topazes -> perfect topazes (12)	1			0					2	key,qty=1	glys,qty=36						useitem			100																										gpys,qty=12																																																										0
+flawless topazes -> perfect topazes (11)	1			0					2	key,qty=1	glys,qty=33						useitem			100																										gpys,qty=11																																																										0
+flawless topazes -> perfect topazes (10)	1			0					2	key,qty=1	glys,qty=30						useitem			100																										gpys,qty=10																																																										0
+flawless topazes -> perfect topazes (9)	1			0					2	key,qty=1	glys,qty=27						useitem			100																										gpys,qty=9																																																										0
+flawless topazes -> perfect topazes (8)	1			0					2	key,qty=1	glys,qty=24						useitem			100																										gpys,qty=8																																																										0
+flawless topazes -> perfect topazes (7)	1			0					2	key,qty=1	glys,qty=21						useitem			100																										gpys,qty=7																																																										0
+flawless topazes -> perfect topazes (6)	1			0					2	key,qty=1	glys,qty=18						useitem			100																										gpys,qty=6																																																										0
+flawless topazes -> perfect topazes (5)	1			0					2	key,qty=1	glys,qty=15						useitem			100																										gpys,qty=5																																																										0
+flawless topazes -> perfect topazes (4)	1			0					2	key,qty=1	glys,qty=12						useitem			100																										gpys,qty=4																																																										0
+flawless topazes -> perfect topazes (3)	1			0					2	key,qty=1	glys,qty=9						useitem			100																										gpys,qty=3																																																										0
+flawless topazes -> perfect topazes (2)	1			0					2	key,qty=1	glys,qty=6						useitem			100																										gpys,qty=2																																																										0
+flawless topazes -> perfect topazes (1)	1			0					2	key,qty=1	glys,qty=3						useitem			100																										gpys,qty=1																																																										0
+flawless emeralds -> perfect emeralds (16)	1			0					2	key,qty=1	glgs,qty=48						useitem			100																										gpgs,qty=16																																																										0
+flawless emeralds -> perfect emeralds (15)	1			0					2	key,qty=1	glgs,qty=45						useitem			100																										gpgs,qty=15																																																										0
+flawless emeralds -> perfect emeralds (14)	1			0					2	key,qty=1	glgs,qty=42						useitem			100																										gpgs,qty=14																																																										0
+flawless emeralds -> perfect emeralds (13)	1			0					2	key,qty=1	glgs,qty=39						useitem			100																										gpgs,qty=13																																																										0
+flawless emeralds -> perfect emeralds (12)	1			0					2	key,qty=1	glgs,qty=36						useitem			100																										gpgs,qty=12																																																										0
+flawless emeralds -> perfect emeralds (11)	1			0					2	key,qty=1	glgs,qty=33						useitem			100																										gpgs,qty=11																																																										0
+flawless emeralds -> perfect emeralds (10)	1			0					2	key,qty=1	glgs,qty=30						useitem			100																										gpgs,qty=10																																																										0
+flawless emeralds -> perfect emeralds (9)	1			0					2	key,qty=1	glgs,qty=27						useitem			100																										gpgs,qty=9																																																										0
+flawless emeralds -> perfect emeralds (8)	1			0					2	key,qty=1	glgs,qty=24						useitem			100																										gpgs,qty=8																																																										0
+flawless emeralds -> perfect emeralds (7)	1			0					2	key,qty=1	glgs,qty=21						useitem			100																										gpgs,qty=7																																																										0
+flawless emeralds -> perfect emeralds (6)	1			0					2	key,qty=1	glgs,qty=18						useitem			100																										gpgs,qty=6																																																										0
+flawless emeralds -> perfect emeralds (5)	1			0					2	key,qty=1	glgs,qty=15						useitem			100																										gpgs,qty=5																																																										0
+flawless emeralds -> perfect emeralds (4)	1			0					2	key,qty=1	glgs,qty=12						useitem			100																										gpgs,qty=4																																																										0
+flawless emeralds -> perfect emeralds (3)	1			0					2	key,qty=1	glgs,qty=9						useitem			100																										gpgs,qty=3																																																										0
+flawless emeralds -> perfect emeralds (2)	1			0					2	key,qty=1	glgs,qty=6						useitem			100																										gpgs,qty=2																																																										0
+flawless emeralds -> perfect emeralds (1)	1			0					2	key,qty=1	glgs,qty=3						useitem			100																										gpgs,qty=1																																																										0
+flawless diamonds -> perfect diamonds (16)	1			0					2	key,qty=1	glws,qty=48						useitem			100																										gpws,qty=16																																																										0
+flawless diamonds -> perfect diamonds (15)	1			0					2	key,qty=1	glws,qty=45						useitem			100																										gpws,qty=15																																																										0
+flawless diamonds -> perfect diamonds (14)	1			0					2	key,qty=1	glws,qty=42						useitem			100																										gpws,qty=14																																																										0
+flawless diamonds -> perfect diamonds (13)	1			0					2	key,qty=1	glws,qty=39						useitem			100																										gpws,qty=13																																																										0
+flawless diamonds -> perfect diamonds (12)	1			0					2	key,qty=1	glws,qty=36						useitem			100																										gpws,qty=12																																																										0
+flawless diamonds -> perfect diamonds (11)	1			0					2	key,qty=1	glws,qty=33						useitem			100																										gpws,qty=11																																																										0
+flawless diamonds -> perfect diamonds (10)	1			0					2	key,qty=1	glws,qty=30						useitem			100																										gpws,qty=10																																																										0
+flawless diamonds -> perfect diamonds (9)	1			0					2	key,qty=1	glws,qty=27						useitem			100																										gpws,qty=9																																																										0
+flawless diamonds -> perfect diamonds (8)	1			0					2	key,qty=1	glws,qty=24						useitem			100																										gpws,qty=8																																																										0
+flawless diamonds -> perfect diamonds (7)	1			0					2	key,qty=1	glws,qty=21						useitem			100																										gpws,qty=7																																																										0
+flawless diamonds -> perfect diamonds (6)	1			0					2	key,qty=1	glws,qty=18						useitem			100																										gpws,qty=6																																																										0
+flawless diamonds -> perfect diamonds (5)	1			0					2	key,qty=1	glws,qty=15						useitem			100																										gpws,qty=5																																																										0
+flawless diamonds -> perfect diamonds (4)	1			0					2	key,qty=1	glws,qty=12						useitem			100																										gpws,qty=4																																																										0
+flawless diamonds -> perfect diamonds (3)	1			0					2	key,qty=1	glws,qty=9						useitem			100																										gpws,qty=3																																																										0
+flawless diamonds -> perfect diamonds (2)	1			0					2	key,qty=1	glws,qty=6						useitem			100																										gpws,qty=2																																																										0
+flawless diamonds -> perfect diamonds (1)	1			0					2	key,qty=1	glws,qty=3						useitem			100																										gpws,qty=1																																																										0
+flawless skulls -> perfect skulls (16)	1			0					2	key,qty=1	skls,qty=48						useitem			100																										skzs,qty=16																																																										0
+flawless skulls -> perfect skulls (15)	1			0					2	key,qty=1	skls,qty=45						useitem			100																										skzs,qty=15																																																										0
+flawless skulls -> perfect skulls (14)	1			0					2	key,qty=1	skls,qty=42						useitem			100																										skzs,qty=14																																																										0
+flawless skulls -> perfect skulls (13)	1			0					2	key,qty=1	skls,qty=39						useitem			100																										skzs,qty=13																																																										0
+flawless skulls -> perfect skulls (12)	1			0					2	key,qty=1	skls,qty=36						useitem			100																										skzs,qty=12																																																										0
+flawless skulls -> perfect skulls (11)	1			0					2	key,qty=1	skls,qty=33						useitem			100																										skzs,qty=11																																																										0
+flawless skulls -> perfect skulls (10)	1			0					2	key,qty=1	skls,qty=30						useitem			100																										skzs,qty=10																																																										0
+flawless skulls -> perfect skulls (9)	1			0					2	key,qty=1	skls,qty=27						useitem			100																										skzs,qty=9																																																										0
+flawless skulls -> perfect skulls (8)	1			0					2	key,qty=1	skls,qty=24						useitem			100																										skzs,qty=8																																																										0
+flawless skulls -> perfect skulls (7)	1			0					2	key,qty=1	skls,qty=21						useitem			100																										skzs,qty=7																																																										0
+flawless skulls -> perfect skulls (6)	1			0					2	key,qty=1	skls,qty=18						useitem			100																										skzs,qty=6																																																										0
+flawless skulls -> perfect skulls (5)	1			0					2	key,qty=1	skls,qty=15						useitem			100																										skzs,qty=5																																																										0
+flawless skulls -> perfect skulls (4)	1			0					2	key,qty=1	skls,qty=12						useitem			100																										skzs,qty=4																																																										0
+flawless skulls -> perfect skulls (3)	1			0					2	key,qty=1	skls,qty=9						useitem			100																										skzs,qty=3																																																										0
+flawless skulls -> perfect skulls (2)	1			0					2	key,qty=1	skls,qty=6						useitem			100																										skzs,qty=2																																																										0
+flawless skulls -> perfect skulls (1)	1			0					2	key,qty=1	skls,qty=3						useitem			100																										skzs,qty=1																																																										0
+3 rune 01 -> rune 02	1			100					4	key,qty=1	r01,qty=3						useitem			100																										r02																																																										0
+3 rune 02 -> rune 03	1			100					4	key,qty=1	r02,qty=3						useitem			100																										r03																																																										0
+3 rune 03 -> rune 04	1			100					4	key,qty=1	r03,qty=3						useitem			100																										r04																																																										0
+3 rune 04 -> rune 05	1			100					4	key,qty=1	r04,qty=3						useitem			100																										r05																																																										0
+3 rune 05 -> rune 06	1			100					4	key,qty=1	r05,qty=3						useitem			100																										r06																																																										0
+3 rune 06 -> rune 07	1			100					4	key,qty=1	r06,qty=3						useitem			100																										r07																																																										0
+3 rune 07 -> rune 08	1			100					4	key,qty=1	r07,qty=3						useitem			100																										r08																																																										0
+3 rune 08 -> rune 09	1			100					4	key,qty=1	r08,qty=3						useitem			100																										r09																																																										0
+3 rune 09 -> rune 10	1			100					4	key,qty=1	r09,qty=3						useitem			100																										r10																																																										0
+3 rune 10 -> rune 11	1			100					4	key,qty=1	r10,qty=3						useitem			100																										r11																																																										0
+3 rune 11 -> rune 12	1			100					4	key,qty=1	r11,qty=3						useitem			100																										r12																																																										0
+3 rune 12 -> rune 13	1			100					4	key,qty=1	r12,qty=3						useitem			100																										r13																																																										0
+3 rune 13 -> rune 14	1			100					4	key,qty=1	r13,qty=3						useitem			100																										r14																																																										0
+3 rune 14 -> rune 15	1			100					4	key,qty=1	r14,qty=3						useitem			100																										r15																																																										0
+3 rune 15 -> rune 16	1			100					4	key,qty=1	r15,qty=3						useitem			100																										r16																																																										0
+3 rune 16 -> rune 17	1			100					4	key,qty=1	r16,qty=3						useitem			100																										r17																																																										0
+3 rune 17 -> rune 18	1			100					4	key,qty=1	r17,qty=3						useitem			100																										r18																																																										0
+3 rune 18 -> rune 19	1			100					4	key,qty=1	r18,qty=3						useitem			100																										r19																																																										0
+3 rune 19 -> rune 20	1			100					4	key,qty=1	r19,qty=3						useitem			100																										r20																																																										0
+3 rune 20 -> rune 21	1			100					4	key,qty=1	r20,qty=3						useitem			100																										r21																																																										0
+2 rune 21 -> rune 22	1			100					3	key,qty=1	r21,qty=2						useitem			100																										r22																																																										0
+2 rune 22 -> rune 23	1			100					3	key,qty=1	r22,qty=2						useitem			100																										r23																																																										0
+2 rune 23 -> rune 24	1			100					3	key,qty=1	r23,qty=2						useitem			100																										r24																																																										0
+2 rune 24 -> rune 25	1			100					3	key,qty=1	r24,qty=2						useitem			100																										r25																																																										0
+2 rune 25 -> rune 26	1			100					3	key,qty=1	r25,qty=2						useitem			100																										r26																																																										0
+2 rune 26 -> rune 27	1			100					3	key,qty=1	r26,qty=2						useitem			100																										r27																																																										0
+2 rune 27 -> rune 28	1			100					3	key,qty=1	r27,qty=2						useitem			100																										r28																																																										0
+2 rune 28 -> rune 29	1			100					3	key,qty=1	r28,qty=2						useitem			100																										r29																																																										0
+2 rune 29 -> rune 30	1			100					3	key,qty=1	r29,qty=2						useitem			100																										r30																																																										0
+2 rune 30 -> rune 31	1			100					3	key,qty=1	r30,qty=2						useitem			100																										r31																																																										0
+2 rune 31 -> rune 32	1			100					3	key,qty=1	r31,qty=2						useitem			100																										r32																																																										0
+2 rune 32 -> rune 33	1			100					3	key,qty=1	r32,qty=2						useitem			100																										r33																																																										0
+3 rune 01s -> rune 02s	1			100					2	key,qty=1	r01s,qty=3						useitem			100																										r02s																																																										0
+3 rune 02s -> rune 03s	1			100					2	key,qty=1	r02s,qty=3						useitem			100																										r03s																																																										0
+3 rune 03s -> rune 04s	1			100					2	key,qty=1	r03s,qty=3						useitem			100																										r04s																																																										0
+3 rune 04s -> rune 05s	1			100					2	key,qty=1	r04s,qty=3						useitem			100																										r05s																																																										0
+3 rune 05s -> rune 06s	1			100					2	key,qty=1	r05s,qty=3						useitem			100																										r06s																																																										0
+3 rune 06s -> rune 07s	1			100					2	key,qty=1	r06s,qty=3						useitem			100																										r07s																																																										0
+3 rune 07s -> rune 08s	1			100					2	key,qty=1	r07s,qty=3						useitem			100																										r08s																																																										0
+3 rune 08s -> rune 09s	1			100					2	key,qty=1	r08s,qty=3						useitem			100																										r09s																																																										0
+3 rune 09s -> rune 10s	1			100					2	key,qty=1	r09s,qty=3						useitem			100																										r10s																																																										0
+3 rune 10s -> rune 11s	1			100					2	key,qty=1	r10s,qty=3						useitem			100																										r11s																																																										0
+3 rune 11s -> rune 12s	1			100					2	key,qty=1	r11s,qty=3						useitem			100																										r12s																																																										0
+3 rune 12s -> rune 13s	1			100					2	key,qty=1	r12s,qty=3						useitem			100																										r13s																																																										0
+3 rune 13s -> rune 14s	1			100					2	key,qty=1	r13s,qty=3						useitem			100																										r14s																																																										0
+3 rune 14s -> rune 15s	1			100					2	key,qty=1	r14s,qty=3						useitem			100																										r15s																																																										0
+3 rune 15s -> rune 16s	1			100					2	key,qty=1	r15s,qty=3						useitem			100																										r16s																																																										0
+3 rune 16s -> rune 17s	1			100					2	key,qty=1	r16s,qty=3						useitem			100																										r17s																																																										0
+3 rune 17s -> rune 18s	1			100					2	key,qty=1	r17s,qty=3						useitem			100																										r18s																																																										0
+3 rune 18s -> rune 19s	1			100					2	key,qty=1	r18s,qty=3						useitem			100																										r19s																																																										0
+3 rune 19s -> rune 20s	1			100					2	key,qty=1	r19s,qty=3						useitem			100																										r20s																																																										0
+3 rune 20s -> rune 21s	1			100					2	key,qty=1	r20s,qty=3						useitem			100																										r21s																																																										0
+2 rune 21s -> rune 22s	1			100					2	key,qty=1	r21s,qty=2						useitem			100																										r22s																																																										0
+2 rune 22s -> rune 23s	1			100					2	key,qty=1	r22s,qty=2						useitem			100																										r23s																																																										0
+2 rune 23s -> rune 24s	1			100					2	key,qty=1	r23s,qty=2						useitem			100																										r24s																																																										0
+2 rune 24s -> rune 25s	1			100					2	key,qty=1	r24s,qty=2						useitem			100																										r25s																																																										0
+2 rune 25s -> rune 26s	1			100					2	key,qty=1	r25s,qty=2						useitem			100																										r26s																																																										0
+2 rune 26s -> rune 27s	1			100					2	key,qty=1	r26s,qty=2						useitem			100																										r27s																																																										0
+2 rune 27s -> rune 28s	1			100					2	key,qty=1	r27s,qty=2						useitem			100																										r28s																																																										0
+2 rune 28s -> rune 29s	1			100					2	key,qty=1	r28s,qty=2						useitem			100																										r29s																																																										0
+2 rune 29s -> rune 30s	1			100					2	key,qty=1	r29s,qty=2						useitem			100																										r30s																																																										0
+2 rune 30s -> rune 31s	1			100					2	key,qty=1	r30s,qty=2						useitem			100																										r31s																																																										0
+2 rune 31s -> rune 32s	1			100					2	key,qty=1	r31s,qty=2						useitem			100																										r32s																																																										0
+2 rune 32s -> rune 33s	1			100					2	key,qty=1	r32s,qty=2						useitem			100																										r33s																																																										0
+craft with magic - hitpower helm	1			200					4	helm,mag,noe	jewg,qty=1	r06g,qty=1	gg4s,qty=1				usetype,crf		50	50	gethit-skill		44	5	4	balance1			10	20	att			100	200																																																																					0
+craft with magic - hitpower helm (eth)	1			200					4	helm,mag,eth	jewg,qty=1	r06g,qty=1	gg4s,qty=1				usetype,crf		50	50	gethit-skill		44	5	4	balance1			10	20	att			100	200	ethereal	100		1	1																																																																0
+craft with magic - hitpower boots	1			100					4	boot,mag,noe	jewg,qty=1	r08g,qty=1	gg4s,qty=1				usetype,crf		50	50	gethit-skill		44	5	4	balance1			10	10	ac-hth			25	60																																																																					0
+craft with magic - hitpower boots (eth)	1			100					4	boot,mag,eth	jewg,qty=1	r08g,qty=1	gg4s,qty=1				usetype,crf		50	50	gethit-skill		44	5	4	balance1			10	10	ac-hth			25	60	ethereal	100		1	1																																																																0
+craft with magic - hitpower gloves	1			100					4	glov,mag,noe	jewg,qty=1	r09g,qty=1	gg4s,qty=1				usetype,crf		50	50	gethit-skill		44	5	4	reduce-ac			10	20	knock			1	1																																																																					0
+craft with magic - hitpower gloves (eth)	1			100					4	glov,mag,eth	jewg,qty=1	r09g,qty=1	gg4s,qty=1				usetype,crf		50	50	gethit-skill		44	5	4	reduce-ac			10	20	knock			1	1	ethereal	100		1	1																																																																0
+craft with magic - hitpower belt	1			100					4	belt,mag,noe	jewg,qty=1	r07g,qty=1	gg4s,qty=1				usetype,crf		50	50	gethit-skill		44	5	4	balance1			10	20	dmg-to-mana			5	10																																																																					0
+craft with magic - hitpower belt (eth)	1			100					4	belt,mag,eth	jewg,qty=1	r07g,qty=1	gg4s,qty=1				usetype,crf		50	50	gethit-skill		44	5	4	balance1			10	20	dmg-to-mana			5	10	ethereal	100		1	1																																																																0
+craft with magic - hitpower shield	1			100					4	shld,mag,noe	jewg,qty=1	r05g,qty=1	gg4s,qty=1				usetype,crf		50	50	gethit-skill		44	5	4	block2			20	30	block			10	20																																																																					0
+craft with magic - hitpower shield (eth)	1			100					4	shld,mag,eth	jewg,qty=1	r05g,qty=1	gg4s,qty=1				usetype,crf		50	50	gethit-skill		44	5	4	block2			20	30	block			10	20	ethereal	100		1	1																																																																0
+craft with magic - hitpower chest	1			100					4	tors,mag,noe	jewg,qty=1	r04g,qty=1	gg4s,qty=1				usetype,crf		50	50	gethit-skill		44	5	4	ac%			25	50	balance1			20	40																																																																					0
+craft with magic - hitpower chest (eth)	1			100					4	tors,mag,eth	jewg,qty=1	r04g,qty=1	gg4s,qty=1				usetype,crf		50	50	gethit-skill		44	5	4	ac%			25	50	balance1			20	40	ethereal	100		1	1																																																																0
+craft with magic - hitpower amulet	1			100					4	amul,mag	jewg,qty=1	r10g,qty=1	gg4s,qty=1				usetype,crf		50	50	gethit-skill		44	5	4	att			150	250	balance1			10	20																																																																					0
+craft with magic - hitpower ring	1			100					4	ring,mag	jewg,qty=1	r11g,qty=1	gg4s,qty=1				usetype,crf		50	50	gethit-skill		44	5	4	dmg-max			1	4	dex			5	10																																																																					0
+craft with magic - hitpower weapon	1			100					4	weap,mag,noe	jewg,qty=1	r03g,qty=1	gg4s,qty=1				usetype,crf		50	50	gethit-skill		44	5	4	reduce-ac			10	20	dmg%			50	80																																																																					0
+craft with magic - hitpower weapon (eth)	1			100					4	weap,mag,eth	jewg,qty=1	r03g,qty=1	gg4s,qty=1				usetype,crf		50	50	gethit-skill		44	5	4	reduce-ac			10	20	dmg%			50	80	ethereal	100		1	1																																																																0
+craft with magic - blood helm	1			200					4	helm,mag,noe	jewg,qty=1	r08g,qty=1	gg4r,qty=1				usetype,crf		50	50	lifesteal			2	4	hp			10	20	crush			10	20																																																																					0
+craft with magic - blood helm (eth)	1			200					4	helm,mag,eth	jewg,qty=1	r08g,qty=1	gg4r,qty=1				usetype,crf		50	50	lifesteal			2	4	hp			10	20	crush			10	20	ethereal	100		1	1																																																																0
+craft with magic - blood boots	1			100					4	boot,mag,noe	jewg,qty=1	r05g,qty=1	gg4r,qty=1				usetype,crf		50	50	lifesteal			2	4	hp			10	20	regen			15	30																																																																					0
+craft with magic - blood boots (eth)	1			100					4	boot,mag,eth	jewg,qty=1	r05g,qty=1	gg4r,qty=1				usetype,crf		50	50	lifesteal			2	4	hp			10	20	regen			15	30	ethereal	100		1	1																																																																0
+craft with magic - blood gloves	1			100					4	glov,mag,noe	jewg,qty=1	r04g,qty=1	gg4r,qty=1				usetype,crf		50	50	lifesteal			2	4	hp			10	20	crush			5	10																																																																					0
+craft with magic - blood gloves (eth)	1			100					4	glov,mag,eth	jewg,qty=1	r04g,qty=1	gg4r,qty=1				usetype,crf		50	50	lifesteal			2	4	hp			10	20	crush			5	10	ethereal	100		1	1																																																																0
+craft with magic - blood belt	1			100					4	belt,mag,noe	jewg,qty=1	r07g,qty=1	gg4r,qty=1				usetype,crf		50	50	lifesteal			3	6	hp			10	20	openwounds			10	20																																																																					0
+craft with magic - blood belt (eth)	1			100					4	belt,mag,eth	jewg,qty=1	r07g,qty=1	gg4r,qty=1				usetype,crf		50	50	lifesteal			3	6	hp			10	20	openwounds			10	20	ethereal	100		1	1																																																																0
+craft with magic - blood shield	1			100					4	shld,mag,noe	jewg,qty=1	r06g,qty=1	gg4r,qty=1				usetype,crf		50	50	lifesteal			3	6	hp			10	20	block			10	20																																																																					0
+craft with magic - blood shield (eth)	1			100					4	shld,mag,eth	jewg,qty=1	r06g,qty=1	gg4r,qty=1				usetype,crf		50	50	lifesteal			3	6	hp			10	20	block			10	20	ethereal	100		1	1																																																																0
+craft with magic - blood chest	1			100					4	tors,mag,noe	jewg,qty=1	r10g,qty=1	gg4r,qty=1				usetype,crf		50	50	lifesteal			3	6	hp			20	40	heal-kill			3	6																																																																					0
+craft with magic - blood chest (eth)	1			100					4	tors,mag,eth	jewg,qty=1	r10g,qty=1	gg4r,qty=1				usetype,crf		50	50	lifesteal			3	6	hp			20	40	heal-kill			3	6	ethereal	100		1	1																																																																0
+craft with magic - blood amulet	1			100					4	amul,mag	jewg,qty=1	r11g,qty=1	gg4r,qty=1				usetype,crf		50	50	heal-kill			3	6	hp			10	20	move1			10	10																																																																					0
+craft with magic - blood ring	1			100					4	ring,mag	jewg,qty=1	r12g,qty=1	gg4r,qty=1				usetype,crf		50	50	lifesteal			1	3	hp			10	20	str			5	10																																																																					0
+craft with magic - blood weapon	1			100					4	weap,mag,noe	jewg,qty=1	r09g,qty=1	gg4r,qty=1				usetype,crf		50	50	lifesteal			3	6	hp			10	20	dmg%			50	80																																																																					0
+craft with magic - blood weapon (eth)	1			100					4	weap,mag,eth	jewg,qty=1	r09g,qty=1	gg4r,qty=1				usetype,crf		50	50	lifesteal			3	6	hp			10	20	dmg%			50	80	ethereal	100		1	1																																																																0
+craft with magic - caster helm	1			200					4	helm,mag,noe	jewg,qty=1	r04g,qty=1	gg4a,qty=1				usetype,crf		50	50	cast2			5	10	mana			10	20	regen-mana			4	10																																																																					0
+craft with magic - caster helm (eth)	1			200					4	helm,mag,eth	jewg,qty=1	r04g,qty=1	gg4a,qty=1				usetype,crf		50	50	cast2			5	10	mana			10	20	regen-mana			4	10	ethereal	100		1	1																																																																0
+craft with magic - caster boots	1			100					4	boot,mag,noe	jewg,qty=1	r10g,qty=1	gg4a,qty=1				usetype,crf		50	50	regen-mana			4	10	mana			10	20	mana%			5	10																																																																					0
+craft with magic - caster boots (eth)	1			100					4	boot,mag,eth	jewg,qty=1	r10g,qty=1	gg4a,qty=1				usetype,crf		50	50	regen-mana			4	10	mana			10	20	mana%			5	10	ethereal	100		1	1																																																																0
+craft with magic - caster gloves	1			100					4	glov,mag,noe	jewg,qty=1	r09g,qty=1	gg4a,qty=1				usetype,crf		50	50	cast2			5	10	mana			10	20	mana-kill			1	3																																																																					0
+craft with magic - caster gloves (eth)	1			100					4	glov,mag,eth	jewg,qty=1	r09g,qty=1	gg4a,qty=1				usetype,crf		50	50	cast2			5	10	mana			10	20	mana-kill			1	3	ethereal	100		1	1																																																																0
+craft with magic - caster belt	1			100					4	belt,mag,noe	jewg,qty=1	r06g,qty=1	gg4a,qty=1				usetype,crf		50	50	regen-mana			4	10	mana			10	20	cast1			10	10																																																																					0
+craft with magic - caster belt (eth)	1			100					4	belt,mag,eth	jewg,qty=1	r06g,qty=1	gg4a,qty=1				usetype,crf		50	50	regen-mana			4	10	mana			10	20	cast1			10	10	ethereal	100		1	1																																																																0
+craft with magic - caster shield	1			100					4	shld,mag,noe	jewg,qty=1	r05g,qty=1	gg4a,qty=1				usetype,crf		50	50	cast1			5	10	mana			10	20	block			10	20																																																																					0
+craft with magic - caster shield (eth)	1			100					4	shld,mag,eth	jewg,qty=1	r05g,qty=1	gg4a,qty=1				usetype,crf		50	50	cast1			5	10	mana			10	20	block			10	20	ethereal	100		1	1																																																																0
+craft with magic - caster chest	1			100					4	tors,mag,noe	jewg,qty=1	r07g,qty=1	gg4a,qty=1				usetype,crf		50	50	cast1			5	10	mana			10	20	mana-kill			2	6																																																																					0
+craft with magic - caster chest (eth)	1			100					4	tors,mag,eth	jewg,qty=1	r07g,qty=1	gg4a,qty=1				usetype,crf		50	50	cast1			5	10	mana			10	20	mana-kill			2	6	ethereal	100		1	1																																																																0
+craft with magic - caster amulet	1			100					4	amul,mag	jewg,qty=1	r08g,qty=1	gg4a,qty=1				usetype,crf		50	50	regen-mana			4	10	mana			10	20	cast1			5	10																																																																					0
+craft with magic - caster ring	1			100					4	ring,mag	jewg,qty=1	r11g,qty=1	gg4a,qty=1				usetype,crf		50	50	mana-kill			1	2	mana			10	20	enr			5	10																																																																					0
+craft with magic - caster weapon	1			100					4	weap,mag,noe	jewg,qty=1	r03g,qty=1	gg4a,qty=1				usetype,crf		50	50	allskills			1	1	mana			10	20	cast1			10	20																																																																					0
+craft with magic - caster weapon (eth)	1			100					4	weap,mag,eth	jewg,qty=1	r03g,qty=1	gg4a,qty=1				usetype,crf		50	50	allskills			1	1	mana			10	20	cast1			10	20	ethereal	100		1	1																																																																0
+craft with magic - safety helm	1			200					4	helm,mag,noe	jewg,qty=1	r06g,qty=1	gg4e,qty=1				usetype,crf		50	50	red-dmg%			5	10	res-ltng			10	20	ac%			20	60																																																																					0
+craft with magic - safety helm (eth)	1			200					4	helm,mag,eth	jewg,qty=1	r06g,qty=1	gg4e,qty=1				usetype,crf		50	50	red-dmg%			5	10	res-ltng			10	20	ac%			20	60	ethereal	100		1	1																																																																0
+craft with magic - safety boots	1			100					4	boot,mag,noe	jewg,qty=1	r09g,qty=1	gg4e,qty=1				usetype,crf		50	50	red-dmg			2	5	red-mag			2	5	res-fire			10	20	ac%			20	60																																																																0
+craft with magic - safety boots (eth)	1			100					4	boot,mag,eth	jewg,qty=1	r09g,qty=1	gg4e,qty=1				usetype,crf		50	50	red-dmg			2	5	red-mag			2	5	res-fire			10	20	ac%			20	60	ethereal	100		1	1																																																											0
+craft with magic - safety gloves	1			100					4	glov,mag,noe	jewg,qty=1	r08g,qty=1	gg4e,qty=1				usetype,crf		50	50	red-dmg			2	5	red-mag			2	5	res-cold			10	20	ac%			20	60																																																																0
+craft with magic - safety gloves (eth)	1			100					4	glov,mag,eth	jewg,qty=1	r08g,qty=1	gg4e,qty=1				usetype,crf		50	50	red-dmg			2	5	red-mag			2	5	res-cold			10	20	ac%			20	60	ethereal	100		1	1																																																											0
+craft with magic - safety belt	1			100					4	belt,mag,noe	jewg,qty=1	r07g,qty=1	gg4e,qty=1				usetype,crf		50	50	red-dmg			2	5	red-mag			2	5	res-pois			10	20	ac%			20	60																																																																0
+craft with magic - safety belt (eth)	1			100					4	belt,mag,eth	jewg,qty=1	r07g,qty=1	gg4e,qty=1				usetype,crf		50	50	red-dmg			2	5	red-mag			2	5	res-pois			10	20	ac%			20	60	ethereal	100		1	1																																																											0
+craft with magic - safety shield	1			100					4	shld,mag,noe	jewg,qty=1	r04g,qty=1	gg4e,qty=1				usetype,crf		50	50	red-dmg%			5	10	ac%			20	60																																																																										0
+craft with magic - safety shield (eth)	1			100					4	shld,mag,eth	jewg,qty=1	r04g,qty=1	gg4e,qty=1				usetype,crf		50	50	red-dmg%			5	10	ac%			20	60	ethereal	100		1	1																																																																					0
+craft with magic - safety chest	1			100					4	tors,mag,noe	jewg,qty=1	r05g,qty=1	gg4e,qty=1				usetype,crf		50	50	red-dmg%			5	10	half-freeze			1	1	ac%			20	60																																																																					0
+craft with magic - safety chest (eth)	1			100					4	tors,mag,eth	jewg,qty=1	r05g,qty=1	gg4e,qty=1				usetype,crf		50	50	red-dmg%			5	10	half-freeze			1	1	ac%			20	60	ethereal	100		1	1																																																																0
+craft with magic - safety amulet	1			100					4	amul,mag	jewg,qty=1	r10g,qty=1	gg4e,qty=1				usetype,crf		50	50	red-dmg			2	5	red-mag			2	5	block			10	10																																																																					0
+craft with magic - safety ring	1			100					4	ring,mag	jewg,qty=1	r11g,qty=1	gg4e,qty=1				usetype,crf		50	50	red-dmg			2	5	red-mag			2	5	vit			5	10																																																																					0
+craft with magic - safety weapon	1			100					4	miss,mag,noe	jewg,qty=1	r12g,qty=1	gg4e,qty=1				usetype,crf		50	50	red-dmg			2	5	red-mag			2	5	dmg%			70	140	swing2			10	20																																																																0
+craft with magic - safety weapon (eth)	0			100					4	miss,mag,eth	jewg,qty=1	r12g,qty=1	gg4e,qty=1				usetype,crf		50	50	red-dmg			2	5	red-mag			2	5	dmg%			70	140	swing2			10	20	ethereal	100		1	1																																																											0
+craft with magic - vampiric helm	1			200					4	helm,mag,noe	jewg,qty=1	r17g,qty=1	gg4z,qty=1				usetype,crf		50	50	manasteal			2	4	deadly			10	20	regen			5	10																																																																					0
+craft with magic - vampiric helm (eth)	1			200					4	helm,mag,eth	jewg,qty=1	r17g,qty=1	gg4z,qty=1				usetype,crf		50	50	manasteal			2	4	deadly			10	20	regen			5	10	ethereal	100		1	1																																																																0
+craft with magic - vampiric boots	1			100					4	boot,mag,noe	jewg,qty=1	r01g,qty=1	gg4z,qty=1				usetype,crf		50	50	manasteal			2	4	res-pois-len			10	20	regen			5	10																																																																					0
+craft with magic - vampiric boots (eth)	1			100					4	boot,mag,eth	jewg,qty=1	r01g,qty=1	gg4z,qty=1				usetype,crf		50	50	manasteal			2	4	res-pois-len			10	20	regen			5	10	ethereal	100		1	1																																																																0
+craft with magic - vampiric gloves	1			100					4	glov,mag,noe	jewg,qty=1	r16g,qty=1	gg4z,qty=1				usetype,crf		50	50	manasteal			2	4	deadly			5	10	regen			5	10																																																																					0
+craft with magic - vampiric gloves (eth)	1			100					4	glov,mag,eth	jewg,qty=1	r16g,qty=1	gg4z,qty=1				usetype,crf		50	50	manasteal			2	4	deadly			5	10	regen			5	10	ethereal	100		1	1																																																																0
+craft with magic - vampiric belt	1			100					4	belt,mag,noe	jewg,qty=1	r02g,qty=1	gg4z,qty=1				usetype,crf		50	50	manasteal			3	6	dmg-to-mana			10	20	regen			5	10																																																																					0
+craft with magic - vampiric belt (eth)	1			100					4	belt,mag,eth	jewg,qty=1	r02g,qty=1	gg4z,qty=1				usetype,crf		50	50	manasteal			3	6	dmg-to-mana			10	20	regen			5	10	ethereal	100		1	1																																																																0
+craft with magic - vampiric shield	1			100					4	shld,mag,noe	jewg,qty=1	r12g,qty=1	gg4z,qty=1				usetype,crf		50	50	manasteal			3	6	ease			-20	-30	block			10	20																																																																					0
+craft with magic - vampiric shield (eth)	1			100					4	shld,mag,eth	jewg,qty=1	r12g,qty=1	gg4z,qty=1				usetype,crf		50	50	manasteal			3	6	ease			-20	-30	block			10	20	ethereal	100		1	1																																																																0
+craft with magic - vampiric chest	1			100					4	tors,mag,noe	jewg,qty=1	r03g,qty=1	gg4z,qty=1				usetype,crf		50	50	manasteal			3	6	ease			-20	-30	ac%			25	50																																																																					0
+craft with magic - vampiric chest (eth)	1			100					4	tors,mag,eth	jewg,qty=1	r03g,qty=1	gg4z,qty=1				usetype,crf		50	50	manasteal			3	6	ease			-20	-30	ac%			25	50	ethereal	100		1	1																																																																0
+craft with magic - vampiric amulet	1			100					4	amul,mag	jewg,qty=1	r14g,qty=1	gg4z,qty=1				usetype,crf		50	50	manasteal			3	6	curse-res			5	10	regen			5	10																																																																					0
+craft with magic - vampiric ring	1			100					4	ring,mag	jewg,qty=1	r15g,qty=1	gg4z,qty=1				usetype,crf		50	50	manasteal			1	3	res-pois-len			10	20	regen			5	10																																																																					0
+craft with magic - vampiric weapon	1			100					4	weap,mag,noe	jewg,qty=1	r13g,qty=1	gg4z,qty=1				usetype,crf		50	50	manasteal			3	6	regen			5	10	dmg-undead			75	120	dmg-demon			75	120																																																																0
+craft with magic - vampiric weapon (eth)	1			100					4	weap,mag,eth	jewg,qty=1	r13g,qty=1	gg4z,qty=1				usetype,crf		50	50	manasteal			3	6	regen			5	10	dmg-undead			75	120	dmg-demon			75	120	ethereal	100		1	1																																																											0
+craft with magic - bountiful helm	1			200					4	helm,mag,noe	jewg,qty=1	r03g,qty=1	gg4t,qty=1				usetype,crf		50	50	mag%			20	30	light			1	3	ac%			25	50																																																																					0
+craft with magic - bountiful helm (eth)	1			200					4	helm,mag,eth	jewg,qty=1	r03g,qty=1	gg4t,qty=1				usetype,crf		50	50	mag%			20	30	light			1	3	ac%			25	50	ethereal	100		1	1																																																																0
+craft with magic - bountiful boots	1			100					4	boot,mag,noe	jewg,qty=1	r16g,qty=1	gg4t,qty=1				usetype,crf		50	50	mag%			15	25	light			1	3	ac%			25	50																																																																					0
+craft with magic - bountiful boots (eth)	1			100					4	boot,mag,eth	jewg,qty=1	r16g,qty=1	gg4t,qty=1				usetype,crf		50	50	mag%			15	25	light			1	3	ac%			25	50	ethereal	100		1	1																																																																0
+craft with magic - bountiful gloves	1			100					4	glov,mag,noe	jewg,qty=1	r15g,qty=1	gg4t,qty=1				usetype,crf		50	50	mag%			15	25	light			1	3	ac%			25	50																																																																					0
+craft with magic - bountiful gloves (eth)	1			100					4	glov,mag,eth	jewg,qty=1	r15g,qty=1	gg4t,qty=1				usetype,crf		50	50	mag%			15	25	light			1	3	ac%			25	50	ethereal	100		1	1																																																																0
+craft with magic - bountiful belt	1			100					4	belt,mag,noe	jewg,qty=1	r01g,qty=1	gg4t,qty=1				usetype,crf		50	50	mag%			20	30	light			1	3	ac%			25	50																																																																					0
+craft with magic - bountiful belt (eth)	1			100					4	belt,mag,eth	jewg,qty=1	r01g,qty=1	gg4t,qty=1				usetype,crf		50	50	mag%			20	30	light			1	3	ac%			25	50	ethereal	100		1	1																																																																0
+craft with magic - bountiful shield	1			100					4	shld,mag,noe	jewg,qty=1	r14g,qty=1	gg4t,qty=1				usetype,crf		50	50	mag%			20	30	light			1	3	block			10	20																																																																					0
+craft with magic - bountiful shield (eth)	1			100					4	shld,mag,eth	jewg,qty=1	r14g,qty=1	gg4t,qty=1				usetype,crf		50	50	mag%			20	30	light			1	3	block			10	20	ethereal	100		1	1																																																																0
+craft with magic - bountiful chest	1			100					4	tors,mag,noe	jewg,qty=1	r02g,qty=1	gg4t,qty=1				usetype,crf		50	50	mag%			20	30	light			1	3	ac%			25	50																																																																					0
+craft with magic - bountiful chest (eth)	1			100					4	tors,mag,eth	jewg,qty=1	r02g,qty=1	gg4t,qty=1				usetype,crf		50	50	mag%			20	30	light			1	3	ac%			25	50	ethereal	100		1	1																																																																0
+craft with magic - bountiful amulet	1			100					4	amul,mag	jewg,qty=1	r18g,qty=1	gg4t,qty=1				usetype,crf		50	50	mag%			20	30	light			1	3	vit			10	20																																																																					0
+craft with magic - bountiful ring	1			100					4	ring,mag	jewg,qty=1	r17g,qty=1	gg4t,qty=1				usetype,crf		50	50	mag%			10	15	light			1	3	vit			5	10																																																																					0
+craft with magic - bountiful weapon	1			100					4	weap,mag,noe	jewg,qty=1	r13g,qty=1	gg4t,qty=1				usetype,crf		50	50	mag%			20	30	light			1	3	dmg%			55	80																																																																					0
+craft with magic - bountiful weapon (eth)	1			100					4	weap,mag,eth	jewg,qty=1	r13g,qty=1	gg4t,qty=1				usetype,crf		50	50	mag%			20	30	light			1	3	dmg%			55	80	ethereal	100		1	1																																																																0
+craft with rare - hitpower helm	1			200					4	helm,rar,noe	jewg,qty=1	r06g,qty=1	gg4s,qty=1				usetype,crf		50	50	gethit-skill		44	5	4	balance1			10	20	att			100	200																																																																					0
+craft with rare - hitpower helm (eth)	1			200					4	helm,rar,eth	jewg,qty=1	r06g,qty=1	gg4s,qty=1				usetype,crf		50	50	gethit-skill		44	5	4	balance1			10	20	att			100	200	ethereal	100		1	1																																																																0
+craft with rare - hitpower boots	1			100					4	boot,rar,noe	jewg,qty=1	r08g,qty=1	gg4s,qty=1				usetype,crf		50	50	gethit-skill		44	5	4	balance1			10	10	ac-hth			25	60																																																																					0
+craft with rare - hitpower boots (eth)	1			100					4	boot,rar,eth	jewg,qty=1	r08g,qty=1	gg4s,qty=1				usetype,crf		50	50	gethit-skill		44	5	4	balance1			10	10	ac-hth			25	60	ethereal	100		1	1																																																																0
+craft with rare - hitpower gloves	1			100					4	glov,rar,noe	jewg,qty=1	r09g,qty=1	gg4s,qty=1				usetype,crf		50	50	gethit-skill		44	5	4	reduce-ac			10	20	knock			1	1																																																																					0
+craft with rare - hitpower gloves (eth)	1			100					4	glov,rar,eth	jewg,qty=1	r09g,qty=1	gg4s,qty=1				usetype,crf		50	50	gethit-skill		44	5	4	reduce-ac			10	20	knock			1	1	ethereal	100		1	1																																																																0
+craft with rare - hitpower belt	1			100					4	belt,rar,noe	jewg,qty=1	r07g,qty=1	gg4s,qty=1				usetype,crf		50	50	gethit-skill		44	5	4	balance1			10	20	dmg-to-mana			5	10																																																																					0
+craft with rare - hitpower belt (eth)	1			100					4	belt,rar,eth	jewg,qty=1	r07g,qty=1	gg4s,qty=1				usetype,crf		50	50	gethit-skill		44	5	4	balance1			10	20	dmg-to-mana			5	10	ethereal	100		1	1																																																																0
+craft with rare - hitpower shield	1			100					4	shld,rar,noe	jewg,qty=1	r05g,qty=1	gg4s,qty=1				usetype,crf		50	50	gethit-skill		44	5	4	block2			20	30	block			10	20																																																																					0
+craft with rare - hitpower shield (eth)	1			100					4	shld,rar,eth	jewg,qty=1	r05g,qty=1	gg4s,qty=1				usetype,crf		50	50	gethit-skill		44	5	4	block2			20	30	block			10	20	ethereal	100		1	1																																																																0
+craft with rare - hitpower chest	1			100					4	tors,rar,noe	jewg,qty=1	r04g,qty=1	gg4s,qty=1				usetype,crf		50	50	gethit-skill		44	5	4	ac%			25	50	balance1			20	40																																																																					0
+craft with rare - hitpower chest (eth)	1			100					4	tors,rar,eth	jewg,qty=1	r04g,qty=1	gg4s,qty=1				usetype,crf		50	50	gethit-skill		44	5	4	ac%			25	50	balance1			20	40	ethereal	100		1	1																																																																0
+craft with rare - hitpower amulet	1			100					4	amul,rar	jewg,qty=1	r10g,qty=1	gg4s,qty=1				usetype,crf		50	50	gethit-skill		44	5	4	att			150	250	balance1			10	20																																																																					0
+craft with rare - hitpower ring	1			100					4	ring,rar	jewg,qty=1	r11g,qty=1	gg4s,qty=1				usetype,crf		50	50	gethit-skill		44	5	4	dmg-max			1	4	dex			5	10																																																																					0
+craft with rare - hitpower weapon	1			100					4	weap,rar,noe	jewg,qty=1	r03g,qty=1	gg4s,qty=1				usetype,crf		50	50	gethit-skill		44	5	4	reduce-ac			10	20	dmg%			50	80																																																																					0
+craft with rare - hitpower weapon (eth)	1			100					4	weap,rar,eth	jewg,qty=1	r03g,qty=1	gg4s,qty=1				usetype,crf		50	50	gethit-skill		44	5	4	reduce-ac			10	20	dmg%			50	80	ethereal	100		1	1																																																																0
+craft with rare - blood helm	1			200					4	helm,rar,noe	jewg,qty=1	r08g,qty=1	gg4r,qty=1				usetype,crf		50	50	lifesteal			2	4	hp			10	20	crush			10	20																																																																					0
+craft with rare - blood helm (eth)	1			200					4	helm,rar,eth	jewg,qty=1	r08g,qty=1	gg4r,qty=1				usetype,crf		50	50	lifesteal			2	4	hp			10	20	crush			10	20	ethereal	100		1	1																																																																0
+craft with rare - blood boots	1			100					4	boot,rar,noe	jewg,qty=1	r05g,qty=1	gg4r,qty=1				usetype,crf		50	50	lifesteal			2	4	hp			10	20	regen			15	30																																																																					0
+craft with rare - blood boots (eth)	1			100					4	boot,rar,eth	jewg,qty=1	r05g,qty=1	gg4r,qty=1				usetype,crf		50	50	lifesteal			2	4	hp			10	20	regen			15	30	ethereal	100		1	1																																																																0
+craft with rare - blood gloves	1			100					4	glov,rar,noe	jewg,qty=1	r04g,qty=1	gg4r,qty=1				usetype,crf		50	50	lifesteal			2	4	hp			10	20	crush			5	10																																																																					0
+craft with rare - blood gloves (eth)	1			100					4	glov,rar,eth	jewg,qty=1	r04g,qty=1	gg4r,qty=1				usetype,crf		50	50	lifesteal			2	4	hp			10	20	crush			5	10	ethereal	100		1	1																																																																0
+craft with rare - blood belt	1			100					4	belt,rar,noe	jewg,qty=1	r07g,qty=1	gg4r,qty=1				usetype,crf		50	50	lifesteal			3	6	hp			10	20	openwounds			10	20																																																																					0
+craft with rare - blood belt (eth)	1			100					4	belt,rar,eth	jewg,qty=1	r07g,qty=1	gg4r,qty=1				usetype,crf		50	50	lifesteal			3	6	hp			10	20	openwounds			10	20	ethereal	100		1	1																																																																0
+craft with rare - blood shield	1			100					4	shld,rar,noe	jewg,qty=1	r06g,qty=1	gg4r,qty=1				usetype,crf		50	50	lifesteal			3	6	hp			10	20	block			10	20																																																																					0
+craft with rare - blood shield (eth)	1			100					4	shld,rar,eth	jewg,qty=1	r06g,qty=1	gg4r,qty=1				usetype,crf		50	50	lifesteal			3	6	hp			10	20	block			10	20	ethereal	100		1	1																																																																0
+craft with rare - blood chest	1			100					4	tors,rar,noe	jewg,qty=1	r10g,qty=1	gg4r,qty=1				usetype,crf		50	50	lifesteal			3	6	hp			20	40	heal-kill			3	6																																																																					0
+craft with rare - blood chest (eth)	1			100					4	tors,rar,eth	jewg,qty=1	r10g,qty=1	gg4r,qty=1				usetype,crf		50	50	lifesteal			3	6	hp			20	40	heal-kill			3	6	ethereal	100		1	1																																																																0
+craft with rare - blood amulet	1			100					4	amul,rar	jewg,qty=1	r11g,qty=1	gg4r,qty=1				usetype,crf		50	50	heal-kill			3	6	hp			10	20	move1			10	10																																																																					0
+craft with rare - blood ring	1			100					4	ring,rar	jewg,qty=1	r12g,qty=1	gg4r,qty=1				usetype,crf		50	50	lifesteal			1	3	hp			10	20	str			5	10																																																																					0
+craft with rare - blood weapon	1			100					4	weap,rar,noe	jewg,qty=1	r09g,qty=1	gg4r,qty=1				usetype,crf		50	50	lifesteal			3	6	hp			10	20	dmg%			50	80																																																																					0
+craft with rare - blood weapon (eth)	1			100					4	weap,rar,eth	jewg,qty=1	r09g,qty=1	gg4r,qty=1				usetype,crf		50	50	lifesteal			3	6	hp			10	20	dmg%			50	80	ethereal	100		1	1																																																																0
+craft with rare - caster helm	1			200					4	helm,rar,noe	jewg,qty=1	r04g,qty=1	gg4a,qty=1				usetype,crf		50	50	cast2			5	10	mana			10	20	regen-mana			4	10																																																																					0
+craft with rare - caster helm (eth)	1			200					4	helm,rar,eth	jewg,qty=1	r04g,qty=1	gg4a,qty=1				usetype,crf		50	50	cast2			5	10	mana			10	20	regen-mana			4	10	ethereal	100		1	1																																																																0
+craft with rare - caster boots	1			100					4	boot,rar,noe	jewg,qty=1	r10g,qty=1	gg4a,qty=1				usetype,crf		50	50	regen-mana			4	10	mana			10	20	mana%			5	10																																																																					0
+craft with rare - caster boots (eth)	1			100					4	boot,rar,eth	jewg,qty=1	r10g,qty=1	gg4a,qty=1				usetype,crf		50	50	regen-mana			4	10	mana			10	20	mana%			5	10	ethereal	100		1	1																																																																0
+craft with rare - caster gloves	1			100					4	glov,rar,noe	jewg,qty=1	r09g,qty=1	gg4a,qty=1				usetype,crf		50	50	cast2			5	10	mana			10	20	mana-kill			1	3																																																																					0
+craft with rare - caster gloves (eth)	1			100					4	glov,rar,eth	jewg,qty=1	r09g,qty=1	gg4a,qty=1				usetype,crf		50	50	cast2			5	10	mana			10	20	mana-kill			1	3	ethereal	100		1	1																																																																0
+craft with rare - caster belt	1			100					4	belt,rar,noe	jewg,qty=1	r06g,qty=1	gg4a,qty=1				usetype,crf		50	50	regen-mana			4	10	mana			10	20	cast1			10	10																																																																					0
+craft with rare - caster belt (eth)	1			100					4	belt,rar,eth	jewg,qty=1	r06g,qty=1	gg4a,qty=1				usetype,crf		50	50	regen-mana			4	10	mana			10	20	cast1			10	10	ethereal	100		1	1																																																																0
+craft with rare - caster shield	1			100					4	shld,rar,noe	jewg,qty=1	r05g,qty=1	gg4a,qty=1				usetype,crf		50	50	cast1			5	10	mana			10	20	block			10	20																																																																					0
+craft with rare - caster shield (eth)	1			100					4	shld,rar,eth	jewg,qty=1	r05g,qty=1	gg4a,qty=1				usetype,crf		50	50	cast1			5	10	mana			10	20	block			10	20	ethereal	100		1	1																																																																0
+craft with rare - caster chest	1			100					4	tors,rar,noe	jewg,qty=1	r07g,qty=1	gg4a,qty=1				usetype,crf		50	50	cast1			5	10	mana			10	20	mana-kill			2	6																																																																					0
+craft with rare - caster chest (eth)	1			100					4	tors,rar,eth	jewg,qty=1	r07g,qty=1	gg4a,qty=1				usetype,crf		50	50	cast1			5	10	mana			10	20	mana-kill			2	6	ethereal	100		1	1																																																																0
+craft with rare - caster amulet	1			100					4	amul,rar	jewg,qty=1	r08g,qty=1	gg4a,qty=1				usetype,crf		50	50	regen-mana			4	10	mana			10	20	cast1			5	10																																																																					0
+craft with rare - caster ring	1			100					4	ring,rar	jewg,qty=1	r11g,qty=1	gg4a,qty=1				usetype,crf		50	50	mana-kill			1	2	mana			10	20	enr			5	10																																																																					0
+craft with rare - caster weapon	1			100					4	weap,rar,noe	jewg,qty=1	r03g,qty=1	gg4a,qty=1				usetype,crf		50	50	allskills			1	1	mana			10	20	cast1			10	20																																																																					0
+craft with rare - caster weapon (eth)	1			100					4	weap,rar,eth	jewg,qty=1	r03g,qty=1	gg4a,qty=1				usetype,crf		50	50	allskills			1	1	mana			10	20	cast1			10	20	ethereal	100		1	1																																																																0
+craft with rare - safety helm	1			200					4	helm,rar,noe	jewg,qty=1	r06g,qty=1	gg4e,qty=1				usetype,crf		50	50	red-dmg%			5	10	res-ltng			10	20	ac%			20	60																																																																					0
+craft with rare - safety helm (eth)	1			200					4	helm,rar,eth	jewg,qty=1	r06g,qty=1	gg4e,qty=1				usetype,crf		50	50	red-dmg%			5	10	res-ltng			10	20	ac%			20	60	ethereal	100		1	1																																																																0
+craft with rare - safety boots	1			100					4	boot,rar,noe	jewg,qty=1	r09g,qty=1	gg4e,qty=1				usetype,crf		50	50	red-dmg			2	5	red-mag			2	5	res-fire			10	20	ac%			20	60																																																																0
+craft with rare - safety boots (eth)	1			100					4	boot,rar,eth	jewg,qty=1	r09g,qty=1	gg4e,qty=1				usetype,crf		50	50	red-dmg			2	5	red-mag			2	5	res-fire			10	20	ac%			20	60	ethereal	100		1	1																																																											0
+craft with rare - safety gloves	1			100					4	glov,rar,noe	jewg,qty=1	r08g,qty=1	gg4e,qty=1				usetype,crf		50	50	red-dmg			2	5	red-mag			2	5	res-cold			10	20	ac%			20	60																																																																0
+craft with rare - safety gloves (eth)	1			100					4	glov,rar,eth	jewg,qty=1	r08g,qty=1	gg4e,qty=1				usetype,crf		50	50	red-dmg			2	5	red-mag			2	5	res-cold			10	20	ac%			20	60	ethereal	100		1	1																																																											0
+craft with rare - safety belt	1			100					4	belt,rar,noe	jewg,qty=1	r07g,qty=1	gg4e,qty=1				usetype,crf		50	50	red-dmg			2	5	red-mag			2	5	res-pois			10	20	ac%			20	60																																																																0
+craft with rare - safety belt (eth)	1			100					4	belt,rar,eth	jewg,qty=1	r07g,qty=1	gg4e,qty=1				usetype,crf		50	50	red-dmg			2	5	red-mag			2	5	res-pois			10	20	ac%			20	60	ethereal	100		1	1																																																											0
+craft with rare - safety shield	1			100					4	shld,rar,noe	jewg,qty=1	r04g,qty=1	gg4e,qty=1				usetype,crf		50	50	red-dmg%			5	10	ac%			20	60																																																																										0
+craft with rare - safety shield (eth)	1			100					4	shld,rar,eth	jewg,qty=1	r04g,qty=1	gg4e,qty=1				usetype,crf		50	50	red-dmg%			5	10	ac%			20	60	ethereal	100		1	1																																																																					0
+craft with rare - safety chest	1			100					4	tors,rar,noe	jewg,qty=1	r05g,qty=1	gg4e,qty=1				usetype,crf		50	50	red-dmg%			5	10	half-freeze			1	1	ac%			20	60																																																																					0
+craft with rare - safety chest (eth)	1			100					4	tors,rar,eth	jewg,qty=1	r05g,qty=1	gg4e,qty=1				usetype,crf		50	50	red-dmg%			5	10	half-freeze			1	1	ac%			20	60	ethereal	100		1	1																																																																0
+craft with rare - safety amulet	1			100					4	amul,rar	jewg,qty=1	r10g,qty=1	gg4e,qty=1				usetype,crf		50	50	red-dmg			2	5	red-mag			2	5	block			10	10																																																																					0
+craft with rare - safety ring	1			100					4	ring,rar	jewg,qty=1	r11g,qty=1	gg4e,qty=1				usetype,crf		50	50	red-dmg			2	5	red-mag			2	5	vit			5	10																																																																					0
+craft with rare - safety weapon	1			100					4	miss,rar,noe	jewg,qty=1	r12g,qty=1	gg4e,qty=1				usetype,crf		50	50	red-dmg			2	5	red-mag			2	5	dmg%			70	140	swing2			10	20																																																																0
+craft with rare - safety weapon (eth)	0			100					4	miss,rar,noe	jewg,qty=1	r12g,qty=1	gg4e,qty=1				usetype,crf		50	50	red-dmg			2	5	red-mag			2	5	dmg%			70	140	swing2			10	20	ethereal	100		1	1																																																											0
+craft with rare - vampiric helm	1			200					4	helm,rar,noe	jewg,qty=1	r17g,qty=1	gg4z,qty=1				usetype,crf		50	50	manasteal			2	4	deadly			10	20	regen			5	10																																																																					0
+craft with rare - vampiric helm (eth)	1			200					4	helm,rar,eth	jewg,qty=1	r17g,qty=1	gg4z,qty=1				usetype,crf		50	50	manasteal			2	4	deadly			10	20	regen			5	10	ethereal	100		1	1																																																																0
+craft with rare - vampiric boots	1			100					4	boot,rar,noe	jewg,qty=1	r01g,qty=1	gg4z,qty=1				usetype,crf		50	50	manasteal			2	4	res-pois-len			10	20	regen			5	10																																																																					0
+craft with rare - vampiric boots (eth)	1			100					4	boot,rar,eth	jewg,qty=1	r01g,qty=1	gg4z,qty=1				usetype,crf		50	50	manasteal			2	4	res-pois-len			10	20	regen			5	10	ethereal	100		1	1																																																																0
+craft with rare - vampiric gloves	1			100					4	glov,rar,noe	jewg,qty=1	r16g,qty=1	gg4z,qty=1				usetype,crf		50	50	manasteal			2	4	deadly			5	10	regen			5	10																																																																					0
+craft with rare - vampiric gloves (eth)	1			100					4	glov,rar,eth	jewg,qty=1	r16g,qty=1	gg4z,qty=1				usetype,crf		50	50	manasteal			2	4	deadly			5	10	regen			5	10	ethereal	100		1	1																																																																0
+craft with rare - vampiric belt	1			100					4	belt,rar,noe	jewg,qty=1	r02g,qty=1	gg4z,qty=1				usetype,crf		50	50	manasteal			3	6	dmg-to-mana			10	20	regen			5	10																																																																					0
+craft with rare - vampiric belt (eth)	1			100					4	belt,rar,eth	jewg,qty=1	r02g,qty=1	gg4z,qty=1				usetype,crf		50	50	manasteal			3	6	dmg-to-mana			10	20	regen			5	10	ethereal	100		1	1																																																																0
+craft with rare - vampiric shield	1			100					4	shld,rar,noe	jewg,qty=1	r12g,qty=1	gg4z,qty=1				usetype,crf		50	50	manasteal			3	6	ease			-20	-30	block			10	20																																																																					0
+craft with rare - vampiric shield (eth)	1			100					4	shld,rar,eth	jewg,qty=1	r12g,qty=1	gg4z,qty=1				usetype,crf		50	50	manasteal			3	6	ease			-20	-30	block			10	20	ethereal	100		1	1																																																																0
+craft with rare - vampiric chest	1			100					4	tors,rar,noe	jewg,qty=1	r03g,qty=1	gg4z,qty=1				usetype,crf		50	50	manasteal			3	6	ease			-20	-30	ac%			25	50																																																																					0
+craft with rare - vampiric chest (eth)	1			100					4	tors,rar,eth	jewg,qty=1	r03g,qty=1	gg4z,qty=1				usetype,crf		50	50	manasteal			3	6	ease			-20	-30	ac%			25	50	ethereal	100		1	1																																																																0
+craft with rare - vampiric amulet	1			100					4	amul,rar	jewg,qty=1	r14g,qty=1	gg4z,qty=1				usetype,crf		50	50	manasteal			3	6	curse-res			5	10	regen			5	10																																																																					0
+craft with rare - vampiric ring	1			100					4	ring,rar	jewg,qty=1	r15g,qty=1	gg4z,qty=1				usetype,crf		50	50	manasteal			1	3	res-pois-len			10	20	regen			5	10																																																																					0
+craft with rare - vampiric weapon	1			100					4	weap,rar,noe	jewg,qty=1	r13g,qty=1	gg4z,qty=1				usetype,crf		50	50	manasteal			3	6	regen			5	10	dmg-undead			75	120	dmg-demon			75	120																																																																0
+craft with rare - vampiric weapon (eth)	1			100					4	weap,rar,eth	jewg,qty=1	r13g,qty=1	gg4z,qty=1				usetype,crf		50	50	manasteal			3	6	regen			5	10	dmg-undead			75	120	dmg-demon			75	120	ethereal	100		1	1																																																											0
+craft with rare - bountiful helm	1			200					4	helm,rar,noe	jewg,qty=1	r03g,qty=1	gg4t,qty=1				usetype,crf		50	50	mag%			20	30	light			1	3	ac%			25	50																																																																					0
+craft with rare - bountiful helm (eth)	1			200					4	helm,rar,eth	jewg,qty=1	r03g,qty=1	gg4t,qty=1				usetype,crf		50	50	mag%			20	30	light			1	3	ac%			25	50	ethereal	100		1	1																																																																0
+craft with rare - bountiful boots	1			100					4	boot,rar,noe	jewg,qty=1	r16g,qty=1	gg4t,qty=1				usetype,crf		50	50	mag%			15	25	light			1	3	ac%			25	50																																																																					0
+craft with rare - bountiful boots (eth)	1			100					4	boot,rar,eth	jewg,qty=1	r16g,qty=1	gg4t,qty=1				usetype,crf		50	50	mag%			15	25	light			1	3	ac%			25	50	ethereal	100		1	1																																																																0
+craft with rare - bountiful gloves	1			100					4	glov,rar,noe	jewg,qty=1	r15g,qty=1	gg4t,qty=1				usetype,crf		50	50	mag%			15	25	light			1	3	ac%			25	50																																																																					0
+craft with rare - bountiful gloves (eth)	1			100					4	glov,rar,eth	jewg,qty=1	r15g,qty=1	gg4t,qty=1				usetype,crf		50	50	mag%			15	25	light			1	3	ac%			25	50	ethereal	100		1	1																																																																0
+craft with rare - bountiful belt	1			100					4	belt,rar,noe	jewg,qty=1	r01g,qty=1	gg4t,qty=1				usetype,crf		50	50	mag%			20	30	light			1	3	ac%			25	50																																																																					0
+craft with rare - bountiful belt (eth)	1			100					4	belt,rar,eth	jewg,qty=1	r01g,qty=1	gg4t,qty=1				usetype,crf		50	50	mag%			20	30	light			1	3	ac%			25	50	ethereal	100		1	1																																																																0
+craft with rare - bountiful shield	1			100					4	shld,rar,noe	jewg,qty=1	r14g,qty=1	gg4t,qty=1				usetype,crf		50	50	mag%			20	30	light			1	3	block			10	20																																																																					0
+craft with rare - bountiful shield (eth)	1			100					4	shld,rar,eth	jewg,qty=1	r14g,qty=1	gg4t,qty=1				usetype,crf		50	50	mag%			20	30	light			1	3	block			10	20	ethereal	100		1	1																																																																0
+craft with rare - bountiful chest	1			100					4	tors,rar,noe	jewg,qty=1	r02g,qty=1	gg4t,qty=1				usetype,crf		50	50	mag%			20	30	light			1	3	ac%			25	50																																																																					0
+craft with rare - bountiful chest (eth)	1			100					4	tors,rar,eth	jewg,qty=1	r02g,qty=1	gg4t,qty=1				usetype,crf		50	50	mag%			20	30	light			1	3	ac%			25	50	ethereal	100		1	1																																																																0
+craft with rare - bountiful amulet	1			100					4	amul,rar	jewg,qty=1	r18g,qty=1	gg4t,qty=1				usetype,crf		50	50	mag%			20	30	light			1	3	vit			10	20																																																																					0
+craft with rare - bountiful ring	1			100					4	ring,rar	jewg,qty=1	r17g,qty=1	gg4t,qty=1				usetype,crf		50	50	mag%			10	15	light			1	3	vit			5	10																																																																					0
+craft with rare - bountiful weapon	1			100					4	weap,rar,noe	jewg,qty=1	r13g,qty=1	gg4t,qty=1				usetype,crf		50	50	mag%			20	30	light			1	3	dmg%			55	80																																																																					0
+craft with rare - bountiful weapon (eth)	1			100					4	weap,rar,eth	jewg,qty=1	r13g,qty=1	gg4t,qty=1				usetype,crf		50	50	mag%			20	30	light			1	3	dmg%			55	80	ethereal	100		1	1																																																																0
 standard chest -> socketed chest	1			100					4	tors,nor,nos	r07g,qty=1	r10g,qty=1	gg4t,qty=1				useitem				sock			1	6																																																																															0
 standard weapon -> socketed weapon	1			100	16	70	0		4	weap,nor,nos	r08g,qty=1	r11g,qty=1	gg4a,qty=1				useitem				sock			1	6																																																																															0
 standard helm -> socketed helm	1			100					4	helm,nor,nos	r08g,qty=1	r10g,qty=1	gg4s,qty=1				useitem				sock			1	6																																																																															0
@@ -356,11 +453,12 @@ upgrade basic set armor	1			100					4	armo,bas,set	r07g,qty=1	r13g,qty=1	gg4d,qt
 upgrade exceptional set weapon (staff)	1			100					4	weap,exc,set	r17g,qty=1	r21g,qty=1	gg4e,qty=1				useitem,mod,eli				cast2	100		20	20																																																																															0
 upgrade exceptional set weapon	1			100					4	weap,exc,set	r17g,qty=1	r21g,qty=1	gg4e,qty=1				useitem,mod,eli																																																																																							0
 upgrade exceptional set armor	1			100					4	armo,exc,set	r18g,qty=1	r20g,qty=1	gg4d,qty=1				useitem,mod,eli																																																																																							0
-r09 + weapon + chipped gem -> repair + recharge	1			100					2	weap,noe	r09g,qty=1						useitem,rep,rch,qty=255																																																																																							0
-r08 + armor + flawed gem -> repair + recharge	1			100					2	armo,noe	r08g,qty=1						useitem,rep,rch,qty=255																																																																																							0
-r33 + weapon -> repair + recharge	1			100					3	weap	r33g,qty=1	gg4z,qty=1					useitem,rep,rch,qty=255																																																																																							0
-r33 + armor -> repair + recharge	1			100					3	armo	r33g,qty=1	gg4z,qty=1					useitem,rep,rch,qty=255																																																																																							0
+repair/recharge weapon	1			100					2	weap,noe	r09g,qty=1						useitem,rep,rch,qty=255																																																																																							0
+repair/recharge armor	1			100					2	armo,noe	r08g,qty=1						useitem,rep,rch,qty=255																																																																																							0
+repair/recharge weapon (eth/non-eth)	1			100					3	weap	r33g,qty=1	gg4z,qty=1					useitem,rep,rch,qty=255																																																																																							0
+repair/recharge armor (eth/non-eth)	1			100					3	armo	r33g,qty=1	gg4z,qty=1					useitem,rep,rch,qty=255																																																																																							0
 r15 + tsc + any socketed item -> unsocket (destroy gems)	1			100					3	any,sock	r15g,qty=1	tsc					useitem,uns																																																																																							0
+r15 + rathma tp book + any socketed item -> unsocket (destroy gems)	1			100					3	any,sock	r15g,qty=1	rtp					useitem,uns																													rtp																																																										0
 r08 + jew + superior armor -> tempered armor				100					3	armo,hiq,nos	jewg,qty=1	r08g,qty=1					useitem,tmp																																																																																							0
 r08 + jew + superior weapon -> tempered weapon				100					3	weap,hiq,nos	jewg,qty=1	r08g,qty=1					useitem,tmp																																																																																							0
 r08 + jew + magic ring -> tempered ring				100					3	ring,mag	jewg,qty=1	r08g,qty=1					usetype,tmp				levelreq			3	3																																																																															0
@@ -370,24 +468,38 @@ r01 + gcv + tempered weapon -> +30-50 ar				100					3	weap,tmp	r01g,qty=1	gcv,qt
 Pandemonium key	1		2	100	28	1			3	pk1,qty=1	pk2,qty=1	pk3,qty=1					Pandemonium Portal																																																																																							0
 Pandemonium Finale key	0		2	100	28	1			3	dhn,qty=1	bey,qty=1	mbr,qty=1					Pandemonium Finale Portal																																																																																							0
 Pandemonium Finale key 2	0		2	100	28	1			3	dhn,qty=1	bey,qty=1	mbr,qty=1					Pandemonium Finale Portal																																																																																							0
-Pandemonium Finale key 3	1			3					2	ubor,qty=3	key,qty=1						ubtm																																																																																							0
+Pandemonium Finale key 3	1			3					2	key,qty=1	ubor,qty=3						useitem			100																										ubtm																																																										0
 Token of Absolution	1			100					4	tes,qty=1	ceh,qty=1	bet,qty=1	fed,qty=1				toa																																																																																							0
 Puzzlebox 2h weapon	1			100					2	2han,nos	lbox,qty=1						useitem			100	sock			2	4																																																																															0
-Puzzlebox Bow	1			100					2	miss,nos	lbox,qty=1						useitem			100	sock			2	4																																																																															0
+Puzzlebox Bow/Crossbow	1			100					2	miss,nos	lbox,qty=1						useitem			100	sock			2	4																																																																															0
 Puzzlebox Bow	0			100					2	xbow,nos	lbox,qty=1						useitem			100	sock			2	4																																																																															0
-Puzzlebox 1h weapon	1			100	16	70	0		2	weap,nos	lbox,qty=1						useitem			100	sock			1	2																																																																															0
+Puzzlebox 1h weapon	1			100					2	weap,nos	lbox,qty=1						useitem			100	sock			1	2																																																																															0
 Puzzlebox helm	1			100					2	helm,nos	lbox,qty=1						useitem			100	sock			1	2																																																																															0
 Puzzlebox chest	1			100					2	tors,nos	lbox,qty=1						useitem			100	sock			1	2																																																																															0
 Puzzlebox shield	1			100					2	shld,nos	lbox,qty=1						useitem			100	sock			1	2																																																																															0
+Puzzlepiece 2h weapon	1			100					2	2han,nos	lpp,qty=1						useitem			100	sock			2	4																																																																															0
+Puzzlepiece Bow/Crossbow	1			100					2	miss,nos	lpp,qty=1						useitem			100	sock			2	4																																																																															0
+Puzzlepiece Bow	0			100					2	xbow,nos	lpp,qty=1						useitem			100	sock			2	4																																																																															0
+Puzzlepiece 1h weapon	1			100					2	weap,nos	lpp,qty=1						useitem			100	sock			1	2																																																																															0
+Puzzlepiece helm	1			100					2	helm,nos	lpp,qty=1						useitem			100	sock			1	2																																																																															0
+Puzzlepiece chest	1			100					2	tors,nos	lpp,qty=1						useitem			100	sock			1	2																																																																															0
+Puzzlepiece shield	1			100					2	shld,nos	lpp,qty=1						useitem			100	sock			1	2																																																																															0
 3 perfect gems + 1 magic item -> magic item	1			2	18	361	0		4	any,mag	ggm4,qty=3						usetype,mag			100																																																																																				0
 3 perfect gems + 1 magic item -> magic item	1			2	18	361	0		2	any,mag	ggm4,qty=3						usetype,mag			100																																																																																				0
 6 perfect skulls + 1 rare item -> 1 low level rare item	1			2	18	361	0		7	any,rar	gg4z,qty=6						usetype,rar		40	40																																																																																				0
 6 perfect skulls + 1 rare item -> 1 low level rare item	1			2	18	361	0		2	any,rar	gg4z,qty=6						usetype,rar		40	40																																																																																				0
 1 perfect skull + 1 rare item + soj -> 1 high level rare item	1			0	18	361	0		3	any,rar	gg4z,qty=1	The Stone of Jordan					usetype,rar		66	66																																																																																				0
 3 perfect skull + 1 rare item + stone of jordan-> add 1 socket to rare	1			0	18	361	0		3	any,rar,nos	gg4z,qty=3	The Stone of Jordan					useitem,sock=1																																																																																							0
-Uber Diablo Map	1			100					3	dcbl,qty=1	dcho,qty=1	dcso,qty=1					dcma																																																																																							0
-ingredients -> voidstone	1			100					4	rtmv,qty=1	dcso,qty=1	rtmo,qty=1	Hellfire Torch				rtma																																																																																							0
-fragment -> jawbone	1			100					2	rtmf,qty=2	Hellfire Torch						rtmo																																																																																							0
+dclone ingredients -> vision of terror	1			100					3	dcbl,qty=1	dcho,qty=1	dcso,qty=1					dcma																																																																																							0
+rathma ingredients -> voidstone	1			100					3	rtmv,qty=1	Hellfire Torch	rtmo,qty=1					rtma																																																																																							0
+fragment -> jawbone (legacy)	1			100					2	rtmf,qty=2	Hellfire Torch						rtmo																																																																																							0
+uber ancients ingredients -> relic of the ancients	1			100					3	ubaa,qty=1	ubab,qty=1	ubac,qty=1					uba																																																																																							0
+Lightsong - Eth weap	1			100					2	weap,noe	lsvl						useitem	95		100	ethereal	100		1	1																																																																															0
+Lightsong - Eth armor	1			100					2	armo,noe	lsvl						useitem	95		100	ethereal	100		1	1																																																																															0
+Lillith's Mirror weap	1			100					2	weap	llmr						useitem	99		100	dye	100		4	4	mirrored	100		1	1																useitem	99		100	dye	100		21	21	mirrored	100		1	1																																													0
+Lillith's Mirror armo	1			100					2	armo	llmr						useitem	99		100	dye	100		4	4	mirrored	100		1	1																useitem	99		100	dye	100		21	21	mirrored	100		1	1																																													0
+Lillith's Mirror ring	1			100					2	ring	llmr						useitem	99		100	dye	100		4	4	mirrored	100		1	1																useitem	99		100	dye	100		21	21	mirrored	100		1	1																																													0
+Lillith's Mirror amul	1			100					2	amul	llmr						useitem	99		100	dye	100		4	4	mirrored	100		1	1																useitem	99		100	dye	100		21	21	mirrored	100		1	1																																													0
 STACKING	0																																																																																																							0
 pop wss	1			100					1	wss,qty=1							wss			100																																																																																				0
 pop dcbl	1			100					1	dcbl,qty=1							dcbl			100																																																																																				0
@@ -512,22 +624,21 @@ r30	1			100					1	r30							r30s			100																																										
 r31	1			100					1	r31							r31s			100																																																																																				0
 r32	1			100					1	r32							r32s			100																																																																																				0
 r33	1			100					1	r33							r33s			100																																																																																				0
-Jewel -> Jewel Fragments	0			100					2	key,qty=1	jew						jewf			100																																																																																				0
-Jewel -> Jewel Fragments	1			100					2	key,qty=1	jew						jewf			100																																																																																				0
-Jewel -> Jewel Fragments x2	1			100					2	key,qty=1	jew,qty=2						jewf,qty=2			100																																																																																				0
-Jewel -> Jewel Fragments x3	1			100					2	key,qty=1	jew,qty=3						jewf,qty=3			100																																																																																				0
-Jewel -> Jewel Fragments x4	1			100					2	key,qty=1	jew,qty=4						jewf,qty=4			100																																																																																				0
-Jewel -> Jewel Fragments x5	1			100					2	key,qty=1	jew,qty=5						jewf,qty=5			100																																																																																				0
-Jewel -> Jewel Fragments x6	1			100					2	key,qty=1	jew,qty=6						jewf,qty=6			100																																																																																				0
-Jewel -> Jewel Fragments x7	1			100					2	key,qty=1	jew,qty=7						jewf,qty=7			100																																																																																				0
-Jewel -> Jewel Fragments x8	1			100					2	key,qty=1	jew,qty=8						jewf,qty=8			100																																																																																				0
-Jewel -> Jewel Fragments x9	1			100					2	key,qty=1	jew,qty=9						jewf,qty=9			100																																																																																				0
-Jewel -> Jewel Fragments x10	1			100					2	key,qty=1	jew,qty=10						jewf,qty=10			100																																																																																				0
-Jewel -> Jewel Fragments x11	1			100					2	key,qty=1	jew,qty=11						jewf,qty=11			100																																																																																				0
-Jewel -> Jewel Fragments x12	1			100					2	key,qty=1	jew,qty=12						jewf,qty=12			100																																																																																				0
-Jewel -> Jewel Fragments x13	1			100					2	key,qty=1	jew,qty=13						jewf,qty=13			100																																																																																				0
-Jewel -> Jewel Fragments x14	1			100					2	key,qty=1	jew,qty=14						jewf,qty=14			100																																																																																				0
-Jewel -> Jewel Fragments x15	1			100					2	key,qty=1	jew,qty=15						jewf,qty=15			100																																																																																				0
+Jewel -> Jewel Fragments	1			100					2	key,qty=1	jew						useitem			100																										jewf			100																																																							0
+Jewel -> Jewel Fragments x2	1			100					2	key,qty=1	jew,qty=2						useitem			100																										jewf,qty=2			100																																																							0
+Jewel -> Jewel Fragments x3	1			100					2	key,qty=1	jew,qty=3						useitem			100																										jewf,qty=3			100																																																							0
+Jewel -> Jewel Fragments x4	1			100					2	key,qty=1	jew,qty=4						useitem			100																										jewf,qty=4			100																																																							0
+Jewel -> Jewel Fragments x5	1			100					2	key,qty=1	jew,qty=5						useitem			100																										jewf,qty=5			100																																																							0
+Jewel -> Jewel Fragments x6	1			100					2	key,qty=1	jew,qty=6						useitem			100																										jewf,qty=6			100																																																							0
+Jewel -> Jewel Fragments x7	1			100					2	key,qty=1	jew,qty=7						useitem			100																										jewf,qty=7			100																																																							0
+Jewel -> Jewel Fragments x8	1			100					2	key,qty=1	jew,qty=8						useitem			100																										jewf,qty=8			100																																																							0
+Jewel -> Jewel Fragments x9	1			100					2	key,qty=1	jew,qty=9						useitem			100																										jewf,qty=9			100																																																							0
+Jewel -> Jewel Fragments x10	1			100					2	key,qty=1	jew,qty=10						useitem			100																										jewf,qty=10			100																																																							0
+Jewel -> Jewel Fragments x11	1			100					2	key,qty=1	jew,qty=11						useitem			100																										jewf,qty=11			100																																																							0
+Jewel -> Jewel Fragments x12	1			100					2	key,qty=1	jew,qty=12						useitem			100																										jewf,qty=12			100																																																							0
+Jewel -> Jewel Fragments x13	1			100					2	key,qty=1	jew,qty=13						useitem			100																										jewf,qty=13			100																																																							0
+Jewel -> Jewel Fragments x14	1			100					2	key,qty=1	jew,qty=14						useitem			100																										jewf,qty=14			100																																																							0
+Jewel -> Jewel Fragments x15	1			100					2	key,qty=1	jew,qty=15						useitem			100																										jewf,qty=15			100																																																							0
 MAPS																																																																																																								0
 map t1 upgrade magic to rare	1			100	18	361	0		4	t1me,mag	r1pg,qty=1	gg4z,qty=1	upma,qty=1				usetype,rar			100																																																																																				0
 map t1 reroll rare	1			100	18	361	0		4	t1me,rar	r1pg,qty=1	ggm4,qty=1	rera,qty=1				usetype,rar			100																																																																																				0
@@ -704,12 +815,12 @@ amulet -> destroyed (rare) (25%)	1	1		100	16	361	250		2	amul	wss,qty=1						uset
 	0																																																																																																							0
 quiver -> destroyed (rare) (25%)	1	1		100	16	361	250		2	misl	wss,qty=1						usetype,rar			100	corrupt	100		1	1	corruptnum	100		1001	1001																																																																										0
 																																																																																																								0
-anni-> destroyed (rare) (20%)	0	0		100	16	361	200		2	Annihilus	cwss,qty=1						cm1,mag			100	corrupt	100		1	1	corruptnum	100		1001	1001	dye	100		10	10																																																																					0
+anni-> destroyed (rare) (20%)	1	1		100	16	361	200		2	Annihilus	cwss,qty=1						cm1,mag			100	corrupt	100		1	1	corruptnum	100		1001	1001	dye	100		10	10																																																																					0
 																																																																																																								0
 ANNIHILUS	0																																																																																																							0
-item -> added mod 1	1	1		100	16	361	250		2	Annihilus	cwss,qty=1						useitem			100	corrupt	100		77	77	corruptnum	100		1001	1001	allskills	100		1	1	dye	100		10	10																																																																0
-item -> added mod 2	1	1		100	16	361	500		2	Annihilus	cwss,qty=1						useitem			100	corrupt	100		78	78	corruptnum	100		1001	1001	vit	100		20	25	enr	100		10	15	dye	100		10	10																																																											0
-item -> added mod 3	1	1		100	16	361	750		2	Annihilus	cwss,qty=1						useitem			100	corrupt	100		79	79	corruptnum	100		1001	1001	addxp	100		3	5	dye	100		10	10																																																																0
+item -> added mod 1	1	1		100	16	361	400		2	Annihilus	cwss,qty=1						useitem			100	corrupt	100		77	77	corruptnum	100		1001	1001	allskills	100		1	1	dye	100		10	10																																																																0
+item -> added mod 2	1	1		100	16	361	600		2	Annihilus	cwss,qty=1						useitem			100	corrupt	100		78	78	corruptnum	100		1001	1001	vit	100		20	25	enr	100		10	15	dye	100		10	10																																																											0
+item -> added mod 3	1	1		100	16	361	800		2	Annihilus	cwss,qty=1						useitem			100	corrupt	100		79	79	corruptnum	100		1001	1001	addxp	100		3	5	dye	100		10	10																																																																0
 item -> added mod 4	1	1		100	16	361	1000		2	Annihilus	cwss,qty=1						useitem			100	corrupt	100		80	80	corruptnum	100		1001	1001	res-all	100		5	10	dye	100		10	10																																																																0
 																																																																																																								0
 ADD SPECIAL MOD (25%)	0																																																																																																							0
