@@ -6,7 +6,7 @@ If you're just looking for PlugY without the item pack or characters, see [PD2-P
 ### [Download](https://github.com/BetweenWalls/PD2-Singleplayer/archive/main.zip)
 
 ## Setup Guide
-The singleplayer [PlugY mod](http://plugy.free.fr/) adds stash pages for all the items, fixes ubers, and  as well as several other optional features. A copy of PlugY v14.03 is included in the files.
+The singleplayer [PlugY mod](http://plugy.free.fr/) adds stash pages for all the items, fixes ubers, and allows unlimited skill/stat resets as well as several other optional features. A copy of PlugY v14.03 is included in the files.
 
 1. Pre-Setup - Ensure you have *Diablo II LoD* and *PD2* installed
 2. Add PlugY and this item/character pack - copy the *Diablo II* folder included here into *Program Files (x86)* (or wherever your game folder is)
@@ -28,7 +28,7 @@ See the wiki for a full list of [bugs](https://wiki.projectdiablo2.com/wiki/Bugs
 * Andariel quest bug
 
 ## Inclusions
-* level 99 characters for each class with accurate stats and skill points (lower level characters in subfolders)
+* level 99 characters for each class with accurate stats and skill points (lower level characters also available)
 * all unique/set items
 * PD2-specific items (maps, worldstone shards, puzzleboxes, dclone materials, etc.)
 * stacks of all runes/gems
