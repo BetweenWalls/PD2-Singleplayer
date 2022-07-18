@@ -11,7 +11,6 @@ Includes several balance and quality-of-life updates for season 5:
     * Set staves now correctly gain extra FCR when upgraded
     * 2 quivers of the same rarity and type (arrows or bolts) can be turned into a quiver of the opposite type
   * Other Modifications:
-    * Added 20% deadly strike to infernal spike (set dagger) to match dagger automod
     * Added 30% faster cast rate to ribcracker to match staff automod
     * Added splash damage as an automod to staves (unique/set staves already have it)
     * Ormus' Robes can roll any non-mastery sorceress skill, Spiritkeeper can roll any druid skill
