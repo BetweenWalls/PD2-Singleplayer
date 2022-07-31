@@ -10,3 +10,5 @@ For example, "official\_INFO" says that it just includes the official PD2 files 
 
 The text files are tab-delineated, so they're best viewed in a column-based spreadsheet program such as Excel.
 For an explanation of what each column refers to, see: https://d2mods.info/forum/viewtopic.php?f=4&t=34455
+
+If you'd like your own PD2 mod to be available here, feel free to use github to make a pull request which includes it, or just message me directly.
