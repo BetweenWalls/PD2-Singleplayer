@@ -1,3 +1,51 @@
+My favorite mod for Diablo 2 is for sure Path of Diablo.  
+
+Unfortunately creator of that mod will not make it for Single Player.  
+
+There is another very similar mod called Project Diablo 2 that supports Single Player.  
+
+But that mod is imo much harder than original LoD or Path of Diablo.  
+
+I want to experience LoD/PoD type of balance in single player while playing content of PD2.  
+
+So i waited for someone to create a mod for Project Diablo 2 that will lower the difficulty for people like me.
+I'm done waiting. I will do it myself.  
+
+With no experience with modding i quickly learned how to do basic text edits and made what is possible to bring
+that LoD/PoD balance (or at least as close as you can get with just text editing) into single player Project Diablo 2.  
+
+This very simple text file mod is for Project Diablo 2 mod - please support creators of Project Diablo 2  
+
+requirements: Diablo 2 LoD 1.13c + Project Diablo 2 mod + PlugY (for shared stash and Uber Tristram)
+
+remember: install Project Diablo 2 ONLY from original source provided by creators of the mod: https://www.projectdiablo2.com/
+
+don't trust any other sources (it would probably be outdated anyway)
+
+if you absolutely have to... do it at your own risk, don't blame anyone but yourself if you catch a virus when you install
+
+Project Diablo 2 from other sources.
+
+Project Diablo 2 from original source is 100% virus free.
+
+
+ver 5-8-7
+
+5-8-4-beta:small fix with stats in monstats.txt
+5-8-4b-beta:small but important readme update (about PD2 instalation and uber tristram)
+5-8-4c-beta:small but important readme update, + added my PlugY.ini
+	(about PlugY settings - it's important to read about possible PlugY bugs and how to properly {completely} avoid them-it's in the readme),
+5-8-5:	Energy Shield - synergy from telekinesis back at LoD value (from 225%-100% damage taken, to 200%-75%)
+	AMAZON: EVADE and DODGE buff (from 33% at lvl 20 to 50% at lvl 14 ; cap from 40% to 65%)
+	ASSASSIN: weapon block back at LoD values (from 36% at lvl 10 to 50% at lvl 10)
+		FADE buff to LoD values ( curse reduction and physical resists )
+	DRUID: werewolf +%HP buff back at LoD value (from 0% to +25%)
+		werebear +%HP buff back at LoD value (from 0% to +75%)
+	BARBARIAN: battle cry back at Season 4 DURATION (12s+0.4s/LVL)
+	{+ small readme update about PlugY bugs}
+5-8-6: Barbarian Find item back to LoD values (now same as in Diablo 2 Resurrected)
+5-8-7: freeze and chill duration vs monsters in hell difficulty buff (x2)
+
 easy as in LoD mod by MAOMAC
 
 to use this Single Player mod for Project Diablo 2 (currently made from season 5 patch 8)
@@ -10,7 +58,7 @@ add -direct -txt to shortcut
 
 every change was made so that you can switch between this and normal PD2 safely
 	(no stat/item changes/lvlup changes etc. that would brick your char/make it different from original PD2
-	permamently so you can safely test it on your PD2 chars, and then remove it if you don't like it) 
+	permanently so you can safely test it on your PD2 chars, and then remove it if you don't like it) 
 
 I will try to explain what i think about my changes and reasons behind them etc.
 
@@ -20,7 +68,7 @@ TL:DR
 	- monster HP reduced by 50% (so we technically "deal" 100% more damage compared to unmodded PD2)
 	- monster and minion crit chance reduced from 5% to 0% (no crit)
 	- you can leech from all monsters
-	- battle cry duration buffed back from 5 seconds to 12 seconds
+	- BARBARIAN battle cry back at Season 4 DURATION (12s+0.4s/LVL)
 	- BO changed to: lvl 1 +350 hp , mana +175 / stat per lvlup same as PD2, 
 	  (basically this lvl 1 BO = unmodded PD2 lvl 21, we got free 20 lvls)
 	  (barb merc provides same bonus as in unmodded PD2-he uses new lvl 1)
@@ -37,6 +85,31 @@ TL:DR
 		(so if it rolls sockets for example you have 1/6 chance to have 6 sockets)
 	- Monsters have X% Deadly Strike map corruption REMOVED
 	- QOL:now you can cube multiple flawless gems into perfect gems
+	- act bosses are always "quest bugged" (i noticed people don't like act boss farming
+		in PD2 that much, i guess it's not as good as farming maps, so i decided
+		to buff it a bit by giving them droptable of quest versions. Now every
+		act boss kill will give you same drops as quest act boss kill)
+	- skill shrine removed {due to a bug in PD2}
+		(skill shrine is bugged in PD2 with skills that give flat hp boost
+		{makes annoying hp glitch where our HP globe never goes back to correct value
+		after shrine runs out-so it looks like we are never full hp until save+exit}
+		so i set mininum area level for spawn to 200-in theory it will remove it completely)
+	- Energy Shield - synergy from telekinesis back at LoD value (from 225%-100% damage taken, to LoD 200%-75%)
+	- AMAZON: EVADE and DODGE buff (from 33% at lvl 20 to 50% at lvl 14 ; cap from 40% to 65%)
+	- ASSASSIN: weapon block back at LoD values (from 36% at lvl 10 to 50% at lvl 10)
+		    FADE buff to LoD values ( curse reduction and physical resists )
+	- DRUID: werewolf +%HP buff back at LoD value (from 0% to +25%)
+		 werebear +%HP buff back at LoD value (from 0% to +75%)
+	- Barbarian Find item back to LoD values (now same as in Diablo 2 Resurrected)
+	- freeze and chill duration vs monsters in hell difficulty buff (x2)
+		( i noticed that every skill in PD2 that freeze or chill have duration GIGA nerfed
+		compared to LoD, from 65%+ nerf to even 90%+ - for example freezing arrow from 4 seconds
+		at max synergy to 0.4s {it's 0.5 in PD2 patch notes but in game it's 0.4}
+		So i buffed freeze and chill by reducing penalty in hell difficulty,
+		it's now like in nightmare difficulty.
+		Before if a skill had 0.4 second freeze duration it was only 0.1 seconds in hell difficulty.
+		Now it will last 0.2 seconds in hell.
+		With that buff we still not freeze as long as we can in LoD, but i think it's good enough. )
 	}
 
 
@@ -79,7 +152,7 @@ monster HP reduced by 50%
 monster and minion crit chance reduced from 5% to 0% (no crit)
 	(Also removed that chance from our minions for consistency, they still deal WAY more dmg because of monster HP nerf)
 
-you can leech from all monsters (ratio 100% in norm, 1/2 in NM, 1/3 in hell - so if you have 3%LL you leech 1% in hell)
+you can leech from all monsters
 	(crushing blow is basically "removed" {it stops working vs bosses when they are below 65% HP}
 	attacks need to be rewarded SOMEHOW for the AR req,
 	so i decided to make phys attack builds "leech tanks", i think it's a fair buff for crushing blow and life tap "removal" in PD2
@@ -89,22 +162,35 @@ you can leech from all monsters (ratio 100% in norm, 1/2 in NM, 1/3 in hell - so
 skills that give HP REBALANCED
 	(LoD BO was removed and we lost WAY to much HP and mana,
 	With these changes + life leech change you actually are rewarded a bit for attack rating requirement and being closer to danger.
-	Also i think meele is supposed to be the mega tank, and with PD2 changes to HP bonuses meele feels not fun for me
+	Also i think melee is supposed to be the mega tank, and with PD2 changes to HP bonuses melee feels not fun for me
 	without this ranged feels like 100% safer)
+
+freeze and chill duration vs monsters in hell difficulty buff (x2)
+	( i noticed that every skill in PD2 that freeze or chill have duration GIGA nerfed
+	compared to LoD, from 65%+ nerf to even 90%+ - for example freezing arrow from 4 seconds
+	at max synergy to 0.4s {it's 0.5 in PD2 patch notes but in game it's 0.4}
+	So i buffed freeze and chill by reducing penalty in hell difficulty,
+	it's now like in nightmare difficulty.
+	Before if a skill had 0.4 second freeze duration it was only 0.1 seconds in hell difficulty.
+	Now it will last 0.2 seconds in hell difficulty.
+	With that buff we still not freeze as long as we can in LoD, but i think it's good enough. )
 
 	
 skill changes:
 
-	
-	battle cry duration buffed from 5 seconds to 12 (still weaker duration than in season 4, it was 12 seconds +0.4 per lvl,
-	with only 5 seconds there is no point for this to be on CTA for example, because if you want to use it with that item you have to
-	switch->cast->swith and THEN do dmg for what.. 4 seconds? and then repeat? not fun)
+	BARBARIAN battle cry back at Season 4 DURATION
+	( Battle cry duration back at 12 seconds + 0.4 seconds per level from 5 seconds at all levels)
+
+	{ with only 5 seconds there is no point for this to be on CTA for example, because if you want to use it with that item you have to
+	switch->cast->swith and THEN do dmg for what.. 4 seconds? and then repeat? not fun.)
 
 	BO changed to: lvl 1 +350 hp , mana +175 (stat/lvl no change) (THIS IS STILL GIGA NERFED
 	compared to VANILLA D2 where you get +95%+ to HP and MANA,)
+	(barb merc provides same bonus as in unmodded PD2-he uses new lvl 1)
 
-	lycanthropy changed to LoD values (basically i change hp buff skills so we can almost
-	reach hp levels of LoD, yes even with all the buffs here we still have less hp compared to LoD)	
+
+	lycanthropy changed to LoD values ( basically i change hp buff skills so we can
+	reach (or almost reach) hp levels of LoD )	
 
 	+20% lvl 1/ +5%/lvlup
 	
@@ -115,7 +201,7 @@ skill changes:
 	COMBAT REFLEXES: (this is where i put a lot of old LoD BO for barbarian. i balanced BO+CR around 2kHP base,
 	since barb usually has like 2k base,
 	{i give more to CR because i had to balance this around barb merc so hes not op},
-	you basically can reach almost LoD amount of HP if you max BO and CR but you have to spend 40 skillpoints so this is still a nerf compared to LoD)
+	you basically can reach almost LoD amount of HP on barb if you max BO and CR but you have to spend 40 skillpoints so this is still a nerf compared to LoD)
 
 	lvl 1 +500 hp and +50hp/lvl
 	
@@ -130,11 +216,31 @@ skill changes:
 	ASSASSIN death sentry corpse explosion %dmg buff x2 (from 3-5 to 6-10)
 		(same reason as necro corpse explosion)
 
+	SORCERESS Energy Shield - synergy from telekinesis back at LoD value (from 225%-100% damage taken, to LoD 200%-75%)
+		( just like with skill HP buffs for barbarian and druid - buffing sorceress HP potential to LoD/D2R value )
+
+	AMAZON EVADE and DODGE buff (from 33% at lvl 20 to 50% at lvl 14 ; cap from 40% to 65%)
+		{ buffing dodge chances to almost LoD value - we only have 2 skills with dodge instead of 3 so
+		we have 50% on 14 instead of 12/7 skill lvl, + we have movement speed and FHR in PD2 }
+
+	ASSASSIN weapon block back at LoD values (from 36% at lvl 10 to 50% at lvl 10)
+		  FADE buff to LoD values ( curse reduction and physical resists )
+		{ fade and weapon block is basically HP for assassin, instead of huge hp buff we got
+		some defensive layers in this class }
+	DRUID werewolf +%HP buff back at LoD value (from 0% to +25%)
+		werebear +%HP buff back at LoD value (from 0% to +75%)
+		{ back to LoD HP value for shapeshift melee druids }
+
+	Barbarian Find item back to LoD values (now same as in Diablo 2 Resurrected)
+		{ fun skill, and for me FUN>>balance , imo it's not even op in D2R because we invest
+		skillpoints from damage/survivability into just a chance to find something, we could just
+		kill another monster - that makes this skill very good only in certain places, like travincal}
+
 MIRROR, ethVIAL, UNLIMITED KEY drop chance improved
 	(Added chance to find: -same as ZOD RUNE {FOR EVERY ZOD YOU FIND you will also find 1 mirror, vial and key on average}.
 	Put in rune droptable so if a ZOD can't drop MIRROR/VIAL/KEY can't drop from this.
 	Added ON TOP OF hardcoded chance, so you still can find a mirror in act 1 norm {gl with that lmao}
-	Still very rare, but at least now they potentially EXIST, AND YOU CAN CRAFT WITH IT, not just a throphy because everything feels
+	Still very rare, but at least now they potentially EXIST, AND YOU CAN CRAFT WITH IT, not just a trophy because everything feels
 	"not rare enough" to mirror/eth vial)
 
 CORRUPTION chance rebalance-now every corruption has "equal" chance FROM a group, so if it rolls sockets for example you have 1/6 chance to have 6 sockets
@@ -142,15 +248,34 @@ CORRUPTION chance rebalance-now every corruption has "equal" chance FROM a group
 
 Monsters have X% Deadly Strike map corruption REMOVED
 	(monsters able to crit is too unpredictable for me to be fun, i want monster dmg to be consistent
-	and not be surprised by a random crit. REMOVED)
+	and not be surprised by a random crit. monster dmg is giga buffed with mapmods compared to LoD. REMOVED)
 
 QOL:now you can cube multiple flawless gems into perfect gems
 	so we don't break our wrists, credit to BetweenWalls, i yoinked it from his CubeMain.txt , hope he doesn't mind i saved like 2hr of my time. ty ty
 
+- act bosses are always "quest bugged" (i noticed people don't like act boss farming
+	in PD2 that much, i guess it's not as good as farming maps, so i decided
+	to buff it a bit by giving them droptable of quest versions. Now every
+	act boss kill will give you same drops as quest act boss kill)
+
+- skill shrine removed {due to a bug in PD2}
+	(skill shrine is bugged in PD2 with skills that give flat hp boost
+	{makes annoying hp glitch where our HP globe never goes back to correct value
+	after shrine runs out-so it looks like we are never full hp until save+exit}
+	so i set mininum area level for spawn to 200-in theory it will remove it completely)
+
 
 And that's it. Now the game is PLAYABLE for old noskill people like me
 
-every change was made so that you can switch between this and normal PD2 safely (no stat/item changes/lvlup changes etc. that would brick your char/make it different from original PD2 permamently) 
+every change was made so that you can switch between this and normal PD2 safely (no stat/item changes/lvlup changes etc. that would brick your char/make it different from original PD2 permanently) 
+
+
+BUGS ETC. :
+
+try to leave town when last PlugY stashpage that was open WAS NOT filled with maps/amulets/rings with a lot of mods on them
+the game can bug out sometimes if you do that (or so I've heard)
+just move to a page that doesn't have A LOT of items with A LOT of mods on them before going out killing monsters.
+
 
 reminder:
 plugy is bugged in s5 because ofc it is
@@ -158,6 +283,11 @@ do not use shared gold, empty it (so you have 0 shared gold) and disable in plug
 	IT BUGS OUT MANY ITEMS, for example CTA
 limit your stash (i do 501 personal and 2001 shared) and put something in the last page (personal and shared, i use a simple key), then save and exit.
 	you do this to avoid a bug that randomly puts you into stash number QUADRILLION OR SOMETHING, very annoying.
+
+most of the time PlugY switch/change stashTYPE button will be bugged and "stuck" , to "unbug" it simply interact with the stash
+	{ for example: put item in / click on page name / etc. } 
+
+PlugY: (i added my PlugY.ini in the .zip if you don't want to make changes manually, read about how to avoid bugs-important)
 
 UBER TRISTRAM IN PLUGY:
 	first you need to kill ball in hell (have finished last quest) and i think you don't need to in online server. ( i can be wrong here
@@ -188,6 +318,74 @@ UberBaalChillingArmorTimer=6000
 
 
 some like 40/15/15 for example, standard settings of 80/30/30 make them spawn monsters like crazy
+
+remember to have ActiveUberBaalChillingArmorTweekAI=0 in PlugY settings {don't put 1 here} ,
+because baal in uber tristram dies instantly if you have it set to 1.
+This bug existed from the beginning of Project Diablo 2 and probably will never be fixed.
+
+PlugY stash settings: 
+some settings are a must to avoid bugs:
+
+this needs to be 0 , so we have that super big stash from Project Diablo 2 and avoid bugs:
+ActiveBigStash=0
+
+this also needs to be 0 to avoid a lot of bugs, but before you change it be sure you have 0 shared gold:
+ActiveSharedGold=0
+
+after ActiveSharedGold=0 , but before [STATS POINTS] (so it's in [STASH] section):
+just copy-paste this button location settings:
+
+PosXPreviousBtn=-1
+PosYPreviousBtn=495
+PosXNextBtn=-1
+PosYNextBtn=495
+PosXPreviousIndexBtn=-1
+PosYPreviousIndexBtn=495
+PosXNextIndexBtn=-1
+PosYNextIndexBtn=495
+PosXSharedBtn=28
+PosYSharedBtn=21
+PosXStashNameField=-1
+PosYStashNameField=16
+PosXStashGoldField=-1
+PosYStashGoldField=36
+PosXPutGoldBtn=28
+PosYPutGoldBtn=495
+PosXTakeGoldBtn=259
+PosYTakeGoldBtn=495
+
+we need that so PlugY buttons are in correct places.
+
+VERY IMPORTANT:
+we also have to limit the stash, then put something in last pages to avoid random strange bugs,
+without this little trick shared stash can bug out, and personal stash is so bugged it's broken
+{it's a Project Diablo 2 bug , doesn't matter if you have my little "mod" or not}
+(i usually put my 2 starting scrolls at pages 501 in personal stash, and 2001 in shared stash
+, you only need 1 item in last page to "unbug" the stash, so when you create your second char just
+put 1 item at last personal page, since shared page already should have 1 no need to add another,
+if you need your stash to be bigger in the future-no problem-set new limits and put something in new
+last pages).
+
+
+
+this is also recommended:
+
+[WORLD EVENT]
+ActiveWorldEvent=0
+
+don't worry, in Project Diablo 2 we can fight Diablo Clone if this is set to 0, but to fight him we don't
+sell any items to vendors, but farm for special items. If you set this to 1 you technically can fight
+PlugY version of Diablo Clone, but it will not drop anything.
+For more info visit Project Diablo 2 subreddit or Project Diablo 2 wiki,
+easy to find just google (you need to anyway because there are MANY changes in Project Diablo 2).
+
+
+
+
+
+I added my PlugY.ini in the .zip.
+
+
 
 hf
 	

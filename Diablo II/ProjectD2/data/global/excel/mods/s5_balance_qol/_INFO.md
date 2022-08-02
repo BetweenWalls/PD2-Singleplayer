@@ -1,8 +1,8 @@
 Includes several balance and quality-of-life updates for season 5:
   * Several charm affixes (MF, resists, flat phys) balanced according to how many inventory spaces the charm requires, using small charms as the standard
   * Armor Bases:
-    * Armor defense values balanced according to their strength requirements (52% of bases affected)
-    * Block chance for paladin shields balanced
+    * Armor defense values balanced according to their strength requirements (about half of the bases needed to be updated for this)
+    * Block chance for exceptional/elite paladin shields balanced
     * Strength requirements adjusted slightly for Heavy/Sharkskin/Vampirebone Gloves and Light/Sharkskin/Vampirefang Belts
     * Unique/set armor ED values adjusted accordingly to minimize changes
   * Recipe Modifications:
