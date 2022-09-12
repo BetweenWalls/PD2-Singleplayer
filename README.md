@@ -14,18 +14,15 @@ The singleplayer [PlugY mod](http://plugy.free.fr/) adds stash pages for all the
 
 You'll still need to run PD2 via the launcher occasionally to get the latest patch/update.
 
-If you want to update old s1/s2 character/stash files, see [PD2-Converter](https://github.com/BetweenWalls/PD2-Converter#simple-characterstash-converter-for-pd2).
-
 ### Troubleshooting
 * PlugY may not load correctly if it is added after a fresh PD2 installation or if PD2 hasn't been updated in a while - run the game once via the launcher to fix it
 * Older versions of PlugY had a different folder structure (some files were in the *Diablo II* folder instead of the *Diablo II/ProjectD2* folder) so they won't be overitten automatically - delete those old files manually if there are any issues
+* Old s1/s2 characters may not load correctly - to update them, see [PD2-Converter](https://github.com/BetweenWalls/PD2-Converter#simple-characterstash-converter-for-pd2)
 
-### Bugs
-See the wiki for a full list of [bugs](https://wiki.projectdiablo2.com/wiki/Bugs#Singleplayer-Only_Bugs). Singleplayer-specific bugs include:
-* Having too many items in a stash page with many affixes (e.g. maps) can cause a crash if that page is the most recently visited stash page
-* Having gold in the shared stash can cause issues, preventing oskills and other stats from working correctly
+PlugY bugs:
+* Having many maps in a single stash page can cause a crash if it is the most recently visited page
+* Having gold in the shared stash can cause issues such as preventing CtA oskills from working correctly
 * The "toggle stash" button may be set to the wrong stash upon loading until interacting with the current stash - put an item on a higher page (such as page 200) in whichever stash is loaded first to fix it
-* Andariel quest bug
 
 ## Inclusions
 * level 99 characters for each class with accurate stats and skill points (lower level characters also available)
@@ -75,7 +72,7 @@ Additionally, the **Bases** assassin character has a personal stash with etherea
 * (20-49) **Regular Weapons**
 * (50-69) **Superior Armor**
 * (70-99) **Superior Weapons**
-* (100-19) **Magic Armor**
+* (100-119) **Magic Armor**
 * (120-149) **Magic Weapons**
 
 Items can be duplicated by making a file backup of the shared stash and transfering items from the stash to a character before restoring the stash file, or vice versa. Files can also be set as "read only" to eliminate the need to backup and restore them for each transfer.
