@@ -22,7 +22,7 @@ You'll still need to run PD2 via the launcher occasionally to get the latest pat
 PlugY bugs:
 * Having many maps in a single stash page can cause a crash if it is the most recently visited page
 * Having gold in the shared stash can cause issues such as preventing CtA oskills from working correctly
-* The "toggle stash" button may be set to the wrong stash upon loading until interacting with the current stash - put an item on a higher page (such as page 200) in whichever stash is loaded first to fix it
+* The "toggle stash" button may be set to the wrong stash upon loading until interacting with the current stash - put an item on a higher page (such as page 1000) in whichever stash is loaded first to fix it
 
 ## Inclusions
 * level 99 characters for each class with accurate stats and skill points (lower level characters also available)
@@ -90,14 +90,14 @@ Note that while many attributes can be edited normally, the following have been 
 New affixes such as "Melee Attacks Deal Splash Damage" cannot be edited in this way at all without an advanced understanding of hex editing.
 
 ## Modification
-If the items in this collection are insufficient for your purposes and importing items via an editor wouldn't help, you may want to look into [text modding](https://d2mods.info/forum/viewtopic.php?f=4&t=34455). By modifying the game's text files, you can spawn items via custom cube recipes, adjust the ranges for affixes that can appear on items, and much more. Here are the basic steps:
+If the items in this collection are insufficient, you may want to look into [text modding](https://d2mods.info/forum/viewtopic.php?f=4&t=34455). By modifying the game's text files, you can spawn items via custom cube recipes, adjust the ranges for affixes that can appear on items, and much more. Here are the basic steps:
 
 1. Extract the game's text files from *patch_d2.mpq* (found in *Diablo II/ProjectD2*) using an [MPQ editor and D2 listfile](http://www.zezula.net/en/mpq/download.html) - the text files will be in */data/global/excel* 
 2. Edit whichever files you want (for example, *CubeMain.txt* includes the cube recipes)
 3. Copy the edited files to your game directory inside a new folder structure: *Diablo II/ProjectD2/data/global/excel*
 4. Create (and run) a new shortcut for PlugY.exe with additional commands in the target field so that the game uses your edited text files: -direct -txt
 
-These steps have already been done for this collection - the game's text files are in *Diablo II\ProjectD2\data\global\excel\mods* along with a modified *CubeMain.txt* file in the above folder. If your Diablo II installation is in *C:\Program Files (x86)*, you'll only need to launch the *PlugY.exe (modded)* shortcut to get access to several useful cube recipes:
+These steps have already been done for this collection - the game's text files are in *Diablo II\ProjectD2\data\global\excel\modpacks* along with modified text files in the above folder. If your Diablo II installation is in the default location, *C:\Program Files (x86)*, you'll only need to launch the *PlugY.exe (modded)* shortcut to get access to several useful cube recipes from the "testing" modpack:
 * reroll any non-crafted item with Horadrim Orb
 * use crafted items as ingredients for crafting recipes
 * generate set/unique items of a given base with Rancid (green) or Oil (gold) Potions
@@ -109,12 +109,16 @@ These steps have already been done for this collection - the game's text files a
 
 After getting whatever items you want, simply run the original PlugY.exe file to make the game run normally.
 
+## Modpacks
+In addition to the ["testing"](https://github.com/BetweenWalls/PD2-Singleplayer/tree/main/Diablo%20II/ProjectD2/data/global/excel/modpacks/testing) modpack that is setup by default to help with acquiring specific items, this collection also includes modpacks that are meant to be used for normal gameplay. [Modpacks](https://github.com/BetweenWalls/PD2-Singleplayer/tree/main/Diablo%20II/ProjectD2/data/global/excel/modpacks) can be anywhere between minimalist (only adding minor quality-of-life features and fixing bugs) and being practically entire mods in their own right, with complete balance overhauls or additional gameplay features.
+
+If you've made your own PD2 modpack and would like it to be available here, I'd be glad to add it.
+
 ## Feedback
 If you would like to improve this collection with additional items, or just want to share feedback about how it could be improved, you can message me on reddit ([u/BetweenWalls](https://www.reddit.com/message/compose/?to=BetweenWalls)) or discord (@BetweenWalls#2390). You can also just open an [issue](https://github.com/BetweenWalls/PD2-Singleplayer/issues) here.
 
 Potential Improvements:
-* Testing charms with individual stats that have more granular values
-* Testing charms with individual corruption effects
+* Testing charms with individual corruption stats or other stats with more granular values
 * More examples of regular item bases with different +3 pointmods
 * More examples of useful magic items like +3 skill tree & +3 pointmod items or vanilla classics like JMoD
 * More examples of rare/crafted items

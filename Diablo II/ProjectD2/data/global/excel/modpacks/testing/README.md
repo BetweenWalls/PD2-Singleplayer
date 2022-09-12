@@ -1,3 +1,6 @@
+### Testing
+Author: BetweenWalls
+
 Includes several developer-style cube recipes to assist in testing:
   * reroll any non-crafted item with Horadrim Orb
   * use crafted items as ingredients for crafting recipes
