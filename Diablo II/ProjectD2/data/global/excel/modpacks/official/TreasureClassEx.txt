@@ -51,8 +51,8 @@ Runes 14 equiv			1						r27s	3	r28s	2	Runes 13 equiv	2170																		0
 Runes 15 equiv			1						r29s	3	r30s	2	Runes 14 equiv	2941																		0
 Runes 16 equiv			1						r31s	3	r32s	2	Runes 15 equiv	3957																		0
 Runes 17 equiv			1						r33s	1	Runes 16 equiv	5170																				0
-Map Tier 1			1			400	800		t11	1	t12	1	t13	1																		0
-Map Tier 2			1			400	800		t21	1	t22	1	t23	1	t24	1	t25	1														0
+Map Tier 1			1			400	800		t11	1	t12	1	t13	1	t14	1	t15	1														0
+Map Tier 2			1			400	800		t21	1	t22	1	t23	1	t24	1	t25	1	t26	1												0
 Map Tier 3			1			400	800		t31	2	t32	2	t33	2	t34	2	t35	2	t36	2	t37	2	t38	2	t39	2						0
 T1 Map Drop			1						Map Tier 1	2	Map Tier 2	1																				0
 T2 Map Drop			1						Map Tier 1	2	Map Tier 2	2	Map Tier 3	1																		0
@@ -743,10 +743,10 @@ Mephistoq (N)			7	993	993	1024	1024	0	Act 4 (N) Equip A	945	Act 4 (N) Good	54	ce
 Mephistoq (H)			7	993	993	1024	1024	0	Act 4 (H) Equip A	928	Act 4 (H) Good	53	ceh	17																		0
 Diablo			7	983	983	983	1024	0	"gld,mul=1280"	76	Act 5 Equip A	799	Act 5 Junk	76	Act 5 Good	46																0
 Diablo (N)			7	983	983	983	1024	0	"gld,mul=1536"	76	Act 5 (N) Equip A	799	Act 5 (N) Junk	76	Act 5 (N) Good	46	bet	15														0
-Diablo (H)			7	983	983	983	1024	0	dcso	1	Act 5 (H) Equip A	787	Act 5 (H) Junk	75	Act 5 (H) Good	45	bet	15	"gld,mul=2048"	75												0
+Diablo (H)			7	983	983	983	1024	0	dcso	3	Act 5 (H) Equip A	787	Act 5 (H) Junk	75	Act 5 (H) Good	45	bet	15	"gld,mul=2048"	75												0
 Diabloq			7	993	993	1024	1024	0	Act 5 Equip A	945	Act 5 Good	54																				0
 Diabloq (N)			7	993	993	1024	1024	0	Act 5 (N) Equip A	945	Act 5 (N) Good	54	bet	17																		0
-Diabloq (H)			7	993	993	1024	1024	0	Act 5 (H) Equip A	928	Act 5 (H) Good	53	bet	17	dcso	4																0
+Diabloq (H)			7	993	993	1024	1024	0	Act 5 (H) Equip A	928	Act 5 (H) Good	53	bet	17	dcso	10																0
 Summoner			5	900	900	972	1024	4	"gld,mul=1280"	248	Act 2 Equip C	414	Act 3 Junk	138	Act 2 Good	82	Act 3 Magic A	110														0
 Summoner (N)			5	900	900	972	1024	4	"gld,mul=1536"	248	Act 2 (N) Equip C	414	Act 3 (N) Junk	138	Act 2 (N) Good	82	Act 3 (N) Magic A	110														0
 Summoner (H)			5	900	900	972	1024	4	"gld,mul=2048"	242	Act 2 (H) Equip C	403	Act 3 (H) Junk	134	Act 2 (H) Good	80	Act 3 (H) Magic A	107	pk2	27												0
@@ -777,10 +777,10 @@ Nihlathak (N)			5	900	900	900	1024	3	"gld,mul=1536"	340	Act 5 (N) Equip B	461	Ac
 Nihlathak (H)			5	900	900	900	1024	2	"gld,mul=2048"	332	Act 5 (H) Equip B	451	Act 5 (H) Junk	71	Act 5 (H) Good	71	pk3	24														0
 Baal			7	983	983	983	1024	0	"gld,mul=1280"	76	Act 1 (N) Equip A	799	Act 1 (N) Junk	76	Act 1 (N) Good	46																0
 Baal (N)			7	983	983	983	1024	0	"gld,mul=1536"	76	Act 1 (H) Equip A	799	Act 1 (H) Junk	76	Act 1 (H) Good	46	fed	15														0
-Baal (H)			7	983	983	983	1024	0	dcso	1	Act 5 (H) Equip B	787	Act 5 (H) Junk	75	Act 5 (H) Good	45	fed	15	"gld,mul=2048"	75												0
+Baal (H)			7	983	983	983	1024	0	dcso	5	Act 5 (H) Equip B	787	Act 5 (H) Junk	75	Act 5 (H) Good	45	fed	15	"gld,mul=2048"	75												0
 Baalq			7	993	993	1024	1024	0	Act 1 (N) Equip A	945	Act 1 (N) Good	54																				0
 Baalq (N)			7	993	993	1024	1024	0	Act 1 (H) Equip A	945	Act 1 (H) Good	54	fed	17																		0
-Baalq (H)			7	993	993	1024	1024	0	Act 5 (H) Equip B	928	Act 5 (H) Good	53	fed	17	dcso	4																0
+Baalq (H)			7	993	993	1024	1024	0	Act 5 (H) Equip B	928	Act 5 (H) Good	53	fed	17	dcso	15																0
 Blood Raven			5	800	800	972	1024	3	"gld,mul=1280"	340	Act 1 Equip B	461	Act 1 Junk	121	Act 1 Good	121																0
 Blood Raven (N)			5	800	800	972	1024	3	"gld,mul=1536"	340	Act 1 (N) Equip B	461	Act 1 (N) Junk	121	Act 1 (N) Good	121																0
 Blood Raven (H)			5	800	800	972	1024	3	"gld,mul=2048"	340	Act 1 (H) Equip B	461	Act 1 (H) Junk	121	Act 1 (H) Good	121	pk1	26														0
@@ -947,5 +947,5 @@ BR Arena Bodies H		90	1	1000	850	1400	800	0	Act 5 (H) Equip C	48	BR Arena misc	5
 BR Arena Zomb N		30	3	9000	9000	1	1	0	Act 5 Uitem C	30	BR Arena jewerly	8																				0
 BR Arena Zomb NM		60	3	9000	9000	1	1	0	Act 5 (N) Uitem C	30	BR Arena jewerly	8																				0
 BR Arena Zomb H		90	3	9000	9000	1	1	0	Act 5 (H) Uitem C	30	BR Arena jewerly	8																				0
-UberAncients		90	6	940	960	1010	1024	0	Act 5 (H) Equip C	928	Jewelry C	20	Runes 17 equiv	15	wss	15	T3 Map Drop	5	T2 Map Drop	5	T1 Map Drop	5										0
-ShadowOfMendeln		90	6	512	654	972	1024	0	Act 5 (H) Equip C	787	Act 5 (H) Good	45	"gld,mul=2048"	75	Act 5 (H) Junk	75																0
+UberAncients		90	6	950	960	990	1024	0	Act 5 (H) Equip C	800	Jewelry C	100	Runes 17 equiv	25	wss	25	T3 Map Drop	10	T2 Map Drop	10	T1 Map Drop	10	scrb	1								0
+ShadowOfMendeln		90	6	950	960	990	1024	0	Act 5 (H) Equip C	787	Act 5 (H) Good	45	Act 5 (H) Junk	75	Runes 17 equiv	10	wss	15	Jewelry C	30	scrb	1										0

@@ -489,4 +489,6 @@ mirrored	486			10	10												1024		8	0	10	0	10																250	3	0	StrMirr
 item_dmgpercent_permissinghppercent	487		1	6													1024		6		6				4	0	missing_hp	item_maxdamage_percent	item_mindamage_percent					1					158	8	1	ModStrEnhancedDamage	ModStrEnhancedDamage	increaseswithmissinghp								0
 lifedrain_percentcap	488		1	7													1024		7		7																		159	7	2	ModStrLifeStealCap	ModStrLifeStealCap	ofmaximumhp								0
 inc_splash_radius_permissinghp	489		1	6													1024		6		6																		158	8	1	ModStrIncSplashRadius	ModStrIncSplashRadius	incsplashwithmissinghp								0
-eaglehorn_raven	490			11													1024		6		11																		255	3	0	EaglehornRaven	EaglehornRaven									0
+eaglehorn_raven	490			11													1024		6		11																		160	3	0	EaglehornRaven	EaglehornRaven									0
+pvp_disable	491		1	5													1024		5		5																															0
+pvp_lld_cd	492		1	5													1024		5		5																															0

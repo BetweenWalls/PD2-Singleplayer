@@ -41,7 +41,7 @@ Sigon's Sabot	Sigon's Complete Steel	hbt	Greaves	7	9	6	whit	whit						5	2500	2	m
 Sigon's Wrap	Sigon's Complete Steel	hbl	Plated Belt	7	9	6	whit	whit						5	2500	2	res-fire		20	20	hp		20	20																													ac/lvl	16																																							0
 Sigon's Guard	Sigon's Complete Steel	tow	Tower Shield	7	9	6	whit	whit						5	2500	2	allskills		1	1	block		20	20	res-cold		30	30																																																																	0
 Infernal Cranium	Infernal Tools	cap	Cap	7	7	5	lyel	lyel						5	2500	2	res-all		10	10	dmg-to-mana		20	20																													ac/lvl	32																																							0
-Infernal Spire	Infernal Tools	dgr	Dagger	7	7	5	lyel	lyel						5	2500	2	dmg-min		8	8	nec		1	1	splash	358	100	1																									att/lvl	20							oskill	73	2	2																													0
+Infernal Spire	Infernal Tools	dgr	Dagger	7	7	5	lyel	lyel						5	2500	2	dmg-min		8	8	nec		1	1	splash	358	100	1	deadly		20	20																					att/lvl	20							oskill	73	2	2																													0
 Infernal Sign	Infernal Tools	tbl	Heavy Belt	7	7	5	lyel	lyel						5	2500	2	ac		25	25	hp		20	20																													res-pois		45	45					nofreeze		1	1																													0
 Berserker's Headgear	Berserker's Garb	hlm	Helm	7	5	3	dred	dred						5	2500	2	ac		15	15	res-fire		25	25																													att/lvl	16							bar		1	1																													0
 Berserker's Hauberk	Berserker's Garb	spl	Splint Mail	7	5	3	dred	dred						5	2500	2	red-mag		2	2	bar		1	1																													ac/lvl	36							dmg%/lvl	28																															0

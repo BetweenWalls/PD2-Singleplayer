@@ -1114,7 +1114,7 @@ Pandemonium Map	1110	156	1	0	1	0	0	1	0	0	0	1	2	-4	3	Expansion/Map/Pandemonium.ds
 Pvp Map	1111	157	1	1	1	0	0	1	0	0	0	1	2	-4	1	Expansion/Map/pvpmap_palace.ds1	0	0	0	0	0	32767	1	0
 Spider Map	1112	158	1	1	1	1	1	1	0	0	0	1	0	-4	3	Expansion/Map/Spider_Dungeon1.ds1	Expansion/Map/Spider_Dungeon2.ds1	Expansion/Map/Spider_Dungeon3.ds1	0	0	0	3	0	1
 Pvp Map 2	1113	159	1	0	1	0	0	1	0	0	0	1	2	-4	1	Expansion/Map/Pvpmap1.ds1	0	0	0	0	0	536870655	1	0
-Frozen Forest Map	1114	160	1	0	0	0	1	1	0	0	0	1	0	-4	1	Expansion/Map/FrozenForestV2.ds1	Expansion/Map/FrozenForestV2.ds1	Expansion/Map/FrozenForestV2.ds1	0	0	0	268435455	0	1
+Frozen Forest Map	1114	160	1	0	0	0	1	1	0	0	0	1	0	-4	3	Expansion/Map/FrozenForestV1.ds1	Expansion/Map/FrozenForestV2.ds1	Expansion/Map/FrozenForestV3.ds1	0	0	0	268435455	0	1
 Necropolis Jungle	1115	161	1	0	1	0	1	1	0	0	0	1	0	0	1	Expansion/Map/necropolis_2.ds1	0	0	0	0	0	262140	1	0
 Necropolis Swamp	1116	162	1	0	1	0	1	1	0	0	0	1	0	0	1	Expansion/Map/necropolis_1.ds1	0	0	0	0	0	262140	1	0
 Necropolis Void	1117	163	1	0	1	0	1	1	0	0	0	1	0	0	1	Expansion/Map/necropolis_3.ds1	0	0	0	0	0	16383	1	0
