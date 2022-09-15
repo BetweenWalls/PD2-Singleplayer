@@ -558,6 +558,10 @@ pop rtmo	1			100					1	rtmo,qty=1							rtmo			100																														
 pop rtmf	1			100					1	rtmf,qty=1							rtmf			100																																																																																				0
 pop rtmv	1			100					1	rtmv,qty=1							rtmv			100																																																																																				0
 pop cwss	1			100					1	cwss,qty=1							cwss			100																																																																																				0
+pop lpp	1			100					1	lpp,qty=1							lpp			100																																																																																				0
+pop ubaa	1			100					1	ubaa,qty=1							ubaa			100																																																																																				0
+pop ubab	1			100					1	ubab,qty=1							ubab			100																																																																																				0
+pop ubac	1			100					1	ubac,qty=1							ubac			100																																																																																				0
 r01s	1			100					1	r01s,qty=1							r01			100																																																																																				0
 r02s	1			100					1	r02s,qty=1							r02			100																																																																																				0
 r03s	1			100					1	r03s,qty=1							r03			100																																																																																				0
@@ -657,7 +661,7 @@ map t3 upgrade regular to rare	1			100	18	361	0		4	t3me,nor	imra,qty=1	jewg,qty=
 map t3 scour	1			100	18	361	0		2	t3me	scou,qty=1						usetype,nor			100																																																																																				0
 map upgrade tier 1 to tier 2	1			0					4	t1me,qty=3	upmp,qty=1						t2me			100																																																																																				0
 map upgrade tier 2 to tier 3	1			0					4	t2me,qty=3	upmp,qty=1						t3me			100																																																																																				0
-map upgrade tier 3 to dungeon	1			0					2	t3me	scrb,qty=1						t4me,rar			100	map-mon-velocity%	100		20	30	map-mon-att-pierce	100		20	30	map-mon-splash	100	358	100	1	map-mon-nofreeze-hp%	100		5	10	map-play-addxp	100		40	60																																																											0
+map upgrade tier 3 to dungeon	1			0					2	t3me	scrb,qty=1						t4me,rar			100	map-mon-velocity%	100		20	30	map-mon-att-pierce	100		50	75	map-mon-splash	100	358	100	1	map-mon-nofreeze-hp%	100		5	10	map-play-addxp	100		40	60																																																											0
 MAP CORRUPT																																																																																																								0
 map heroed	1			100	18	458	0		2	map	std,qty=1						useitem			100	heroed	100		1	1	map-play-mag	100		20	20	map-play-gold	100		20	20	map-glob-density	100		20	20	map-play-addxp	100		10	10																																																											0
 map corrupt	1			100	18	361	0		2	map	wss,qty=1						useitem			100	corruptnum	100		1	1000																					wss,qty=1																																																										0

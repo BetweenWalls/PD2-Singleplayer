@@ -728,12 +728,12 @@ Plagued		1	1	1	1		1				2	167	map-mon-phys-as-extra-pois	125	163	205	map-glob-den
 Runic		1	1	1	1		1				2	168	map-mon-phys-as-extra-mag		8	10	map-glob-density		25	30	map-play-mag-gold%		5	10			t1m	t2m	t3m	t4m											0
 Taboo		1	1	1	1		1				2	168	map-mon-phys-as-extra-mag		10	12	map-glob-density		30	35	map-play-mag-gold%		20	25			t2m	t3m	t4m												0
 Occult		1	1	1	1		1				2	168	map-mon-phys-as-extra-mag		12	14	map-glob-density		35	40	map-play-mag-gold%		35	40			t3m	t4m													0
-Stygian		1	1	1	1		1				1	169	map-glob-add-mon-doll		690	690	map-glob-density		50	60	map-play-mag-gold%		40	45			t1m	t2m	t3m												0
-Lustful		1	1	1	1		1				1	169	map-glob-add-mon-succ		885	885	map-glob-density		50	60	map-play-mag-gold%		45	50			t1m	t2m	t3m												0
-Vampiric		1	1	1	1		1				1	169	map-glob-add-mon-vamp		697	697	map-glob-density		35	40	map-play-mag-gold%		15	20			t1m	t2m	t3m												0
-Bovine		1	1	1	1		1				1	169	map-glob-add-mon-cow		391	391	map-glob-density		35	40	map-play-mag-gold%		15	20			t1m	t2m	t3m												0
-Reanimated		1	1	1	1		1				1	169	map-glob-add-mon-horde		698	698	map-glob-density		50	60	map-play-mag-gold%		35	40			t1m	t2m	t3m												0
-Ghastly		1	1	1	1		1				1	169	map-glob-add-mon-ghost		732	732	map-glob-density		35	40	map-play-mag-gold%		15	20			t1m	t2m	t3m												0
+Stygian		1	1	1	1		1				1	169	map-glob-add-mon-doll		690	690	map-glob-density		50	60	map-play-mag-gold%		40	45			t1m	t2m	t3m					t4m							0
+Lustful		1	1	1	1		1				1	169	map-glob-add-mon-succ		885	885	map-glob-density		50	60	map-play-mag-gold%		45	50			t1m	t2m	t3m					t4m							0
+Vampiric		1	1	1	1		1				1	169	map-glob-add-mon-vamp		697	697	map-glob-density		35	40	map-play-mag-gold%		15	20			t1m	t2m	t3m					t4m							0
+Bovine		1	1	1	1		1				1	169	map-glob-add-mon-cow		391	391	map-glob-density		35	40	map-play-mag-gold%		15	20			t1m	t2m	t3m					t4m							0
+Reanimated		1	1	1	1		1				1	169	map-glob-add-mon-horde		698	698	map-glob-density		50	60	map-play-mag-gold%		35	40			t1m	t2m	t3m					t4m							0
+Ghastly		1	1	1	1		1				1	169	map-glob-add-mon-ghost		732	732	map-glob-density		35	40	map-play-mag-gold%		15	20			t1m	t2m	t3m					t4m							0
 Blood Letting		1	1	1	13		12				3	200	heal-kill		1	1											weap	ring	circ	tors	helm	shld	misl								0
 Murderous		100	1	1	51		44				1	200	heal-kill		2	5											weap	circ	tors	helm	shld	misl									0
 Blood Sucking		100	1	1	32		26				2	200	heal-kill		1	3											jewl	tors	helm	shld	weap	ring	misl								0
@@ -777,8 +777,8 @@ Shaman's		100	1	1	65		58	dru			1	125	dru		1	1											tors	shld	helm										
 Magekiller's		100	1	1	65		58	ass			1	125	ass		1	1											tors	shld	helm												95000
 Cerulean		100	1	1	49		41				2	115	mana		21	30									1	cblu	jewl														0
 Lancer's		100	1		60		45	ama			1	125	skilltab	2	3	3									1	lgld	amul														0
-Souless		1	1	1	1		1				1	169	map-glob-add-mon-souls		918	918	map-glob-density		50	60	map-play-mag-gold%		50	60			t1m	t2m	t3m												0
-Shamanic		1	1	1	1		1				1	169	map-glob-add-mon-fetish		785	785	map-glob-density		40	50	map-play-mag-gold%		25	30			t1m	t2m	t3m												0
+Souless		1	1	1	1		1				1	169	map-glob-add-mon-souls		918	918	map-glob-density		50	60	map-play-mag-gold%		50	60			t1m	t2m	t3m					t4m							0
+Shamanic		1	1	1	1		1				1	169	map-glob-add-mon-fetish		785	785	map-glob-density		40	50	map-play-mag-gold%		25	30			t1m	t2m	t3m					t4m							0
 Strange		100	1		32		24				5	110	att		151	300									1	lgld	misl														0
 Unearthly		100	1		25		18				1	123	att-demon		101	150	dmg-demon		51	100							misl														0
 Plague		100	1	1	50		37				1	140	dmg-pois	150	626	626									1	dgrn	weap	misl													0

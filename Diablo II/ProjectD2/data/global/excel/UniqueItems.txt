@@ -418,7 +418,7 @@ Maxlevel Trophy	100	0		0		130	1	cm1	charm			3	5000			flpflag	invflag	item_charm	
 Dev Charm	100	0		0		130	1	cm1	charm			3	5000			flpcap	devcharm	item_cap	12	item_cap	hp		20	20	state	devaura	1	1	dev-clout		1	1																																					0
 Band of Skulls	100	1		0	1	85	90	rbe	Troll Belt			5	5000				invbsk				ac%		100	150	gethit-skill	Bone Armor	10	24	mag%		25	30	red-dmg%		10	15	sock		1	1	light		-4	-4																									0
 Cage of the Unsullied	100	1		0	1	85	90	rar	Boneweave			5	5000	lgry			invuns				ac%		200	300	res-all		15	20	light		-4	-8	sock		6	6																																	0
-The Third Eye	100	1		0	1	85	90	ram	Amulet			5	5000	oran	oran		invamu				allskills		1	1	cast2		20	20	nofreeze		1	1	light		-4	-4	gethit-skill	FingermageBossNova	10	25	enr		20	30	sock		1	1	socketed-text		1	1																	0
+The Third Eye	100	1		0	1	85	90	ram	Amulet			5	5000	oran	oran		invamu				allskills		1	1	cast2		20	20	nofreeze		1	1	light		-4	-4	cast-skill	FingermageBossNova	8	25	enr		20	30	sock		1	1	socketed-text		1	1																	0
 Magefist	0	0		1	1	31	23	tgl	Light Gauntlets			5	5000	lgry	lgry						cast3		20	20	regen-mana		10	25	poisskill		1	1	dmg-pois	75	204	204	ac		10	10	ac%		20	30																									0
 Magefist	0	0		1	1	31	23	tgl	Light Gauntlets			5	5000	lgry	lgry						cast3		20	20	regen-mana		10	25	ltngskill		1	1	dmg-ltng		1	45	ac		10	10	ac%		20	30																									0
 Magefist	0	0		1	1	31	23	tgl	Light Gauntlets			5	5000	lgry	lgry						cast3		20	20	regen-mana		10	25	coldskill		1	1	dmg-cold		10	18	ac		10	10	ac%		20	30																									0
