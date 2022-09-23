@@ -43,5 +43,6 @@ mendelnbloodgolem																																																													cu
 ubertalic	aura	100	479	22	22																										aura	100	479	22	22																										aura	100	479	22	22																										0
 uberkorlic	leapspeed	100		20	20	aura	100	532	1	1																					leapspeed	100		20	20	aura	100	532	1	1																					leapspeed	100		20	20	aura	100	532	1	1																					0
 shadowmonprop	state	100	220	1	1	move1			20	20																					state	100	220	1	1	move1			20	20																					state	100	220	1	1	move1			20	20																					0
-libraryboss	aura	100	99	15	15																										aura	100	99	15	15																										aura	100	99	15	15																										
-cursereduction																																																													curse-res	100		75	75																										
+libraryboss	aura	100	99	15	15																										aura	100	99	15	15																										aura	100	99	15	15																										0
+cursereduction																																																													curse-res	100		75	75																										0
+targetdummyprop																																																																																											0
