@@ -12,6 +12,7 @@ Includes several balance and quality-of-life updates for season 5:
     * Up to 48 flawless gems can now be combined simultaneously into perfect gems
     * Set staves now correctly gain extra FCR when upgraded
     * 2 quivers of the same rarity and type (arrows or bolts) can be turned into a quiver of the opposite type
+    * Runes can now be downgraded at a 1:1 ratio by cubing them with an Orb of Destruction
   * Other Modifications:
     * Added splash damage as an automod to staves (unique/set staves already have it)
     * Added 30% faster cast rate to ribcracker to match staff automod

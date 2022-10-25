@@ -94,10 +94,16 @@ If the items in this collection are insufficient, you may want to look into [tex
 
 1. Extract the game's text files from *patch_d2.mpq* (found in *Diablo II/ProjectD2*) using an [MPQ editor and D2 listfile](http://www.zezula.net/en/mpq/download.html) - the text files will be in */data/global/excel* 
 2. Edit whichever files you want (for example, *CubeMain.txt* includes the cube recipes)
+    * This is best done in a spreadsheet program since the files have tab-separated data
 3. Copy the edited files to your game directory inside a new folder structure: *Diablo II/ProjectD2/data/global/excel*
 4. Create (and run) a new shortcut for PlugY.exe with additional commands in the target field so that the game uses your edited text files: -direct -txt
 
-These steps have already been done for this collection - the game's text files are in *Diablo II\ProjectD2\data\global\excel\modpacks* along with modified text files in the above folder. If your Diablo II installation is in the default location, *C:\Program Files (x86)*, you'll only need to launch the *PlugY.exe (modded)* shortcut to get access to several useful cube recipes from the "testing" modpack:
+These steps have already been done for this collection - the game's text files are in *Diablo II\ProjectD2\data\global\excel\modpacks* along with modified text files from the "testing" modpack in the above folder.
+
+After getting whatever items you want via the "testing" modpack or other modifications, simply run the original PlugY.exe file to make the game run normally. The original game files aren't changed so you can experiment with text mods like this without fear of messing something up.
+
+## Modpacks
+The ["testing"](https://github.com/BetweenWalls/PD2-Singleplayer/tree/main/Diablo%20II/ProjectD2/data/global/excel/modpacks/testing) modpack is setup by default to help with acquiring specific items. If your Diablo II installation is in *C:\Program Files (x86)* (the default location) you'll only need to launch the *PlugY.exe (modded)* shortcut to get access to several useful cube recipes from the "testing" modpack:
 * reroll any non-crafted item with Horadrim Orb
 * use crafted items as ingredients for crafting recipes
 * generate set/unique items of a given base with Rancid (green) or Oil (gold) Potions
@@ -107,10 +113,7 @@ These steps have already been done for this collection - the game's text files a
 * safely remove socketed gems/runes/jewels with Hel Rune
 * set the number of sockets with runes #1-6 based on the number of the rune used
 
-After getting whatever items you want, simply run the original PlugY.exe file to make the game run normally.
-
-## Modpacks
-In addition to the ["testing"](https://github.com/BetweenWalls/PD2-Singleplayer/tree/main/Diablo%20II/ProjectD2/data/global/excel/modpacks/testing) modpack that is setup by default to help with acquiring specific items, this collection also includes modpacks that are meant to be used for normal gameplay. [Modpacks](https://github.com/BetweenWalls/PD2-Singleplayer/tree/main/Diablo%20II/ProjectD2/data/global/excel/modpacks) can be anywhere between minimalist (only adding minor quality-of-life features and fixing bugs) and being practically entire mods in their own right, with complete balance overhauls or additional gameplay features.
+In addition to the "testing" modpack, this collection also includes modpacks that are meant to be used for normal gameplay. [Modpacks](https://github.com/BetweenWalls/PD2-Singleplayer/tree/main/Diablo%20II/ProjectD2/data/global/excel/modpacks) can be anywhere between minimalist (only adding minor quality-of-life features and fixing bugs) and being practically entire mods in their own right, with complete balance overhauls or additional gameplay features.
 
 If you've made your own PD2 modpack and would like it to be available here, I'd be glad to add it.
 

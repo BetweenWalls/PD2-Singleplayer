@@ -18,3 +18,4 @@ Note that "CubeMain.txt" from the "s5_balance_qol" mod is used as a base instead
   * Up to 48 flawless gems can now be combined simultaneously into perfect gems
   * Set staves now correctly gain extra FCR when upgraded
   * 2 quivers of the same rarity and type (arrows or bolts) can be turned into a quiver of the opposite type
+  * Runes can now be downgraded at a 1:1 ratio by cubing them with an Orb of Destruction

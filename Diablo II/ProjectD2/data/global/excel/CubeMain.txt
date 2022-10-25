@@ -231,6 +231,38 @@ flawless skulls -> perfect skulls (1)	1			0					2	key,qty=1	skls,qty=3						usei
 2 rune 30s -> rune 31s	1			100					2	key,qty=1	r30s,qty=2						useitem			100																										r31s																																																										0
 2 rune 31s -> rune 32s	1			100					2	key,qty=1	r31s,qty=2						useitem			100																										r32s																																																										0
 2 rune 32s -> rune 33s	1			100					2	key,qty=1	r32s,qty=2						useitem			100																										r33s																																																										0
+downgrade rune 02 -> 01	1			100					2	scou,qty=1	r02g,qty=1						r01s			100																																																																																				0
+downgrade rune 03 -> 02	1			100					2	scou,qty=1	r03g,qty=1						r02s			100																																																																																				0
+downgrade rune 04 -> 03	1			100					2	scou,qty=1	r04g,qty=1						r03s			100																																																																																				0
+downgrade rune 05 -> 04	1			100					2	scou,qty=1	r05g,qty=1						r04s			100																																																																																				0
+downgrade rune 06 -> 05	1			100					2	scou,qty=1	r06g,qty=1						r05s			100																																																																																				0
+downgrade rune 07 -> 06	1			100					2	scou,qty=1	r07g,qty=1						r06s			100																																																																																				0
+downgrade rune 08 -> 07	1			100					2	scou,qty=1	r08g,qty=1						r07s			100																																																																																				0
+downgrade rune 09 -> 08	1			100					2	scou,qty=1	r09g,qty=1						r08s			100																																																																																				0
+downgrade rune 10 -> 09	1			100					2	scou,qty=1	r10g,qty=1						r09s			100																																																																																				0
+downgrade rune 11 -> 10	1			100					2	scou,qty=1	r11g,qty=1						r10s			100																																																																																				0
+downgrade rune 12 -> 11	1			100					2	scou,qty=1	r12g,qty=1						r11s			100																																																																																				0
+downgrade rune 13 -> 12	1			100					2	scou,qty=1	r13g,qty=1						r12s			100																																																																																				0
+downgrade rune 14 -> 13	1			100					2	scou,qty=1	r14g,qty=1						r13s			100																																																																																				0
+downgrade rune 15 -> 14	1			100					2	scou,qty=1	r15g,qty=1						r14s			100																																																																																				0
+downgrade rune 16 -> 15	1			100					2	scou,qty=1	r16g,qty=1						r15s			100																																																																																				0
+downgrade rune 17 -> 16	1			100					2	scou,qty=1	r17g,qty=1						r16s			100																																																																																				0
+downgrade rune 18 -> 17	1			100					2	scou,qty=1	r18g,qty=1						r17s			100																																																																																				0
+downgrade rune 19 -> 18	1			100					2	scou,qty=1	r19g,qty=1						r18s			100																																																																																				0
+downgrade rune 20 -> 19	1			100					2	scou,qty=1	r20g,qty=1						r19s			100																																																																																				0
+downgrade rune 21 -> 20	1			100					2	scou,qty=1	r21g,qty=1						r20s			100																																																																																				0
+downgrade rune 22 -> 21	1			100					2	scou,qty=1	r22g,qty=1						r21s			100																																																																																				0
+downgrade rune 23 -> 22	1			100					2	scou,qty=1	r23g,qty=1						r22s			100																																																																																				0
+downgrade rune 24 -> 23	1			100					2	scou,qty=1	r24g,qty=1						r23s			100																																																																																				0
+downgrade rune 25 -> 24	1			100					2	scou,qty=1	r25g,qty=1						r24s			100																																																																																				0
+downgrade rune 26 -> 25	1			100					2	scou,qty=1	r26g,qty=1						r25s			100																																																																																				0
+downgrade rune 27 -> 26	1			100					2	scou,qty=1	r27g,qty=1						r26s			100																																																																																				0
+downgrade rune 28 -> 27	1			100					2	scou,qty=1	r28g,qty=1						r27s			100																																																																																				0
+downgrade rune 29 -> 28	1			100					2	scou,qty=1	r29g,qty=1						r28s			100																																																																																				0
+downgrade rune 30 -> 29	1			100					2	scou,qty=1	r30g,qty=1						r29s			100																																																																																				0
+downgrade rune 31 -> 30	1			100					2	scou,qty=1	r31g,qty=1						r30s			100																																																																																				0
+downgrade rune 32 -> 31	1			100					2	scou,qty=1	r32g,qty=1						r31s			100																																																																																				0
+downgrade rune 33 -> 32	1			100					2	scou,qty=1	r33g,qty=1						r32s			100																																																																																				0
 craft with magic - hitpower helm	1			200					4	helm,mag,noe	jewg,qty=1	r06g,qty=1	gg4s,qty=1				usetype,crf		50	50	gethit-skill		44	5	4	balance1			10	20	att			100	200																																																																					0
 craft with magic - hitpower helm (eth)	1			200					4	helm,mag,eth	jewg,qty=1	r06g,qty=1	gg4s,qty=1				usetype,crf		50	50	gethit-skill		44	5	4	balance1			10	20	att			100	200	ethereal	100		1	1																																																																0
 craft with magic - hitpower boots	1			100					4	boot,mag,noe	jewg,qty=1	r08g,qty=1	gg4s,qty=1				usetype,crf		50	50	gethit-skill		44	5	4	balance1			10	10	ac-hth			25	60																																																																					0
