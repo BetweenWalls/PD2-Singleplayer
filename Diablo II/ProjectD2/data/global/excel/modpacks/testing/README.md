@@ -11,11 +11,4 @@ Includes several developer-style cube recipes to assist in testing:
   * safely remove socketed gems/runes/jewels with Hel Rune
   * set the number of sockets with runes #1-6 based on the number of the rune used
   
-Most changes are in "CubeMain.txt". "UniqueItems.txt" is just modified to ensure uniques aren't limited to one per game (so they can be rerolled multiple times)
-
-Note that "CubeMain.txt" from the "s5_balance_qol" mod is used as a base instead of the "official" version, so it has these differences:
-  * Improved file organization - descriptions are more accurate/readable and similar recipes are grouped next to eachother
-  * Up to 48 flawless gems can now be combined simultaneously into perfect gems
-  * Set staves now correctly gain extra FCR when upgraded
-  * 2 quivers of the same rarity and type (arrows or bolts) can be turned into a quiver of the opposite type
-  * Runes can now be downgraded at a 1:1 ratio by cubing them with an Orb of Destruction
+Most changes are in "CubeMain.txt". Some things are also changed in "UniqueItems.txt" to ensure uniques aren't limited to one per game and they can be rerolled multiple times.
