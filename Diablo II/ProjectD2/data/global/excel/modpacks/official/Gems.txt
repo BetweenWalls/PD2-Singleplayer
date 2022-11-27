@@ -48,7 +48,7 @@ Thul Rune	Thul	18	r10	1	dmg-cold	75	3	14									res-cold		30	30									res-col
 Amn Rune	Amn	18	r11	1	lifesteal		7	7									thorns		14	14									thorns		14	14								0
 Sol Rune	Sol	18	r12	1	dmg-min		9	9									red-dmg		7	7									red-dmg		7	7								0
 Shael Rune	Shael	18	r13	1	swing2		20	20									balance2		20	20									block2		20	20								0
-Dol Rune	Dol	18	r14	1	dmg%		25	25									regen		10	10									regen		10	10								0
+Dol Rune	Dol	18	r14	1	dmg%		20	20									regen		10	10									regen		10	10								0
 Hel Rune	Hel	18	r15	1	ease		-20	-20									ease		-15	-15									ease		-15	-15								0
 Io Rune	Io	18	r16	1	vit		10	10									vit		10	10									vit		10	10								0
 Lum Rune	Lum	18	r17	1	enr		10	10									enr		10	10									enr		10	10								0
@@ -58,13 +58,13 @@ Lem Rune	Lem	18	r20	1	gold%		75	75									gold%		50	50									gold%		50	50				
 Pul Rune	Pul	18	r21	1	att-demon		100	100	dmg-demon		75	75					ac%		30	30									ac%		30	30								0
 Um Rune	Um	18	r22	1	openwounds		25	25									res-all		15	15									res-all		22	22								0
 Mal Rune	Mal	18	r23	1	noheal		1	1									red-mag		7	7									red-mag		7	7								0
-Ist Rune	Ist	18	r24	1	mag%		30	30									mag%		25	25									mag%		25	25								0
+Ist Rune	Ist	18	r24	1	mag%		30	30									mag%		30	30									mag%		30	30								0
 Gul Rune	Gul	18	r25	1	att%		20	20									res-pois-max		4	4									res-pois-max		4	4								0
 Vex Rune	Vex	18	r26	1	manasteal		7	7									res-fire-max		4	4									res-fire-max		4	4								0
-Ohm Rune	Ohm	18	r27	1	dmg%		50	50									res-cold-max		4	4									res-cold-max		4	4								0
+Ohm Rune	Ohm	18	r27	1	dmg%		40	40									res-cold-max		4	4									res-cold-max		4	4								0
 Lo Rune	Lo	18	r28	1	deadly		20	20									res-ltng-max		4	4									res-ltng-max		4	4								0
 Sur Rune	Sur	18	r29	1	heal-kill		4	4									mana%		5	5									mana		50	50								0
-Ber Rune	Ber	18	r30	1	crush		20	20									red-dmg%		4	4									red-dmg%		4	4								0
-Jah Rune	Jah	18	r31	1	ignore-ac		1	1									hp%		5	5									hp		50	50								0
+Ber Rune	Ber	18	r30	1	crush		20	20									red-dmg%		5	5									red-dmg%		5	5								0
+Jah Rune	Jah	18	r31	1	ignore-ac		1	1									hp%		5	5									hp		75	75								0
 Cham Rune	Cham	18	r32	1	freeze		3	3									nofreeze		1	1									nofreeze		1	1								0
 Zod Rune	Zod	18	r33	1	indestruct		1	1									indestruct		1	1									indestruct		1	1								0

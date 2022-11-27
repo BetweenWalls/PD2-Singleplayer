@@ -122,8 +122,8 @@ Act	Place
 2	TombBoss
 2	act2hireTraitorBoss
 2	MarketBoss
-2	place_nothing
-2	place_nothing
+2	lernaeanhydra1
+2	lernaeanhydra2
 2	place_nothing
 2	place_nothing
 2	place_nothing
@@ -273,7 +273,7 @@ Act	Place
 5	IceBoss
 5	CanyonBoss
 5	westmarchMapBoss
-5	place_nothing
+5	AshenBoss
 5	place_nothing
 5	place_nothing
 5	place_nothing

@@ -2,7 +2,7 @@ index	name	version	level	PCode2a	PParam2a	PMin2a	PMax2a	PCode2b	PParam2b	PMin2b	
 Civerb's Vestments	Civerb's Vestments	0	13	res-fire		25	25																													str	0	15	15	dmg-undead	0	200	200	res-ltng	0	25	25																					0
 Hsarus' Defense	Hsarus' Defense	0	4	thorns		9	9																													dmg-max	0	5	5	nofreeze	0	1	1	res-ltng	0	25	25																					0
 Cleglaw's Brace	Cleglaw's Brace	0	6	ac		50	50																													ac	0	50	50	manasteal	0	6	6	crush	0	35	35	swing2		20	20																	0
-Iratha's Finery	Iratha's Finery	0	21	ac		50	50					move2		20	20																					res-all	0	20	20	res-fire-max	0	5	5	res-cold-max	0	5	5	res-ltng-max	0	5	5	res-pois-max	0	5	5	dex	0	15	15									0
+Iratha's Finery	Iratha's Finery	0	21	ac		50	50					move2		20	20																					res-all	0	20	20	res-fire-max	0	2	2	res-cold-max	0	2	2	res-ltng-max	0	2	2	res-pois-max	0	2	2	dex	0	15	15									0
 Isenhart's Armory	Isenhart's Armory	0	11	str		10	10					dex		10	10																					lifesteal	0	5	5	att%	0	35	35	block		30	30	move2		20	20	res-all		10	10													0
 Vidala's Rig	Vidala's Rig	0	19	att		75	75					dex		15	15																					dmg-cold	50	15	20	freeze	0	1	1	pierce	0	30	30	str		10	10																	0
 Milabrega's Regalia	Milabrega's Regalia	0	23	att		75	75					att		125	125																					lifesteal	0	8	8	pal	0	2	2	manasteal	0	10	10	res-pois	0	15	15																	0

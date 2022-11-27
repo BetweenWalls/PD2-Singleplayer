@@ -1734,6 +1734,18 @@ LevelName	TileName	Style	StartSequence	EndSequence	Type1	Cel1	Type2	Cel2	Type2	C
 2 Sewer	fl	7	17	19	Water_	266		-1		-1		-1
 2 Sewer	fl	7	12	13	Water_	266		-1		-1		-1
 2 Sewer	tr	0	-1	-1	Trees_	257		258		259		-1
+2 Sewer	fl	38	33	33	PD2 - Oasis	266	D_Oasis_b	267		-1		-1
+2 Sewer	fl	38	37	37	PD2 - Oasis	266	D_Oasis_b	267		-1		-1
+2 Sewer	fl	39	0	0	PD2 - Oasis	266	D_Oasis_b	267		-1		-1
+2 Sewer	fl	39	10	11	PD2 - Oasis	266	D_Oasis_b	267		-1		-1
+2 Sewer	fl	39	22	22	PD2 - Oasis	266	D_Oasis_b	267		-1		-1
+2 Sewer	fl	39	30	31	PD2 - Oasis	266	D_Oasis_b	267		-1		-1
+2 Sewer	fl	39	33	34	PD2 - Oasis	266	D_Oasis_b	267		-1		-1
+2 Sewer	fl	39	36	39	PD2 - Oasis	266	D_Oasis_b	267		-1		-1
+2 Sewer	fl	39	40	41	PD2 - Oasis	266	D_Oasis_b	267		-1		-1
+2 Sewer	fl	39	44	50	PD2 - Oasis	266	D_Oasis_b	267		-1		-1
+2 Sewer	fl	40	3	3	PD2 - Oasis	266	D_Oasis_b	267		-1		-1
+2 Sewer	fl	40	18	19	PD2 - Oasis	266	D_Oasis_b	267		-1		-1
 2 Arcane	fl	0	-1	-1	Arcane_fla	337	Arcane_flb	338		-1		-1
 2 Arcane	fl	1	3	3	Arcane_str14	503		-1		-1		-1
 2 Arcane	fl	1	4	4	Arcane_str13	502		-1		-1		-1
@@ -3882,3 +3894,234 @@ Expansion
 36	wtlr	1	0	2	PD2 - WTLR	1226		-1		-1		-1
 36	wl	1	0	2	PD2 - Wall Left	1213		-1		-1		-1
 36	wr	1	0	2	PD2 - Wall Right	1212		-1		-1		-1
+37	fl	0	1	46	Floor Path A	0	Floor Path B	1	Floor Path C	2	Floor Path D	3
+37	fl	2	0	3	Floor Path A	0	Floor Path B	1	Floor Path C	2	Floor Path D	3
+37	fl	2	4	7	River T A	4		-1		-1		-1
+37	fl	2	8	11	River M A	6	River M B	7	River M C	8		-1
+37	fl	2	12	15	Floor Path A	0	Floor Path B	1	Floor Path C	2	Floor Path D	3
+37	fl	2	16	19	River T A	4		-1		-1		-1
+37	fl	2	20	24	River M A	6	River M B	7	River M C	8		-1
+37	fl	3	0	3	Floor Path A	0	Floor Path B	1	Floor Path C	2	Floor Path D	3
+37	fl	3	4	7	River B A	5		-1		-1		-1
+37	fl	3	8	11	Floor Path A	0	Floor Path B	1	Floor Path C	2	Floor Path D	3
+37	fl	3	12	15	River B A	5		-1		-1		-1
+37	wr	0	0	18	F_WR	60	F_WR B	70		-1		-1
+37	wl	0	0	18	F_WL	61	F_WL B	71		-1		-1
+37	wtlr	0	15	15	F_WTLL	64		-1		-1		-1
+37	wtlr	0	0	1	F_WTLL	64		-1		-1		-1
+37	wtll	0	15	15	F_WR	60		-1		-1		-1
+37	wtll	0	0	1	F_WTLL	64		-1		-1		-1
+37	wbr	0	0	2	F_WBR	65		-1		-1		-1
+37	wbr	0	5	-1	F_WBR	65		-1		-1		-1
+37	wtr	0	-1	-1	F_WBL	62		-1		-1		-1
+37	wbl	0	-1	-1	F_WTR	63		-1		-1		-1
+37	wr	2	0	3	Stn_WR a	11	Stn_WR b	12		-1		-1
+37	wr	2	4	4	Stn_L R E	18		-1		-1		-1
+37	wl	2	0	3	Stn_WL a	13	Stn_WL b	14		-1		-1
+37	wl	2	4	4	Stn_L L E	17		-1		-1		-1
+37	wtr	2	0	4	Stn_WL a	13	Stn_WL b	14		-1		-1
+37	wtlr	2	0	4	Stn_X	16		-1		-1		-1
+37	wtll	2	0	4	Stn_X	16		-1		-1		-1
+37	wbl	2	0	4	Stn_WR a	11	Stn_WR b	12		-1		-1
+37	fl	4	0	3	Bridge M	79		-1		-1		-1
+37	fl	4	4	4	Bridge T A	76		-1		-1		-1
+37	fl	4	5	6	Bridge M	79		-1		-1		-1
+37	fl	4	7	7	Bridge B A	73		-1		-1		-1
+37	fl	4	8	8	Bridge T B	77		-1		-1		-1
+37	fl	4	9	10	Bridge M	79		-1		-1		-1
+37	fl	4	11	11	Bridge B B	74		-1		-1		-1
+37	fl	4	12	12	Bridge T B	77		-1		-1		-1
+37	fl	4	13	14	Bridge M	79		-1		-1		-1
+37	fl	4	15	15	Bridge B B	74		-1		-1		-1
+37	fl	4	16	16	Bridge T B	77		-1		-1		-1
+37	fl	4	17	18	Bridge M	79		-1		-1		-1
+37	fl	4	19	19	Bridge B B	74		-1		-1		-1
+37	fl	4	20	21	Bridge M	79		-1		-1		-1
+37	fl	4	22	22	Bridge B B	74		-1		-1		-1
+37	fl	4	23	26	Bridge M	79		-1		-1		-1
+37	fl	4	27	27	Bridge T C	78		-1		-1		-1
+37	fl	4	28	29	Bridge M	79		-1		-1		-1
+37	fl	4	30	30	Bridge B C	75		-1		-1		-1
+37	fl	4	31	31	Bridge T B	77		-1		-1		-1
+37	fl	4	32	33	Bridge M	79		-1		-1		-1
+37	fl	4	34	34	Bridge B B	74		-1		-1		-1
+37	fl	4	35	35	Bridge T B	77		-1		-1		-1
+37	fl	4	36	37	Bridge M	79		-1		-1		-1
+37	fl	4	38	38	Bridge B B	74		-1		-1		-1
+37	fl	4	39	39	Bridge T B	77		-1		-1		-1
+37	co	7	10	10	akara_c10	400		-1		-1		-1
+37	co	7	11	11	akara_c11	401		-1		-1		-1
+37	co	7	12	12	akara_c12	402		-1		-1		-1
+37	co	7	13	13	cmlwgn_c13	403		-1		-1		-1
+37	co	7	14	14	cmlwgn_c14	404		-1		-1		-1
+37	fl	8	8	8	firepit_fl88	405		-1		-1		-1
+37	co	6	5	5	wgnw_c65	406		-1		-1		-1
+37	wtll	0	3	3	XXwgnt_wl040	407		-1		-1		-1
+37	wl	0	38	38	wgnt_wl038	408		-1		-1		-1
+37	wr	0	42	42	wgnt_wr031	409		-1		-1		-1
+37	wl	0	30	30	wgn1_wl030	410		-1		-1		-1
+37	wl	0	28	28	wgn1_wl028	411		-1		-1		-1
+37	wl	0	26	26	wgn1_wl026	412		-1		-1		-1
+37	wr	0	27	27	wgn2_wr027	415		-1		-1		-1
+37	wr	0	29	29	wgn2_wr029	416		-1		-1		-1
+37	wr	0	40	40	tntsm_wr040	413		-1		-1		-1
+37	wl	0	43	43	tntsm_wl043	414		-1		-1		-1
+37	wr	0	33	33	tntlrg_wr033	417		-1		-1		-1
+37	wl	0	36	36	tntlrg_wl036	418		-1		-1		-1
+37	wl	0	34	34	tntlrg_wl034	419		-1		-1		-1
+37	wr	0	36	36	smthy_wr036	420		-1		-1		-1
+37	wr	0	38	38	smthy_wr038	421		-1		-1		-1
+37	fl	1	61	61	smthy_fl161	422		-1		-1		-1
+37	fl	0	54	54	Waypoint	307		-1		-1		-1
+37	wr	0	19	19	wgn3_wr021	423		-1		-1		-1
+37	wr	0	21	21	wgn3_wl020	424		-1		-1		-1
+37	co	6	7	7	Stash_Box	319		-1		-1		-1
+37	wr	0	24	24	cart_wr024	425		-1		-1		-1
+37	wr	0	4	4	Stn_WR a	11		-1		-1		-1
+37	wr	0	5	5	Stn_L R E	18		-1		-1		-1
+37	wr	0	6	6	Stn_U R E	10		-1		-1		-1
+37	wr	0	0	3	WR A	20		-1		-1		-1
+37	wl	0	0	0	WL A	21		-1		-1		-1
+37	wl	0	1	1	WLD 1	35		-1		-1		-1
+37	wl	0	2	-1	WL A	21		-1		-1		-1
+37	wtll	0	-1	-1	WTLL	24		-1		-1		-1
+37	fl	0	1	47	Floor Path A	0	Floor Path B	1	Floor Path C	2	Floor Path D	3
+37	fl	0	54	54	Waypoint	307		-1		-1		-1
+37	fl	0	49	49	Floor Path A	0	Floor Path B	1	Floor Path C	2	Floor Path D	3
+37	fl	2	0	3	Floor Path A	0	Floor Path B	1	Floor Path C	2	Floor Path D	3
+37	fl	2	4	7	River T A	4		-1		-1		-1
+37	fl	2	8	11	River M A	6	River M B	7	River M C	8		-1
+37	fl	2	12	15	Floor Path A	0	Floor Path B	1	Floor Path C	2	Floor Path D	3
+37	fl	2	16	19	River T A	4		-1		-1		-1
+37	fl	2	20	24	River M A	6	River M B	7	River M C	8		-1
+37	fl	3	0	3	Floor Path A	0	Floor Path B	1	Floor Path C	2	Floor Path D	3
+37	fl	3	4	7	River B A	5		-1		-1		-1
+37	fl	3	8	11	Floor Path A	0	Floor Path B	1	Floor Path C	2	Floor Path D	3
+37	fl	3	12	15	River B A	5		-1		-1		-1
+37	wr	10	2	2	WBL	22		-1		-1		-1
+37	wr	10	0	1	WR A	20		-1		-1		-1
+37	wr	10	3	6	WR A	20		-1		-1		-1
+37	wr	10	13	-1	WR A	20		-1		-1		-1
+37	wl	10	2	2	WTR	23		-1		-1		-1
+37	wl	10	0	1	WL A	21		-1		-1		-1
+37	wl	10	3	12	WL A	21		-1		-1		-1
+37	wl	10	14	-1	WL A	21		-1		-1		-1
+37	wtlr	10	-1	-1	WTLL	24		-1		-1		-1
+37	wtll	10	-1	-1	WTLL	24		-1		-1		-1
+37	wbr	10	-1	-1	WBR	25		-1		-1		-1
+37	wtr	10	-1	-1	WTR	23		-1		-1		-1
+37	wbl	10	-1	-1	WBL	22		-1		-1		-1
+37	wrd	10	0	0	WBR	25		-1		-1		-1
+37	wld	10	1	1	WLE B	33		-1		-1		-1
+37	wld	10	0	0	WLE A	32		-1		-1		-1
+37	wre	10	1	1	Cave M BCT	159		-1		-1		-1
+37	wre	10	3	3	Cave M RWS D	158		-1		-1		-1
+37	wre	10	0	0	G_WLE A BROKE	86		-1		-1		-1
+37	wre	10	2	2	G_WLE B	87		-1		-1		-1
+37	wr	10	7	7	Crypt_11	436		-1		-1		-1
+37	wr	10	9	9	Crypt_12	437		-1		-1		-1
+37	wr	10	12	12	Crypt_21	438		-1		-1		-1
+37	wl	10	13	13	Crypt_22	439		-1		-1		-1
+37	fl	10	0	0	Floor Path A	0	Floor Path B	1	Floor Path C	2	Floor Path D	3
+37	fl	10	5	11	Floor Path A	0	Floor Path B	1	Floor Path C	2	Floor Path D	3
+37	wr	2	0	4	Stn_WR a	11	Stn_WR b	12		-1		-1
+37	wl	2	0	4	Stn_WL a	13	Stn_WL b	14		-1		-1
+37	wtr	2	0	4	Stn_WL a	13	Stn_WL b	14		-1		-1
+37	wtlr	2	0	4	Stn_X	16		-1		-1		-1
+37	wtll	2	0	4	Stn_X	16		-1		-1		-1
+37	wbl	2	0	4	Stn_WR a	11	Stn_WR b	12		-1		-1
+37	wr	2	0	13	F_WR	60		-1		-1		-1
+37	wl	2	0	13	F_WL	61		-1		-1		-1
+37	wtlr	2	-1	-1	F_WTLL	64		-1		-1		-1
+37	wtll	2	-1	-1	F_WTLL	64		-1		-1		-1
+37	wbr	2	-1	-1	F_WBR	65		-1		-1		-1
+37	wtr	2	-1	-1	F_WTR	63		-1		-1		-1
+37	wbl	2	-1	-1	F_WBL	62		-1		-1		-1
+37	wr	2	14	23	Stn_WR a	11	Stn_WR b	12		-1		-1
+37	wl	2	14	23	Stn_WL a	13	Stn_WL b	14		-1		-1
+37	wr	3	-1	-1	C_WR a	46	C_WR b	47	C_WR c	48	C_WR d	49
+37	wl	3	-1	-1	C_WL a	51	C_WL b	52	C_WL c	53	C_WL d	54
+37	wtr	3	-1	-1	C_WL a	51	C_WL b	52	C_WL c	53	C_WL d	54
+37	wtlr	3	-1	-1	C_WTLL	55		-1		-1		-1
+37	wtll	3	-1	-1	C_WTLL	55		-1		-1		-1
+37	wbr	3	-1	-1	C_WBR	50		-1		-1		-1
+37	wbl	3	-1	-1	C_WL b	52		-1		-1		-1
+37	wr	23	-1	-1	C_WR a	46	C_WR b	47	C_WR c	48	C_WR d	49
+37	wl	23	-1	-1	C_WL a	51	C_WL b	52	C_WL c	53	C_WL d	54
+37	wtr	23	-1	-1	C_WRE 2	59		-1		-1		-1
+37	wtlr	23	-1	-1	C_WTLL	55		-1		-1		-1
+37	wtll	23	-1	-1	C_WTLL	55		-1		-1		-1
+37	wbr	23	-1	-1	C_WBR	50		-1		-1		-1
+37	wbl	23	-1	-1	C_WR a	46	C_WR b	47	C_WR c	48	C_WR d	49
+37	wle	3	0	0	C_WLE 1	56		-1		-1		-1
+37	wle	3	1	1	C_WLE 2	57		-1		-1		-1
+37	wre	4	0	0	C_WRE 1	58		-1		-1		-1
+37	wre	4	1	1	C_WRE 2	59		-1		-1		-1
+37	wl	39	0	0	Den of Evil	312		-1		-1		-1
+37	fl	4	0	3	Bridge M	79		-1		-1		-1
+37	fl	4	4	4	Bridge T A	76		-1		-1		-1
+37	fl	4	5	6	Bridge M	79		-1		-1		-1
+37	fl	4	7	7	Bridge B A	73		-1		-1		-1
+37	fl	4	8	8	Bridge T B	77		-1		-1		-1
+37	fl	4	9	10	Bridge M	79		-1		-1		-1
+37	fl	4	11	11	Bridge B B	74		-1		-1		-1
+37	fl	4	12	12	Bridge T B	77		-1		-1		-1
+37	fl	4	13	14	Bridge M	79		-1		-1		-1
+37	fl	4	15	15	Bridge B B	74		-1		-1		-1
+37	fl	4	16	16	Bridge T B	77		-1		-1		-1
+37	fl	4	17	18	Bridge M	79		-1		-1		-1
+37	fl	4	19	19	Bridge B B	74		-1		-1		-1
+37	fl	4	20	21	Bridge M	79		-1		-1		-1
+37	fl	4	22	22	Bridge B B	74		-1		-1		-1
+37	fl	4	23	26	Bridge M	79		-1		-1		-1
+37	fl	4	27	27	Bridge T C	78		-1		-1		-1
+37	fl	4	28	29	Bridge M	79		-1		-1		-1
+37	fl	4	30	30	Bridge B C	75		-1		-1		-1
+37	fl	4	31	31	Bridge T B	77		-1		-1		-1
+37	fl	4	32	33	Bridge M	79		-1		-1		-1
+37	fl	4	34	34	Bridge B B	74		-1		-1		-1
+37	fl	4	35	35	Bridge T B	77		-1		-1		-1
+37	fl	4	36	37	Bridge M	79		-1		-1		-1
+37	fl	4	38	38	Bridge B B	74		-1		-1		-1
+37	fl	4	39	39	Bridge T B	77		-1		-1		-1
+37	fl	21	12	12	C_WLE 2	57		-1		-1		-1
+37	fl	21	14	14	C_WLE 1	56		-1		-1		-1
+37	fl	24	10	10	C_WRE 2	59		-1		-1		-1
+37	fl	24	9	9	C_WRE 1	58		-1		-1		-1
+37	fl	25	25	25	WRE 1	36		-1		-1		-1
+37	wr	15	3	3	WR A	20		-1		-1		-1
+37	wr	15	0	0	FTwr_wr15_0	430		-1		-1		-1
+37	wr	15	2	2	FTwr_wr15_2	431		-1		-1		-1
+37	wr	15	5	5	FTwr_wr15_5	441		-1		-1		-1
+37	wr	15	9	9	FTwr_wr15_9	442		-1		-1		-1
+37	wr	15	8	8	FTwr_wr15_8	444		-1		-1		-1
+37	wl	15	2	2	FTwr_wl15_2	428		-1		-1		-1
+37	wl	15	0	0	FTwr_wl15_0	429		-1		-1		-1
+37	wbl	15	0	0	FTwr_wbl15_0	440		-1		-1		-1
+37	wtll	15	1	1	FTwr_wtll15_1	443		-1		-1		-1
+37	wl	15	5	-1	WL A	21		-1		-1		-1
+37	wr	15	5	-1	WR A	20		-1		-1		-1
+37	fl	25	0	0	FTwr_marker	432		-1		-1		-1
+37	wle	0	0	0	WLE B	33		-1		-1		-1
+37	wle	1	0	0	WLE A	32		-1		-1		-1
+37	wr	45	-1	-1	WR A	20		-1		-1		-1
+37	wl	45	0	4	WL A	21		-1		-1		-1
+37	wl	45	5	6	WBR	25		-1		-1		-1
+37	wl	45	7	-1	WL A	21		-1		-1		-1
+37	wtlr	45	-1	-1	WTLL	24		-1		-1		-1
+37	wtll	45	-1	-1	WTLL	24		-1		-1		-1
+37	wbr	45	2	2	WBR	25		-1		-1		-1
+37	wbr	45	-1	-1	WBR	25		-1		-1		-1
+37	wtr	45	0	2	WTR	23		-1		-1		-1
+37	wtr	45	3	3	WBR	25		-1		-1		-1
+37	wtr	45	-1	-1	WTR	23		-1		-1		-1
+37	wbl	45	-1	-1	WBL	22		-1		-1		-1
+37	wrd	45	-1	-1	WRD 1	34		-1		-1		-1
+37	wld	45	-1	-1	WLD 1	35		-1		-1		-1
+37	wtlr	8	0	0	TomeWall_utlr80	426		-1		-1		-1
+37	wle	0	1	1	WLE A	32		-1		-1		-1
+37	wle	0	0	0	WLE B	33		-1		-1		-1
+37	wle	1	0	0	WLE A	32		-1		-1		-1
+37	wle	1	1	1	WLE B	33		-1		-1		-1
+37	wl	2	-1	-1	WL A	21	WL B	39		-1		-1
+37	wl	4	-1	-1	WL A	21	WL B	39		-1		-1

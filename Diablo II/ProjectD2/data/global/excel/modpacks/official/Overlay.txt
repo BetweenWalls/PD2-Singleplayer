@@ -308,3 +308,5 @@ aura_magicgoldfind	evilaura_gold	100	21	all	1	1	0	0	0	0	0	0	0	0	0	8	0	3	0	0	0	0	
 MendelnEvent	Extra\GolemCast	100	16	all	0	1	0	0	0	0	0	0	0	0	0	16	0	3	0	0	0	0	0	1	0
 rathma_aura	AuraRathmaKiller	0	20	all	1	1	0	0	0	0	0	0	0	0	0	16	0	3	0	0	255	255	255	1	0
 disable_tele	Conversion	0	10	all	0	1	0	0	0	0	0	0	0	0	0	8	0	3	0	0	255	255	255	1	0
+inferno_debuff	Extra\AuraResistFire	100	16	all	0	1	0	0	0	0	0	0	0	0	0	16	0	3	0	0	100	0	0	1	0
+arcticblast_debuff	Extra\AuraResistCold	100	16	all	0	1	0	0	0	0	0	0	0	0	0	16	0	3	0	0	0	0	100	1	0

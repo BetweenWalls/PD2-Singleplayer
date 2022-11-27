@@ -220,3 +220,5 @@ butchermap	217					1																																						aura_magicgoldfind				
 rathmaset	218																																											rathma_aura																											0
 vengeance	219																																																vengeance_hit														paladin_sacrifice								0
 black	220																														1	1			1																							101	99	255	255	255									0
+inferno_debuff	221																								1																			inferno_debuff																											0
+arcticblast_debuff	222																										1																	arcticblast_debuff																											0

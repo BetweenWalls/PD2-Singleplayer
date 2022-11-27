@@ -51,9 +51,9 @@ Runes 14 equiv			1						r27s	3	r28s	2	Runes 13 equiv	2170																		0
 Runes 15 equiv			1						r29s	3	r30s	2	Runes 14 equiv	2941																		0
 Runes 16 equiv			1						r31s	3	r32s	2	Runes 15 equiv	3957																		0
 Runes 17 equiv			1						r33s	1	Runes 16 equiv	5170																				0
-Map Tier 1			1			400	800		t11	1	t12	1	t13	1	t14	1	t15	1														0
-Map Tier 2			1			400	800		t21	1	t22	1	t23	1	t24	1	t25	1	t26	1												0
-Map Tier 3			1			400	800		t31	2	t32	2	t33	2	t34	2	t35	2	t36	2	t37	2	t38	2	t39	2						0
+Map Tier 1			1			400	800		t21	1	t12	1	t13	1	t22	1	t23	1	t16	1	t33	1										0
+Map Tier 2			1			400	800		t15	1	t11	1	t14	1	t34	1	t36	1	t26	1												0
+Map Tier 3			1			400	800		t31	2	t32	2	t24	2	t25	2	t35	2	t3a	2	t37	2	t38	2	t39	2						0
 T1 Map Drop			1						Map Tier 1	2	Map Tier 2	1																				0
 T2 Map Drop			1						Map Tier 1	2	Map Tier 2	2	Map Tier 3	1																		0
 T3 Map Drop			1						Map Tier 1	2	Map Tier 2	2	Map Tier 3	2																		0
@@ -949,3 +949,37 @@ BR Arena Zomb NM		60	3	9000	9000	1	1	0	Act 5 (N) Uitem C	30	BR Arena jewerly	8		
 BR Arena Zomb H		90	3	9000	9000	1	1	0	Act 5 (H) Uitem C	30	BR Arena jewerly	8																				0
 UberAncients		90	6	950	960	990	1024	0	Act 5 (H) Equip C	800	Jewelry C	100	Runes 17 equiv	25	wss	25	T3 Map Drop	10	T2 Map Drop	10	T1 Map Drop	10	scrb	1								0
 ShadowOfMendeln		90	6	950	960	990	1024	0	Act 5 (H) Equip C	787	Act 5 (H) Good	45	Act 5 (H) Junk	75	Runes 17 equiv	10	wss	15	Jewelry C	30	scrb	1										0
+Act 1 (H) Weap A	1	68	1						weap54	2	armo54	0	weap57	6	armo57	0	weap60	14	armo60	0	weap63	6	armo63	3	Act 5 (N) Weap C	1785			28	1813	0.977	0
+Act 1 (H) Weap B	1	70	1						weap57	2	armo57	0	weap60	6	armo60	0	weap63	14	armo63	0	weap66	2	armo66	1	Act 1 (H) Weap A	1530			24	1554	0.977	0
+Act 1 (H) Weap C	1	71	1						weap57	2	armo57	0	weap60	6	armo60	0	weap63	14	armo63	0	weap66	6	armo66	3	Act 1 (H) Weap A	1785			28	1813	0.977	0
+Act 2 (H) Weap A	1	73	1						weap60	2	armo60	0	weap63	6	armo63	0	weap66	14	armo66	0	weap69	2	armo69	1	Act 1 (H) Weap B	1530			24	1554	0.977	0
+Act 2 (H) Weap B	1	75	1						weap60	2	armo60	0	weap63	6	armo63	0	weap66	14	armo66	0	weap69	6	armo69	3	Act 2 (H) Weap A	1785			28	1813	0.977	0
+Act 2 (H) Weap C	1	76	1						weap63	2	armo63	0	weap66	6	armo66	0	weap69	14	armo69	0	weap72	2	armo72	1	Act 2 (H) Weap A	1530			24	1554	0.977	0
+Act 3 (H) Weap A	1	77	1						weap63	2	armo63	0	weap66	6	armo66	0	weap69	14	armo69	0	weap72	6	armo72	3	Act 2 (H) Weap B	1785			28	1813	0.977	0
+Act 3 (H) Weap B	1	78	1						weap66	2	armo66	0	weap69	6	armo69	0	weap72	14	armo72	0	weap75	2	armo75	1	Act 3 (H) Weap A	1530			24	1554	0.977	0
+Act 3 (H) Weap C	1	79	1						weap66	2	armo66	0	weap69	6	armo69	0	weap72	14	armo72	0	weap75	6	armo75	3	Act 3 (H) Weap A	1785			28	1813	0.977	0
+Act 4 (H) Weap A	1	80	1						weap69	2	armo69	0	weap72	6	armo72	0	weap75	14	armo75	0	weap78	2	armo78	1	Act 3 (H) Weap B	1530			24	1554	0.977	0
+Act 4 (H) Weap B	1	81	1						weap69	2	armo69	0	weap72	6	armo72	0	weap75	14	armo75	0	weap78	6	armo78	0	Act 4 (H) Weap A	1785			28	1813	0.977	0
+Act 4 (H) Weap C	1	82	1						weap72	2	armo72	0	weap75	6	armo75	0	weap78	14	armo78	0	weap81	2	armo81	0	Act 4 (H) Weap A	1530			24	1554	0.977	0
+Act 5 (H) Weap A	1	83	1						weap75	2	armo75	0	weap78	6	armo78	0	weap81	14	armo81	0	weap84	2	armo84	0	Act 4 (H) Weap B	1530			24	1554	0.977	0
+Act 5 (H) Weap B	1	84	1						weap78	2	armo78	0	weap81	6	armo81	0	weap84	14	armo84	0	weap87	2	armo87	0	Act 5 (H) Weap A	1530			24	1554	0.977	0
+Act 5 (H) Weap C	1	85	1						weap81	2	armo81	0	weap84	6	armo84	0	weap87	14	armo87	0	weap87	1	armo87	0	Act 5 (H) Weap B	1530			23	1553	0.9776	0
+Act 1 (H) Armo A	1	68	1						weap54	0	armo54	1	weap57	0	armo57	3	weap60	0	armo60	7	weap63	0	armo63	3	Act 5 (N) Armo C	1785			14	1799	0.977	0
+Act 1 (H) Armo B	1	70	1						weap57	0	armo57	1	weap60	0	armo60	3	weap63	0	armo63	7	weap66	0	armo66	1	Act 1 (H) Armo A	1530			12	1542	0.977	0
+Act 1 (H) Armo C	1	71	1						weap57	0	armo57	1	weap60	0	armo60	3	weap63	0	armo63	7	weap66	0	armo66	3	Act 1 (H) Armo A	1785			14	1799	0.977	0
+Act 2 (H) Armo A	1	73	1						weap60	0	armo60	1	weap63	0	armo63	3	weap66	0	armo66	7	weap69	0	armo69	1	Act 1 (H) Armo B	1530			12	1542	0.977	0
+Act 2 (H) Armo B	1	75	1						weap60	0	armo60	1	weap63	0	armo63	3	weap66	0	armo66	7	weap69	0	armo69	3	Act 2 (H) Armo A	1785			14	1799	0.977	0
+Act 2 (H) Armo C	1	76	1						weap63	0	armo63	1	weap66	0	armo66	3	weap69	0	armo69	7	weap72	0	armo72	1	Act 2 (H) Armo A	1530			12	1542	0.977	0
+Act 3 (H) Armo A	1	77	1						weap63	0	armo63	1	weap66	0	armo66	3	weap69	0	armo69	7	weap72	0	armo72	3	Act 2 (H) Armo B	1785			14	1799	0.977	0
+Act 3 (H) Armo B	1	78	1						weap66	0	armo66	1	weap69	0	armo69	3	weap72	0	armo72	7	weap75	0	armo75	1	Act 3 (H) Armo A	1530			12	1542	0.977	0
+Act 3 (H) Armo C	1	79	1						weap66	0	armo66	1	weap69	0	armo69	3	weap72	0	armo72	7	weap75	0	armo75	3	Act 3 (H) Armo A	1785			14	1799	0.977	0
+Act 4 (H) Armo A	1	80	1						weap69	0	armo69	1	weap72	0	armo72	3	weap75	0	armo75	7	weap78	0	armo78	1	Act 3 (H) Armo B	1530			12	1542	0.977	0
+Act 4 (H) Armo B	1	81	1						weap69	0	armo69	1	weap72	0	armo72	3	weap75	0	armo75	7	weap78	0	armo78	3	Act 4 (H) Armo A	1785			14	1799	0.977	0
+Act 4 (H) Armo C	1	82	1						weap72	0	armo72	1	weap75	0	armo75	3	weap78	0	armo78	7	weap81	0	armo81	1	Act 4 (H) Armo A	1530			12	1542	0.977	0
+Act 5 (H) Armo A	1	83	1						weap75	0	armo75	1	weap78	0	armo78	3	weap81	0	armo81	7	weap84	0	armo84	1	Act 4 (H) Armo B	1530			12	1542	0.977	0
+Act 5 (H) Armo B	1	84	1						weap78	0	armo78	1	weap81	0	armo81	3	weap84	0	armo84	7	weap87	0	armo87	1	Act 5 (H) Armo A	1530			12	1542	0.977	0
+Act 5 (H) Armo C	1	85	1						weap81	0	armo81	1	weap84	0	armo84	3	weap87	0	armo87	7	weap87	0	armo87	1	Act 5 (H) Armo B	1530			12	1542	0.9776	0
+MapStat DropJewelry			1						rin	2	amu	2	jew	4	cm3	1	cm2	1	cm1	1												0
+MapStat DropWeapons			1						Act 5 (H) Weap C	1																						0
+MapStat DropArmor			1						Act 5 (H) Armo C	1																						0
+MapStat DropCharms			1						Treasure Fallen Gem	1	Treasure Fallen Rune	1	"gld,mul=2048"	1																		0

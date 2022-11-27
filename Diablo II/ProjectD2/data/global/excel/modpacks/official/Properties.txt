@@ -314,7 +314,7 @@ map-mon-balance1	1			8	map_mon_fastergethitrate																													none
 map-mon-hp%	1			1	map_mon_maxhp_percent																													none	0
 map-mon-openwounds	1			1	map_mon_openwounds																													none	0
 map-mon-crush	1			1	map_mon_crushingblow																													none	0
-map-mon-curseresist-hp%	1			1	map_mon_curse_resistance			3	map_mon_maxhp_percent																									none	0
+map-mon-curseresist-hp%	1			1	map_mon_curse_resistance																													none	0
 map-play-ac%	1			1	map_play_ac%																													none	0
 map-play-balance1	1			8	map_play_fastergethitrate																													none	0
 map-play-block	1			1	map_play_toblock																													none	0
@@ -399,3 +399,10 @@ dmg%/missinghp%	1			17	item_dmgpercent_permissinghppercent																						
 lifesteal-cap	1			1	lifedrain_percentcap																														0
 splash%/missinghp%	1			17	inc_splash_radius_permissinghp																														0
 eaglehorn-raven	1			1	eaglehorn_raven																														0
+map-glob-skirmish-mode	1			1	map_glob_skirmish_mode																														0
+map-mon-dropjewelry	1			8	map_mon_dropjewelry																													none	0
+map-mon-dropweapons	1			8	map_mon_dropweapons																													none	0
+map-mon-droparmor	1			8	map_mon_droparmor																													none	0
+map-mon-dropcharms	1			8	map_mon_dropcharms																													none	0
+map-glob-extra-boss	1			1	map_glob_extra_boss																														0
+map-glob-add-mon-shriek	1			1	map_glob_add_mon_shriek																													none	0

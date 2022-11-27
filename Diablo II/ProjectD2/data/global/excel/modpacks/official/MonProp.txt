@@ -46,3 +46,7 @@ shadowmonprop	state	100	220	1	1	move1			20	20																					state	100	220	
 libraryboss	aura	100	99	15	15																										aura	100	99	15	15																										aura	100	99	15	15																										0
 cursereduction																																																													curse-res	100		75	75																										0
 targetdummyprop																																																																																											0
+sanctuaryboss																																																													aura	100	534	22	22																										0
+howlattack	hit-skill	100	130	100	1																										hit-skill	100	130	100	1																										hit-skill	100	130	90	5	curse-res	100		75	75																					0
+blunderboreDungeon																															crush			25	25	knock			1	1																					crush			100	100	curse-res	100		75	75																					0
+stygianDungeon	death-skill	100	363	100	1																										death-skill	100	363	100	2																										death-skill	100	363	100	10	curse-res	100		75	75																					0

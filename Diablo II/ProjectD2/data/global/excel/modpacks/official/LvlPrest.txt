@@ -1128,3 +1128,5 @@ Crypts Map	1124	170	1	1	0	0	1	1	0	0	0	1	0	0	3	Expansion/Map/RoyalCrypts.ds1	Expa
 Sanctuary of Sin Map	1125	171	1	1	1	0	1	1	0	0	0	1	0	-4	3	Expansion/Map/SanctuaryOfSin.ds1	Expansion/Map/SanctuaryOfSinV2.ds1	Expansion/Map/SanctuaryOfSinV3.ds1	0	0	0	524287	0	1
 Black Abyss Map	1126	172	1	1	1	0	1	1	0	0	0	1	0	-4	1	Expansion/Map/BlackAbyss.ds1	0	0	0	0	0	524287	0	1
 Butcher Event Map	1127	173	1	0	1	0	1	1	0	0	0	1	0	-4	1	Expansion/Map/butcher1.ds1	0	0	0	0	0	53256	0	1
+Ruined Cistern Map	1128	174	1	1	1	1	1	1	0	0	0	1	0	-4	3	Expansion/Map/RuinedCistern.ds1	Expansion/Map/RuinedCisternV2.ds1	Expansion/Map/RuinedCisternV3.ds1	0	0	0	65159183	0	1
+Ashen Plains Map	1129	175	1	1	1	0	1	1	0	0	0	1	2	-4	3	Expansion/Map/AshenPlains1.ds1	Expansion/Map/AshenPlains2.ds1	Expansion/Map/AshenPlains3.ds1	0	0	0	8191	0	1
