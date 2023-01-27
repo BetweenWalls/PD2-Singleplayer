@@ -92,7 +92,7 @@ New affixes such as "Melee Attacks Deal Splash Damage" cannot be edited in this 
 ## Modification
 If the items in this collection are insufficient, you may want to look into [text modding](https://d2mods.info/forum/viewtopic.php?f=4&t=34455). By modifying the game's text files, you can spawn items via custom cube recipes, adjust the ranges for affixes that can appear on items, and much more. Here are the basic steps:
 
-1. Extract the game's text files from *patch_d2.mpq* (found in *Diablo II/ProjectD2*) using an [MPQ editor and D2 listfile](http://www.zezula.net/en/mpq/download.html) - the text files will be in */data/global/excel* 
+1. Extract the game's text files from *pd2data.mpq* (found in *Diablo II/ProjectD2*) using an [MPQ editor and D2 listfile](http://www.zezula.net/en/mpq/download.html) - the text files will be in */data/global/excel* 
 2. Edit whichever files you want (for example, *CubeMain.txt* includes the cube recipes)
     * This is best done in a spreadsheet program since the files have tab-separated data
 3. Copy the edited files to your game directory inside a new folder structure: *Diablo II/ProjectD2/data/global/excel*
