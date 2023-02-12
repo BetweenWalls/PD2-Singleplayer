@@ -8,15 +8,15 @@ If you're just looking for PlugY without the item pack or characters, see [PD2-P
 ## Setup Guide
 The singleplayer [PlugY mod](http://plugy.free.fr/) adds stash pages for all the items, fixes ubers, and allows unlimited skill/stat resets as well as several other optional features. A copy of PlugY v14.03 is included in the files.
 
-1. Pre-Setup - Ensure you have *Diablo II LoD* and *PD2* installed
-2. Add PlugY and this item/character pack - copy the *Diablo II* folder included here into *Program Files (x86)* (or wherever your game folder is)
+1. Pre-Setup - Ensure you have *Diablo II LoD* and *PD2* installed; if you already use PlugY, backup your shared stash file
+2. Add PlugY and this item/character pack - copy *ProjectD2* and *Save* from the included *Diablo II* folder into your own *Diablo II* folder
 3. Run PlugY.exe as administrator
 
 You'll still need to run PD2 via the launcher occasionally to get the latest patch/update.
 
 ### Troubleshooting
 * PlugY may not load correctly if it is added after a fresh PD2 installation or if PD2 hasn't been updated in a while - run the game once via the launcher to fix it
-* Older versions of PlugY had a different folder structure (some files were in the *Diablo II* folder instead of the *Diablo II/ProjectD2* folder) so they won't be overitten automatically - delete those old files manually if there are any issues
+* Older versions of PlugY had a different folder structure (some files were in the *Diablo II* folder instead of the *Diablo II/ProjectD2* folder) so they won't be ovewritten automatically - delete those old files manually if there are any issues
 * Old s1/s2 characters may not load correctly - to update them, see [PD2-Converter](https://github.com/BetweenWalls/PD2-Converter#simple-characterstash-converter-for-pd2)
 
 PlugY bugs:
@@ -135,8 +135,8 @@ Low Priority Improvements
 Some generated rare/crafted items have incorrect required levels
 Some generated runeword item bases are missing certain stats, such as 10-50% FCR for staves
 Some generated item bases may have incorrect armor values - they should be verified
-eth Vampire Gaze defense is 182 when it should be 378
-eth Quetzalcoatl defense is 18 when it should be 42
-eth Jalal's Mane defense is 327 when it should be 445
-...many other eth uniques seem to have incorrect defense values, often even being lower than the non-eth version - the ethereal defense equation seems to be wrong, since regenerating these items doesn't fix them
+  eth Vampire Gaze defense is 182 when it should be 378
+  eth Quetzalcoatl defense is 18 when it should be 42
+  eth Jalal's Mane defense is 327 when it should be 445
+  ...many other eth uniques seem to have incorrect defense values, often even being lower than the non-eth version - the ethereal defense equation seems to be wrong, since regenerating these items doesn't fix them
 -->
