@@ -24,7 +24,7 @@ You'll still need to run PD2 via the launcher occasionally to get the latest pat
 PlugY bugs:
 * Having many maps in a single stash page can cause a crash if it is the most recently visited page
 * Having gold in the shared stash can cause issues such as preventing CtA oskills from working correctly
-* The "toggle stash" button may be set to the wrong stash upon loading until interacting with the current stash - put an item on a higher page (such as page 1000) in whichever stash is loaded first to fix it
+* The "toggle stash" button may be set to the wrong stash upon loading until interacting with the current stash - putting an item on a higher page (such as page 200) in whichever stash is loaded first seems to fix it in some cases
 
 ## Inclusions
 * level 99 characters for each class with accurate stats and skill points (lower level characters also available)
