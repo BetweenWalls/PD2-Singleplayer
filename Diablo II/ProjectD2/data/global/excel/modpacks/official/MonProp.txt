@@ -28,7 +28,7 @@ griswoldgolem																																																													lifest
 baalminionboss																																																													cast1			-50	-50																										0
 stygian	death-skill	100	363	100	1																										death-skill	100	363	100	2																										death-skill	100	363	100	10																										0
 ubertrappedsoul																																																													curse-res	100		100	100																										0
-uberdiablonew																																																													curse-res	100		95	95	res-pois-len	100		75	75																					0
+uberdiablonew																																																													curse-res	100		95	95	res-pois-len	100		75	75	abs-fire	100		8	8																0
 torajanMaggot																																																													slow	100		20	20																										0
 dcloneminion																																																													curse-res	100		100	100	res-pois-len	100		75	75																					0
 rathma	cast2	100		30	30	swing2	100		30	30	death-skill	100	485	100	1																cast2	100		30	30	swing2	100		30	30	death-skill	100	485	100	1																cast2	100		30	30	swing2	100		30	30	death-skill	100	485	100	1	curse-res	100		95	95	res-pois-len	100		50	50						0
@@ -50,3 +50,5 @@ sanctuaryboss																																																													aura	1
 howlattack	hit-skill	100	130	100	1																										hit-skill	100	130	100	1																										hit-skill	100	130	90	5	curse-res	100		75	75																					0
 blunderboreDungeon																															crush			25	25	knock			1	1																					crush			100	100	curse-res	100		75	75																					0
 stygianDungeon	death-skill	100	363	100	1																										death-skill	100	363	100	2																										death-skill	100	363	100	10	curse-res	100		75	75																					0
+zharminibossbaboonprop	aura	100	108	15	15	move1			20	20																					aura	100	108	15	15	move1			20	20																					aura	100	108	15	15	move1			20	20																					0
+warlordminibossdefilerprop	aura	100	122	8	8	cast2	100		30	30	swing2	100		30	30																aura	100	122	8	8	cast2	100		30	30	swing2	100		30	30																aura	100	122	8	8	cast2	100		30	30	swing2	100		30	30																0

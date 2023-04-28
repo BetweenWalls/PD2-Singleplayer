@@ -105,15 +105,15 @@ Sapphire	gems	gem	ggms	0	0					0	0	0	0			1	0	1	0	0	0	0	0	3		0		0							misc	0
 Topaz	gemt	gem	ggmt	0	0					0	0	0	0			1	0	1	0	0	0	0	0	3		0		0							misc	0
 Skull	gemz	gem	ggmz	0	0					0	0	0	0			1	0	1	0	0	0	0	0	3		0		0							misc	0
 Worldstone Shard	corr			0	0					0	0	0	1			1	0	0	0	0	0	0	0	3		0		0								0
-Map	map			0	0					0	0	0	0		1	0	0	0	0	0	0	0	0	3		0		0							misc	0
-Map T1	t1m	map		0	0					0	0	0	0		1	0	0	0	0	0	0	0	0	3		0		0							misc	0
-Map T2	t2m	t1m		0	0					0	0	0	0		1	0	0	0	0	0	0	0	0	3		0		0							misc	0
-Map T3	t3m	t2m		0	0					0	0	0	0		1	0	0	0	0	0	0	0	0	3		0		0							misc	0
-Map T4	t4m			0	0					0	0	0	0		1	0	0	0	0	0	0	0	0	3		0		0							misc	0
-Map T1 exc	t1me	map		0	0					0	0	0	0		1	0	0	0	0	0	0	0	0	3		0		0							misc	0
-Map T2 exc	t2me	map		0	0					0	0	0	0		1	0	0	0	0	0	0	0	0	3		0		0							misc	0
-Map T3 exc	t3me	map		0	0					0	0	0	0		1	0	0	0	0	0	0	0	0	3		0		0							misc	0
-Map T4 exc	t4me	map		0	0					0	0	0	0		1	0	0	0	0	0	0	0	0	3		0		0							misc	0
+Map	map			0	0					0	0	0	1		1	0	0	0	0	0	0	0	0	3		0		0							misc	0
+Map T1	t1m	map		0	0					0	0	0	1		1	0	0	0	0	0	0	0	0	3		0		0							misc	0
+Map T2	t2m	t1m		0	0					0	0	0	1		1	0	0	0	0	0	0	0	0	3		0		0							misc	0
+Map T3	t3m	t2m		0	0					0	0	0	1		1	0	0	0	0	0	0	0	0	3		0		0							misc	0
+Map T4	t4m			0	0					0	0	0	1		1	0	0	0	0	0	0	0	0	3		0		0							misc	0
+Map T1 exc	t1me	map		0	0					0	0	0	1		1	0	0	0	0	0	0	0	0	3		0		0							misc	0
+Map T2 exc	t2me	map		0	0					0	0	0	1		1	0	0	0	0	0	0	0	0	3		0		0							misc	0
+Map T3 exc	t3me	map		0	0					0	0	0	1		1	0	0	0	0	0	0	0	0	3		0		0							misc	0
+Map T4 exc	t4me	map		0	0					0	0	0	1		1	0	0	0	0	0	0	0	0	3		0		0							misc	0
 2Handed Melee Weapon	2han			1	1	rarm	larm			0	0	0	0		1	0	0	0	0	0	0	0	1	3		0		0								0
 General Weapon	gen			1	1					0	0	0	0		1	0	0	0	0	0	0	0	1	3		0		0								0
 Polearm and Spear	pas			1	1					0	0	0	0		1	0	0	0	0	0	0	0	1	3		0		0								0
@@ -210,3 +210,7 @@ General Melee	mgen	mele	gen	1	1					0	0	0	0		1	0	0	0	0	0	0	0	1	3		0		0								0
 Fortify Map	fort			0	0					0	0	0	1			1	0	0	0	0	0	0	0	3		0		0							misc	0
 UberUnique	ubru			0	0					0	0	0	0			1	0	0	0	0	0	0	0	0		0		0								0
 Larzuks Malus	lmal			0	0					0	0	0	0			1	0	0	0	0	0	0	0	0		0		0							misc	0
+UberMap	ubmp			0	0					0	0	0	0			1	0	0	0	0	0	0	0	0		0		0								0
+Map T5	t5m			0	0					0	0	0	1		1	0	0	0	0	0	0	0	0	3		0		0							misc	0
+Map T5 exc	t5me	map		0	0					0	0	0	1		1	0	0	0	0	0	0	0	0	3		0		0							misc	0
+Torch Fragment	cm2f			0	0					0	0	0	1			1	0	0	0	0	0	0	0	0		0		0								0

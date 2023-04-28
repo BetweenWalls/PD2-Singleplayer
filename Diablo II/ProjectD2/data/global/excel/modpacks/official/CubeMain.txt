@@ -1,23 +1,23 @@
 description	enabled	ladder	min diff	version	op	param	value	class	numinputs	input 1	input 2	input 3	input 4	input 5	input 6	input 7	output	lvl	plvl	ilvl	mod 1	mod 1 chance	mod 1 param	mod 1 min	mod 1 max	mod 2	mod 2 chance	mod 2 param	mod 2 min	mod 2 max	mod 3	mod 3 chance	mod 3 param	mod 3 min	mod 3 max	mod 4	mod 4 chance	mod 4 param	mod 4 min	mod 4 max	mod 5	mod 5 chance	mod 5 param	mod 5 min	mod 5 max	output b	b lvl	b plvl	b ilvl	b mod 1	b mod 1 chance	b mod 1 param	b mod 1 min	b mod 1 max	b mod 2	b mod 2 chance	b mod 2 param	b mod 2 min	b mod 2 max	b mod 3	b mod 3 chance	b mod 3 param	b mod 3 min	b mod 3 max	b mod 4	b mod 4 chance	b mod 4 param	b mod 4 min	b mod 4 max	b mod 5	b mod 5 chance	b mod 5 param	b mod 5 min	b mod 5 max	output c	c lvl	c plvl	c ilvl	c mod 1	c mod 1 chance	c mod 1 param	c mod 1 min	c mod 1 max	c mod 2	c mod 2 chance	c mod 2 param	c mod 2 min	c mod 2 max	c mod 3	c mod 3 chance	c mod 3 param	c mod 3 min	c mod 3 max	c mod 4	c mod 4 chance	c mod 4 param	c mod 4 min	c mod 4 max	c mod 5	c mod 5 chance	c mod 5 param	c mod 5 min	c mod 5 max	*eol
 MAPS																																																																																																								0
-map upgrade mag to rare	1			100	18	361	0		4	"t1me,mag"	"r1pg,qty=1"	"gg4z,qty=1"	"upma,qty=1"				"usetype,rar"			100																																																																																				0
-map reroll rare	1			100	18	361	0		4	"t1me,rar"	"r1pg,qty=1"	"ggm4,qty=1"	"rera,qty=1"				"usetype,rar"			100																																																																																				0
-map imbue magic	1			100	18	361	0		3	"t1me,nor"	"jewg,qty=1"	"imma,qty=1"					"usetype,mag"			100																																																																																				0
-map imbue rare	1			100	18	361	0		4	"t1me,nor"	"imra,qty=1"	"jewg,qty=1"	"r1pg,qty=1"				"usetype,rar"			100																																																																																				0
-map scour	1			100	18	361	0		2	"t1me"	"scou,qty=1"						"usetype,nor"			100																																																																																				0
-map upgrade mag to rare	1			100	18	361	0		4	"t2me,mag"	"r1pg,qty=1"	"gg4z,qty=1"	"upma,qty=1"				"usetype,rar"			100																																																																																				0
-map reroll rare	1			100	18	361	0		4	"t2me,rar"	"r1pg,qty=1"	"ggm4,qty=1"	"rera,qty=1"				"usetype,rar"			100																																																																																				0
-map imbue magic	1			100	18	361	0		3	"t2me,nor"	"jewg,qty=1"	"imma,qty=1"					"usetype,mag"			100																																																																																				0
-map imbue rare	1			100	18	361	0		4	"t2me,nor"	"imra,qty=1"	"jewg,qty=1"	"r1pg,qty=1"				"usetype,rar"			100																																																																																				0
-map scour	1			100	18	361	0		2	"t2me"	"scou,qty=1"						"usetype,nor"			100																																																																																				0
-map upgrade mag to rare	1			100	18	361	0		4	"t3me,mag"	"r1pg,qty=1"	"gg4z,qty=1"	"upma,qty=1"				"usetype,rar"			100																																																																																				0
-map reroll rare	1			100	18	361	0		4	"t3me,rar"	"r1pg,qty=1"	"ggm4,qty=1"	"rera,qty=1"				"usetype,rar"			100																																																																																				0
-map imbue magic	1			100	18	361	0		3	"t3me,nor"	"jewg,qty=1"	"imma,qty=1"					"usetype,mag"			100																																																																																				0
-map imbue rare	1			100	18	361	0		4	"t3me,nor"	"imra,qty=1"	"jewg,qty=1"	"r1pg,qty=1"				"usetype,rar"			100																																																																																				0
-map scour	1			100	18	361	0		2	"t3me"	"scou,qty=1"						"usetype,nor"			100																																																																																				0
+map upgrade mag to rare	1			100	18	361	0		4	"t1me,mag,qty=1"	"r1pg,qty=1"	"gg4z,qty=1"	"upma,qty=1"				"usetype,rar"			100																																																																																				0
+map reroll rare	1			100	18	361	0		4	"t1me,rar,qty=1"	"r1pg,qty=1"	"ggm4,qty=1"	"rera,qty=1"				"usetype,rar"			100																																																																																				0
+map imbue magic	1			100	18	361	0		3	"t1me,nor,qty=1"	"jewg,qty=1"	"imma,qty=1"					"usetype,mag"			100																																																																																				0
+map imbue rare	1			100	18	361	0		4	"t1me,nor,qty=1"	"imra,qty=1"	"jewg,qty=1"	"r1pg,qty=1"				"usetype,rar"			100																																																																																				0
+map scour	1			100	18	361	0		2	"t1me,qty=1"	"scou,qty=1"						"usetype,nor"			100																																																																																				0
+map upgrade mag to rare	1			100	18	361	0		4	"t2me,mag,qty=1"	"r1pg,qty=1"	"gg4z,qty=1"	"upma,qty=1"				"usetype,rar"			100																																																																																				0
+map reroll rare	1			100	18	361	0		4	"t2me,rar,qty=1"	"r1pg,qty=1"	"ggm4,qty=1"	"rera,qty=1"				"usetype,rar"			100																																																																																				0
+map imbue magic	1			100	18	361	0		3	"t2me,nor,qty=1"	"jewg,qty=1"	"imma,qty=1"					"usetype,mag"			100																																																																																				0
+map imbue rare	1			100	18	361	0		4	"t2me,nor,qty=1"	"imra,qty=1"	"jewg,qty=1"	"r1pg,qty=1"				"usetype,rar"			100																																																																																				0
+map scour	1			100	18	361	0		2	"t2me,qty=1"	"scou,qty=1"						"usetype,nor"			100																																																																																				0
+map upgrade mag to rare	1			100	18	361	0		4	"t3me,mag,qty=1"	"r1pg,qty=1"	"gg4z,qty=1"	"upma,qty=1"				"usetype,rar"			100																																																																																				0
+map reroll rare	1			100	18	361	0		4	"t3me,rar,qty=1"	"r1pg,qty=1"	"ggm4,qty=1"	"rera,qty=1"				"usetype,rar"			100																																																																																				0
+map imbue magic	1			100	18	361	0		3	"t3me,nor,qty=1"	"jewg,qty=1"	"imma,qty=1"					"usetype,mag"			100																																																																																				0
+map imbue rare	1			100	18	361	0		4	"t3me,nor,qty=1"	"imra,qty=1"	"jewg,qty=1"	"r1pg,qty=1"				"usetype,rar"			100																																																																																				0
+map scour	1			100	18	361	0		2	"t3me,qty=1"	"scou,qty=1"						"usetype,nor"			100																																																																																				0
 map upgrade tier 1 to tier 2	1			0					2	"t1me,qty=3"	"upmp,qty=1"						t2me			100																																																																																				0
 map upgrade tier 2 to tier 3	1			0					2	"t2me,qty=3"	"upmp,qty=1"						t3me			100																																																																																				0
-map upgrade tier 3 to dungeon	1			0					2	t3me	"scrb,qty=1"						"t4me,rar"			100	map-mon-velocity%	100		20	30	map-mon-att-pierce	100		80	100	map-mon-splash	100	358	100	1	map-mon-nofreeze-hp%	100		10	20	map-play-addxp	100		40	50																																																											0
+map upgrade tier 3 to dungeon	1			0					2	"t3me,qty=1"	"scrb,qty=1"						"t4me,rar"			100	map-mon-velocity%	100		20	30	map-mon-att-pierce	100		80	100	map-mon-splash	100	358	100	1	map-mon-nofreeze-hp%	100		10	20	map-play-addxp	100		40	50																																																											0
 Staff of Kings + Viper amulet -> Horadric Staff	1			0	28				2	msf	vip						hst																																																																																							0
 Khalim Flail + Khalim Heart + Khalim Eye + Khalim Brain -> Super Khalim Flail	1			0	28				4	qf1	qhr	qey	qbr				qf2																																																																																							0
 1 Wirt's leg + 1 town portal book -> portal to cow lvl	1			0	28				2	leg	tbk						Cow Portal																																																																																							0
@@ -356,7 +356,17 @@ Puzzlebox helm	1			100					2	"helm,nos"	"lbox,qty=1"						useitem			100	sock			1
 Puzzlebox chest	1			100					2	"tors,nos"	"lbox,qty=1"						useitem			100	sock			1	2																																																																															0
 Puzzlebox shield	1			100					2	"shld,nos"	"lbox,qty=1"						useitem			100	sock			1	2																																																																															0
 Uber Diablo Map	1			100					3	"dcbl,qty=1"	"dcho,qty=1"	"dcso,qty=1"					dcma																																																																																							0
+Uber Map Difficulty 1	1			100	18	185	0		2	ubmp	"r26g,qty=1"						useitem			100	uber-difficulty			1	1																																																																															0
+Uber Map Difficulty 2	1			100	18	185	0		2	ubmp	"r27g,qty=1"						useitem			100	uber-difficulty			2	2																																																																															0
+Uber Map Difficulty 3	1			100	18	185	0		2	ubmp	"r28g,qty=1"						useitem			100	uber-difficulty			3	3																																																																															0
+Uber Map Difficulty 4	1			100	18	185	0		2	ubmp	"r29g,qty=1"						useitem			100	uber-difficulty			4	4																																																																															0
+Uber Map Difficulty 5	1			100	18	185	0		2	ubmp	"r30g,qty=1"						useitem			100	uber-difficulty			5	5																																																																															0
+Uber Map Difficulty 6	1			100	18	185	0		2	ubmp	"r31g,qty=1"						useitem			100	uber-difficulty			6	6																																																																															0
+Uber Map Difficulty 7	1			100	18	185	0		2	ubmp	"r32g,qty=1"						useitem			100	uber-difficulty			7	7																																																																															0
+Uber Map Difficulty 8	1			100	18	185	0		2	ubmp	"r33g,qty=1"						useitem			100	uber-difficulty			8	8																																																																															0
 MAP CORRUPT																																																																																																								0
+map heroed	1			2	30				2	"map,nor"	"std,qty=1"						useitem			100																																																																																				0
+map corrupt	1			2	30				2	"map,nor"	"wss,qty=1"						useitem			100																																																																																				0
 map heroed	1			100	18	458	0		2	map	"std,qty=1"						useitem			100	heroed	100		1	1	map-play-mag	100		20	20	map-play-gold	100		20	20	map-glob-density	100		20	20	map-play-addxp	100		10	10																																																											0
 map corrupt	1	2		100	18	361	0		2	map	"wss,qty=1"						useitem			100	corruptnum	100		1	1000																					"wss,qty=1"																																																										0
 T1																																																																																																								0
@@ -716,7 +726,7 @@ item -> added mod 6	1	1		100	16	361	860		2	"tors,nos"	"wss,qty=1"						useitem		
 item -> added mod 7	1	1		100	16	361	880		2	"tors,nos"	"wss,qty=1"						useitem			100	corrupt	100		47	47	corruptnum	100		1001	1001	red-mag	100		6	10																																																																					0
 item -> added mod 8	1	1		100	16	361	900		2	"tors,nos"	"wss,qty=1"						useitem			100	corrupt	100		48	48	corruptnum	100		1001	1001	indestruct	100		1	1	ac%	100		50	80																																																																0
 Tier 3	0																																																																																																							0
-item -> added mod 1	1	1		100	16	361	912		2	"tors,nos"	"wss,qty=1"						useitem			100	corrupt	100		49	49	corruptnum	100		1001	1001	curse-res	100		10	20																																																																					0
+item -> added mod 1	1	1		100	16	361	912		2	"tors,nos"	"wss,qty=1"						useitem			100	corrupt	100		49	49	corruptnum	100		1001	1001	curse-effectiveness	100		10	10																																																																					0
 item -> added mod 2	1	1		100	16	361	925		2	"tors,nos"	"wss,qty=1"						useitem			100	corrupt	100		50	50	corruptnum	100		1001	1001	allskills	100		1	1																																																																					0
 item -> added mod 3	1	1		100	16	361	937		2	"tors,nos"	"wss,qty=1"						useitem			100	corrupt	100		51	51	corruptnum	100		1001	1001	res-all	100		15	20																																																																					0
 item -> added mod 4	1	1		100	16	361	950		2	"tors,nos"	"wss,qty=1"						useitem			100	corrupt	100		52	52	corruptnum	100		1001	1001	red-dmg%	100		6	6																																																																					0
@@ -744,7 +754,7 @@ item -> added mod 6	1	1		100	16	361	860		2	"helm,nos"	"wss,qty=1"						useitem		
 item -> added mod 7	1	1		100	16	361	880		2	"helm,nos"	"wss,qty=1"						useitem			100	corrupt	100		9	9	corruptnum	100		1001	1001	mana-kill	100		3	4																																																																					0
 item -> added mod 8	1	1		100	16	361	900		2	"helm,nos"	"wss,qty=1"						useitem			100	corrupt	100		59	59	corruptnum	100		1001	1001	att	100		150	250	light	100		2	4																																																																0
 Tier 3	0																																																																																																							0
-item -> added mod 1	1	1		100	16	361	912		2	"helm,nos"	"wss,qty=1"						useitem			100	corrupt	100		49	49	corruptnum	100		1001	1001	curse-res	100		10	10																																																																					0
+item -> added mod 1	1	1		100	16	361	912		2	"helm,nos"	"wss,qty=1"						useitem			100	corrupt	100		49	49	corruptnum	100		1001	1001	curse-effectiveness	100		10	10																																																																					0
 item -> added mod 2	1	1		100	16	361	925		2	"helm,nos"	"wss,qty=1"						useitem			100	corrupt	100		50	50	corruptnum	100		1001	1001	allskills	100		1	1																																																																					0
 item -> added mod 3	1	1		100	16	361	937		2	"helm,nos"	"wss,qty=1"						useitem			100	corrupt	100		51	51	corruptnum	100		1001	1001	res-all	100		15	20																																																																					0
 item -> added mod 4	1	1		100	16	361	950		2	"helm,nos"	"wss,qty=1"						useitem			100	corrupt	100		52	52	corruptnum	100		1001	1001	red-dmg%	100		4	6																																																																					0
@@ -858,7 +868,7 @@ item -> added mod 8	1	1		100	16	361	850		2	"misl,nos"	"wss,qty=1"						useitem		
 Tier 3	0																																																																																																							0
 item -> added mod 1	1	1		100	16	361	869		2	"misl,nos"	"wss,qty=1"						useitem			100	corrupt	100		74	74	corruptnum	100		1001	1001	dmg-min	100		10	15																																																																					0
 item -> added mod 2	1	1		100	16	361	888		2	"misl,nos"	"wss,qty=1"						useitem			100	corrupt	100		51	51	corruptnum	100		1001	1001	res-all	100		5	10																																																																					0
-item -> added mod 3	1	1		100	16	361	907		2	"misl,nos"	"wss,qty=1"						useitem			100	corrupt	100		49	49	corruptnum	100		1001	1001	curse-res	100		10	10																																																																					0
+item -> added mod 3	1	1		100	16	361	907		2	"misl,nos"	"wss,qty=1"						useitem			100	corrupt	100		49	49	corruptnum	100		1001	1001	curse-effectiveness	100		10	10																																																																					0
 item -> added mod 4	1	1		100	16	361	925		2	"misl,nos"	"wss,qty=1"						useitem			100	corrupt	100		75	75	corruptnum	100		1001	1001	dmg-max	100		10	15																																																																					0
 item -> added mod 5	1	1		100	16	361	944		2	"misl,nos"	"wss,qty=1"						useitem			100	corrupt	100		2	2	corruptnum	100		1001	1001	dmg%	100		30	40																																																																					0
 item -> added mod 6	1	1		100	16	361	963		2	"misl,nos"	"wss,qty=1"						useitem			100	corrupt	100		76	76	corruptnum	100		1001	1001	ignore-ac	100		1	1																																																																					0
@@ -884,7 +894,7 @@ item -> added mod 6	1	1		100	16	361	860		2	"shld,nos"	"wss,qty=1"						useitem		
 item -> added mod 7	1	1		100	16	361	880		2	"shld,nos"	"wss,qty=1"						useitem			100	corrupt	100		47	47	corruptnum	100		1001	1001	red-mag	100		6	10																																																																					0
 item -> added mod 8	1	1		100	16	361	900		2	"shld,nos"	"wss,qty=1"						useitem			100	corrupt	100		42	42	corruptnum	100		1001	1001	cast1	100		10	10																																																																					0
 Tier 3	0																																																																																																							0
-item -> added mod 1	1	1		100	16	361	912		2	"shld,nos"	"wss,qty=1"						useitem			100	corrupt	100		49	49	corruptnum	100		1001	1001	curse-res	100		10	20																																																																					0
+item -> added mod 1	1	1		100	16	361	912		2	"shld,nos"	"wss,qty=1"						useitem			100	corrupt	100		49	49	corruptnum	100		1001	1001	curse-effectiveness	100		10	10																																																																					0
 item -> added mod 2	1	1		100	16	361	925		2	"shld,nos"	"wss,qty=1"						useitem			100	corrupt	100		50	50	corruptnum	100		1001	1001	allskills	100		1	1																																																																					0
 item -> added mod 3	1	1		100	16	361	937		2	"shld,nos"	"wss,qty=1"						useitem			100	corrupt	100		51	51	corruptnum	100		1001	1001	res-all	100		22	30																																																																					0
 item -> added mod 4	1	1		100	16	361	950		2	"shld,nos"	"wss,qty=1"						useitem			100	corrupt	100		52	52	corruptnum	100		1001	1001	red-dmg%	100		6	6																																																																					0
@@ -1608,7 +1618,7 @@ magic amulet + jewel + rune 18 + perfect topaz -> bountiful amulet	1			100					4
 magic ring + jewel + rune 17 + perfect topaz -> bountiful ring	1			100					4	"ring,mag"	"jewg,qty=1"	"r17g,qty=1"	"gg4t,qty=1"				"usetype,crf"		50	50	mag%			10	15	light			1	3	vit			5	10																																																																					0
 magic blunt + jewel + rune 13 + perfect topaz -> bountiful weapon	1			100					4	"weap,mag,noe"	"jewg,qty=1"	"r13g,qty=1"	"gg4t,qty=1"				"usetype,crf"		50	50	mag%			20	30	light			1	3	dmg%			55	80																																																																					0
 magic blunt + jewel + rune 13 + perfect topaz -> bountiful weapon	1			100					4	"weap,mag,eth"	"jewg,qty=1"	"r13g,qty=1"	"gg4t,qty=1"				"usetype,crf"		50	50	mag%			20	30	light			1	3	dmg%			55	80	ethereal	100		1	1																																																																0
-ingredients	1			100					3	"rtmv,qty=1"	"Hellfire Torch"	"rtmo,qty=1"					rtma																																																																																							0
+rathma ingredients	1			100					3	"rtmv,qty=1"	"Hellfire Torch"	"rtmo,qty=1"					rtma																																																																																							0
 fragment -> jawbone	1			100					2	"rtmf,qty=2"	"Hellfire Torch"						rtmo																																																																																							0
 Jewel -> Jewel Fragments x15	1			100					2	"key,qty=1"	"jew,qty=15"						useitem			100																										"jewf,qty=15"			100																																																							0
 Jewel -> Jewel Fragments x14	1			100					2	"key,qty=1"	"jew,qty=14"						useitem			100																										"jewf,qty=14"			100																																																							0
@@ -1732,6 +1742,9 @@ Puzzlepiece chest	1			100					2	"tors,nos"	"lpp,qty=1"						useitem			100	sock		
 Puzzlepiece shield	1			100					2	"shld,nos"	"lpp,qty=1"						useitem			100	sock			1	2																																																																															0
 r15 + rathma tp book + any socketed item -> unsocket (destroy gems)	1			100					3	"any,sock"	"r15g,qty=1"	rtp					"useitem,uns"																													rtp																																																										0
 test map area level -- map + isc	0			100					2	"map"	"isc"						useitem			100	map-glob-arealevel	100		5	5																																																																															0
+fortify T1 map-- map + fort	1			2	30				2	"t1me,nor"	"fort,qty=1"						useitem			100																																																																																				0
+fortify T2 map-- map + fort	1			2	30				2	"t2me,nor"	"fort,qty=1"						useitem			100																																																																																				0
+fortify T3 map-- map + fort	1			2	30				2	"t3me,nor"	"fort,qty=1"						useitem			100																																																																																				0
 fortify T1 map-- map + fort	1			100					2	"t1me"	"fort,qty=1"						useitem			100	map-glob-skirmish-mode	100		50	50																																																																															0
 fortify T2 map-- map + fort	1			100					2	"t2me"	"fort,qty=1"						useitem			100	map-glob-skirmish-mode	100		50	50																																																																															0
 fortify T3 map-- map + fort	1			100					2	"t3me"	"fort,qty=1"						useitem			100	map-glob-skirmish-mode	100		50	50																																																																															0
@@ -1739,6 +1752,8 @@ test map drop increase jewelry -- map + perfect topas (gpys)	0			100					2	"map"
 test map drop increase weapons -- map + perfect ruby (gprs)	0			100					2	"map"	"gprs,qty=1"						useitem			100	map-mon-dropweapons	100		20	20																																																																															0
 test map drop increase armor -- map + perfect sapphire (gpbs)	0			100					2	"map"	"gpbs,qty=1"						useitem			100	map-mon-droparmor	100		20	20																																																																															0
 test map drop increase charms -- map + perfect emerald (gpgs)	0			100					2	"map"	"gpgs,qty=1"						useitem			100	map-mon-dropcharms	100		20	20																																																																															0
+BLOCK 3 perfect gems + 1 magic map -> CREATES DUPLICATES due to stackable maps	1			2	30				2	"map"	"ggm4,qty=3"						"usetype,mag"			100																																																																																				0
+BLOCK 6 perfect skulls + 1 rare map -> CREATES DUPLICATES due to stackable maps	1			2	30				2	"map"	"gg4z,qty=6"						"usetype,rar"		40	40																																																																																				0
 3 perfect gems + 1 magic item -> magic item	1			2	18	361	0		2	"any,mag"	"ggm4,qty=3"						"usetype,mag"			100																																																																																				0
 BLOCK 6 perfect skulls + 1 rare t4m -> 1 low level rare item	1			2	30				2	"t4me"	"gg4z,qty=6"						"usetype,rar"		40	40																																																																																				0
 6 perfect skulls + 1 rare item -> 1 low level rare item	1			2	18	361	0		2	"any,rar"	"gg4z,qty=6"						"usetype,rar"		40	40																																																																																				0
@@ -1759,3 +1774,17 @@ map-glob-density	1	1		100	16	361	700		2	t4me	"wss,qty=1"						useitem			100	corr
 map-glob-arealevel	1	1		100	16	361	800		2	t4me	"wss,qty=1"						useitem			100	corrupt	100		85	85	corruptnum	100		1001	1001	map-glob-arealevel	100		1	1	map-glob-density	100		25	30																																																																0
 map-glob-monsterrarity	1	1		100	16	361	900		2	t4me	"wss,qty=1"						useitem			100	corrupt	100		86	86	corruptnum	100		1001	1001	map-glob-monsterrarity	100		50	60																																																																					0
 map-play-res-all-max	1	1		100	16	361	1000		2	t4me	"wss,qty=1"						useitem			100	corrupt	100		87	87	corruptnum	100		1001	1001	map-play-res-all-max	100		-5	-4	map-glob-density	100		50	60	map-glob-monsterrarity	100		20	25																																																											0
+T1 map + iwss -> forced map event map	1			2	30				2	"t1me,nor"	"iwss,qty=1"						useitem			100																																																																																				0
+T2 map + iwss -> forced map event map	1			2	30				2	"t2me,nor"	"iwss,qty=1"						useitem			100																																																																																				0
+T3 map + iwss -> forced map event map	1			2	30				2	"t3me,nor"	"iwss,qty=1"						useitem			100																																																																																				0
+T1 map + iwss -> forced map event map	1			100					2	"t1me"	"iwss,qty=1"						useitem			100	map-force-event	100		63	63																																																																															0
+T2 map + iwss -> forced map event map	1			100					2	"t2me"	"iwss,qty=1"						useitem			100	map-force-event	100		63	63																																																																															0
+T3 map + iwss -> forced map event map	1			100					2	"t3me"	"iwss,qty=1"						useitem			100	map-force-event	100		63	63																																																																															0
+Torch -> Torch Fragments x7	1			100					2	"key,qty=1"	"Hellfire Torch,qty=7"						useitem			100																										"cm2f,qty=7"			100																																																							0
+Torch -> Torch Fragments x6	1			100					2	"key,qty=1"	"Hellfire Torch,qty=6"						useitem			100																										"cm2f,qty=6"			100																																																							0
+Torch -> Torch Fragments x5	1			100					2	"key,qty=1"	"Hellfire Torch,qty=5"						useitem			100																										"cm2f,qty=5"			100																																																							0
+Torch -> Torch Fragments x4	1			100					2	"key,qty=1"	"Hellfire Torch,qty=4"						useitem			100																										"cm2f,qty=4"			100																																																							0
+Torch -> Torch Fragments x3	1			100					2	"key,qty=1"	"Hellfire Torch,qty=3"						useitem			100																										"cm2f,qty=3"			100																																																							0
+Torch -> Torch Fragments x2	1			100					2	"key,qty=1"	"Hellfire Torch,qty=2"						useitem			100																										"cm2f,qty=2"			100																																																							0
+Torch -> Torch Fragments	1			100					2	"key,qty=1"	"Hellfire Torch"						useitem			100																										cm2f			100																																																							0
+rathma ingredients stackable	1			100					3	"rtmv,qty=1"	"cm2f,qty=1"	"rtmo,qty=1"					rtma																																																																																							0

@@ -63,21 +63,21 @@ decrepify	60						1	1															1																					cursedecrepify					cur
 lowerresist	61						1	1																	1	1	1	1																curselowerresist					curse_hit		lightresist																				0
 openwounds	62								1																											1																																	85		0
 dopplezon	63				1							1																			1	1	1		1						1																								2	0					0
-criticalstrike	64			1																																																																			0
-dodge	65			1																																																																			0
-avoid	66			1																																																																			0
+criticalstrike	64																																																		passive_critical_strike																				0
+dodge	65																																																																						0
+avoid	66																																																																						0
 penetrate	67																																																																						0
-evade	68			1																																																																			0
+evade	68																																																		velocitypercent																				0
 pierce	69																																																																						0
 warmth	70																																																																						0
 firemastery	71																																																																						0
 lightningmastery	72																																																																						0
 coldmastery	73																																																																						0
 swordmastery	74																																																																						0
-axemastery	75																																																																						0
+axemastery	75																																																		passive_mastery_melee_crit																				0
 macemastery	76																																																																						0
-polearmmastery	77																																																																						0
-throwingmastery	78																																																																						0
+polearmmastery	77																																																		passive_mastery_melee_crit																				0
+throwingmastery	78																																																		passive_mastery_throw_crit																				0
 spearmastery	79																																																																						0
 increasedstamina	80																																																																						0
 ironskin	81																																																																						0
@@ -184,7 +184,7 @@ passive_resistfire	181																																																										
 passive_resistcold	182																																																																						0
 passive_resistltng	183																																																																						0
 uberminion	184																														1		1	1	1																												impact_bluemotize_1								0
-javmastery	185																																																																						0
+javmastery	185																																																		passive_mastery_melee_crit																				0
 teleportdebuff	186																																											teleport_debuff																											0
 grimward	187																																											grimward_bottom																											0
 coldenchant	188														1																																		frozenarmor		skill_cold_enchant					weap	cblu														0
@@ -210,7 +210,7 @@ merc_passive_mastery	207																																																								
 player_stun	208																						1																					stun							velocitypercent																				0
 dcloneset	209																																											dclone_aura																											0
 maxlevelset	210																																											maxlevel_aura																											0
-devaura	211																																											dev_aura																											0
+devaura	211																																											dev_aura	dev_glow_aura																										0
 spectatemode	212																																																			12	8																		0
 mapevent	213																																																																						0
 disable_tele	214																																											disable_tele																											0
@@ -219,6 +219,11 @@ blinddimvision	216						1																																					cursedimvision				
 butchermap	217					1																																						aura_magicgoldfind																			paladin_aura_purification								0
 rathmaset	218																																											rathma_aura																											0
 vengeance	219																																																vengeance_hit														paladin_sacrifice								0
-black	220																														1	1			1																							101	99	255	255	255									0
+black	220																														1	1			1																							101	99												0
 inferno_debuff	221																								1																			inferno_debuff																											0
 arcticblast_debuff	222																										1																	arcticblast_debuff																											0
+sacrifice_explosion	223																																																cast_undead																						0
+temp_splash	224																																																																						0
+deepwounds	225																																																		deep_wounds																				0
+dclone8set	226																																											dclone_aura	dclone_t8_aura																										0
+rathma8set	227																																											rathma_aura	rathma_t8_aura																										0

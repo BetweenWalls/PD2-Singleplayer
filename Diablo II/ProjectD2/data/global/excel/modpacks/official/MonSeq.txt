@@ -1130,3 +1130,38 @@ seq_siegebeastsc	GH	0		2	0
 seq_siegebeastsc	GH	0			0
 seq_siegebeastsc	GH	2			0
 seq_siegebeastsc	GH	3			0
+seq_warlordofbloodwhirlwind	A1	0			0
+seq_warlordofbloodwhirlwind	A1	1			0
+seq_warlordofbloodwhirlwind	A1	2			0
+seq_warlordofbloodwhirlwind	A1	3		1	0
+seq_warlordofbloodwhirlwind	A1	4			0
+seq_warlordofbloodwhirlwind	A1	5			0
+seq_warlordofbloodwhirlwind	A1	6			0
+seq_warlordofbloodwhirlwind	A1	7		1	0
+seq_warlordofbloodcharge	WL	0		1	0
+seq_warlordofbloodcharge	WL	2		1	0
+seq_warlordofbloodcharge	WL	4		1	0
+seq_warlordofbloodcharge	WL	6		1	0
+seq_warlordofbloodcharge	WL	1		1	0
+seq_warlordofbloodcharge	WL	3		1	0
+seq_warlordofbloodcharge	WL	5		1	0
+seq_warlordofbloodcharge	WL	7		1	0
+seq_warlordofbloodcharge	A1	5			0
+seq_warlordofbloodcharge	A1	6			0
+seq_warlordofbloodcharge	A1	7			0
+seq_warlordofbloodcharge	A1	8		1	0
+seq_warlordofbloodcharge	A1	9			0
+seq_warlordofbloodcharge	A1	11			0
+seq_warlordofbloodcharge	A1	13			0
+seq_warlordofbloodcharge	A1	14			0
+seq_warlordofbloodcharge	A1	15			0
+seq_warlordofbloodsc	GH	5			0
+seq_warlordofbloodsc	GH	5			0
+seq_warlordofbloodsc	GH	4			0
+seq_warlordofbloodsc	GH	4			0
+seq_warlordofbloodsc	GH	3			0
+seq_warlordofbloodsc	GH	3			0
+seq_warlordofbloodsc	A1	3		2	0
+seq_warlordofbloodsc	A1	2			0
+seq_warlordofbloodsc	A1	1			0
+seq_warlordofbloodsc	A1	0			0

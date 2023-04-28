@@ -56,12 +56,12 @@ Ko Rune	Ko	18	r18	1	dex		10	10									dex		10	10									dex		10	10								0
 Fal Rune	Fal	18	r19	1	str		10	10									str		10	10									str		10	10								0
 Lem Rune	Lem	18	r20	1	gold%		75	75									gold%		50	50									gold%		50	50								0
 Pul Rune	Pul	18	r21	1	att-demon		100	100	dmg-demon		75	75					ac%		30	30									ac%		30	30								0
-Um Rune	Um	18	r22	1	openwounds		25	25									res-all		15	15									res-all		22	22								0
+Um Rune	Um	18	r22	1	openwounds		10	10	Deep-Wounds		120	120					res-all		15	15									res-all		22	22								0
 Mal Rune	Mal	18	r23	1	noheal		1	1									red-mag		7	7									red-mag		7	7								0
 Ist Rune	Ist	18	r24	1	mag%		30	30									mag%		30	30									mag%		30	30								0
 Gul Rune	Gul	18	r25	1	att%		20	20									res-pois-max		4	4									res-pois-max		4	4								0
 Vex Rune	Vex	18	r26	1	manasteal		7	7									res-fire-max		4	4									res-fire-max		4	4								0
-Ohm Rune	Ohm	18	r27	1	dmg%		40	40									res-cold-max		4	4									res-cold-max		4	4								0
+Ohm Rune	Ohm	18	r27	1	dmg%		45	45									res-cold-max		4	4									res-cold-max		4	4								0
 Lo Rune	Lo	18	r28	1	deadly		20	20									res-ltng-max		4	4									res-ltng-max		4	4								0
 Sur Rune	Sur	18	r29	1	heal-kill		4	4									mana%		5	5									mana		50	50								0
 Ber Rune	Ber	18	r30	1	crush		20	20									red-dmg%		5	5									red-dmg%		5	5								0

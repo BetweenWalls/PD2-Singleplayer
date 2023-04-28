@@ -107,6 +107,7 @@ After getting whatever items you want via the "testing" modpack or other modific
 ## Modpacks
 The ["testing"](https://github.com/BetweenWalls/PD2-Singleplayer/tree/main/Diablo%20II/ProjectD2/data/global/excel/modpacks/testing) modpack is setup by default to help with acquiring specific items. If your Diablo II installation is in *C:\Program Files (x86)* (the default location) you'll only need to launch the *PlugY.exe (modded)* shortcut to get access to several useful cube recipes from the "testing" modpack:
 * reroll any non-crafted item with Horadrim Orb
+* duplicate any item with Fortification Orb
 * use crafted items as ingredients for crafting recipes
 * generate set/unique items of a given base with Rancid (green) or Oil (gold) Potions
 * upgrade regular/magic item bases with Zakarum Orb

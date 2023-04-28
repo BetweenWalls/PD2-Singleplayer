@@ -6,7 +6,7 @@ golem	3		0	1		1	1	1	StrUI0	1	2	earthgolumicon	290	bloodgolumicon	291	metalgolumi
 skeleton	4		0	1		1	1	1	StrUI1	1	2	skeletonicon									0
 skeletonmage	5		0	1		1	1	1	StrUI2	1	2	skeletonmageicon									0
 revive	6		0	1		1	1	1	StrUI3	1	2	revivedicon									0
-hireable	7		1	1		1		1		1		barbhirable_icon	271	rogueicon	338	act2hireableicon	359	act3hireableicon			0
+hireable	7		1	1		1		1		1		barbhirable_icon	271	rogueicon	338	act2hireableicon	359	act3hireableicon	1056	act4hireableicon	0
 dopplezon	8		0				1	1		1											0
 invis	9		0	1																	0
 raven	10		0	1					strUI5		2	raven									0

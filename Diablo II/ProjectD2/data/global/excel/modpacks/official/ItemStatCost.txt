@@ -38,13 +38,13 @@ magic_damage_reduction	35		1	10											397	340	1024		6	0	6	0																	
 damageresist	36		1	9											152	68	1024		8	0	8	0																	22	2	2	ModStr2u	ModStr2u									0
 magicresist	37		1	9											164	68	1024		8	0	8	0																	41	4	2	ModStr1m	ModStr1m									0
 maxmagicresist	38		1	9											1091	409	1024		5	0	5	0																	46	4	1	ModStr5x	ModStr5x									0
-fireresist	39		1	9											43	20	1024		8	0	8	50																	36	4	2	ModStr1j	ModStr1j		2	19		strModAllResistances	strModAllResistances			0
+fireresist	39		1	9											43	20	1024		8	0	8	50																	36	4	2	ModStr1j	ModStr1j		2	19		strModAllResistances	strModAllResistancesNeg			0
 maxfireresist	40		1	9											584	256	1024		5	0	5	0																	42	4	1	ModStr5u	ModStr5u									0
-lightresist	41		1	9											43	20	1024		8	0	8	50																	38	4	2	ModStr1l	ModStr1l		2	19		strModAllResistances	strModAllResistances			0
+lightresist	41		1	9											43	20	1024		8	0	8	50																	38	4	2	ModStr1l	ModStr1l		2	19		strModAllResistances	strModAllResistancesNeg			0
 maxlightresist	42		1	9											584	256	1024		5	0	5	0																	43	4	1	ModStr5w	ModStr5w									0
-coldresist	43		1	9											43	20	1024		8	0	8	50																	40	4	2	ModStr1k	ModStr1k		2	19		strModAllResistances	strModAllResistances			0
+coldresist	43		1	9											43	20	1024		8	0	8	50																	40	4	2	ModStr1k	ModStr1k		2	19		strModAllResistances	strModAllResistancesNeg			0
 maxcoldresist	44		1	9											584	256	1024		5	0	5	0																	44	4	1	ModStr5v	ModStr5v									0
-poisonresist	45		1	9											43	20	1024		8	0	8	50																	34	4	2	ModStr1n	ModStr1n		2	19		strModAllResistances	strModAllResistances			0
+poisonresist	45		1	9											43	20	1024		8	0	8	50																	34	4	2	ModStr1n	ModStr1n		2	19		strModAllResistances	strModAllResistancesNeg			0
 maxpoisonresist	46		1	9											526	256	1024		5	0	5	0																	45	4	1	ModStr5y	ModStr5y									0
 damageaura	47		1	16													1024																																			0
 firemindam	48		1	16											11	10	1024		8	0	10	0												1					102	1	1	ModStr1p	ModStr1p									0
@@ -184,12 +184,12 @@ fade	181	1		7															14	0	3																															0
 armor_override_percent	182	1	1	8															14	0																																0
 equipped_eth	183		1	1													1024		7	0	1																															0
 missing_hp	184																		14	0																																0
-unused185	185																		14	0																																0
-unused186	186																		14	0																																0
-unused187	187																		14	0																																0
+uber_difficulty	185			5													1024		5	0	5	0																	100	3	2	StrUberDifficulty	StrUberDifficulty									0
+map_glob_boss_dropskillers	186			2											1065	72	2007		2	2	2	2																	208	3	0	MapBossSkillers	MapBossSkillers									0
+map_glob_boss_dropcorruptedunique	187			2											1065	72	2008		2	2	2	2																	208	3	0	MapBossCorruptedUnique	MapBossCorruptedUnique									0
 item_addskill_tab	188		1	3	6						1				11042	768	1024		10	0	3	0	16																151	14		StrSklTabItem1	StrSklTabItem1									0
-unused189	189																1024		10	0																																0
-unused190	190																1024		10	0																																0
+openwounds_stack	189			5													1024		5	0	5	0																														0
+curse_slots	190			3													1024		3		3																															0
 unused191	191																1024		10	0																																0
 unused192	192																1024		10	0																																0
 unused193	193																1024		10	0																																0
@@ -373,7 +373,7 @@ map_play_magicbonus	370		1	9											577	102	1080		8	100	8	100																
 map_play_goldbonus	371		1	10											187	34	1079		9	100	9	100																	210	4	2	MapGlobGF	MapGlobGF		6	4	2	MapGlobMFGF	MapGlobMFGF			0
 map_glob_density	372			1	16											54	2000				12	0																	211	4	2	MapGlobDensity	MapGlobDensity									0
 map_play_addexperience	373		1	9											36015	519	1085		3	0	9	50																	213	4	2	MapGlobExp	MapGlobExp									0
-map_glob_arealevel	374			1	16											54	2001				12	0																	205	1	1	MapGlobLevel	MapGlobLevel									0
+map_glob_arealevel	374			1	16											54	2001				12	0																	209	1	1	MapGlobLevel	MapGlobLevel									0
 map_glob_monsterrarity	375			1	16											54	2002				12	0																	212	4	2	MapGlobMonRarity	MapGlobMonRarity									0
 map_mon_firemindam	376		1	16											11	10	0048		8	0	8	0												1					102	6	2	MapMonHave	MapMonHave	ModStr1p								0
 map_mon_firemaxdam	377		1	16											19	10	0049		8	0	9	0												1					101	6	2	MapMonHave	MapMonHave	ModStr1o								0
@@ -410,9 +410,9 @@ map_mon_openwounds	407		1	7							1				23	10	0135		7	0	7	0												1	domeleed
 map_mon_crushingblow	408		1	7							1				98	40	0136		7	0	7	0												1	domeleedamage	16	domissiledamage	16	87	7	2	MapMonHave	MapMonHave	ModStr5c								0
 map_mon_curse_resistance	409			9											159	33	0109		14	0	9	0																	55	7	2	MapMonHave	MapMonHave	MapMonCurse								0
 map_play_ac%	410		1	16											47	20	1016		14	60	14	60			13			armorclass											198	7	2	MapPlayHave	MapPlayHave	Modstr2v								0
-map_play_fastergethitrate	411	1	1	9											1065	72	1099		14	60	14	60																	204	8	2	MapPlayHave	MapPlayHave	ModStr4p								0
+map_play_fastergethitrate	411	1	1	9											1065	72	1099		14	60	14	60																	199	8	2	MapPlayHave	MapPlayHave	ModStr4p								0
 map_play_toblock	412		1	10											89	204	1020		14	60	14	60																	199	7	2	MapPlayHave	MapPlayHave	MapPlayBlock								0
-map_play_hpregen	413			10											451	410	1074		14	60	14	60																	205	6	2	MapPlayHave	MapPlayHave	ModStr2w								0
+map_play_hpregen	413			10											451	410	1074		14	60	14	60																	204	6	2	MapPlayHave	MapPlayHave	ModStr2w								0
 map_mon_passive_fire_pierce	414		1	9												2578	0333		8	0	8	0																	200	7	2	MapMonIgnore	MapMonHave	MapMonFirePierce								0
 map_mon_passive_ltng_pierce	415		1	9												2493	0334		8	0	8	0																	200	7	2	MapMonIgnore	MapMonHave	MapMonLtngPierce								0
 map_mon_passive_cold_pierce	416		1	9												1984	0335		8	0	8	0																	200	7	2	MapMonIgnore	MapMonHave	MapMonColdPierce								0
@@ -493,9 +493,14 @@ eaglehorn_raven	490			11													1024		6		11																		160	3	0	Eagleh
 pvp_disable	491		1	5													1024		5		5																															0
 pvp_lld_cd	492		1	5													1024		5		5																															0
 map_glob_skirmish_mode	493			1	16											54	2004				12	0																	248	3	0	MapGlobSkirmishMode	MapGlobSkirmishMode									0
-map_mon_dropjewelry	494		1	9											1065	72	0494		7	20	7	20																	138	8	2	MapMonHave	MapMonHave	MapMonIncreasedJewelry								0
-map_mon_dropweapons	495		1	9											1065	72	0495		7	20	7	20																	138	8	2	MapMonHave	MapMonHave	MapMonIncreasedWeapons								0
-map_mon_droparmor	496		1	9											1065	72	0496		7	20	7	20																	138	8	2	MapMonHave	MapMonHave	MapMonIncreasedArmor								0
-map_mon_dropcharms	497		1	9											1065	72	0497		7	20	7	20																	138	8	2	MapMonHave	MapMonHave	MapMonIncreasedCharms								0
-map_glob_extra_boss	498			1	16											54	2005				12	0																	204	3	0	MapGlobExtraBoss	MapGlobExtraBoss									0
+map_mon_dropjewelry	494		1	9											1065	72	0494		7	20	7	20																	205	8	2	MapMonHave	MapMonHave	MapMonIncreasedJewelry								0
+map_mon_dropweapons	495		1	9											1065	72	0495		7	20	7	20																	205	8	2	MapMonHave	MapMonHave	MapMonIncreasedWeapons								0
+map_mon_droparmor	496		1	9											1065	72	0496		7	20	7	20																	205	8	2	MapMonHave	MapMonHave	MapMonIncreasedArmor								0
+map_mon_dropcrafting	497		1	9											1065	72	0497		7	20	7	20																	205	8	2	MapMonHave	MapMonHave	MapMonIncreasedCrafting								0
+map_glob_extra_boss	498			1	16											54	2005				12	0																	206	3	0	MapGlobExtraBoss	MapGlobExtraBoss									0
 map_glob_add_mon_shriek	499			1	16											54	2003				12	0																	160	3	0	MapAddMonShriek	MapAddMonShriek									0
+map_force_event	500			6											54	204	0		8	0	6	0																	203	3	0	StrForceMapEvent	StrForceMapEvent									0
+deep_wounds	501		1	11	8												1024		11	0	11	0																	82	1	1	OpenWoundsItem	OpenWoundsItem									0
+map_mon_dropcharms	502		1	9											1065	72	0502		7	20	7	20																	205	8	2	MapMonHave	MapMonHave	MapMonIncreasedCharms								0
+map_glob_dropcorrupted	503		1	9											1065	72	2006		7	20	7	20																	205	8	2	MapMonHave	MapMonHave	MapMonIncreasedCorrupted								0
+curse_effectiveness	504		1	9											103	40	1024		8	0	8	50																	38	4	2	StrCurseEffectiveness	StrCurseEffectiveness									0

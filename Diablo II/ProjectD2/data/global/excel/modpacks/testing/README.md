@@ -3,6 +3,7 @@ Author: BetweenWalls
 
 Includes several developer-style cube recipes to assist in testing:
   * reroll any non-crafted item with Horadrim Orb
+  * duplicate any item with Fortification Orb
   * use crafted items as ingredients for crafting recipes
   * generate set/unique items of a given base with Rancid (green) or Oil (gold) Potions
   * upgrade regular/magic item bases with Zakarum Orb

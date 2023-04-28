@@ -4125,3 +4125,94 @@ Expansion
 37	wle	1	1	1	WLE B	33		-1		-1		-1
 37	wl	2	-1	-1	WL A	21	WL B	39		-1		-1
 37	wl	4	-1	-1	WL A	21	WL B	39		-1		-1
+38	wl	50	1	2	hellcaves_obj Walls Left	81		-1		-1		-1
+38	wr	50	1	2	hellcaves_obj Walls Right	80		-1		-1		-1
+38	wl	50	3	3	hellcaves_obj Walls NC Left	83		-1		-1		-1
+38	wr	50	3	3	hellcaves_obj Walls NC Right	82		-1		-1		-1
+38	wld	50	0	1	hellcaves_obj Walls Doors Left	81		-1		-1		-1
+38	wrd	50	0	1	hellcaves_obj Walls Doors Right	80		-1		-1		-1
+38	wtll	50	0	0	hellcaves_obj Walls NC Left	83		-1		-1		-1
+38	wtlr	50	0	1	hellcaves_obj Walls NC Full	84		-1		-1		-1
+38	fl	26	43	43	hellcaves_base a4_Waypoint	307		-1		-1		-1
+38	wl	48	0	5	hellcaves_base Cave_WL	1505		1506		-1		-1
+38	wr	48	0	5	hellcaves_base Cave_WR	1507		1508		-1		-1
+38	wl	48	6	8	hellcaves_base Cave_Back_WL	1509		-1		-1		-1
+38	wr	48	6	8	hellcaves_base Cave_Back_WR	1510		-1		-1		-1
+38	wbr	48	1	1	hellcaves_base Cave_Back_SC_In	1512		-1		-1		-1
+38	wbr	48	2	2	hellcaves_base Cave_Back_SC_Out	1511		-1		-1		-1
+38	wtll	48	0	0	hellcaves_base Cave NC Full	1515		-1		-1		-1
+38	wtlr	48	0	0	hellcaves_base Cave NC Full	1515		-1		-1		-1
+38	wtll	48	1	1	hellcaves_base Cave NC Exit	1516		-1		-1		-1
+38	wtlr	48	1	1	hellcaves_base Cave NC Exit	1516		-1		-1		-1
+38	wl	49	0	5	hellcaves_base LavaCave_WL	1505		1506		-1		-1
+38	wr	49	0	5	hellcaves_base LavaCave_WR	1507		1508		-1		-1
+38	wl	49	6	8	hellcaves_base LavaCave_Back_WL	1509		-1		-1		-1
+38	wr	49	6	8	hellcaves_base LavaCave_Back_WR	1510		-1		-1		-1
+38	wbr	49	1	1	hellcaves_base LavaCave_Back_SC_In	1512		-1		-1		-1
+38	wbr	49	2	2	hellcaves_base LavaCave_Back_SC_Out	1511		-1		-1		-1
+38	wtll	49	0	0	hellcaves_base LavaCave NC Full	1515		-1		-1		-1
+38	wtlr	49	0	0	hellcaves_base LavaCave NC Full	1515		-1		-1		-1
+38	wtll	49	1	1	hellcaves_base LavaCave NC Exit	1516		-1		-1		-1
+38	wtlr	49	1	1	hellcaves_base LavaCave NC Exit	1516		-1		-1		-1
+38	fl	48	15	29	hellcaves_base lavacracks_m	1502		1503		1504		-1
+38	fl	48	30	62	hellcaves_base lavacracks_l	1502		1503		1504		-1
+38	ld	48	0	1	hellcaves_base Cave_LowerL	1519		-1		-1		-1
+38	ld	48	2	2	hellcaves_base Cave_LowerLEnd	1521		-1		-1		-1
+38	rd	48	0	1	hellcaves_base Cave_LowerR	1520		-1		-1		-1
+38	rd	48	2	2	hellcaves_base Cave_LowerREnd	1522		-1		-1		-1
+38	fd	48	0	0	hellcaves_base Cave_LowerC_In	1518		-1		-1		-1
+38	ld	49	0	1	hellcaves_base Cave_LowerL	1519		-1		-1		-1
+38	ld	49	2	2	hellcaves_base Cave_LowerLEnd	1521		-1		-1		-1
+38	ld	49	3	4	hellcaves_base Cave_LowerL	1519		-1		-1		-1
+38	ld	49	5	5	hellcaves_base Cave_LowerLEnd	1521		-1		-1		-1
+38	rd	49	0	1	hellcaves_base Cave_LowerR	1520		-1		-1		-1
+38	rd	49	2	2	hellcaves_base Cave_LowerREnd	1522		-1		-1		-1
+38	rd	49	3	4	hellcaves_base Cave_LowerR	1520		-1		-1		-1
+38	rd	49	5	5	hellcaves_base Cave_LowerREnd	1522		-1		-1		-1
+38	fd	49	0	1	hellcaves_base Cave_LowerC_In	1518		-1		-1		-1
+38	fl	50	53	53	hellcaves_base Cave_EdgeC_In	1512		-1		-1		-1
+38	fl	50	54	55	hellcaves_base Cave_EdgeLC	1510		-1		-1		-1
+38	fl	50	56	57	hellcaves_base Cave_EdgeRC	1509		-1		-1		-1
+38	fl	50	58	59	hellcaves_base Cave_EdgeC_Out	1511		-1		-1		-1
+38	fl	50	60	61	hellcaves_base Cave_EdgeL	1509		-1		-1		-1
+38	fl	50	62	63	hellcaves_base Cave_EdgeR	1510		-1		-1		-1
+38	fl	51	53	53	hellcaves_base CaveB_EdgeC_In	1512		-1		-1		-1
+38	fl	51	54	54	hellcaves_base CaveB_EdgeLC	1510		-1		-1		-1
+38	fl	51	55	55	hellcaves_base CaveB_EdgeRC	1509		-1		-1		-1
+38	fl	51	56	56	hellcaves_base CaveB_EdgeC_Out	1511		-1		-1		-1
+38	fl	51	57	58	hellcaves_base CaveB_EdgeL	1509		-1		-1		-1
+38	fl	51	59	60	hellcaves_base CaveB_EdgeR	1510		-1		-1		-1
+38	fl	50	13	13	hellcaves_base FloorCave_EdgeR	1513		-1		-1		-1
+38	fl	50	14	15	hellcaves_base FloorCave_StairsR	1525		-1		-1		-1
+38	fl	50	16	16	hellcaves_base FloorCave_EdgeR	1513		-1		-1		-1
+38	fl	50	17	17	hellcaves_base FloorCave_EdgeRC	1523		-1		-1		-1
+38	fl	50	19	19	hellcaves_base FloorCave_EdgeL	1514		-1		-1		-1
+38	fl	50	26	26	hellcaves_base FloorCave_StairsL	1526		-1		-1		-1
+38	fl	50	33	33	hellcaves_base FloorCave_StairsL	1526		-1		-1		-1
+38	fl	50	40	40	hellcaves_base FloorCave_EdgeL	1514		-1		-1		-1
+38	fl	50	47	47	hellcaves_base FloorCave_EdgeLC	1524		-1		-1		-1
+38	fl	50	24	24	hellcaves_base FloorCave_BackEdgeR	1514		-1		-1		-1
+38	fl	50	31	31	hellcaves_base FloorCave_BackEdgeR	1514		-1		-1		-1
+38	fl	50	35	35	hellcaves_base FloorCave_BackEdgeR	1514		-1		-1		-1
+38	fl	50	38	38	hellcaves_base FloorCave_BackEdgeR	1514		-1		-1		-1
+38	fl	50	45	45	hellcaves_base FloorCave_BackEdgeR	1514		-1		-1		-1
+38	fl	50	48	51	hellcaves_base FloorCave_BackEdgeL	1513		-1		-1		-1
+38	fl	50	36	36	hellcaves_base FloorCave_BackEdgeNC	1511		-1		-1		-1
+38	fl	50	52	52	hellcaves_base FloorCave_BackEdgeNC	1511		-1		-1		-1
+38	fl	51	13	13	hellcaves_base FloorCaveB_EdgeR	1513		-1		-1		-1
+38	fl	51	14	15	hellcaves_base FloorCaveB_StairsR	1525		-1		-1		-1
+38	fl	51	16	16	hellcaves_base FloorCaveB_EdgeR	1513		-1		-1		-1
+38	fl	51	17	17	hellcaves_base FloorCaveB_EdgeRC	1523		-1		-1		-1
+38	fl	51	19	19	hellcaves_base FloorCaveB_EdgeL	1514		-1		-1		-1
+38	fl	51	26	26	hellcaves_base FloorCaveB_StairsL	1526		-1		-1		-1
+38	fl	51	33	33	hellcaves_base FloorCaveB_StairsL	1526		-1		-1		-1
+38	fl	51	40	40	hellcaves_base FloorCaveB_EdgeL	1514		-1		-1		-1
+38	fl	51	47	47	hellcaves_base FloorCaveB_EdgeLC	1524		-1		-1		-1
+38	fl	51	24	24	hellcaves_base FloorCaveB_BackEdgeR	1514		-1		-1		-1
+38	fl	51	31	31	hellcaves_base FloorCaveB_BackEdgeR	1514		-1		-1		-1
+38	fl	51	35	35	hellcaves_base FloorCaveB_BackEdgeR	1514		-1		-1		-1
+38	fl	51	38	38	hellcaves_base FloorCaveB_BackEdgeR	1514		-1		-1		-1
+38	fl	51	45	45	hellcaves_base FloorCaveB_BackEdgeR	1514		-1		-1		-1
+38	fl	51	48	51	hellcaves_base FloorCaveB_BackEdgeL	1513		-1		-1		-1
+38	fl	51	36	36	hellcaves_base FloorCaveB_BackEdgeNC	1511		-1		-1		-1
+38	fl	51	52	52	hellcaves_base FloorCaveB_BackEdgeNC	1511		-1		-1		-1

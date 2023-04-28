@@ -403,6 +403,14 @@ map-glob-skirmish-mode	1			1	map_glob_skirmish_mode																													
 map-mon-dropjewelry	1			8	map_mon_dropjewelry																													none	0
 map-mon-dropweapons	1			8	map_mon_dropweapons																													none	0
 map-mon-droparmor	1			8	map_mon_droparmor																													none	0
-map-mon-dropcharms	1			8	map_mon_dropcharms																													none	0
+map-mon-dropcrafting	1			8	map_mon_dropcrafting																													none	0
 map-glob-extra-boss	1			1	map_glob_extra_boss																														0
 map-glob-add-mon-shriek	1			1	map_glob_add_mon_shriek																													none	0
+map-force-event	1			1	map_force_event																														0
+uber-difficulty	1			1	uber_difficulty																														0
+deep-wounds	1			1	deep_wounds																														0
+map-mon-dropcharms	1			8	map_mon_dropcharms																													none	0
+map-glob-dropcorrupted	1			8	map_glob_dropcorrupted																													none	0
+curse-effectiveness	1			1	curse_effectiveness																													none	0
+map-glob-boss-dropskillers	1			1	map_glob_boss_dropskillers																													none	0
+map-glob-boss-dropcorruptedunique	1			1	map_glob_boss_dropcorruptedunique																													none	0

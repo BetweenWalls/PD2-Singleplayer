@@ -4703,3 +4703,12 @@ butcher_freshmeat	4700	act1\monster\butcher.wav	225	0	0	0	0	1	0	0	0	1	1	0	0	80	0
 leoric_taunt	4701	pd2\leoric\leoric_remaster.wav	255	0	0	0	0	1	0	0	0	1	1	0	0	80	0	0	1	0	0	-1	-1	-1
 leoric_death	4702	pd2\leoric\golumded_remaster.wav	200	0	0	0	0	1	0	0	0	1	1	0	0	80	0	0	1	0	0	-1	-1	-1
 leoric_swing	4703	pd2\leoric\swing_remaster.wav	190	0	0	0	0	1	0	0	0	1	1	0	0	80	0	0	1	0	0	-1	-1	-1
+zhar_intro1	4704	pd2\zhar\zharquest_troubleMeNoMore.wav	255	0	0	0	0	1	0	0	0	1	1	0	0	80	0	0	1	0	0	-1	-1	-1
+zhar_intro2	4705	pd2\zhar\zharquest_allTheseInterruptions.wav	255	0	0	0	0	1	0	0	0	1	1	0	0	80	0	0	1	0	0	-1	-1	-1
+zhar_intro3	4706	pd2\zhar\zharquest_deathOfYou.wav	255	0	0	0	0	1	0	0	0	1	1	0	0	80	0	0	1	0	0	-1	-1	-1
+zhar_book	4707	pd2\zhar\zharquest_readbook.wav	255	0	0	0	0	1	0	0	0	1	1	0	0	80	0	0	1	0	0	-1	-1	-1
+zhar_taunt	4708	pd2\zhar\zharquest_whyAreYouHere.wav	255	0	0	0	0	1	0	0	0	1	1	0	0	80	0	0	1	0	0	-1	-1	-1
+zhar_death	4709	pd2\zhar\zhar_death1.wav	255	0	0	0	0	1	0	0	0	1	1	0	0	80	0	0	1	0	0	-1	-1	-1
+zhar_attack1	4710	pd2\zhar\zhar_attack1.wav	255	0	0	0	0	1	0	0	0	1	1	0	0	80	0	0	1	0	0	-1	-1	-1
+zhar_cast1	4711	pd2\zhar\zhar_cast1.wav	255	0	0	0	0	1	0	0	0	1	1	0	0	80	0	0	1	0	0	-1	-1	-1
+zhar_gethit1	4712	pd2\zhar\zhar_gethit1.wav	255	0	0	0	0	1	0	0	0	1	1	0	0	80	0	0	1	0	0	-1	-1	-1

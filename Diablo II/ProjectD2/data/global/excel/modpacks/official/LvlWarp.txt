@@ -88,3 +88,5 @@ Act 5 Baal Temple Up	81	-70	-110	95	115	5	2	1	4	1	2	l	0
 Act 5 Baal Temple Up	81	-20	-110	80	115	2	5	4	1	1	2	r	0
 Act 5 Baal Temple Down	82	-70	-110	95	115	5	2	1	4	1	2	l	0
 Act 5 Baal Temple Down	82	-20	-110	80	115	2	5	4	1	1	2	r	0
+Act 4 Mesa to Hellcaves	83	-60	-30	120	200	-2	2	0	0	0	2	b	0
+Act 4 Hellcaves to Mesa	84	-80	-240	160	160	2	2	0	0	0	2	b	0

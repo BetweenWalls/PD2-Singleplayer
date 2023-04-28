@@ -11,3 +11,6 @@ Lightning Spells	ltng	0
 Might Merc	mght	0
 Frenzy Merc	frnz	0
 Whirlwind Merc	wwnd	0
+Ascendant Dark	ascd	0
+Ascendant Light	ascl	0
+Physical Arrow	parw	0
