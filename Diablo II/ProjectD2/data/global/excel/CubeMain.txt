@@ -2108,7 +2108,7 @@ generate unique small charm	1			100					2	cm1	ops						cm1,uni	99		100										
 generate unique large charm	1			100					2	cm2	ops						cm2,uni	99		100																										ops																																																										0
 generate unique grand charm	1			100					2	cm3	ops						cm3,uni	99		100																										ops																																																										0
 TEMPORARY	0																																																																																																							0
-temp 1	0			100					2	r01g,qty=1	r02g,qty=1							99		100																																																																																				0
+temp 1	1			100					2	r01g,qty=1	r02g,qty=1						iwss	99		100																																																																																				0
 temp 2	0			100					2	r02g,qty=1	r03g,qty=1							99		100																																																																																				0
 temp 3	0			100					2	r03g,qty=1	r04g,qty=1							99		100																																																																																				0
 temp 4	0			100					2	r04g,qty=1	r05g,qty=1							99		100																																																																																				0
@@ -2117,8 +2117,9 @@ temp 6	0			100					2	r06g,qty=1	r07g,qty=1							99		100																								
 temp 7	0			100					2	r07g,qty=1	r08g,qty=1							99		100																																																																																				0
 temp 8	0			100					2	r08g,qty=1	r09g,qty=1							99		100																																																																																				0
 temp 9	0			100					2	r09g,qty=1	r10g,qty=1							99		100																																																																																				0
-duplicate weapon	1			100					2	weap	fort=1						useitem	99		100																										useitem	99		100																																																							0
-duplicate armor	1			100					2	armo	fort=1						useitem	99		100																										useitem	99		100																																																							0
-duplicate ring	1			100					2	ring	fort=1						useitem	99		100																										useitem	99		100																																																							0
-duplicate amulet				100					2	amul	fort=1						useitem	99		100																										useitem	99		100																																																							0
-duplicate jewel	1			100					2	jew	fort=1						useitem	99		100																										useitem	99		100																																																							0
+duplicate weapon	1			100					2	weap	fort,qty=1						useitem	99		100																										useitem	99		100																																																							0
+duplicate armor	1			100					2	armo	fort,qty=1						useitem	99		100																										useitem	99		100																																																							0
+duplicate ring	1			100					2	ring	fort,qty=1						useitem	99		100																										useitem	99		100																																																							0
+duplicate amulet	1			100					2	amul	fort,qty=1						useitem	99		100																										useitem	99		100																																																							0
+duplicate jewel	1			100					2	jew	fort,qty=1						useitem	99		100																										useitem	99		100																																																							0
+duplicate any	0			100					2	any	fort,qty=1						useitem	99		100																										useitem	99		100																																																							0

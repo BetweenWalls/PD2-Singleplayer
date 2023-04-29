@@ -327,7 +327,7 @@ Viperfork	100	1		1	1	79	71	7br	war fork			5	5000	dgrn	dgrn						dmg%		290	290	dm
 Ethereal Edge	100	1		1	1	82	74	7ba	silver-edged axe			5	5000	whit	whit						dmg%		180	180	swing2		45	45	abs-fire		12	12	dmg-demon		200	200	demon-heal		20	20	att		350	350	ethereal		1	1	indestruct		1	1													splash	358	100	1	0
 Demonhorn's Edge	100	1		1	1	69	61	bad	destroyer helm			5	5000	dgry	dgry						ac%		160	160	openwounds		20	20	red-dmg		24	24	thorns		1050	1050	skilltab	12	3	3	skilltab	13	3	3	skilltab	14	3	3	Deep-Wounds		350	350																	0
 The Reaper's Toll	100	1		1	1	83	75	7s8	thresher			5	5000				invscy				dmg%		290	290	hit-skill	AmpDmg Proc	33	31	ignore-ac		1	1	lifesteal		15	15	ease		-25	-25	deadly		33	33	dmg-cold		4	44																	splash	358	100	1	0
-Spiritkeeper	100	1		1	1	75	67	drd	earth spirit			5	5000								ac%		190	190	balance2		20	20	abs-ltng		14	14	res-fire		40	40	abs-cold%		8	8	res-pois-max		10	10	dru		2	2	skill-rand	2	250	250	extra-spirits		1	1													0
+Spiritkeeper	100	1		1	1	75	67	drd	earth spirit			5	5000								ac%		190	190	balance2		20	20	abs-ltng		14	14	res-fire		40	40	abs-cold%		8	8	res-pois-max		10	10	dru		2	2	skill-rand	2	221	250	extra-spirits		1	1													0
 Hellrack	100	1		1	1	84	76	6hx	colossus crossbow			5	5000	cred			invhxbu				dmg%		230	230	dmg-elem	33	63	324	swing2		60	60	att%		150	150	sock		5	5	fireskill		6	6																					pierce-phys		10	10	0
 Alma Negra	100	1		1	1	85	77	pac	sacred rondache			5	5000	blac	blac						ac%		210	210	block2		30	30	allskills		2	2	block		20	20	red-mag		18	18	att%		150	150	dmg%		200	200	joust-reduction		13	13																	0
 Darkforge Spawn	100	1		1	1	72	64	nef	bloodlord skull			5	5000	cred	cred						ac%		180	180	cast2		30	30	mana%		20	20	res-fire		50	50	reanimate	312	5	5	maxcurse		1	1	skilltab	8	2	2	skilltab	6	2	2																	0
@@ -356,9 +356,9 @@ Nethercrow	100											3	5000	cblu	cblu																																							
 Flamebellow	100	1		1	1	79	71	7gs	balrog blade			3	5000	cred	cred		invgisu				dmg%		240	240	dmg-fire		233	482	fireskill		3	3	abs-fire%		5	5	hit-skill	Firestorm	12	16	str		20	20	vit		10	10	aura	102	28	28													splash	358	100	1	0
 Fathom	100	1		1	1	81	73	obf	dimensional shard			3	5000	lblu							allskills		3	3	extra-cold		30	30	cast2		30	30	res-fire		40	40	res-ltng		40	40	heal-kill		5	5																									0
 Wolfhowl	100	1		1	1	85	79	bac	fury visor			3	5000	cred	cred						ac%		150	150	skilltab	14	3	3	str		15	15	dex		15	15	oskill	223	5	5	oskill	237	15	15	oskill	248	5	5																					0
-Spirit Ward	100	1		1	1	76	68	uts	ward			3	5000	dblu	dblu		invgtsu				ac%		180	180	abs-cold		11	11	res-all		30	30	block		30	30	block2		25	25	gethit-skill	Lesser Fade	35	10	randclassskill2		6	6																					0
+Spirit Ward	100	1		1	1	76	68	uts	ward			3	5000	dblu	dblu		invgtsu				ac%		180	180	abs-cold		11	11	res-all		30	30	block		30	30	block2		25	25	gethit-skill	Lesser Fade	35	10	randclassskill2		0	6																					0
 Kira's Guardian	100	1		1	1	85	77	ci2	tiara			3	5000	blac	blac						ac		120	120	res-all		45	45	nofreeze		1	1	balance2		20	20	pierce-ltng		15	15	pierce-cold		15	15	pierce-fire		15	15																					0
-Ormus' Robes	100	1		1	1	83	75	uui	dusk shroud			3	5000	blac	blac						ac		20	20	cast2		20	20	extra-fire		15	15	extra-cold		15	15	extra-ltng		15	15	regen-mana		15	15	skill-rand	3	60	60																					0
+Ormus' Robes	100	1		1	1	83	75	uui	dusk shroud			3	5000	blac	blac						ac		20	20	cast2		20	20	extra-fire		15	15	extra-cold		15	15	extra-ltng		15	15	regen-mana		15	15	skill-rand	3	36	60																					0
 Gheed's Fortune	100	1		1	1	70	62	cm3	charm			3	5000	lgld							mag%		40	40	gold%		160	160	cheap		15	15																																					0
 Stormlash	100	1		1	1	86	82	7fl	scourge	1		3	5000	dgry	dgry						dmg%		340	340	swing2		30	30	hit-skill	Static Field	15	25	hit-skill	Tornado	20	28	dmg-ltng		1	600	light-thorns		360	360	crush		33	33	abs-ltng		9	9													splash	358	100	1	0
 Halaberd's Reign	100	1		1	1	85	77	bae	conqueror crown			3	5000	blac							ac%		170	170	skilltab	13	3	3	bar		2	2	balance2		20	20	red-dmg%		15	15	skill	Battle Orders	3	3	skill	Battle Cry	3	3	att/lvl	9																			0
@@ -400,7 +400,7 @@ Rainbow Facet	100	1		1	1	85	49	jew	jewel			3	5000								dmg-ltng		1	74	pierce-l
 Rainbow Facet	100	1		1	1	85	49	jew	jewel			3	5000								dmg-cold	3	24	38	pierce-cold		5	5	extra-cold		5	5	levelup-skill	Frost Nova	100	43																																	0
 Rainbow Facet	100	1		1	1	85	49	jew	jewel			3	5000								dmg-fire		17	45	pierce-fire		5	5	extra-fire		5	5	levelup-skill	Blaze	100	29																																	0
 Rainbow Facet	100	1		1	1	85	49	jew	jewel			3	5000								dmg-pois	50	187	187	pierce-pois		5	5	extra-pois		5	5	levelup-skill	Venom	100	23																																	0
-Hellfire Torch	100	1		1	1	90	75	cm2	charm			3	5000			flptrch	invtrch	item_gem	12	item_gem	randclassskill1		6	6	vit		60	60	enr		20	20	res-all		20	20	light		8	8																													0
+Hellfire Torch	100	1		1	1	90	75	cm2	charm			3	5000			flptrch	invtrch	item_gem	12	item_gem	randclassskill1		0	6	vit		60	60	enr		20	20	res-all		20	20	light		8	8																													0
 Itheraels Path	100	1		1	1	90	85	utb	mirrored boots			5	5000				dcloneboots				ac		60	60	cast2		20	20	move2		20	20	dex		15	15	vit		15	15	balance2		20	20																									0
 Overlords Helm	100	1		1	1	90	85	uhl	Giant Conch			3	5000	cred			dclonehelm				pierce-phys		15	15	lifesteal		8	8	ac		680	680	str		20	20	enr		-30	-30	vit		15	15	dex		15	15	curse-effectiveness		-30	-30																	0
 Dark Abyss	100	1		1	1	90	85	uth	Lacquered Plate			5	5000	blac			dclonearmor				ac%		250	250	heal-kill		5	5	mana-kill		5	5	res-cold		60	60	res-fire		-60	-60	cast2		50	50	allskills		2	2																					0
