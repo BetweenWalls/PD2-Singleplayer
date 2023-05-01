@@ -227,3 +227,4 @@ temp_splash	224																																																																	
 deepwounds	225																																																		deep_wounds																				0
 dclone8set	226																																											dclone_aura	dclone_t8_aura																										0
 rathma8set	227																																											rathma_aura	rathma_t8_aura																										0
+passive_blessedaim	228																																																																						0
