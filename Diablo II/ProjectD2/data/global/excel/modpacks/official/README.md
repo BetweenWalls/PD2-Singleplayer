@@ -1,3 +1,7 @@
+### official
+
+* Updated: Season 7 (no patches)
+
 Includes the official PD2 files without any modifications (for reference)
 
 For information about how you can generate these files yourself, see the main [README](https://github.com/BetweenWalls/PD2-Singleplayer#modification).

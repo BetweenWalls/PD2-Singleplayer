@@ -1,5 +1,7 @@
 ### Easy as LoD
-Author: MAOMAC
+
+* Updated: Season 5
+* Author: MAOMAC
 
 This modpack is also published here with additional info: https://www.moddb.com/mods/easy-as-lod-direct-txt-mod-for-a-mod-project-diablo-2
 

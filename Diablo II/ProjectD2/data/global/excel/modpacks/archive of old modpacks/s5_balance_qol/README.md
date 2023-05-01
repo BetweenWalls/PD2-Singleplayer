@@ -1,5 +1,7 @@
 ### S5 Balance QoL
-Author: BetweenWalls
+
+* Updated: Season 5
+* Author: BetweenWalls
 
 Includes several balance and quality-of-life updates for season 5:
   * Several charm affixes (MF, resists, flat phys) balanced according to how many inventory spaces the charm requires, using small charms as the standard

@@ -1,5 +1,7 @@
 ### Testing
-Author: BetweenWalls
+
+* Updated: Season 7 (no patches)
+* Author: BetweenWalls
 
 Includes several developer-style cube recipes to assist in testing:
   * reroll any non-crafted item with Horadrim Orb

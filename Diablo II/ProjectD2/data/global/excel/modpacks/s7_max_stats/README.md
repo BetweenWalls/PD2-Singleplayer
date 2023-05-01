@@ -1,4 +1,6 @@
 ### s7_max_stats
-Author: BetweenWalls
 
-Maximizes all unique/set/runeword stats as well as prefixes/suffixes
+* Updated: Season 7 (no patches)
+* Author: BetweenWalls
+
+Maximizes all unique/set/runeword attributes, prefixes/suffixes, and armor defense values
