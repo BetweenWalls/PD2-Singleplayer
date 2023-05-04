@@ -5,7 +5,7 @@ If you're just looking for PlugY without the item pack or characters, see [PD2-P
 
 ### [Download](https://github.com/BetweenWalls/PD2-Singleplayer/archive/main.zip)
 
-The item pack has *not* been updated for s6, but the "testing" [modpack](https://github.com/BetweenWalls/PD2-Singleplayer#modpacks) can be used to reroll items with updated stats for the current season.
+The item pack has been updated for season 7.
 
 ## Setup Guide
 The singleplayer [PlugY mod](http://plugy.free.fr/) adds stash pages for all the items, fixes ubers, and allows unlimited skill/stat resets as well as several other optional features. A copy of PlugY v14.03 is included in the files.
