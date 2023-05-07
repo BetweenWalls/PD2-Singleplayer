@@ -107,7 +107,7 @@ After getting whatever items you want via the "testing" modpack or other modific
 ## Modpacks
 The ["testing"](https://github.com/BetweenWalls/PD2-Singleplayer/tree/main/Diablo%20II/ProjectD2/data/global/excel/modpacks/testing) modpack is setup by default to help with acquiring specific items. If your Diablo II installation is in *C:\Program Files (x86)* (the default location) you'll only need to launch the *PlugY.exe (modded)* shortcut to get access to several useful cube recipes from the "testing" modpack:
 * reroll any non-crafted item with Horadrim Orb
-* duplicate any item with Fortification Orb
+* duplicate any item with Key
 * use crafted items as ingredients for crafting recipes
 * generate set/unique items of a given base with Rancid (green) or Oil (gold) Potions
 * upgrade regular/magic item bases with Zakarum Orb
@@ -115,7 +115,7 @@ The ["testing"](https://github.com/BetweenWalls/PD2-Singleplayer/tree/main/Diabl
 * upgrade regular item quality with Arcane Orb, and downgrade with Orb of Destruction
 * safely remove socketed gems/runes/jewels with Hel Rune
 * set the number of sockets with runes #1-6 based on the number of the rune used
-* roll specific corruption modifiers by adding a rune to the normal recipe: runes #1-10 are for low-tier mods, runes #11-20 are for mid-tier mods, and runes #21-30 are for high-tier mods
+* roll specific corruption modifiers with Angelic Orb and a rune: runes #1-10 are for low-tier mods, runes #11-20 are for mid-tier mods, and runes #21-30 are for high-tier mods
 
 In addition to the "testing" modpack, this collection also includes modpacks that are meant to be used for normal gameplay. [Modpacks](https://github.com/BetweenWalls/PD2-Singleplayer/tree/main/Diablo%20II/ProjectD2/data/global/excel/modpacks) can be anywhere between minimalist (only adding minor quality-of-life features and fixing bugs) and being practically entire mods in their own right, with complete balance overhauls or additional gameplay features.
 
