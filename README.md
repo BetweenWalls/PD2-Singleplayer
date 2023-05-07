@@ -115,6 +115,7 @@ The ["testing"](https://github.com/BetweenWalls/PD2-Singleplayer/tree/main/Diabl
 * upgrade regular item quality with Arcane Orb, and downgrade with Orb of Destruction
 * safely remove socketed gems/runes/jewels with Hel Rune
 * set the number of sockets with runes #1-6 based on the number of the rune used
+* roll specific corruption modifiers by adding a rune to the normal recipe: runes #1-10 are for low-tier mods, runes #11-20 are for mid-tier mods, and runes #21-30 are for high-tier mods
 
 In addition to the "testing" modpack, this collection also includes modpacks that are meant to be used for normal gameplay. [Modpacks](https://github.com/BetweenWalls/PD2-Singleplayer/tree/main/Diablo%20II/ProjectD2/data/global/excel/modpacks) can be anywhere between minimalist (only adding minor quality-of-life features and fixing bugs) and being practically entire mods in their own right, with complete balance overhauls or additional gameplay features.
 
