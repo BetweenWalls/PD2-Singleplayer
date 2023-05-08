@@ -1,6 +1,6 @@
 ### s7_crazy_drops
 
-* Updated: Season 7 (no patches)
+* Updated: Season 7 (patch 3)
 * Author: crazyinside87
 
 Discussion thread: https://www.reddit.com/r/ProjectDiablo2/comments/139e009/s7_single_player_mod/
