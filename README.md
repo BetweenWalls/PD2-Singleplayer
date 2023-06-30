@@ -19,19 +19,20 @@ You'll still need to run PD2 via the launcher to update the game to the latest s
 The **PlugY.exe (modded)** file is a shortcut for using [modpacks](https://github.com/BetweenWalls/PD2-Singleplayer/tree/main/Diablo%20II/ProjectD2/data/global/excel/modpacks) and is preconfigured to use the default English installation directory. If your **Diablo II** directory is *not* **C:\Program Files (x86)\Diablo II** then it won't function until you modify its "Target" and "Start in" properties.
 
 ### Troubleshooting
+Setup:
 * PlugY may not load correctly if it is added after a fresh PD2 installation or if PD2 hasn't been updated in a while - run the game once via the launcher to fix it
 * Older versions of PlugY had a different folder structure (some files were in the **Diablo II** folder instead of the **Diablo II/ProjectD2** folder) so they won't be ovewritten automatically - delete those old files manually if there are any issues
 * Old characters from previous seasons may not load correctly - to update them, see [PD2-Converter](https://github.com/BetweenWalls/PD2-Converter#simple-characterstash-converter-for-pd2)
 
 PlugY bugs:
 * If a single stash page contains many items that each have many affixes (e.g. maps) then crashes can occur when accessing that page or at any time if that page was the most recently viewed page
-    * FIX: Reduce the number of maps stored per page, or switch to another page before leaving the stash or saving/exiting
-* Having gold in the shared stash can cause issues such as preventing oskills from working correctly
-    * FIX: Ensure no "shared gold" remains in the stash during normal gameplay (the "shared gold" feature is disabled by default)
+    * FIX: Reduce the number of maps stored per page, or switch to another page before leaving the stash
+* Having gold in the shared stash can cause issues such as preventing oskills from working correctly (disabled by default)
+    * FIX: Ensure no "shared gold" remains in the stash during normal gameplay
 * The "toggle stash" button may be set to the wrong stash upon loading until interacting with the current stash - this happens if the most recent stash interaction prior to saving/exiting involved using a PlugY stash button instead of manipulating an item in the stash
     * FIX: Add or remove an item from the stash prior to saving/exiting (this also fixes the button at any time if it's set wrong)
 * Stash navigation may be buggy if the stash pages are empty - the navigation will appear to jump between the wrong pages, but it is actually just displaying the wrong page numbers for all pages between the first page (page 1) and the first index (page 10)
-    * FIX: Put an item on page 10 or higher (you'll also need to exit to the character menu and rejoin)
+    * FIX: Put an item on page 10 or higher and save/exit
 
 ## Stash Organization
 The shared stash has multiple pages and can be navigated in increments of 1, 10, or 100 pages at a time. The stash is organized as follows:
@@ -106,8 +107,6 @@ If the items in this collection are insufficient, you may want to look into [tex
 
 These steps have already been done for this collection - the game's text files are in **Diablo II\ProjectD2\data\global\excel\modpacks** along with modified text files from the "testing" modpack in the above folder.
 
-After getting whatever items you want via the "testing" modpack or other modifications, simply run the original **PlugY.exe** file to make the game run normally. The original game files aren't changed so you can experiment with text mods like this without fear of messing something up.
-
 ## Modpacks
 [Modpacks](https://github.com/BetweenWalls/PD2-Singleplayer/tree/main/Diablo%20II/ProjectD2/data/global/excel/modpacks) are custom game modifications. They can alter the game in a variety of ways and have different purposes, such as streamlining testing or improving normal gameplay. Some modpacks may be minimalist (only adding minor quality-of-life features and fixing bugs) while others may be major overhauls with significant balance changes or new features.
 
@@ -122,6 +121,8 @@ The ["testing"](https://github.com/BetweenWalls/PD2-Singleplayer/tree/main/Diabl
 * safely remove socketed gems/runes/jewels with Hel Rune
 * set the number of sockets with runes #1-6 based on the number of the rune used
 * roll specific corruption modifiers with Angelic Orb and a rune: runes #1-10 are for low-tier mods, runes #11-20 are for mid-tier mods, and runes #21-30 are for high-tier mods
+
+After getting whatever items you want via the "testing" modpack or other modifications, simply run the original **PlugY.exe** file to make the game run normally. The original game files aren't changed so you can experiment with text mods like this without fear of messing something up.
 
 If you've made your own PD2 modpack and would like it to be available here, I'd be glad to add it.
 
