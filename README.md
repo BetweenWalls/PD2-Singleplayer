@@ -1,42 +1,37 @@
 # PD2-Singleplayer
 This collection aims to include everything you'd want for singleplayer testing in [Project D2](https://www.projectdiablo2.com/).
 
-If you're just looking for PlugY without the item pack or characters, see [PD2-PlugY](https://github.com/BetweenWalls/PD2-PlugY#pd2-plugy).
+If you're just looking for PlugY without the item pack, characters, or modpacks, see [PD2-PlugY](https://github.com/BetweenWalls/PD2-PlugY#pd2-plugy).
 
 ### [Download](https://github.com/BetweenWalls/PD2-Singleplayer/archive/main.zip)
-
-The item pack has been updated for season 7.
 
 ## Setup Guide
 The singleplayer [PlugY mod](http://plugy.free.fr/) adds stash pages for all the items, fixes ubers, and allows unlimited skill/stat resets as well as several other optional features. A copy of PlugY v14.03 is included in the files.
 
 1. Pre-Setup - Ensure you have *Diablo II LoD* and *PD2* installed; if you already use PlugY, backup your shared stash file
-2. Add PlugY and this item/character pack - copy *ProjectD2* and *Save* from the included *Diablo II* folder into your own *Diablo II* folder
-3. Run PlugY.exe as administrator
+2. Add PlugY and this item/character pack - copy **ProjectD2** and **Save** from the included **Diablo II** folder into your own **Diablo II** folder
+    * The items and characters are in the **Save** folder so if you don't want them, don't copy them
+    * The characters are in subfolders within the **Save** folder - copy whichever you want into the main **Save** folder to access them in-game
+3. Run **PlugY.exe** as administrator
 
-You'll still need to run PD2 via the launcher occasionally to get the latest patch/update.
+You'll still need to run PD2 via the launcher to update the game to the latest season/patch.
+
+The **PlugY.exe (modded)** file is a shortcut for using [modpacks](https://github.com/BetweenWalls/PD2-Singleplayer/tree/main/Diablo%20II/ProjectD2/data/global/excel/modpacks) and is preconfigured to use the default English installation directory. If your **Diablo II** directory is *not* **C:\Program Files (x86)\Diablo II** then it won't function until you modify its "Target" and "Start in" properties.
 
 ### Troubleshooting
 * PlugY may not load correctly if it is added after a fresh PD2 installation or if PD2 hasn't been updated in a while - run the game once via the launcher to fix it
-* Older versions of PlugY had a different folder structure (some files were in the *Diablo II* folder instead of the *Diablo II/ProjectD2* folder) so they won't be ovewritten automatically - delete those old files manually if there are any issues
-* Old s1/s2 characters may not load correctly - to update them, see [PD2-Converter](https://github.com/BetweenWalls/PD2-Converter#simple-characterstash-converter-for-pd2)
+* Older versions of PlugY had a different folder structure (some files were in the **Diablo II** folder instead of the **Diablo II/ProjectD2** folder) so they won't be ovewritten automatically - delete those old files manually if there are any issues
+* Old characters from previous seasons may not load correctly - to update them, see [PD2-Converter](https://github.com/BetweenWalls/PD2-Converter#simple-characterstash-converter-for-pd2)
 
 PlugY bugs:
-* Having many maps in a single stash page can cause a crash if it is the most recently visited page
-* Having gold in the shared stash can cause issues such as preventing CtA oskills from working correctly
-* The "toggle stash" button may be set to the wrong stash upon loading until interacting with the current stash - putting an item on a higher page (such as page 200) in whichever stash is loaded first seems to fix it in some cases
-
-## Inclusions
-* level 99 characters for each class with accurate stats and skill points (lower level characters also available)
-* all unique/set items
-* PD2-specific items (maps, worldstone shards, puzzleboxes, dclone materials, etc.)
-* stacks of all runes/gems
-* variety of jewels/charms
-* examples of all runewords, and additional item bases for making your own
-* all regular and magic equipment item bases
-* some magic, rare, and crafted items
-
-**Note:** Included characters are *not* currently Andariel-quest-bugged, which is something that can only occur in singleplayer. To quest-bug a character, reset their Andariel quest in Hero Editor and do the bug in-game.
+* If a single stash page contains many items that each have many affixes (e.g. maps) then crashes can occur when accessing that page or at any time if that page was the most recently viewed page
+    * FIX: Reduce the number of maps stored per page, or switch to another page before leaving the stash or saving/exiting
+* Having gold in the shared stash can cause issues such as preventing oskills from working correctly
+    * FIX: Ensure no "shared gold" remains in the stash during normal gameplay (the "shared gold" feature is disabled by default)
+* The "toggle stash" button may be set to the wrong stash upon loading until interacting with the current stash - this happens if the most recent stash interaction prior to saving/exiting involved using a PlugY stash button instead of manipulating an item in the stash
+    * FIX: Add or remove an item from the stash prior to saving/exiting (this also fixes the button at any time if it's set wrong)
+* Stash navigation may be buggy if the stash pages are empty - the navigation will appear to jump between the wrong pages, but it is actually just displaying the wrong page numbers for all pages between the first page (page 1) and the first index (page 10)
+    * FIX: Put an item on page 10 or higher (you'll also need to exit to the character menu and rejoin)
 
 ## Stash Organization
 The shared stash has multiple pages and can be navigated in increments of 1, 10, or 100 pages at a time. The stash is organized as follows:
@@ -79,7 +74,16 @@ Additionally, the **Bases** assassin character has a personal stash with etherea
 
 Items can be duplicated by making a file backup of the shared stash and transfering items from the stash to a character before restoring the stash file, or vice versa. Files can also be set as "read only" to eliminate the need to backup and restore them for each transfer.
 
-There are in-game commands for renaming stash pages and moving stash pages around, as well as some other useful commands such as renaming characters - checkout the PlugY [Readme](https://raw.githubusercontent.com/BetweenWalls/PD2-Singleplayer/main/Diablo%20II/ProjectD2/PlugY_The_Survival_Kit_-_Readme.txt) file.
+There are in-game commands for renaming stash pages and moving stash pages around, as well as some other useful commands - checkout the PlugY [Readme](https://raw.githubusercontent.com/BetweenWalls/PD2-Singleplayer/main/Diablo%20II/ProjectD2/PlugY_The_Survival_Kit_-_Readme.txt) file.
+
+## Characters
+This collection includes blank characters of each class at levels 30, 70, 90, and 99. These characters can be edited with vanilla editors prior to being loaded in-game.
+
+Several "showcase" characters are also included for each class. These characters are from previous ladders that were shared with the community and showcased on stream.
+
+Included characters are *not* currently Andariel-quest-bugged, which is something that can only occur in singleplayer. To quest-bug a blank character, reset their Andariel quest in Hero Editor and do the bug in-game.
+
+Characters can be renamed by using the ***/renamechar newname*** command. Checkout the PlugY [Readme](https://raw.githubusercontent.com/BetweenWalls/PD2-Singleplayer/main/Diablo%20II/ProjectD2/PlugY_The_Survival_Kit_-_Readme.txt) file for other useful commands.
 
 ## Editing
 The included blank characters can be edited with [Hero Editor](https://www.moddb.com/games/diablo-2-lod/downloads/hero-editor-v-104) or other editors, but only until they're loaded in-game. Once you play a character and save it, the character's file will be formatted differently. If you're making many edits, create copies of the unplayed character files before entering the game with them. The [PD2-Converter](https://github.com/BetweenWalls/PD2-Converter#simple-characterstash-converter-for-pd2) may also be useful for converting certain files from PD2 to vanilla in order to edit them, although it was primarily designed for converting files in the opposite direction.
@@ -94,18 +98,20 @@ New affixes such as "Melee Attacks Deal Splash Damage" cannot be edited in this 
 ## Modification
 If the items in this collection are insufficient, you may want to look into [text modding](https://d2mods.info/forum/viewtopic.php?f=4&t=34455). By modifying the game's text files, you can spawn items via custom cube recipes, adjust the ranges for affixes that can appear on items, and much more. Here are the basic steps:
 
-1. Extract the game's text files from *pd2data.mpq* (found in *Diablo II/ProjectD2*) using an [MPQ editor and D2 listfile](http://www.zezula.net/en/mpq/download.html) - the text files will be in */data/global/excel* 
-2. Edit whichever files you want (for example, *CubeMain.txt* includes the cube recipes)
+1. Extract the game's text files from **pd2data.mpq** (found in **Diablo II/ProjectD2**) using an [MPQ editor and D2 listfile](http://www.zezula.net/en/mpq/download.html) - the text files will be in **/data/global/excel**
+2. Edit whichever files you want (for example, **CubeMain.txt** includes the cube recipes)
     * This is best done in a spreadsheet program since the files have tab-separated data
-3. Copy the edited files to your game directory inside a new folder structure: *Diablo II/ProjectD2/data/global/excel*
-4. Create (and run) a new shortcut for PlugY.exe with additional commands in the target field so that the game uses your edited text files: -direct -txt
+3. Copy the edited files to your game directory inside a new folder structure: **Diablo II/ProjectD2/data/global/excel**
+4. Create (and run) a new shortcut for **PlugY.exe** with additional commands in the target field so that the game uses your edited text files: -direct -txt
 
-These steps have already been done for this collection - the game's text files are in *Diablo II\ProjectD2\data\global\excel\modpacks* along with modified text files from the "testing" modpack in the above folder.
+These steps have already been done for this collection - the game's text files are in **Diablo II\ProjectD2\data\global\excel\modpacks** along with modified text files from the "testing" modpack in the above folder.
 
-After getting whatever items you want via the "testing" modpack or other modifications, simply run the original PlugY.exe file to make the game run normally. The original game files aren't changed so you can experiment with text mods like this without fear of messing something up.
+After getting whatever items you want via the "testing" modpack or other modifications, simply run the original **PlugY.exe** file to make the game run normally. The original game files aren't changed so you can experiment with text mods like this without fear of messing something up.
 
 ## Modpacks
-The ["testing"](https://github.com/BetweenWalls/PD2-Singleplayer/tree/main/Diablo%20II/ProjectD2/data/global/excel/modpacks/testing) modpack is setup by default to help with acquiring specific items. If your Diablo II installation is in *C:\Program Files (x86)* (the default location) you'll only need to launch the *PlugY.exe (modded)* shortcut to get access to several useful cube recipes from the "testing" modpack:
+[Modpacks](https://github.com/BetweenWalls/PD2-Singleplayer/tree/main/Diablo%20II/ProjectD2/data/global/excel/modpacks) are custom game modifications. They can alter the game in a variety of ways and have different purposes, such as streamling testing or improving normal gameplay. Some modpacks may be minimalist (only adding minor quality-of-life features and fixing bugs) while others may be major overhauls with significant balance changes or new features.
+
+The ["testing"](https://github.com/BetweenWalls/PD2-Singleplayer/tree/main/Diablo%20II/ProjectD2/data/global/excel/modpacks/testing) modpack is setup by default to help with acquiring specific items for more thorough testing. It is not designed for normal gameplay - when used alongside the item pack, it trivializes item acquisition. If your Diablo II installation is in **C:\Program Files (x86)** (the default location) you'll only need to launch the **PlugY.exe (modded)** shortcut to get access to several useful cube recipes from the "testing" modpack:
 * reroll any non-crafted item with Horadrim Orb
 * duplicate most items with Key, duplicate jewels with Jewel Fragments
 * use crafted items as ingredients for crafting recipes
@@ -117,12 +123,10 @@ The ["testing"](https://github.com/BetweenWalls/PD2-Singleplayer/tree/main/Diabl
 * set the number of sockets with runes #1-6 based on the number of the rune used
 * roll specific corruption modifiers with Angelic Orb and a rune: runes #1-10 are for low-tier mods, runes #11-20 are for mid-tier mods, and runes #21-30 are for high-tier mods
 
-In addition to the "testing" modpack, this collection also includes modpacks that are meant to be used for normal gameplay. [Modpacks](https://github.com/BetweenWalls/PD2-Singleplayer/tree/main/Diablo%20II/ProjectD2/data/global/excel/modpacks) can be anywhere between minimalist (only adding minor quality-of-life features and fixing bugs) and being practically entire mods in their own right, with complete balance overhauls or additional gameplay features.
-
 If you've made your own PD2 modpack and would like it to be available here, I'd be glad to add it.
 
 ## Feedback
-If you would like to improve this collection with additional items, or just want to share feedback about how it could be improved, you can message me on reddit ([u/BetweenWalls](https://www.reddit.com/message/compose/?to=BetweenWalls)) or discord (@BetweenWalls#2390). You can also just open an [issue](https://github.com/BetweenWalls/PD2-Singleplayer/issues) here.
+If you would like to improve this collection with additional items, or just want to share feedback about how it could be improved, you can message me on reddit ([u/BetweenWalls](https://www.reddit.com/message/compose/?to=BetweenWalls)) or discord (@BetweenWalls). You can also just open an [issue](https://github.com/BetweenWalls/PD2-Singleplayer/issues) here.
 
 Potential Improvements:
 * Testing charms with individual corruption stats or other stats with more granular values
@@ -134,13 +138,7 @@ Potential Improvements:
 <!-- Notes
 Low Priority Improvements
 * Ethereal versions of certain skill-specific items (Spirit Keeper, Ormus' Robes, Spirit Ward)
-* Unique/Set items with variable inventory graphics - Rings, Amulets, Rainbow Facets
-
-Some generated rare/crafted items have incorrect required levels
-Some generated runeword item bases are missing certain stats, such as 10-50% FCR for staves
-Some generated item bases may have incorrect armor values - they should be verified
-  eth Vampire Gaze defense is 182 when it should be 378
-  eth Quetzalcoatl defense is 18 when it should be 42
-  eth Jalal's Mane defense is 327 when it should be 445
-  ...many other eth uniques seem to have incorrect defense values, often even being lower than the non-eth version - the ethereal defense equation seems to be wrong, since regenerating these items doesn't fix them
+* Some generated rare/crafted items have incorrect required levels
+* Some generated runeword item bases are missing certain stats, such as 10-50% FCR for staves
+* Some example runewords are made with items that have higher level requirements than the runewords themselves
 -->
