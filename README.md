@@ -1,23 +1,21 @@
 # PD2-Singleplayer
-This collection aims to include everything you'd want for singleplayer testing in [Project D2](https://www.projectdiablo2.com/).
+This collection aims to include everything you'd want for singleplayer testing in [Project D2](https://www.projectdiablo2.com/). The singleplayer [PlugY mod](http://plugy.free.fr/) adds shared/personal stash pages, fixes ubers, and allows unlimited skill/stat resets as well as several other optional features. This collection includes PlugY v14.03 with settings adjusted for PD2. It also includes an item pack, characters, and modpacks for testing or advanced customization.
 
 If you're just looking for PlugY without the item pack, characters, or modpacks, see [PD2-PlugY](https://github.com/BetweenWalls/PD2-PlugY#pd2-plugy).
 
 ### [Download](https://github.com/BetweenWalls/PD2-Singleplayer/archive/main.zip)
 
 ## Setup Guide
-The singleplayer [PlugY mod](http://plugy.free.fr/) adds stash pages for all the items, fixes ubers, and allows unlimited skill/stat resets as well as several other optional features. A copy of PlugY v14.03 is included in the files.
-
-1. Pre-Setup - Ensure you have *Diablo&nbsp;II&nbsp;LoD* and *PD2* installed; if you already use PlugY, backup your shared stash file
-2. Add PlugY and this item/character pack - copy **ProjectD2** and **Save** from the included **Diablo&nbsp;II** folder into your own **Diablo&nbsp;II** folder
-    * The items and characters are in the **Save** folder so if you don't want them, don't copy them
-    * The characters are in subfolders within the **Save** folder - copy whichever you want into the main **Save** folder to access them in-game
-    * PlugY features can be enabled/disabled within the **PlugY.ini** file
+1. Pre-Setup - Ensure you have *Diablo&nbsp;II&nbsp;LoD* and *PD2* installed
+2. Add this collection - copy the **ProjectD2** and **Save** folders from the included **Diablo&nbsp;II** folder into your own **Diablo&nbsp;II** folder
+    * If you want the item pack, copy the files in **Save\Library** into your **Save** folder (don't overwrite your stash file without backups)
+    * If you want additional characters, copy them from the subfolders within **Save\Library** into your **Save** folder
+    * If you want to customize any PlugY features, they can be enabled/disabled within the **PlugY.ini** file (see the [Readme](https://raw.githubusercontent.com/BetweenWalls/PD2-Singleplayer/main/Diablo%20II/ProjectD2/PlugY_The_Survival_Kit_-_Readme.txt))
 3. Run **PlugY.exe** as administrator
 
 When new seasons/patches are released, you'll need to run PD2 via the launcher to update the game. Running the game via the launcher will also update your lootfilter.
 
-The **PlugY.exe&nbsp;(modded)** file is a shortcut for using [modpacks](https://github.com/BetweenWalls/PD2-Singleplayer/tree/main#modpacks) and is preconfigured to use the default English installation directory. If your **Diablo&nbsp;II** directory is *not* **C:\Program&nbsp;Files&nbsp;(x86)\Diablo&nbsp;II** then it won't function until you modify its "Target" and "Start&nbsp;in" properties.
+The **PlugY&nbsp;(modded)** file is a shortcut for using [modpacks](https://github.com/BetweenWalls/PD2-Singleplayer/tree/main#modpacks) and is preconfigured to use the default English installation directory. If your **Diablo&nbsp;II** directory is *not* **C:\Program&nbsp;Files&nbsp;(x86)\Diablo&nbsp;II** then it won't function until you modify its "Target" and "Start&nbsp;in" properties.
 
 ### Troubleshooting
 Setup:
