@@ -695,9 +695,9 @@ Opulent		1	1	1	1		1				2	156	map-mon-att-pierce		90	90	map-glob-density		40	40	m
 Fast		1	1	1	1		1				2	305	map-mon-att-cast-speed		60	60	map-glob-density		40	40	map-play-addxp		4	4			t1m	t2m	t3m												0
 Speedy		1	1	1	1		1				2	305	map-mon-att-cast-speed		80	80	map-glob-density		50	50	map-play-addxp		5	5			t2m	t3m													0
 Ludicrous		1	1	1	1		1				2	305	map-mon-att-cast-speed		100	100	map-glob-density		60	60	map-play-addxp		6	6			t3m	t4m													0
-Large		1	1	1	1		1				2	311	map-mon-hp%		20	20	map-glob-density		40	40	map-play-addxp		6	6			t1m	t2m	t3m												0
-Huge		1	1	1	1		1				2	311	map-mon-hp%		30	30	map-glob-density		50	50	map-play-addxp		7	7			t2m	t3m													0
-Colossal		1	1	1	1		1				2	311	map-mon-hp%		40	40	map-glob-density		60	60	map-play-addxp		8	8			t3m	t4m													0
+Large		1	1	1	1		1				1	311	map-mon-hp%		15	15	map-glob-density		40	40	map-play-addxp		8	8			t1m	t2m	t3m												0
+Huge		1	1	1	1		1				1	311	map-mon-hp%		25	25	map-glob-density		50	50	map-play-addxp		10	10			t2m	t3m													0
+Colossal		1	1	1	1		1				1	311	map-mon-hp%		35	35	map-glob-density		60	60	map-play-addxp		12	12			t3m	t4m													0
 Strong		1	1	1	1		1				2	158	map-mon-ed%		15	15	map-play-addxp		5	5	map-play-mag-gold%		15	15			t1m	t2m	t3m												0
 Mighty		1	1	1	1		1				2	158	map-mon-ed%		20	20	map-play-addxp		6	6	map-play-mag-gold%		30	30			t2m	t3m													0
 Formidable		1	1	1	1		1				2	158	map-mon-ed%		25	25	map-play-addxp		7	7	map-play-mag-gold%		45	45			t3m	t4m													0

@@ -778,9 +778,9 @@ of the Bloodsucker		1	1	1	1		1				4	309	map-mon-lifesteal-hp%		25	25	map-glob-de
 of Resilience		1	1	1	1		1				4	310	map-mon-balance1		60	60	map-glob-density		40	40	map-play-mag-gold%		15	15			t1m	t2m	t3m												0
 of Hardiness		1	1	1	1		1				4	310	map-mon-balance1		80	80	map-glob-density		50	50	map-play-mag-gold%		30	30			t2m	t3m													0
 of Fortitude		1	1	1	1		1				4	310	map-mon-balance1		100	100	map-glob-density		60	60	map-play-mag-gold%		45	45			t3m	t4m													0
-of Health		1	1	1	1		1				4	316	map-mon-hp%		20	20	map-glob-density		40	40	map-play-addxp		6	6			t1m	t2m	t3m												0
-of Vitality		1	1	1	1		1				4	316	map-mon-hp%		30	30	map-glob-density		50	50	map-play-addxp		7	7			t2m	t3m													0
-of Vim		1	1	1	1		1				4	316	map-mon-hp%		40	40	map-glob-density		60	60	map-play-addxp		8	8			t3m	t4m													0
+of Health		1	1	1	1		1				2	316	map-mon-hp%		15	15	map-glob-density		40	40	map-play-addxp		8	8			t1m	t2m	t3m												0
+of Vitality		1	1	1	1		1				2	316	map-mon-hp%		25	25	map-glob-density		50	50	map-play-addxp		10	10			t2m	t3m													0
+of Vim		1	1	1	1		1				2	316	map-mon-hp%		35	35	map-glob-density		60	60	map-play-addxp		12	12			t3m	t4m													0
 of Imbalance		1	1	1	1		1				4	313	map-play-balance1		-10	-10	map-glob-density		40	40	map-play-addxp		4	4			t1m	t2m	t3m												0
 of Inequality		1	1	1	1		1				4	313	map-play-balance1		-20	-20	map-glob-density		50	50	map-play-addxp		5	5			t2m	t3m													0
 of Uneveness		1	1	1	1		1				4	313	map-play-balance1		-30	-30	map-glob-density		60	60	map-play-addxp		6	6			t3m	t4m													0
