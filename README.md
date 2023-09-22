@@ -6,8 +6,8 @@ If you're just looking for PlugY without the item pack, characters, or modpacks,
 ### [Download](https://github.com/BetweenWalls/PD2-Singleplayer/archive/main.zip)
 
 ## Setup Guide
-1. Pre-Setup - Ensure you have *Diablo&nbsp;II&nbsp;LoD* and *PD2* installed
-2. Add this collection - copy the **ProjectD2** and **Save** folders from the included **Diablo&nbsp;II** folder into your own **Diablo&nbsp;II** folder
+1. Ensure you have *Diablo&nbsp;II&nbsp;LoD* and *PD2* installed
+2. Copy the **ProjectD2** and **Save** folders from the included **Diablo&nbsp;II** folder into your own **Diablo&nbsp;II** folder
     * If you want the item pack, copy the files in **Save\Library** into your **Save** folder (don't overwrite your stash file without backups)
     * If you want additional characters, copy them from the subfolders within **Save\Library** into your **Save** folder
     * If you want to customize any PlugY features, they can be enabled/disabled within the **PlugY.ini** file (see the [Readme](https://raw.githubusercontent.com/BetweenWalls/PD2-Singleplayer/main/Diablo%20II/ProjectD2/PlugY_The_Survival_Kit_-_Readme.txt))
@@ -60,6 +60,8 @@ The shared stash has multiple pages and can be navigated in increments of 1, 10,
 * (140-149) **Popular Base Items**
 
 Additionally, the **Bases** assassin character has a personal stash with ethereal and non-ethereal versions of all regular/magic items, so you can get exactly the desired item needed for crafting or runewords. They're separated from the shared stash to improve load times. 
+
+The **Legacy** paladin character has select items from previous seasons.
 
 * (1) **Empty Landing Page**
 * (2-19) **Regular Armor**

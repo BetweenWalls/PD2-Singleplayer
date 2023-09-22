@@ -1138,3 +1138,5 @@ Void Event Map	1134	180	1	0	1	0	1	1	0	0	0	1	0	0	1	Expansion/Map/VoidEventMap.ds1
 Unused	1135	0	1	1	1	0	1	1	0	0	0	1	0	-4	1	Expansion/Map/hellcaves_palette.ds1	0	0	0	0	0	32767	0	0
 Hellcaves	1136	181	1	1	1	1	1	1	0	0	0	1	0	0	1	Expansion/Map/hellcaves.ds1	0	0	0	0	0	32767	1	0
 HellcaveFortress	1137	182	1	1	1	1	1	1	0	0	0	1	0	0	1	Expansion/Map/hellcavefortress.ds1	0	0	0	0	0	32767	1	0
+FallenGardens	1138	183	1	1	1	1	1	1	0	0	0	1	0	0	1	Expansion/Map/FallenGardens.ds1	0	0	0	0	0	32505859	1	0
+DiamondGates	1139	184	1	1	1	1	1	1	0	0	0	1	0	0	1	Expansion/Map/diamondgates.ds1	0	0	0	0	0	54784	1	0

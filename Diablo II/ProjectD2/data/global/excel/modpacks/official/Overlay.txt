@@ -314,3 +314,11 @@ sacrifice_explosion	CorpseExplodeGuts	100	13	all	1	1	0	0	0	0	0	0	0	0	0	16	0	3	1	
 dclone_t8_aura	Extra\aurared	0	31	all	1	1	0	0	0	0	0	0	0	0	0	16	0	3	0	0	255	120	120	1	0
 rathma_t8_aura	Extra\aurablue	0	31	all	1	1	0	0	0	0	0	0	0	0	0	16	0	3	0	0	120	255	120	1	0
 dev_glow_aura	Extra\AuraReflection	0	20	all	1	1	0	0	0	3	-5	0	0	0	0	16	0	3	0	0	255	255	255	1	0
+tpotfire_debuff	Extra\AMredSpellSections	100	16	all	0	1	0	0	0	0	-72	0	0	0	0	16	0	3	0	0	100	0	0	1	0
+tpotgas_debuff	Extra\AMgreenSpellSections	100	16	all	0	1	0	0	0	0	-72	0	0	0	0	16	0	3	0	0	0	100	0	1	0
+tpotcold_debuff	Extra\AMblueSpellSections	100	16	all	0	1	0	0	0	0	-72	0	0	0	0	16	0	3	0	0	0	0	100	1	0
+tpotltng_debuff	Extra\AMwhiteSpellSections	100	16	all	0	1	0	0	0	0	-72	0	0	0	0	16	0	3	0	0	100	60	60	1	0
+toppvp_aura	AuraTopPvp	0	20	all	1	1	0	0	0	0	0	0	0	0	0	16	0	3	0	0	255	120	255	1	0
+rakanoth_steal_1	rakanoth1	100	16	all	0	1	0	0	0	0	0	0	0	0	0	16	0	3	0	0	0	0	0	1	0
+rakanoth_steal_2	rakanoth2	100	16	all	0	1	0	0	0	0	0	0	0	0	0	16	0	3	0	0	0	0	0	1	0
+rakanoth_steal_3	rakanoth3	100	16	all	0	1	0	0	0	0	0	0	0	0	0	16	0	3	0	0	0	0	0	1	0

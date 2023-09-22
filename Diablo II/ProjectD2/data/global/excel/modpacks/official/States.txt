@@ -100,7 +100,7 @@ skel_mastery	97			1																																																													
 sourceunit	98																														1	1																				4	2																		0
 redeemed	99																														1	1	1		1																	10			Redemption								paladin_redeemed_soul								0
 healthpot	100																																																																						0
-holyshield	101				1																																														skill_armor_percent				Holy Shield																0
+holyshield	101	4			1																																														skill_armor_percent				Holy Shield																0
 just_portaled	102																																																																						0
 monfrenzy	103																																												monfrenzy						skill_frenzy																				0
 corpse_nodraw	104																														1	1	1		1																																				0
@@ -228,3 +228,10 @@ deepwounds	225																																																		deep_wounds					
 dclone8set	226																																											dclone_aura	dclone_t8_aura																										0
 rathma8set	227																																											rathma_aura	rathma_t8_aura																										0
 passive_blessedaim	228																																																																						0
+tpotfire_debuff	229																								1																			tpotfire_debuff																											0
+tpotgas_debuff	230																											1																tpotgas_debuff																											0
+tpotcold_debuff	231																										1																	tpotcold_debuff																											0
+tpotlight_debuff	232																									1																		tpotltng_debuff																											0
+holysword	233	4																																																					Holy Sword	weap	bwht														0
+toppvpset	234																																											toppvp_aura																											0
+rakanoth_steal	235																																					1										rakanoth_steal_1			progressive_steal	1	1																		0

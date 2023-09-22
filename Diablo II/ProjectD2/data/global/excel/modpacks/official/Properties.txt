@@ -414,3 +414,7 @@ map-glob-dropcorrupted	1			8	map_glob_dropcorrupted																													
 curse-effectiveness	1			1	curse_effectiveness																													none	0
 map-glob-boss-dropskillers	1			1	map_glob_boss_dropskillers																													none	0
 map-glob-boss-dropcorruptedunique	1			1	map_glob_boss_dropcorruptedunique																													none	0
+equipped-skill	1			22	item_skillonequip																													none	0
+mindmg/energy	1			17	item_mindamage_energy																									Min Damage per energy	(8ths)			none	0
+map-glob-boss-dropfacet	1			1	map_glob_boss_dropfacet																													none	0
+map-mon-dropjewels	1			8	map_mon_dropjewels																													none	0

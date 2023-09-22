@@ -2837,6 +2837,8 @@ LevelName	TileName	Style	StartSequence	EndSequence	Type1	Cel1	Type2	Cel2	Type2	C
 4 Mesa	fl	0	59	59	PD2 Stairs	1101		1101		1101		1101
 4 Mesa	fl	0	60	60	PD2 Stairs	1101		1101		1101		1101
 4 Mesa	fl	51	0	37	PD2 Void Floor	1469	temple floor	1470	temple floor	1471		-1
+4 Mesa	fl	54	4	4	PD2 Heaven	338		-1		-1		-1
+4 Mesa	fl	3	36	60	PD2 Heaven	1138		-1		-1		-1
 4 Lava	fl	26	43	43	Waypoint	307		-1		-1		-1
 4 Lava	wr	13	-1	-1	WR A	20		-1		-1		-1
 4 Lava	wl	13	-1	-1	WL A	21		-1		-1		-1

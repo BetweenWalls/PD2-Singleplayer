@@ -25,7 +25,7 @@ Runeword162	White	1		wand									DolIo	r14	r16					skilltab	7	2	2	red-mag		4	4	
 Runeword170	Zephyr	1		miss									OrthEth	r09	r05					move2		25	25	swing2		25	25	dmg%		33	66	att		66	66	gethit-skill	240	7	1	ac		25	25					0
 Runeword14	Bound by Duty	1		tors									DolUmBerIst	r14	r22	r30	r24			res-all		35	45	ac%		70	70	dmg-demon		200	200	dmg-undead		100	100	lifesteal		8	8	allskills		2	2	str		20	20	0
 Runeword9	Bramble	1		tors									RalOhmSurEth	r08	r27	r29	r05			balance2		50	50	ac		300	300	aura	Thorns	18	21	heal-kill		4	6	extra-pois		40	50	res-pois		100	100	charged	Spirit of Barbs	33	13	0
-Runeword11	Breath of the Dying	1		weap									VexHelElEldZodEth	r26	r15	r01	r02	r33	r05	swing2		60	60	dmg-undead		125	125	lifesteal		8	10	noheal		1	1	hit-skill	Poison Nova	35	40	dmg%		350	400	all-stats		20	30	0
+Runeword11	Breath of the Dying	1		weap									VexHelElEldZodEth	r26	r15	r01	r02	r33	r05	swing2		60	60	dmg-undead		125	125	lifesteal		8	12	noheal		1	1	hit-skill	Poison Nova	35	40	dmg%		350	400	all-stats		30	30	0
 Runeword13	Call to Arms	1		weap									AmnRalMalIstOhm	r11	r08	r23	r24	r27		swing2		40	40	dmg%		200	240	allskills		1	1	oskill	Battle Command	2	6	oskill	Battle Orders	2	6	oskill	Battle Cry	1	3	regen		12	12	0
 Runeword17	Crescent Moon	1		axe	swor	h2h							ShaelUmTir	r13	r22	r03				pierce-ltng		10	15	ignore-ac		1	1	dmg%		180	220	abs-mag		3	5	charged	Summon Spirit Wolf	30	18	hit-skill	Static Field	12	13	hit-skill	Lightning	10	27	0
 Runeword22	Delirium	1		helm									LemIstIo	r20	r24	r16				hit-skill	Confuse	11	18	charged	Attract	60	17	gethit-skill	Terror	14	13	ac		261	261	gethit-skill	Mind Blast	6	14	allskills		2	2					0
@@ -41,7 +41,7 @@ Runeword66	Kingslayer	1		swor	axe								MalUmGulFal	r23	r22	r25	r19			swing2		3
 Runeword95	Passion	1		weap									DolOrtEldLem	r14	r09	r02	r20			dmg%		160	210	oskill	Zeal	1	1	att%		50	80	oskill	Concentrate	1	1	swing2		25	25	charged	Heart of Wolverine	36	8	stupidity		10	10	0
 Runeword45	Gloom	1		tors									FalUmPul	r19	r22	r21				ac%		170	230	res-all		30	30	gethit-skill	Dim Vision	15	9	balance2		20	40	dmg-to-mana		5	5	curse-effectiveness		20	20	half-freeze		1	1	0
 Runeword122	Sanctuary	1		shld									KoKoMal	r18	r18	r23				block		20	20	block2		20	20	ac%		130	160	charged	Slow Movement	60	12	res-all		40	50	balance2		20	20	nofreeze		1	1	0
-Runeword16	Chaos	1		h2h									FalOhmUm	r19	r27	r22				demon-heal		15	15	dmg%		250	300	dmg-mag		216	471	skill	Blade Dance	2	2	hit-skill	Charged Bolt	18	40	hit-skill	Frozen Orb	20	30	indestruct		1	1	0
+Runeword16	Chaos	1		h2h									FalOhmUm	r19	r27	r22				demon-heal		15	15	dmg%		200	250	dmg-mag		200	400	skill	Blade Dance	2	2	hit-skill	Charged Bolt	18	40	hit-skill	Frozen Orb	20	30	indestruct		1	1	0
 Runeword4	The Beast	1		axe	scep	hamm	staf						BerTirUmMalLum	r30	r03	r22	r23	r17		swing2		40	40	aura	Fanaticism	8	10	dmg%		260	290	oskill	Hunger	3	3	charged	Summon Grizzly	35	13	oskill	Wearbear	3	3	oskill	Maul	3	3	0
 Runeword123	Serendipity																																															0
 Runeword124	Shadow																																															0
@@ -101,7 +101,7 @@ Runeword57	Humility																																															0
 Runeword58	Hunger																																															0
 Runeword59	Ice	1		miss									AmnShaelJahLo	r11	r13	r31	r28			dmg%		140	210	aura	Holy Freeze	18	18	extra-cold		25	30	hit-skill	Frost Nova	20	32	levelup-skill	Blizzard	100	40	pierce-cold		20	20	gold%/lvl	25			0
 Runeword60	Infinity	1		pole	spea								BerMalBerIst	r30	r23	r30	r24			dmg%		255	325	move2		35	35	vit/lvl	4			aura	Conviction	12	12	kill-skill	Lightning	50	20	pierce-ltng		45	55	oskill	Cyclone Armor	3	3	0
-Runeword61	Innocence																																															0
+Runeword61	Innocence	1		tors									GulLemZodHel	r25	r20	r33	r15			allskills		2	2	thorns		600	800	equipped-skill	Blade Shield SelfAura	8	12	ac%		200	275	crush		20	20	res-pois-len		50	50	ease		-10	-10	0
 Runeword62	Insight	1		pole	staf	spea	scep						RalTirTalSol	r08	r03	r07	r12			dmg%		140	180	att%		180	250	mag%		23	23	oskill	Critical Strike	1	6	cast2		35	35	aura	Meditation	12	17	all-stats		10	20	0
 Runeword63	Jealousy																																															0
 Runeword64	Judgment																																															0
@@ -173,7 +173,7 @@ Runeword60	Infinity	1		staf									BerMalBerIst	r30	r23	r30	r24			dmg%		255	325
 Runeword130	Spirit	1		staf									TalThulOrtAmn	r07	r10	r09	r11			balance3		55	55	mana		59	82	ease		-15	-15	vit		11	22	cast3		25	35	abs-mag		3	8	allskills		2	2	0
 Runeword103	Phoenix	1		weap						staf			VexVexLoJah	r26	r26	r28	r31			dmg%		400	450	ac-miss		350	400	hit-skill	Firestorm	20	40	levelup-skill	Blaze	100	40	pierce-fire		28	28	aura	Redemption	10	15	abs-fire		15	21	0
 Runeword17	Crescent Moon	1		pole	spea								ShaelUmTir	r13	r22	r03				pierce-ltng		10	15	ignore-ac		1	1	dmg%		180	220	abs-mag		3	5	charged	Summon Spirit Wolf	30	18	hit-skill	Static Field	24	13	hit-skill	Lightning	10	27	0
-Ferocity	Ferocity	1		helm									ZodChamShael	r33	r32	r13				hit-skill	Taunt	12	10	lifesteal		10	12	oskill	Zeal	8	10	ac%		150	200	red-mag		6	12	Thorns		200	250					0
+Ferocity	Ferocity	1		helm									ZodChamShael	r33	r32	r13				hit-skill	Taunt	12	10	lifesteal		10	12	oskill	Zeal	12	14	ac%		150	200	red-mag		6	12	Thorns		200	250					0
 Runeword171	Dominion	1		wand									ChamOhm	r32	r27					skill	Golem Mastery	2	3	cast2		25	25	red-dmg		5	7	res-cold		30	30	nec		2	2	ac		300	450	extra-golem		1	1	0
 Zenith	Zenith	1		miss	spea	pole	staf						JahZodOrtThulRal	r31	r33	r09	r10	r08		dmg%		200	300	aura	Salvation	8	12	swing2		20	20	move2		20	20	allskills		2	2	dmg-elem	100	300	350					0
 Rampage	Rampage	1		staf	spea	pole							ShaelElIthEth	r13	r01	r06	r05			dmg%		110	135	swing2		45	45	res-fire		25	25	balance2		20	20													
@@ -182,8 +182,9 @@ Neophyte2	Neophyte	1		staf									ThulTir	r10	r03					half-freeze		1	1	red-dmg	
 Wind Staff	Wind	1		staf									SurEl	r29	r01					dmg%		320	380	swing2		40	40	move2		20	30	reduce-ac		50	50	cast-skill	245	18	35	cast-skill	240	18	35	cast-skill	Cyclone Armor	5	9	0
 Phoenix Staff	Phoenix	1		staf									VexVexLoJah	r26	r26	r28	r31			dmg%		400	450	ac-miss		350	400	cast-skill	Firestorm	20	40	levelup-skill	Blaze	100	40	pierce-fire		28	28	aura	Redemption	10	15	abs-fire		15	21	0
 Shattered Wall	Shattered Wall	1		pala									ZodJahRalCham	r33	r31	r08	r32			ac%		160	200	aura	Holy Freeze	16	16	block2		60	60	mana-kill		5	5	dmg-cold	50	200	250	hp		50	100					0
-Asylum	Asylum	1		hamm	pole	spea	miss						GulChamTirJahDolUm	r25	r32	r15	r31	r14	r22	dmg%		265	315	dex		20	20	allskills		2	2	openwounds		20	20	aura	Sanctuary	17	20	gold%		100	100	hit-skill	121	25	40	0
+Asylum	Asylum	1		hamm	pole	spea	miss	2hsw					GulChamTirJahDolUm	r25	r32	r15	r31	r14	r22	dmg%		265	315	dex		20	20	allskills		2	2	openwounds		20	20	aura	Sanctuary	17	20	gold%		100	100	hit-skill	121	25	40	0
 Asylum Staff	Asylum	1		staf									GulChamHelJahDolUm	r25	r32	r15	r31	r14	r22	dmg%		265	315	dex		20	20	allskills		2	2	openwounds		20	20	aura	Sanctuary	17	20	gold%		100	100	cast-skill	121	25	40	0
 Revenge	Revenge			sc9									LoHelZodAmn	r28	r15	r33	r11			dmg%		250	300	red-dmg		18	18	swing2		60	60	skill	68	6	8	balance2		60	60	poisskill		4	4	dmg-pois	50	28672	28672	0
 Runeword41	Fortitude	1		weap									ElSolDolLo	r01	r12	r14	r28			ac%		200	200	dmg%		300	350	cast3		25	25	dmg-to-mana		12	12	hp/lvl		8	12	res-all		25	30					0
 Runeword25	Destruction	1		staf									VexLoBerJahKo	r26	r28	r30	r31	r18		dmg%		300	300	swing2		30	40	cast-skill	Molten Boulder	8	35	cast-skill	Meteor	15	45	cast-skill	Nova	15	40	cast-skill	Frost Nova	20	35					0
+Hustle	Hustle	1		tors									ShaelKoEld	r13	r18	r02				equipped-skill	Quickness SelfAura	6	6	swing2		20	20	stamdrain		35	35	res-all		10	10	half-freeze		1	1									0

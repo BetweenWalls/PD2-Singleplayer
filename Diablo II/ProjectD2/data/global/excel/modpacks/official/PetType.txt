@@ -16,7 +16,7 @@ totem	13		0	1		1	1	1	strUI14		2	oaksage	423	heartofwolverine	422	spiritofbarbs		
 vine	14		0	1		1	1	1	Carrion		2	cycleoflife	427								0
 grizzly	15		0	1		1	1	1	strUI7	1	2	bear									0
 shadowwarrior	16		0	1		1	1	1	UiShadowUI	1	1	shadowassassin									0
-assassintrap	17		0		1																0
+assassintrap	17		0		1				AssassinTrapUI	0	2	traplightningicon	410	trapfireicon	415	trapfireicon					0
 pettrap	18		0		1																0
 hydra	19		0		1																0
 bladesent	20		0		1																0

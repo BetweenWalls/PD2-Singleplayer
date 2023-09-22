@@ -612,3 +612,4 @@ preset_placeholder_H	ZZ	0
 preset_placeholder_I	ZZ	0
 preset_placeholder_J	ZZ	0
 ForceShardAltar	xo	0
+gidbinn altar on	ga	0

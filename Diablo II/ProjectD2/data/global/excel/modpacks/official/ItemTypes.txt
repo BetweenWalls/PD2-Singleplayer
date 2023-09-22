@@ -214,3 +214,9 @@ UberMap	ubmp			0	0					0	0	0	0			1	0	0	0	0	0	0	0	0		0		0								0
 Map T5	t5m			0	0					0	0	0	1		1	0	0	0	0	0	0	0	0	3		0		0							misc	0
 Map T5 exc	t5me	map		0	0					0	0	0	1		1	0	0	0	0	0	0	0	0	3		0		0							misc	0
 Torch Fragment	cm2f			0	0					0	0	0	1			1	0	0	0	0	0	0	0	0		0		0								0
+ImbueMag Ready	irma			0	0					0	0	0	1			1	0	0	0	0	0	0	0	3		0		0							misc	0
+ImbueRandom Ready	irrn			0	0					0	0	0	1			1	0	0	0	0	0	0	0	3		0		0							misc	0
+ImbueRare Ready	irra			0	0					0	0	0	1			1	0	0	0	0	0	0	0	3		0		0							misc	0
+RerollRare Ready	rrra			0	0					0	0	0	1			1	0	0	0	0	0	0	0	3		0		0							misc	0
+UpgradeMag Ready	urma			0	0					0	0	0	1			1	0	0	0	0	0	0	0	3		0		0							misc	0
+2H Sword	2hsw	swor	2han	1	1	rarm	larm			0	0	0	0		1	0	0	0	0	3	4	6	0	3		0		0							weap	0

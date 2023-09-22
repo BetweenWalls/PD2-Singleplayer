@@ -190,7 +190,7 @@ map_glob_boss_dropcorruptedunique	187			2											1065	72	2008		2	2	2	2							
 item_addskill_tab	188		1	3	6						1				11042	768	1024		10	0	3	0	16																151	14		StrSklTabItem1	StrSklTabItem1									0
 openwounds_stack	189			5													1024		5	0	5	0																														0
 curse_slots	190			3													1024		3		3																															0
-unused191	191																1024		10	0																																0
+item_skillonequip	191		1								1						1024		7	0	5	0	12																159	16	0	ModitemSkillOnEquip	ModitemSkillOnEquip									0
 unused192	192																1024		10	0																																0
 unused193	193																1024		10	0																																0
 item_numsockets	194		1	4											38	170	1024		4	0	4	0											1																			0
@@ -212,7 +212,7 @@ unused208	209		1	30										3	401	256	1024		30	0																															
 unused209	210		1	30										3	401	256	1024		30	0																																0
 unused210	211		1	30										3	401	256	1024		30	0																																0
 unused211	212		1	30										3	401	256	1024		30	0																																0
-unused212	213		1	30										3	401	256	1024		30	0																																0
+item_mindamage_energy	213		1	6											90	128	1024		6	0	6	0			4	3	energy	mindamage	secondary_mindamage	item_throw_mindamage				1					53	6	1	ModStr1g	ModStr1g	increaseswithenergy								0
 item_armor_perlevel	214		1	6											43	42	1024		6	0	6	0			4	3	level	armorclass											72	6	1	ModStr1i	ModStr1i	increaseswithplaylevelX								0
 item_armorpercent_perlevel	215		1	6											87	100	1024		6	0	6	0			5	3	level	armorclass											73	8	1	Modstr2v	Modstr2v	increaseswithplaylevelX								0
 item_hp_perlevel	216		1	6											92	64	1024	8	6	0	6	0			2	3	level	maxhp											57	6	1	ModStr1u	ModStr1u	increaseswithplaylevelX								0
@@ -500,7 +500,9 @@ map_mon_dropcrafting	497		1	9											1065	72	0497		7	20	7	20																	
 map_glob_extra_boss	498			1	16											54	2005				12	0																	206	3	0	MapGlobExtraBoss	MapGlobExtraBoss									0
 map_glob_add_mon_shriek	499			1	16											54	2003				12	0																	160	3	0	MapAddMonShriek	MapAddMonShriek									0
 map_force_event	500			6											54	204	0		8	0	6	0																	203	3	0	StrForceMapEvent	StrForceMapEvent									0
-deep_wounds	501		1	11	8												1024		11	0	11	0																	82	1	1	OpenWoundsItem	OpenWoundsItem									0
+deep_wounds	501		1	16	8												1024		16	0	16	0																	82	1	1	OpenWoundsItem	OpenWoundsItem									0
 map_mon_dropcharms	502		1	9											1065	72	0502		7	20	7	20																	205	8	2	MapMonHave	MapMonHave	MapMonIncreasedCharms								0
 map_glob_dropcorrupted	503		1	9											1065	72	2006		7	20	7	20																	205	8	2	MapMonHave	MapMonHave	MapMonIncreasedCorrupted								0
 curse_effectiveness	504		1	9											103	40	1024		8	0	8	50																	38	4	2	StrCurseEffectiveness	StrCurseEffectiveness									0
+map_glob_boss_dropfacet	505			2											1065	72	2009		2	2	2	2																	208	3	0	MapBossFacet	MapBossFacet									0
+map_mon_dropjewels	506		1	9											1065	72	0506		7	20	7	20																	205	8	2	MapMonHave	MapMonHave	MapMonIncreasedJewels								0

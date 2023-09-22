@@ -4712,3 +4712,4 @@ zhar_death	4709	pd2\zhar\zhar_death1.wav	255	0	0	0	0	1	0	0	0	1	1	0	0	80	0	0	1	0	
 zhar_attack1	4710	pd2\zhar\zhar_attack1.wav	255	0	0	0	0	1	0	0	0	1	1	0	0	80	0	0	1	0	0	-1	-1	-1
 zhar_cast1	4711	pd2\zhar\zhar_cast1.wav	255	0	0	0	0	1	0	0	0	1	1	0	0	80	0	0	1	0	0	-1	-1	-1
 zhar_gethit1	4712	pd2\zhar\zhar_gethit1.wav	255	0	0	0	0	1	0	0	0	1	1	0	0	80	0	0	1	0	0	-1	-1	-1
+parry	4713	pd2\holysword\parry.wav	110	0	0	0	0	1	0	0	0	1	1	0	0	80	0	0	1	0	0	-1	-1	-1

@@ -9,9 +9,9 @@ Normal Gem			1						gsv	3	gsy	3	gsb	3	gsg	3	gsr	3	gsw	3	sku	2										0
 Flawless Gem			1						gzvs	3	glys	3	glbs	3	glgs	3	glrs	3	glws	3	skls	2										0
 Perfect Gem			1						gpvs	3	gpys	3	gpbs	3	gpgs	3	gprs	3	gpws	3	skzs	2										0
 Ammo			1						aqv	1	cqv	1																				0
-Misc 0			1						key	3	tsc	3	isc	3	opl	2	gpl	2														0
-Misc 1			1						key	3	tsc	3	isc	3	opm	2	gpm	2														0
-Misc 2			1						key	3	tsc	3	isc	3	ops	2	gps	2														0
+Misc 0			1						key	3	tsc	3	isc	3	tpfs	2	tpgs	2	tpcs	2	tpls	2										0
+Misc 1			1						key	3	tsc	3	isc	3	tpfm	2	tpgm	2	tpcm	2	tplm	2										0
+Misc 2			1						key	3	tsc	3	isc	3	tpfl	2	tpgl	2	tpcl	2	tpll	2										0
 Hpotion 1			1						hp1	8	hp2	3	mp1	3	mp2	2	rvs	1														0
 Hpotion 2			1						hp1	1	hp2	4	hp3	3	mp2	2	mp3	2	rvs	1												0
 Hpotion 3			1						hp2	1	hp3	4	hp4	3	mp3	2	mp4	2	rvs	1												0
@@ -985,3 +985,4 @@ MapStat DropArmor			1						Act 5 (H) Armo C	1																						0
 MapStat DropCrafting			1						Treasure Fallen Gem	1	Treasure Fallen Rune	1	"gld,mul=2048"	1																		0
 MapStat DropCharms			1						cm3	1	cm2	1	cm1	1																		0
 MapStat DropWss			1						wss	1																						0
+MapStat DropJewels			1						jew	1																						0
