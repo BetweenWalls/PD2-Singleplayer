@@ -61,8 +61,6 @@ The shared stash has multiple pages and can be navigated in increments of 1, 10,
 
 Additionally, the **Bases** assassin character has a personal stash with ethereal and non-ethereal versions of all regular/magic items, so you can get exactly the desired item needed for crafting or runewords. They're separated from the shared stash to improve load times. 
 
-The **Legacy** paladin character has select items from previous seasons.
-
 * (1) **Empty Landing Page**
 * (2-19) **Regular Armor**
 * (20-49) **Regular Weapons**
@@ -70,6 +68,8 @@ The **Legacy** paladin character has select items from previous seasons.
 * (70-99) **Superior Weapons**
 * (100-119) **Magic Armor**
 * (120-149) **Magic Weapons**
+
+The **Legacy** paladin character has select items from previous seasons.
 
 Items can be duplicated by making a file backup of the shared stash and transfering items from the stash to a character before restoring the stash file, or vice versa. Files can also be set as "read only" to eliminate the need to backup and restore them for each transfer. The fastest way to duplicate items is to use the "testing" [modpack](https://github.com/BetweenWalls/PD2-Singleplayer/tree/main#modpacks).
 
