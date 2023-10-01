@@ -52,3 +52,4 @@ blunderboreDungeon																															crush			25	25	knock			1	1						
 stygianDungeon	death-skill	100	363	100	1																										death-skill	100	363	100	2																										death-skill	100	363	100	10	curse-res	100		75	75																					0
 zharminibossbaboonprop	aura	100	108	15	15	move1			20	20																					aura	100	108	15	15	move1			20	20																					aura	100	108	15	15	move1			20	20																					0
 warlordminibossdefilerprop	aura	100	122	8	8	cast2	100		30	30	swing2	100		30	30																aura	100	122	8	8	cast2	100		30	30	swing2	100		30	30																aura	100	122	8	8	cast2	100		30	30	swing2	100		30	30																0
+zharminibossbighead	aura	100	115	15	15																										aura	100	115	15	15																										aura	100	115	15	15																										0

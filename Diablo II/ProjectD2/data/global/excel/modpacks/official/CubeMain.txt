@@ -4,23 +4,24 @@ t1 map upgrade mag to rare	1	4		100	18	361	0		4	"t1me,mag"	"r1pg,qty=1"	"gg4z,qt
 t1 map reroll rare	1	4		100	18	361	0		4	"t1me,rar"	"r1pg,qty=1"	"ggm4,qty=1"	"rera,qty=1"				"usetype,rar"			100																																																																																				0
 t1 map imbue magic	1	4		100	18	361	0		3	"t1me,nor,qty=1"	"jewg,qty=1"	"imma,qty=1"					"usetype,mag"			100																																																																																				0
 t1 map imbue rare	1	4		100	18	361	0		4	"t1me,nor,qty=1"	"imra,qty=1"	"jewg,qty=1"	"r1pg,qty=1"				"usetype,rar"			100																																																																																				0
-t1 map scour magic	0	4		100	18	361	0		2	"t1me,mag"	"scou,qty=1"						"usetype,nor"			100																																																																																				0
-t1 map scour rare	0	4		100	18	361	0		2	"t1me,rar"	"scou,qty=1"						"usetype,nor"			100																																																																																				0
+t1 map scour magic	1	4		100	18	361	0		2	"t1me,mag"	"scou,qty=1"						"usetype,nor"			100																																																																																				0
+t1 map scour rare	1	4		100	18	361	0		2	"t1me,rar"	"scou,qty=1"						"usetype,nor"			100																																																																																				0
 t2 map upgrade mag to rare	1	4		100	18	361	0		4	"t2me,mag"	"r1pg,qty=1"	"gg4z,qty=1"	"upma,qty=1"				"usetype,rar"			100																																																																																				0
 t2 map reroll rare	1	4		100	18	361	0		4	"t2me,rar"	"r1pg,qty=1"	"ggm4,qty=1"	"rera,qty=1"				"usetype,rar"			100																																																																																				0
 t2 map imbue magic	1	4		100	18	361	0		3	"t2me,nor,qty=1"	"jewg,qty=1"	"imma,qty=1"					"usetype,mag"			100																																																																																				0
 t2 map imbue rare	1	4		100	18	361	0		4	"t2me,nor,qty=1"	"imra,qty=1"	"jewg,qty=1"	"r1pg,qty=1"				"usetype,rar"			100																																																																																				0
-t2 map scour magic	0	4		100	18	361	0		2	"t2me,mag"	"scou,qty=1"						"usetype,nor"			100																																																																																				0
-t2 map scour rare	0	4		100	18	361	0		2	"t2me,rar"	"scou,qty=1"						"usetype,nor"			100																																																																																				0
+t2 map scour magic	1	4		100	18	361	0		2	"t2me,mag"	"scou,qty=1"						"usetype,nor"			100																																																																																				0
+t2 map scour rare	1	4		100	18	361	0		2	"t2me,rar"	"scou,qty=1"						"usetype,nor"			100																																																																																				0
 t3 map upgrade mag to rare	1	4		100	18	361	0		4	"t3me,mag"	"r1pg,qty=1"	"gg4z,qty=1"	"upma,qty=1"				"usetype,rar"			100																																																																																				0
 t3 map reroll rare	1	4		100	18	361	0		4	"t3me,rar"	"r1pg,qty=1"	"ggm4,qty=1"	"rera,qty=1"				"usetype,rar"			100																																																																																				0
 t3 map imbue magic	1	4		100	18	361	0		3	"t3me,nor,qty=1"	"jewg,qty=1"	"imma,qty=1"					"usetype,mag"			100																																																																																				0
 t3 map imbue rare	1	4		100	18	361	0		4	"t3me,nor,qty=1"	"imra,qty=1"	"jewg,qty=1"	"r1pg,qty=1"				"usetype,rar"			100																																																																																				0
-t3 map scour magic	0	4		100	18	361	0		2	"t3me,mag"	"scou,qty=1"						"usetype,nor"			100																																																																																				0
-t3 map scour rare	0	4		100	18	361	0		2	"t3me,rar"	"scou,qty=1"						"usetype,nor"			100																																																																																				0
+t3 map scour magic	1	4		100	18	361	0		2	"t3me,mag"	"scou,qty=1"						"usetype,nor"			100																																																																																				0
+t3 map scour rare	1	4		100	18	361	0		2	"t3me,rar"	"scou,qty=1"						"usetype,nor"			100																																																																																				0
 map upgrade tier 1 to tier 2	1	4		0					2	"t1me,qty=3"	"upmp,qty=1"						t2me			100																																																																																				0
+map upgrade tier 1 to tier 2	1	4		0					4	"t1me,qty=1"	"t1me,qty=1"	"t1me,qty=1"	"upmp,qty=1"				t2me			100																																																																																				0
 map upgrade tier 2 to tier 3	1	4		0					2	"t2me,qty=3"	"upmp,qty=1"						t3me			100																																																																																				0
-t3 map upgrade tier 3 to dungeon	1	4		0					2	"t3me"	"scrb,qty=1"						"t4me,rar"			100	map-mon-velocity%	100		20	30	map-mon-att-pierce	100		80	100	map-mon-splash	100	358	100	1	map-mon-nofreeze-hp%	100		10	20	map-play-addxp	100		60	70																																																											0
+map upgrade tier 2 to tier 3	1	4		0					4	"t2me,qty=1"	"t2me,qty=1"	"t2me,qty=1"	"upmp,qty=1"				t3me			100																																																																																				0
 Staff of Kings + Viper amulet -> Horadric Staff	1			0	28				2	msf	vip						hst																																																																																							0
 Khalim Flail + Khalim Heart + Khalim Eye + Khalim Brain -> Super Khalim Flail	1			0	28				4	qf1	qhr	qey	qbr				qf2																																																																																							0
 1 Wirt's leg + 1 town portal book -> portal to cow lvl	1			0	28				2	leg	tbk						Cow Portal																																																																																							0
@@ -1876,33 +1877,3 @@ t3 map rare upgrade tier 3 to dungeon	1	4		0					2	"t3me,rar"	"scrb,qty=1"						
 1 ring + 1 perfect emerald + 1 l gas tpotions -> jade ring	1			0					3	"rin,mag"	"gg4e,qty=1"	tpgl					"rin,mag,pre=412"	30																																																																																						0
 2 arrows -> bolts	1			0					1	"aqv,nor,qty=2"							"cqv,nor"																																																																																							0
 2 bolts -> arrows	1			0					1	"cqv,nor,qty=2"							"aqv,nor"																																																																																							0
-orb of destruction + magic maps x15	1			100					16	"t3m,mag"	"scou,qty=15"						"usetype,nor,qty=15"			100																																																																																				0
-orb of destruction + magic maps x14	1			100					15	"t3m,mag"	"scou,qty=14"						"usetype,nor,qty=14"			100																																																																																				0
-orb of destruction + magic maps x13	1			100					14	"t3m,mag"	"scou,qty=13"						"usetype,nor,qty=13"			100																																																																																				0
-orb of destruction + magic maps x12	1			100					13	"t3m,mag"	"scou,qty=12"						"usetype,nor,qty=12"			100																																																																																				0
-orb of destruction + magic maps x11	1			100					12	"t3m,mag"	"scou,qty=11"						"usetype,nor,qty=11"			100																																																																																				0
-orb of destruction + magic maps x10	1			100					11	"t3m,mag"	"scou,qty=10"						"usetype,nor,qty=10"			100																																																																																				0
-orb of destruction + magic maps x9	1			100					10	"t3m,mag"	"scou,qty=9"						"usetype,nor,qty=9"			100																																																																																				0
-orb of destruction + magic maps x8	1			100					9	"t3m,mag"	"scou,qty=8"						"usetype,nor,qty=8"			100																																																																																				0
-orb of destruction + magic maps x7	1			100					8	"t3m,mag"	"scou,qty=7"						"usetype,nor,qty=7"			100																																																																																				0
-orb of destruction + magic maps x6	1			100					7	"t3m,mag"	"scou,qty=6"						"usetype,nor,qty=6"			100																																																																																				0
-orb of destruction + magic maps x5	1			100					6	"t3m,mag"	"scou,qty=5"						"usetype,nor,qty=5"			100																																																																																				0
-orb of destruction + magic maps x4	1			100					5	"t3m,mag"	"scou,qty=4"						"usetype,nor,qty=4"			100																																																																																				0
-orb of destruction + magic maps x3	1			100					4	"t3m,mag"	"scou,qty=3"						"usetype,nor,qty=3"			100																																																																																				0
-orb of destruction + magic maps x2	1			100					3	"t3m,mag"	"scou,qty=2"						"usetype,nor,qty=2"			100																																																																																				0
-orb of destruction + magic maps x1	1			100					2	"t3m,mag"	"scou,qty=1"						"usetype,nor,qty=1"			100																																																																																				0
-orb of destruction + rare maps x15	1			100					16	"t3m,rar"	"scou,qty=15"						"usetype,nor,qty=15"			100																																																																																				0
-orb of destruction + rare maps x14	1			100					15	"t3m,rar"	"scou,qty=14"						"usetype,nor,qty=14"			100																																																																																				0
-orb of destruction + rare maps x13	1			100					14	"t3m,rar"	"scou,qty=13"						"usetype,nor,qty=13"			100																																																																																				0
-orb of destruction + rare maps x12	1			100					13	"t3m,rar"	"scou,qty=12"						"usetype,nor,qty=12"			100																																																																																				0
-orb of destruction + rare maps x11	1			100					12	"t3m,rar"	"scou,qty=11"						"usetype,nor,qty=11"			100																																																																																				0
-orb of destruction + rare maps x10	1			100					11	"t3m,rar"	"scou,qty=10"						"usetype,nor,qty=10"			100																																																																																				0
-orb of destruction + rare maps x9	1			100					10	"t3m,rar"	"scou,qty=5"						"usetype,nor,qty=9"			100																																																																																				0
-orb of destruction + rare maps x8	1			100					9	"t3m,rar"	"scou,qty=4"						"usetype,nor,qty=8"			100																																																																																				0
-orb of destruction + rare maps x7	1			100					8	"t3m,rar"	"scou,qty=3"						"usetype,nor,qty=7"			100																																																																																				0
-orb of destruction + rare maps x6	1			100					7	"t3m,rar"	"scou,qty=6"						"usetype,nor,qty=6"			100																																																																																				0
-orb of destruction + rare maps x5	1			100					6	"t3m,rar"	"scou,qty=5"						"usetype,nor,qty=5"			100																																																																																				0
-orb of destruction + rare maps x4	1			100					5	"t3m,rar"	"scou,qty=4"						"usetype,nor,qty=4"			100																																																																																				0
-orb of destruction + rare maps x3	1			100					4	"t3m,rar"	"scou,qty=3"						"usetype,nor,qty=3"			100																																																																																				0
-orb of destruction + rare maps x2	1			100					3	"t3m,rar"	"scou,qty=2"						"usetype,nor,qty=2"			100																																																																																				0
-orb of destruction + rare maps x1	1			100					2	"t3m,rar"	"scou,qty=1"						"usetype,nor,qty=1"			100																																																																																				0
