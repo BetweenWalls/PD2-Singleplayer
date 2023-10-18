@@ -118,7 +118,7 @@ The ["testing"](https://github.com/BetweenWalls/PD2-Singleplayer/tree/main/Diabl
 * upgrade regular item quality with Arcane Orb, and downgrade with Orb of Destruction
 * safely remove socketed gems/runes/jewels with Hel Rune
 * set the number of sockets with runes #1-6 based on the number of the rune used
-* roll specific corruption modifiers with Angelic Orb and a rune: runes #1-10 are for low-tier mods, runes #11-20 are for mid-tier mods, and runes #21-30 are for high-tier mods
+* roll specific corruption modifiers with Angelic Orb and a rune: runes #1-10 are for low-tier mods, runes #11-20 are for mid-tier mods, and runes #21-30 are for high-tier mods (see [wiki](https://wiki.projectdiablo2.com/wiki/Corruptions#Equipment_Corruptions) for order)
 
 After getting whatever items you want via the "testing" modpack or other modifications, simply run the original **PlugY.exe** file to make the game run normally. The original game files aren't changed so you can experiment with text mods like this without fear of messing something up.
 
