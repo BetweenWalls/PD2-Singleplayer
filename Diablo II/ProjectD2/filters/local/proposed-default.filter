@@ -1,0 +1,129 @@
+// (Proposed) Default Filter
+								// level 0 - show all items
+ItemDisplayFilterName[]:	(see launcher for filters)	// level 1 - same as previous level
+ItemDisplayFilterName[]:	Hide Some Basic Items		// level 2 - hides some gold, potions, gems, keys, scrolls, and regular items with zero runeword useability
+
+// Item name changes
+ItemDisplay[RUNE>0 FILTLVL>1]: %NAME% [%RUNENUM%]%CONTINUE%						// appends rune number to runes
+ItemDisplay[QTY>1 !(WEAPON OR aqv OR cqv OR tbk OR ibk OR key)]: %NAME% %WHITE%x%QTY%%CONTINUE%		// appends quantity
+
+// PD2 Items
+ItemDisplay[wss]:	%NAME%{%WHITE%Can also add corruption modifiers to maps%NL%Corrupts equipment, either adding a modifier or turning it into a random rare}	// Worldstone Shard
+ItemDisplay[lbox]:	%NAME%{%WHITE%Adds 2-4 sockets to two-handed weapons, or 1-2 sockets to other items}								// Larzuk's Puzzlebox
+ItemDisplay[lpp]:	%NAME%{%WHITE%Cannot be used with unique or set items%NL%Adds 2-4 sockets to two-handed weapons, or 1-2 sockets to other items}			// Larzuk's Puzzlepiece
+ItemDisplay[cwss]:	%NAME%{%WHITE%Corrupts Annihilus, either adding a modifier or turning it into a random magic small charm}					// Tainted Worldstone Shard
+ItemDisplay[ubtm]:	%NAME%{%WHITE%Sends you and nearby allies to fight the Uber Prime Evils in Tristram}								// Pandemonium Talisman  (Uber Tristram)
+ItemDisplay[uba]:	%NAME%{%WHITE%Sends you and nearby allies to fight the Uber Ancients on Arreat Summit}								// Relic of the Ancients (Uber Ancients)
+ItemDisplay[ubaa]:	%NAME%{%WHITE%Combine with Sigil of Talic and Sigil of Korlic to create Relic of the Ancients}							// Sigil of Madawc	 (Uber Ancients ingredient)
+ItemDisplay[ubab]:	%NAME%{%WHITE%Combine with Sigil of Madawc and Sigil of Korlic to create Relic of the Ancients}							// Sigil of Talic	 (Uber Ancients ingredient)
+ItemDisplay[ubac]:	%NAME%{%WHITE%Combine with Sigil of Madawc and Sigil of Talic to create Relic of the Ancients}							// Sigil of Korlic	 (Uber Ancients ingredient)
+ItemDisplay[dcma]:	%NAME%{%WHITE%Sends you and nearby allies to fight Diablo in the Pandemonium Fortress}								// Vision of Terror	 (DClone)
+ItemDisplay[dcso]:	%NAME%{%WHITE%Combine with Black Soulstone and Pure Demonic Essence to create Vision of Terror}							// Prime Evil Soul	 (DClone ingredient)
+ItemDisplay[dcho]:	%NAME%{%WHITE%Combine with Prime Evil Soul and Pure Demonic Essence to create Vision of Terror}							// Black Soulstone	 (DClone ingredient)
+ItemDisplay[dcbl]:	%NAME%{%WHITE%Combine with Black Soulstone and Prime Evil Soul to create Vision of Terror}							// Pure Demonic Essence	 (DClone ingredient)
+ItemDisplay[rtma]:	%NAME%{%WHITE%Sends you and nearby allies to fight Rathma and his minions in the Necropolis}							// Voidstone		 (Rathma)
+ItemDisplay[rtmv]:	%NAME%{%WHITE%Combine with Trang-Oul's Jawbone and Hellfire Torch to create Voidstone}								// Splinter of the Void  (Rathma ingredient)
+ItemDisplay[rtmo]:	%NAME%{%WHITE%Combine with Splinter of the Void and Hellfire Torch to create Voidstone}								// Trang-Oul's Jawbone	 (Rathma ingredient)
+ItemDisplay[cm2f]:	%NAME%{%WHITE%Stackable %GOLD%Hellfire Torch %WHITE%ingredient}											// Hellfire Ashes	 (Rathma ingredient)
+ItemDisplay[jewf]:	%NAME%{%WHITE%Stackable %BLUE%Jewel %WHITE%ingredient}												// Jewel Fragments
+ItemDisplay[lsvl]:	%NAME%{%WHITE%Cannot be used with set items or indestructible items}										// Vial of Lightsong
+ItemDisplay[llmr]:	%NAME%{%WHITE%Mirrored items cannot be used in any cube recipes}										// Lilith's Mirror
+// Map Orbs and Related Items																		
+ItemDisplay[scrb]:	%NAME%{%WHITE%Transforms a tier 3 map into a tier 4 dungeon}											// Horadrim Scarab
+ItemDisplay[iwss]:	%NAME%{%WHITE%Gives a map 100% chance to contain a map event}											// Catalyst Shard
+ItemDisplay[irma]:	%NAME%{%WHITE%Raises Map Rarity from Common to Magic}												// Infused Arcane Orb
+ItemDisplay[irra]:	%NAME%{%WHITE%Raises Map Rarity from Common to Rare}												// Infused Zakarum Orb
+ItemDisplay[urma]:	%NAME%{%WHITE%Raises Map Rarity from Magic to Rare}												// Infused Angelic Orb
+ItemDisplay[rrra]:	%NAME%{%WHITE%Rerolls Rare Map Affixes}														// Infused Horadrim Orb
+ItemDisplay[imma]:	%NAME%{%GOLD%Orb %WHITE%+ Map + %BLUE%Jewel%NL%%WHITE%Raises Map Rarity from Common to Magic}							// Arcane Orb
+ItemDisplay[imra]:	%NAME%{%GOLD%Orb %WHITE%+ Map + %BLUE%Jewel %WHITE%+ %ORANGE%Rune #10 or higher%NL%%WHITE%Raises Map Rarity from Common to Rare}		// Zakarum Orb
+ItemDisplay[upma]:	%NAME%{%GOLD%Orb %WHITE%+ %BLUE%Map %WHITE%+ Perfect Skull + %ORANGE%Rune #10 or higher%NL%%WHITE%Raises Map Rarity from Magic to Rare}		// Angelic Orb
+ItemDisplay[rera]:	%NAME%{%GOLD%Orb %WHITE%+ %YELLOW%Map %WHITE%+ Perfect Gem + %ORANGE%Rune #10 or higher%NL%%WHITE%Rerolls Rare Map Affixes}			// Horadrim Orb
+ItemDisplay[scou]:	%NAME%{%WHITE%Lowers Map Rarity to Common}													// Orb of Destruction
+ItemDisplay[upmp]:	%NAME%{%WHITE%Combines three maps to create one of a higher tier}										// Cartographer's Orb
+ItemDisplay[fort]:	%NAME%{%WHITE%Map monsters have doubled life and deal extra damage%NL%Halves number of map monsters and doubles loot/experience gained from them}// Orb of Fortification
+ItemDisplay[std]:	%NAME%{%WHITE%Adds Heroic bonuses to Maps}													// Standard of Heroes
+
+// Descriptions for Stacked Gems
+ItemDisplay[gzvs]: %NAME%{%WHITE%Shields: +24 Defense%NL%Armors: +8 to Strength%NL%Weapons: +100 to Attack Rating%NL%}%CONTINUE%
+ItemDisplay[gpvs]: %NAME%{%WHITE%Shields: +30 Defense%NL%Armors: +10 to Strength%NL%Weapons: +150 to Attack Rating%NL%}%CONTINUE%
+ItemDisplay[glws]: %NAME%{%WHITE%Shields: All Resistances +14%NL%Armors: +80 to Attack Rating%NL%Weapons: +54% Damage to Undead%NL%}%CONTINUE%
+ItemDisplay[gpws]: %NAME%{%WHITE%Shields: All Resistances +19%NL%Armors: +100 to Attack Rating%NL%Weapons: +68% Damage to Undead%NL%}%CONTINUE%
+ItemDisplay[glgs]: %NAME%{%WHITE%Shields: Poison Resist +28%%NL%Armors: +8 to Dexterity%NL%Weapons: +60 poison damage over 6 seconds%NL%}%CONTINUE%
+ItemDisplay[gpgs]: %NAME%{%WHITE%Shields: Poison Resist +40%%NL%Armors: +10 to Dexterity%NL%Weapons: +100 poison damage over 7 seconds%NL%}%CONTINUE%
+ItemDisplay[glrs]: %NAME%{%WHITE%Shields: Fire Resist +28%%NL%Armors: +31 to Life%NL%Weapons: Adds 10-16 fire damage%NL%}%CONTINUE%
+ItemDisplay[gprs]: %NAME%{%WHITE%Shields: Fire Resist +40%%NL%Armors: +38 to Life%NL%Weapons: Adds 15-20 fire damage%NL%}%CONTINUE%
+ItemDisplay[glbs]: %NAME%{%WHITE%Shields: Cold Resist +28%%NL%Armors: +31 to Mana%NL%Weapons: Adds 6-10 cold damage%NL%}%CONTINUE%
+ItemDisplay[gpbs]: %NAME%{%WHITE%Shields: Cold Resist +40%%NL%Armors: +38 to Mana%NL%Weapons: Adds 10-14 cold damage%NL%}%CONTINUE%
+ItemDisplay[glys]: %NAME%{%WHITE%Shields: Lightning Resist +28%%NL%Armors: 20% Better Chance of Getting Magic Items%NL%Weapons: Adds 1-30 lightning damage%NL%}%CONTINUE%
+ItemDisplay[gpys]: %NAME%{%WHITE%Shields: Lightning Resist +40%%NL%Armors: 24% Better Chance of Getting Magic Items%NL%Weapons: Adds 1-40 lightning damage%NL%}%CONTINUE%
+ItemDisplay[skls]: %NAME%{%WHITE%Shields: Attacker Takes Damage of 16%NL%Armors: Regenerate Mana 12%, Replenish Life +4%NL%Weapons: 3% Life stolen per hit, 3% Mana stolen per hit%NL%}%CONTINUE%
+ItemDisplay[skzs]: %NAME%{%WHITE%Shields: Attacker Takes Damage of 20%NL%Armors: Regenerate Mana 19%, Replenish Life +5%NL%Weapons: 4% Life stolen per hit, 3% Mana stolen per hit%NL%}%CONTINUE%
+
+// Descriptions for Stacked Runes
+ItemDisplay[r01s]: %NAME%{%WHITE%Others: +15 Defense, +1 to Light Radius%NL%Weapons: +50 to Attack Rating, +1 to Light Radius%NL%}%CONTINUE%
+ItemDisplay[r02s]: %NAME%{%WHITE%Shields: +7% Increased Chance of Blocking%NL%Armors: 15% Slower Stamina Drain%NL%Weapons: +75% Damage to Undead, +50 to Attack Rating against Undead%NL%}%CONTINUE%
+ItemDisplay[r03s]: %NAME%{%WHITE%Items: +2 to Mana after each Kill%NL%}%CONTINUE%
+ItemDisplay[r04s]: %NAME%{%WHITE%Others: +30 Defense vs. Missile%NL%Weapons: Knockback%NL%}%CONTINUE%
+ItemDisplay[r05s]: %NAME%{%WHITE%Others: Regenerate Mana 15%%NL%Weapons: -25% Target Defense%NL%}%CONTINUE%
+ItemDisplay[r06s]: %NAME%{%WHITE%Others: 15% Damage Taken Gained as Mana when Hit%NL%Weapons: +9 to Maximum Damage%NL%}%CONTINUE%
+ItemDisplay[r07s]: %NAME%{%WHITE%Shields: Poison Resist +35%%NL%Armors: Poison Resist +30%%NL%Weapons: +75 poison damage over 5 seconds%NL%}%CONTINUE%
+ItemDisplay[r08s]: %NAME%{%WHITE%Shields: Fire Resist +35%%NL%Armors: Fire Resist +30%%NL%Weapons: Adds 5-30 fire damage%NL%}%CONTINUE%
+ItemDisplay[r09s]: %NAME%{%WHITE%Shields: Lightning Resist +35%%NL%Armors: Lightning Resist +30%%NL%Weapons: Adds 1-50 lightning damage%NL%}%CONTINUE%
+ItemDisplay[r10s]: %NAME%{%WHITE%Shields: Cold Resist +35%%NL%Armors: Cold Resist +30%%NL%Weapons: Adds 3-14 cold damage%NL%}%CONTINUE%
+ItemDisplay[r11s]: %NAME%{%WHITE%Others: Attacker Takes Damage of 14%NL%Weapons: 7% Life stolen per hit%NL%}%CONTINUE%
+ItemDisplay[r12s]: %NAME%{%WHITE%Others: Physical Damage Taken Reduced by 7%NL%Weapons: +9 to Minimum Damage%NL%}%CONTINUE%
+ItemDisplay[r13s]: %NAME%{%WHITE%Shields: +20% Faster Block Rate%NL%Armors: +20% Faster Hit Recovery%NL%Weapons: +20% Increased Attack Speed%NL%}%CONTINUE%
+ItemDisplay[r14s]: %NAME%{%WHITE%Others: Replenish Life +10%NL%Weapons: +20% Enhanced Damage%NL%}%CONTINUE%
+ItemDisplay[r15s]: %NAME%{%WHITE%Others: Requirements -15%%NL%Weapons: Requirements -20%%NL%}%CONTINUE%
+ItemDisplay[r16s]: %NAME%{%WHITE%Items: +10 to Vitality%NL%}%CONTINUE%
+ItemDisplay[r17s]: %NAME%{%WHITE%Items: +10 to Energy%NL%}%CONTINUE%
+ItemDisplay[r18s]: %NAME%{%WHITE%Items: +10 to Dexterity%NL%}%CONTINUE%
+ItemDisplay[r19s]: %NAME%{%WHITE%Items: +10 to Strength%NL%}%CONTINUE%
+ItemDisplay[r20s]: %NAME%{%WHITE%Others: 50% Extra Gold from Monsters%NL%Weapons: 75% Extra Gold from Monsters%NL%}%CONTINUE%
+ItemDisplay[r21s]: %NAME%{%WHITE%Others: +30% Enhanced Defense%NL%Weapons: +75% Damage & +100 Attack Rating vs. Demons%NL%}%CONTINUE%
+ItemDisplay[r22s]: %NAME%{%WHITE%Shields: All Resistances +22%NL%Armors: All Resistances +15%NL%Weapons: 10% Chance of Open Wounds, +120 Open Wounds Damage per Second%NL%}%CONTINUE%
+ItemDisplay[r23s]: %NAME%{%WHITE%Others: Magic Damage Taken Reduced by 7%NL%Weapons: Prevent Monster Heal%NL%}%CONTINUE%
+ItemDisplay[r24s]: %NAME%{%WHITE%Items: 30% Better Chance of Getting Magic Items%NL%}%CONTINUE%
+ItemDisplay[r25s]: %NAME%{%WHITE%Others: +4% to Maximum Poison Resist%NL%Weapons: 20% Bonus to Attack Rating%NL%}%CONTINUE%
+ItemDisplay[r26s]: %NAME%{%WHITE%Others: +4% to Maximum Fire Resist%NL%Weapons: 7% Mana stolen per hit%NL%}%CONTINUE%
+ItemDisplay[r27s]: %NAME%{%WHITE%Others: +4% to Maximum Cold Resist%NL%Weapons: +45% Enhanced Damage%NL%}%CONTINUE%
+ItemDisplay[r28s]: %NAME%{%WHITE%Others: +4% to Maximum Lightning Resist%NL%Weapons: 20% Deadly Strike%NL%}%CONTINUE%
+ItemDisplay[r29s]: %NAME%{%WHITE%Shields: +50 to Mana%NL%Armors: Increase Maximum Mana 5%%NL%Weapons: +4 Life after Each Kill%NL%}%CONTINUE%
+ItemDisplay[r30s]: %NAME%{%WHITE%Others: Physical Damage Taken Reduced by 5%%NL%Weapons: 20% Chance of Crushing Blow%NL%}%CONTINUE%
+ItemDisplay[r31s]: %NAME%{%WHITE%Shields: +75 to Life%NL%Armors: Increase Maximum Life 5%%NL%Weapons: Ignore Target's Defense%NL%}%CONTINUE%
+ItemDisplay[r32s]: %NAME%{%WHITE%Others: Cannot Be Frozen%NL%Weapons: Freezes target +3%NL%}%CONTINUE%
+ItemDisplay[r33s]: %NAME%{%WHITE%Items: Indestructible%NL%}%CONTINUE%
+
+ItemDisplay[(RUNE>0 OR GEMLEVEL>3) QTY=1 FILTLVL>0]: %NAME%{%NL%%NL%%NAME%}%CONTINUE%											// description for individual gems/runes (spacing)
+ItemDisplay[(RUNE>0 OR GEMLEVEL>3) QTY<2 FILTLVL>0]: %NAME%{%WHITE%Ctrl + Shift + Left Click to toggle between stackable and socketable versions%NAME%}%CONTINUE%	// description for individual gems/runes
+
+// Please see the launcher
+ItemDisplay[FILTLVL=0 (box OR (key SHOP))]: %NAME%{%NL%%WHITE%Please see the launcher for a list of community-made filters%NL%This filter level doesn't hide anything%NL%Filters can have multiple filter levels, and you are currently using filter level 0%NL%You are using the default filter - it makes few changes and doesn't filter much or provide notifications%NL%}
+ItemDisplay[FILTLVL=1 (box OR (key SHOP))]: %NAME%{%NL%%WHITE%Please see the launcher for a list of community-made filters%NL%This filter level is the same as filter level 0 and doesn't hide anything%NL%Filters can have multiple filter levels, and you are currently using filter level 1%NL%You are using the default filter - it makes few changes and doesn't filter much or provide notifications%NL%}
+ItemDisplay[FILTLVL=2 (box OR (key SHOP))]: %NAME%{%NL%%WHITE%Please see the launcher for a list of community-made filters%NL%This filter level hides some gold, potions, gems, keys, scrolls, and regular items with zero runeword useability%NL%Filters can have multiple filter levels, and you are currently using filter level 2%NL%You are using the default filter - it makes few changes and doesn't filter much or provide notifications%NL%}
+
+// Showing: All items in town, equipped/gemmed/shop items, class-related items
+ItemDisplay[(EQUIPPED OR GEMMED OR SHOP OR MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109 OR CLASS OR STAFF OR WAND OR SCEPTER OR CLUB)]: %NAME%{%NAME%}
+
+// Hidden Items for Filter Level 2
+ItemDisplay[FILTLVL>1 CLVL>14 GOLD>0 GOLD<100]:			// level 15 - gold piles smaller than 100
+ItemDisplay[FILTLVL>1 CLVL>39 GOLD>0 GOLD<250]:			// level 40 - gold piles smaller than 250
+ItemDisplay[FILTLVL>1 CLVL>69 GOLD>0 GOLD<500]:			// level 70 - gold piles smaller than 500
+ItemDisplay[FILTLVL>1 CLVL>14 (tpfs OR tpgs OR tpcs OR tpls)]:	// level 15 - low throwing potions
+ItemDisplay[FILTLVL>1 CLVL>29 (tpfm OR tpgm OR tpcm OR tplm)]:	// level 30 - mid throwing potions
+ItemDisplay[FILTLVL>1 CLVL>14 vps]:				// level 15 - stamina potions
+ItemDisplay[FILTLVL>1 CLVL>19 (hp1 OR mp1)]:			// level 20 - minor healing/mana potions
+ItemDisplay[FILTLVL>1 CLVL>34 (hp2 OR mp2)]:			// level 35 - light healing/mana potions
+ItemDisplay[FILTLVL>1 CLVL>49 (hp3 OR mp3)]:			// level 50 - normal healing/mana potions
+ItemDisplay[FILTLVL>1 CLVL>84 (hp4 OR mp4)]:			// level 85 - greater healing/mana potions
+ItemDisplay[FILTLVL>1 CLVL>29 key]:				// level 30 - keys
+ItemDisplay[FILTLVL>1 CLVL>29 (tsc OR isc)]:			// level 30 - scrolls of identify and town portal
+ItemDisplay[FILTLVL>1 CLVL>29 GEMLEVEL=1]:			// level 30 - chipped gems
+ItemDisplay[FILTLVL>1 CLVL>44 GEMLEVEL=2]:			// level 45 - flawed gems
+ItemDisplay[FILTLVL>1 CLVL>69 GEMLEVEL=3]:			// level 70 - normal gems
+ItemDisplay[FILTLVL>1 CLVL>14 NMAG (aqv OR cqv)]:		// level 15 - regular quivers
+ItemDisplay[FILTLVL>1 CLVL>29 NMAG (GLOVES OR BOOTS OR BELT)]:	// level 30 - regular gloves, boots, belts
+ItemDisplay[FILTLVL>1 CLVL>39 NMAG (dgr OR dir OR buc OR xuc)]:	// level 40 - regular items which can only get 1 socket
+ItemDisplay[FILTLVL>1 CLVL>69 NMAG SOCK=1]:			// level 70 - regular items with 1 socket
+ItemDisplay[FILTLVL>1 CLVL>69 NMAG THROWING !ETH !SUP]:		// level 70 - regular plain throwable weapons

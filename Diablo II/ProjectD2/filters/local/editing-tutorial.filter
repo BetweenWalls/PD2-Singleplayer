@@ -1,0 +1,803 @@
+//-----------------------------------------------------------------------------------------------------------------------
+// "Editing Tutorial" Item Filter for Project Diablo II	  (work-in-progress)
+//	Date Updated:	2023-10-18
+//-----------------------------------------------------------------------------------------------------------------------
+// Description:
+//	This filter is primarily meant as an example of how a filter can be structured
+//	It should provide examples for all common filter syntax questions and be an excellent starting point for writing a custom filter
+// Resources:
+//	See the PD2 Wiki for filter syntax and codes: https://wiki.projectdiablo2.com/wiki/Item_Filtering
+//	To simulate different items, checkout Filterbird: https://betweenwalls.github.io/filterbird/?v=PD2
+// Valid output characters:
+//	ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789 ~!?@#$%^&*=-+_"',.:;<>\|()[]{}
+//	ÁÀÂÄÃÅáàâäãåÆæÉÈÊËéèêëÍÌÎÏíìîïÓÒÔÖÕóòôöõÚÙÛÜúùûüÝýÿÐÇçÑñµ¶ß¢£¥®©ØøÞþ§ð¿¡¯¨¬­¦«»÷×±ªº´`¤°¹²³¼½¾·¸
+//-----------------------------------------------------------------------------------------------------------------------
+
+// Progress
+//	Filter Levels		...done
+//	Gold and Potions	...done
+//	Other Basic Items	...needs more comments but is otherwise done
+//	Gems			...needs more comments but is otherwise done
+//	Runes			...needs more comments but is otherwise mostly done
+//	Jewels & Charms		...not reviewed yet
+//	Amulets, Rings, Quivers	...not reviewed yet
+//	General Equipment	...not reviewed yet
+//	Identified Magic+	...not reviewed yet
+//	Unique/Set Items (unid)	...not reviewed yet
+//	Rare Items (unid)	...not reviewed yet
+//	Magic Items (unid)	...not reviewed yet
+//	Regular Items		...not reviewed yet
+//	Regular Class Items	...not reviewed yet
+
+// General Info
+// Spaces between rule conditions are assumed to be "AND" operators (both conditions need to be true) so "AND" never actually needs to be spelled out
+// If both OR/AND are used together, parentheses should always be used to separate them and clarify which conditions each operator applies to
+// The "NOT" operator is indicated by putting "!" in front of the condition or group of conditions
+// Any item without a name will be hidden, but hidden items can still have tooltip descriptions
+// All hiding rules should use "FILTLVL>0" to prevent the filter's aesthetics from being overwritten when "Show All Items" is selected (filter level 0 forces hidden items to instead be shown with their default vanilla appearance)
+
+
+// +---------------+
+//-¦ Filter Levels ¦-----------------------------------------------------------------------------------------------------
+// +---------------+
+// These are separate "versions" of the filter which can be switched between from the in-game Settings menu
+
+							// level 0 - show all items
+ItemDisplayFilterName[]:Min Strictness (Default)	// level 1 - default (players who have never used a filter before will automatically start at this level)
+ItemDisplayFilterName[]:Minimum Strictness		// level 2 - 
+ItemDisplayFilterName[]:Low Strictness			// level 3 - 
+ItemDisplayFilterName[]:Moderate Strictness		// level 4 - 
+ItemDisplayFilterName[]:High Strictness			// level 5 - 
+ItemDisplayFilterName[]:Severe Strictness		// level 6 -  
+//ItemDisplayFilterName[]:Extreme Strictness		// level 7 - unused (anything that comes after "//" is ignored by the computer)
+
+
+// +------------------+
+//-¦ Gold and Potions ¦--------------------------------------------------------------------------------------------------
+// +------------------+
+// These are very common so they're included at the top to ensure the computer doesn't have to check as many lines
+// It's also useful to get the static non-equipment items out of the way so that later equipment-related rules can be simpler
+
+
+// Gold can only be shown or hidden; the name can't be modified
+// Gold will be automatically picked up (even when hidden) but the pickup range is quite small so it's still useful to see where larger piles are
+// Possible Feature - Smaller gold piles can be hidden based on the zone level to reduce clutter while still preserving some of the original aesthetic of vanilla zones (they often have gold piles scattered around)
+
+// Hiding: Smaller Gold Piles
+ItemDisplay[FILTLVL>0 CLVL>24 GOLD>0 GOLD<100]:		// level 25 - hides gold piles below 100
+ItemDisplay[FILTLVL>0 CLVL>39 DIFF>0 GOLD>0 GOLD<200]:	// level 40 - hides gold piles below 200 in Nightmare/Hell
+ItemDisplay[FILTLVL>0 CLVL>69 DIFF>1 GOLD>0 GOLD<300]:	// level 70 - hides gold piles below 300 in Hell
+ItemDisplay[FILTLVL>1 CLVL>69 DIFF=2 GOLD>0 GOLD<500]:	// hides gold piles below 500 at level 70+ in Hell for filter level 2+
+ItemDisplay[FILTLVL>1 GOLD>0 GOLD<1000 MAPID>132]:	// hides gold piles below 1000 in endgame zones (maps, ubers, pvp arenas) for filter level 2+
+
+// Catchall: Gold
+ItemDisplay[GOLD>0]: %NAME%				// any gold that isn't hidden gets displayed normally
+
+
+// Potions are so common that their names are typically shortened enough that they can be recognized without needing to read
+// Since the shortened names are more abstract, the tooltip "description" for each potion can include its full name instead
+// The first group of rules below determines HOW the potions get displayed (aesthetics)
+// The second group of rules below determines IF and WHEN the potions get displayed (strictness)
+
+// Recovery Potions
+ItemDisplay[rvl]:	%PURPLE%  (%WHITE%R%PURPLE%)  {%WHITE%Full Rejuvenation Potion}%WHITE%	// Full Rejuvenation (never hidden so "CONTINUE" isn't needed)
+ItemDisplay[rvs]:	%PURPLE% (%GRAY%r%PURPLE%) {%WHITE%Rejuvenation Potion}%CONTINUE%	// Rejuvenation
+ItemDisplay[hp5]:	%RED% (%WHITE%H%RED%) {%WHITE%Super Healing Potion}%CONTINUE%		// Super Healing
+ItemDisplay[mp5]:	%BLUE% (%WHITE%M%BLUE%) {%WHITE%Super Mana Potion}%CONTINUE%		// Super Mana
+ItemDisplay[hp4]:	%RED%(%GRAY%H%RED%){%WHITE%Greater Healing Potion}%CONTINUE%		// Greater Healing
+ItemDisplay[mp4]:	%BLUE%(%GRAY%M%BLUE%){%WHITE%Greater Mana Potion}%CONTINUE%		// Greater Mana
+ItemDisplay[hp3]:	%RED%(%GRAY%h³%RED%){%WHITE%Healing Potion}%CONTINUE%			// Healing
+ItemDisplay[mp3]:	%BLUE%(%GRAY%m³%BLUE%){%WHITE%Mana Potion}%CONTINUE%			// Mana
+ItemDisplay[hp2]:	%RED%(%GRAY%h²%RED%){%WHITE%Lesser Healing Potion}%CONTINUE%		// Lesser Healing
+ItemDisplay[mp2]:	%BLUE%(%GRAY%m²%BLUE%){%WHITE%Lesser Mana Potion}%CONTINUE%		// Lesser Mana
+ItemDisplay[hp1]:	%RED%(%GRAY%h¹%RED%){%WHITE%Minor Healing Potion}%CONTINUE%		// Minor Healing
+ItemDisplay[mp1]:	%BLUE%(%GRAY%m¹%BLUE%){%WHITE%Minor Mana Potion}%CONTINUE%		// Minor Mana
+// Throwing Potions
+ItemDisplay[tpfs]:	%SAGE%(%GRAY%f¹%SAGE%){%WHITE%Fulminating Potion}%CONTINUE%		// Fulminating
+ItemDisplay[tpfm]:	%SAGE%(%GRAY%f²%SAGE%){%WHITE%Exploding Potion}%CONTINUE%		// Exploding
+ItemDisplay[tpfl]:	%SAGE%(%GRAY%f³%SAGE%){%WHITE%Oil Potion}%CONTINUE%			// Oil
+ItemDisplay[tpgs]:	%SAGE%(%GRAY%p¹%SAGE%){%WHITE%Strangling Gas Potion}%CONTINUE%		// Strangling Gas
+ItemDisplay[tpgm]:	%SAGE%(%GRAY%p²%SAGE%){%WHITE%Choking Gas Potion}%CONTINUE%		// Choking Gas
+ItemDisplay[tpgl]:	%SAGE%(%GRAY%p³%SAGE%){%WHITE%Rancid Gas Potion}%CONTINUE%		// Rancid Gas
+ItemDisplay[tpcs]:	%SAGE%(%GRAY%c¹%SAGE%){%WHITE%Chilling Potion}%CONTINUE%		// Chilling
+ItemDisplay[tpcm]:	%SAGE%(%GRAY%c²%SAGE%){%WHITE%Frost Potion}%CONTINUE%			// Frost
+ItemDisplay[tpcl]:	%SAGE%(%GRAY%c³%SAGE%){%WHITE%Freezing Potion}%CONTINUE%		// Freezing
+ItemDisplay[tpls]:	%SAGE%(%GRAY%l¹%SAGE%){%WHITE%Charged Potion}%CONTINUE%			// Charged
+ItemDisplay[tplm]:	%SAGE%(%GRAY%l²%SAGE%){%WHITE%Static Potion}%CONTINUE%			// Static
+ItemDisplay[tpll]:	%SAGE%(%GRAY%l³%SAGE%){%WHITE%Shock Potion}%CONTINUE%			// Shock
+// Misc Potions
+ItemDisplay[yps]:	%DARK_GREEN%(%GRAY%a%DARK_GREEN%){%WHITE%Antidote Potion}%CONTINUE%	// Antidote
+ItemDisplay[wms]:	%YELLOW%(%GRAY%t%YELLOW%){%WHITE%Thawing Potion}%CONTINUE%		// Thawing
+ItemDisplay[vps]:	%WHITE%(%GRAY%s%WHITE%){%WHITE%Stamina Potion}%CONTINUE%		// Stamina
+
+
+// Using both "Showing" and "Hiding" types of rules (instead of focusing on just one type along with a "Catchall" rule) is useful for simplification as it allows you to approach strictness from whichever side makes the most sense for each situation
+
+// Showing: Potions (in town)
+ItemDisplay[(rvl OR rvs OR hp1 OR mp1 OR hp2 OR mp2 OR hp3 OR mp3 OR hp4 OR mp4 OR hp5 OR mp5 OR (THROWING !(NORM OR EXC OR ELT)) OR yps OR wms OR vps) (MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109 OR (MAPID>160 MAPID<164))]: %NAME%{%NAME%}%WHITE%	// potions are always displayed in town or in Necropolis zones (this could instead be achieved by excluding the MAPIDs from each of the below rules with the "NOT" operator)
+
+// Hiding: Recovery Potions
+ItemDisplay[FILTLVL>0 CLVL>17 (hp1 OR mp1)]: {%NAME%}							// level 18 - hides minor potions
+ItemDisplay[FILTLVL>0 CLVL>29 (hp2 OR mp2)]: {%NAME%}							// level 30 - hides lesser potions
+ItemDisplay[FILTLVL>0 CLVL>39 (hp3 OR mp3)]: {%NAME%}							// level 40 - hides standard potions
+ItemDisplay[FILTLVL>0 CLVL>74 (hp4 OR mp4)]: {%NAME%}							// level 75 - hides greater potions
+ItemDisplay[((FILTLVL>5 CLVL>89) OR (FILTLVL>6 CLVL>74)) (hp5 OR mp5)]: {%NAME%}			// hides super potions at level 90 (filter level 6+) or at level 75 (filter level 7+)
+ItemDisplay[FILTLVL>6 CLVL>79 rvs]: {%NAME%}								// hides "small" rejuvenation potions at level 80 (filter level 7+)
+// Hiding: Throwing Potions
+ItemDisplay[FILTLVL>0 CLVL>14 (tpfs OR tpgs OR tpcs OR tpls)]: {%NAME%}					// level 15 - hides low throwing potions
+ItemDisplay[FILTLVL>0 CLVL>29 (tpfm OR tpgm OR tpcm OR tplm)]: {%NAME%}					// level 30 - hides mid throwing potions
+ItemDisplay[((FILTLVL>0 CLVL>74) OR (FILTLVL>4 CLVL>59)) (tpfl OR tpgl OR tpcl OR tpll)]: {%NAME%}	// level 75 - hides high throwing potions; also hidden at level 60 (filter level 5+)
+ItemDisplay[FILTLVL>0 (opl OR gpl OR opm OR gpm OR ops OR gps)]: {%NAME%}				// hides legacy throwing potions (won't drop in the game anymore)
+// Hiding: Misc Potions
+ItemDisplay[FILTLVL>0 vps CLVL>14]: {%NAME%}								// level 15 - hides stamina potions
+ItemDisplay[FILTLVL>0 wms CLVL>29]: {%NAME%}								// level 30 - hides thawing potions
+ItemDisplay[((FILTLVL>0 CLVL>89) OR (FILTLVL>1 CLVL>74) OR (FILTLVL>2 CLVL>59)) yps]: {%NAME%}		// level 90 - hides antidote potions; also hidden at 75 (filter level 2+) or at level 60 (filter level 3+)
+
+// Catchall: Potions
+ItemDisplay[(rvl OR rvs OR hp1 OR mp1 OR hp2 OR mp2 OR hp3 OR mp3 OR hp4 OR mp4 OR hp5 OR mp5 OR (THROWING !(NORM OR EXC OR ELT)) OR yps OR wms OR vps)]: %NAME%{%NAME%}%WHITE%	// Show any potions that aren't hidden above
+
+
+// +-------------------+
+//-¦ Other Basic Items ¦-------------------------------------------------------------------------------------------------
+// +-------------------+
+
+// Some items have their color "built-in" to their default name so to change their color, the whole name needs to be spelled out (this replaces the default name)
+// These name replacements need to be done before the other aesthetic changes such as adding "quantity" to the item's name
+
+// Name Modification
+ItemDisplay[wss]:	%RED%Worldstone Shard%CONTINUE%				// sets color for Worldstone Shard
+ItemDisplay[lbox]:	%GOLD%Larzuk's Puzzlebox%CONTINUE%			// sets color for Larzuk's Puzzlebox
+ItemDisplay[lpp]:	%GOLD%Larzuk's Puzzlepyramid%CONTINUE%			// sets color for Larzuk's Puzzlepiece (and name)
+ItemDisplay[cwss]:	%RED%Tainted Worldstone Shard%CONTINUE%			// sets color for Tainted Worldstone Shard
+ItemDisplay[iwss]:	%GOLD%Catalyst Shard%CONTINUE%				// sets color for Catalyst Shard
+ItemDisplay[t51]:	Zhar's Sanctum%CONTINUE%				// fixes name for "Zhar's Sanctum" unique map
+ItemDisplay[t52]:	Stygian Caverns%CONTINUE%				// fixes name for "Warlord of Blood" unique map
+ItemDisplay[t53]:	Fallen Gardens%CONTINUE%				// fixes name for "Fallen Gardens" unique map
+ItemDisplay[MAPTIER=5 !ID]:	%NAME% Map%CONTINUE%				// standardizes fixed maps (unid)
+ItemDisplay[MAPTIER=5 ID]:	Map%NL%%NAME%%CONTINUE%				// standardizes fixed maps (id)
+ItemDisplay[QTY>1 !(WEAPON OR aqv OR cqv OR tbk OR ibk OR key OR MAPTIER>-1 OR GEMLEVEL>0 OR RUNE>0 OR jewf)]: %NAME% %WHITE%×%QTY%%CONTINUE%	// appends quantity
+
+// Common Vanilla Items
+ItemDisplay[key]:	%GRAY%%NAME%%CONTINUE%											// Key
+ItemDisplay[tsc]:	%BLUE%- %WHITE%Portal{%WHITE%Scroll of Town Portal}%CONTINUE%						// Scroll of Town Portal
+ItemDisplay[isc]:	%RED%- %WHITE%Identify{%WHITE%Scroll of Identify}%CONTINUE%						// Scroll of Identify
+//ItemDisplay[tbk]:	%NAME%%WHITE%												// Tome of Town Portal
+//ItemDisplay[ibk]:	%NAME%%WHITE%												// Tome of Identify
+//ItemDisplay[ear]:	%GRAY%%NAME%%WHITE%											// Player Ear
+//ItemDisplay[(hdm OR msf OR vip OR hst OR g33 OR qf1 OR qf2 OR hfh)]: %NAME%{%NAME%}%CONTINUE%					// quest equipment
+//ItemDisplay[(bks OR bkd OR box OR tr1 OR ass OR j34 OR g34 OR xyz OR bbb OR qbr OR qey OR qhr OR mss OR ice OR tr2)]: %NAME%	// quest non-equipment
+
+// Hiding: Keys, Scrolls (not in town)
+ItemDisplay[FILTLVL>0 key (CLVL>19 OR ASSASSIN) !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109)]: {%NAME%}		// level 20 - hides keys; also hidden for Assassins at all levels
+ItemDisplay[FILTLVL>0 (tsc OR isc) CLVL>19 !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109)]: {%NAME%}		// level 20 - hides scrolls
+
+// Endgame Vanilla Items  (includes notifications)
+ItemDisplay[tes]:	%ORANGE%%DOT-60%%TIER-9%  %NAME%  {%WHITE%Token ingredient%NL%%GRAY%(Andariel & Duriel)}%WHITE%		// Twisted Essence of Suffering
+ItemDisplay[ceh]:	%ORANGE%%DOT-60%%TIER-9%  %NAME%  {%WHITE%Token ingredient%NL%%GRAY%(Mephisto)}%WHITE%			// Charged Essence of Hatred
+ItemDisplay[bet]:	%ORANGE%%DOT-60%%TIER-9%  %NAME%  {%WHITE%Token ingredient%NL%%GRAY%(Diablo)}%WHITE%			// Burning Essence of Terror
+ItemDisplay[fed]:	%ORANGE%%DOT-60%%TIER-9%  %NAME%  {%WHITE%Token ingredient%NL%%GRAY%(Baal)}%WHITE%			// Festering Essence of Destruction
+ItemDisplay[toa]:	%ORANGE%%DOT-60%%TIER-9%  Token of Absolution  {%WHITE%Right-click to reset Stat/Skill Points}%WHITE%	// Token of Absolution
+ItemDisplay[pk1]:	%ORANGE%%DOT-60%%TIER-9%  %NAME%  {%GRAY%(Countess / Blood Raven)}%WHITE%				// Key of Terror
+ItemDisplay[pk2]:	%ORANGE%%DOT-60%%TIER-9%  %NAME%  {%GRAY%(Summoner / Bloodwitch)}%WHITE%				// Key of Hate
+ItemDisplay[pk3]:	%ORANGE%%DOT-60%%TIER-9%  %NAME%  {%GRAY%(Nihlathak / Izual)}%WHITE%					// Key of Destruction
+ItemDisplay[dhn]:	%DOT-60%%TIER-9%  %NAME%  {%WHITE%Uber Tristram ingredient%NL%%GRAY%(Matron's Den)}%WHITE%		// Diablo's Horn	 (Lilith)
+ItemDisplay[bey]:	%DOT-60%%TIER-9%  %NAME%  {%WHITE%Uber Tristram ingredient%NL%%GRAY%(Forgotten Sands)}%WHITE%		// Baal's Eye		 (Uber Duriel)
+ItemDisplay[mbr]:	%DOT-60%%TIER-9%  %NAME%  {%WHITE%Uber Tristram ingredient%NL%%GRAY%(Furnace of Pain)}%WHITE%		// Mephisto's Brain	 (Uber Izual)
+ItemDisplay[std]:	%DOT-53%%TIER-9% %NAME% {%WHITE%Adds Heroic bonuses to Maps & Dungeons}%WHITE%				// Standard of Heroes
+
+// PD2 Items  (includes notifications)
+ItemDisplay[wss]:	%DOT-62%%TIER-9% %NAME% {%WHITE%Can also add corruption modifiers to maps%NL%Corrupts equipment, either adding a modifier or turning it into a random rare}%WHITE%	// Worldstone Shard
+ItemDisplay[cwss]:	%MAP-62%%TIER-9%    %NAME%    {%WHITE%Corrupts %GOLD%Annihilus%WHITE%, either adding a modifier or turning it into a random magic small charm}%WHITE%			// Tainted Worldstone Shard
+ItemDisplay[lpp]:	%MAP-53%%TIER-9%    %NAME%    {%WHITE%Cannot be used with unique or set items%NL%Adds 2-4 sockets to two-handed weapons, or 1-2 sockets to other items}%WHITE%		// Larzuk's Puzzlepiece
+ItemDisplay[lbox]:	%MAP-53%%TIER-9%        %NAME%        {%WHITE%Adds 2-4 sockets to two-handed weapons, or 1-2 sockets to other items}%WHITE%	// Larzuk's Puzzlebox
+ItemDisplay[rtp]:	%BORDER-53%%TIER-9%     %NAME%     {%NAME%}%WHITE%										// Horadrim Navigator
+ItemDisplay[rid]:	%BORDER-53%%TIER-9%     %NAME%     {%NAME%}%WHITE%										// Horadrim Almanac
+ItemDisplay[rkey]:	%BORDER-53%%TIER-9%     %NAME%     {%NAME%}%WHITE%										// Skeleton Key
+ItemDisplay[lsvl]:	%BORDER-62%%TIER-9%%RED%       Vial of Lightsong       {%WHITE%Cannot be used with set items or indestructible items}%WHITE%	// Vial of Lightsong
+ItemDisplay[llmr]:	%BORDER-62%%TIER-9%%RED%        Lilith's Mirror        {%WHITE%Mirrored items cannot be used in any cube recipes}%WHITE%	// Lilith's Mirror
+ItemDisplay[pvpp]:	%BLUE% (%WHITE%M%BLUE%) {%WHITE%Dueling Mana Potion}%WHITE%									// Dueling Mana Potion (PvP only)
+//ItemDisplay[lmal]:	%NAME%{%NAME%}%WHITE%														// Larzuk's Malus
+// Uber-Related
+ItemDisplay[ubtm]:	%MAP-60%%TIER-9%  %NAME%  {%WHITE%Sends you to fight the Uber Prime Evils in Tristram}%WHITE%					// Pandemonium Talisman   (Uber Tristram)
+ItemDisplay[uba]:	%MAP-60%%TIER-9%  %NAME%  {%WHITE%Sends you to fight the Uber Ancients}%WHITE%							// Relic of the Ancients  (Uber Ancients)
+ItemDisplay[ubaa]:	%DOT-60%%TIER-9%  %NAME%  {%WHITE%Uber Ancients ingredient%NL%%GRAY%(T1 Maps)}%WHITE%						// Sigil of Madawc	  (Uber Ancients ingredient)
+ItemDisplay[ubab]:	%DOT-60%%TIER-9%  %NAME%  {%WHITE%Uber Ancients ingredient%NL%%GRAY%(T2 Maps)}%WHITE%						// Sigil of Talic	  (Uber Ancients ingredient)
+ItemDisplay[ubac]:	%DOT-60%%TIER-9%  %NAME%  {%WHITE%Uber Ancients ingredient%NL%%GRAY%(T3 Maps)}%WHITE%						// Sigil of Korlic	  (Uber Ancients ingredient)
+ItemDisplay[dcma]:	%MAP-60%%TIER-9%  %NAME%  {%WHITE%Sends you to fight Diablo-Clone}%WHITE%							// Vision of Terror	  (DClone)
+ItemDisplay[dcso]:	%MAP-60%%TIER-9%  %NAME%  {%WHITE%Diablo-Clone ingredient%NL%%GRAY%(Mephisto / Diablo / Baal)}%WHITE%				// Prime Evil Soul	  (DClone ingredient)
+ItemDisplay[dcho]:	%MAP-60%%TIER-9%  %NAME%  {%WHITE%Diablo-Clone ingredient%NL%%GRAY%(Uber Tristram)}%WHITE%					// Black Soulstone	  (DClone ingredient)
+ItemDisplay[dcbl]:	%MAP-60%%TIER-9%  %NAME%  {%WHITE%Diablo-Clone ingredient%NL%%GRAY%(Map Bosses)}%WHITE%						// Pure Demonic Essence	  (DClone ingredient)
+ItemDisplay[rtma]:	%MAP-60%%TIER-9%  %NAME%  {%WHITE%Sends you to fight Rathma and his minions}%WHITE%						// Voidstone		  (Rathma)
+ItemDisplay[rtmv]:	%MAP-60%%TIER-9%  %NAME%  {%WHITE%Rathma ingredient%NL%%GRAY%(Shadow of Mendeln)}%WHITE%					// Splinter of the Void   (Rathma ingredient)
+ItemDisplay[rtmo]:	%MAP-60%%TIER-9%  %NAME%  {%WHITE%Rathma ingredient%NL%%GRAY%(Undead Enemies)}%WHITE%						// Trang-Oul's Jawbone	  (Rathma ingredient)
+ItemDisplay[cm2f]:	%GOLD%%MAP%%TIER-9%  %NAME%  {%WHITE%Stackable %GOLD%Hellfire Torch %WHITE%ingredient (Rathma)}%WHITE%				// Hellfire Ashes	  (Rathma ingredient)
+ItemDisplay[rtmf]:	%DOT-60%%TIER-9%  %NAME%  {%WHITE%Jawbone Recipe: 2 %ORANGE%Ancient Bone Fragments %WHITE%+ %GOLD%Hellfire Torch}%WHITE%	// Ancient Bone Fragments (legacy item from season 4)
+// Map-Related
+ItemDisplay[scrb]:	%MAP-53%%TIER-9%    %NAME%    {%WHITE%Transforms a T3 map into a Dungeon)}%WHITE%						// Horadrim Scarab	  (Map -> Dungeon)
+ItemDisplay[iwss]:	%DOT-53%%TIER-9% %NAME% {%WHITE%Gives a map 100% chance to contain a map event}%WHITE%						// Catalyst Shard	  (Guarantees map event)
+ItemDisplay[(imma OR irma)]:	%PX-53%%TIER-9%%NAME%{%WHITE%Raises Map Rarity from Common to Magic}%CONTINUE%						// Infused Arcane Orb
+ItemDisplay[(imra OR irra)]:	%PX-53%%TIER-9%%NAME%{%WHITE%Raises Map Rarity from Common to Rare}%CONTINUE%						// Infused Zakarum Orb
+ItemDisplay[(upma OR urma)]:	%PX-53%%TIER-9%%NAME%{%WHITE%Raises Map Rarity from Magic to Rare}%CONTINUE%						// Infused Angelic Orb
+ItemDisplay[(rera OR rrra)]:	%PX-53%%TIER-9%%NAME%{%WHITE%Rerolls Rare Map Affixes}%CONTINUE%							// Infused Horadrim Orb
+ItemDisplay[imma]:	%NAME%{%GOLD%Orb %WHITE%+ Map + %BLUE%Jewel%NL%%NAME%}%CONTINUE%								// Arcane Orb		  (Common -> Magic)
+ItemDisplay[imra]:	%NAME%{%GOLD%Orb %WHITE%+ Map + %BLUE%Jewel %WHITE%+ %ORANGE%Thul Rune or higher%NL%%NAME%}%CONTINUE%				// Zakarum Orb		  (Common -> Rare)
+ItemDisplay[upma]:	%NAME%{%GOLD%Orb %WHITE%+ %BLUE%Map %WHITE%+ P%GRAY%.%WHITE%Skull + %ORANGE%Thul Rune or higher%NL%%NAME%}%CONTINUE%		// Angelic Orb		  (Magic -> Rare)
+ItemDisplay[rera]:	%NAME%{%GOLD%Orb %WHITE%+ %YELLOW%Map %WHITE%+ P%GRAY%.%WHITE%Gem + %ORANGE%Thul Rune or higher%NL%%NAME%}%CONTINUE%		// Horadrim Orb		  (Reroll Rare)
+ItemDisplay[scou]:	%NAME%{%WHITE%Lowers Map Rarity to Common}%WHITE%										// Orb of Destruction	  (Magic/Rare -> Common)
+ItemDisplay[upmp]:	%NAME%{%WHITE%Combines three maps to create one of a higher tier}%WHITE%							// Cartographer's Orb	  (3 T1 Maps -> 1 T2 Map or 3 T2 Maps -> 1 T3 Map)
+ItemDisplay[fort]:	%GOLD%%NAME%{%WHITE%Fortified monsters have doubled life and deal 20% extra damage%NL%Halves number of map monsters and doubles loot/experience gained from them}%WHITE%	// Orb of Fortification
+// Maps
+ItemDisplay[MAPTIER>0 NMAG]:	%WHITE%%NAME%%CONTINUE%										// maps - regular
+ItemDisplay[MAPTIER>0 MAG]:	%BLUE%%MAP%%TIER-9%%NAME%%CONTINUE%								// maps - magic (adds blue minimap border)
+ItemDisplay[MAPTIER>0 RARE]:	%YELLOW%%MAP%%TIER-9%%NAME%%CONTINUE%								// maps - rare (adds yellow minimap border)
+ItemDisplay[MAPTIER=1]:		%MAP-77%%DOT-53%%TIER-9%%NAME% %DARK_GREEN%(%GOLD%T1%DARK_GREEN%)%CONTINUE%			// maps - T1 (Horazon's Memory, Bastion Keep, Ruined Cistern, Phlegethon, Torajan Jungle, Arreat Battlefield)
+ItemDisplay[MAPTIER=2]:		%MAP-77%%DOT-53%%TIER-9%%NAME% %DARK_GREEN%(%GOLD%T2%DARK_GREEN%)%CONTINUE%			// maps - T2 (Ruins of Viz-Jun, Sanatorium, Royal Crypts, Ancestral Trial, Fall of Caldeum, Shadows of Westmarch)
+ItemDisplay[MAPTIER=3]:		%MAP-77%%DOT-53%%TIER-9%%NAME% %DARK_GREEN%(%GOLD%T3%DARK_GREEN%)%CONTINUE%			// maps - T3 (Tomb of Zultan Kulle, Sewers of Harrogath, River of Blood, Throne of Insanity, Lost Temple, Blood Moon, Pandemonium Citadel, Canyon of Sescheron, Kehjistan Marketplace, Ashen Plains)
+ItemDisplay[MAPTIER=4]:		%MAP-77%%DOT-53%%PX-62%%TIER-9%%NAME% %DARK_GREEN%(%GOLD%Dungeon%DARK_GREEN%)%CONTINUE%		// dungeons  (Cathedral of Light, Plains of Torment, Sanctuary of Sin)
+ItemDisplay[t53]:		%BORDER-53%%MAP-77%%DOT-53%%PX-62%%TIER-9%%NAME% %DARK_GREEN%(%GOLD%T2%DARK_GREEN%)%CONTINUE%	// maps - T2 uniques (Fallen Gardens)
+ItemDisplay[(t51 OR t52)]:	%BORDER-53%%MAP-77%%DOT-53%%PX-62%%TIER-9%%NAME% %DARK_GREEN%(%GOLD%T3%DARK_GREEN%)%CONTINUE%	// maps - T3 uniques (Zhar's Sanctum, Stygian Caverns)
+ItemDisplay[MAPTIER>-1 QTY>1]:			%NAME% %WHITE%×%QTY%%CONTINUE%							// maps - appends quantity
+ItemDisplay[MAPTIER=1 !(ID (RARE OR UNI))]:	 %NAME% %CONTINUE%								// maps - T1 highlighting
+ItemDisplay[MAPTIER=2 !(ID (RARE OR UNI))]:	  %NAME%  %CONTINUE%								// maps - T2 highlighting
+ItemDisplay[MAPTIER=3 !(ID (RARE OR UNI))]:	   %NAME%   %CONTINUE%								// maps - T3 highlighting
+ItemDisplay[MAPTIER=4 !(ID (RARE OR UNI))]:	    %NAME%    %CONTINUE%							// maps - T4 highlighting
+ItemDisplay[MAPTIER=5 UNI !ID]:			         %NAME%         %CONTINUE%						// maps - unique highlighting
+//ItemDisplay[(t61 OR t62)]:	%NAME%{%NAME%}%WHITE%										// Desert/Moor Duel Arenas
+
+// Possible Feature - Maps can include a list of monster resistances (immunes) in their description
+
+
+// +------+
+//-¦ Gems ¦--------------------------------------------------------------------------------------------------------------
+// +------+
+// Name Modification
+ItemDisplay[GEMLEVEL=1]: ~%ORANGE%]  %GRAY%%NAME%%WHITE%%CONTINUE%
+ItemDisplay[GEMLEVEL=2]: +%ORANGE%]  %GRAY%%NAME%%WHITE%%CONTINUE%
+ItemDisplay[GEMLEVEL=3]: ×%ORANGE%]  %GRAY%%NAME%%WHITE%%CONTINUE%
+ItemDisplay[GEMLEVEL=4]: Ø%ORANGE%]  %WHITE%%NAME%%PX-60%%TIER-2%%CONTINUE%		// flawless (map icons without text notifications)
+ItemDisplay[GEMLEVEL=5]: O%ORANGE%]  %WHITE%%NAME%%MAP-60%%DOT-20%%TIER-9%%CONTINUE%	// perfect (notifications)
+ItemDisplay[GEMTYPE=1]: %ORANGE%[%PURPLE%%NAME%%CONTINUE%
+ItemDisplay[GEMTYPE=2]: %ORANGE%[%WHITE%%NAME%%CONTINUE%
+ItemDisplay[GEMTYPE=3]: %ORANGE%[%GREEN%%NAME%%CONTINUE%
+ItemDisplay[GEMTYPE=4]: %ORANGE%[%RED%%NAME%%CONTINUE%
+ItemDisplay[GEMTYPE=5]: %ORANGE%[%BLUE%%NAME%%CONTINUE%
+ItemDisplay[GEMTYPE=6]: %ORANGE%[%YELLOW%%NAME%%CONTINUE%
+ItemDisplay[GEMTYPE=7]: %ORANGE%[%GRAY%%NAME%%CONTINUE%
+ItemDisplay[GEMLEVEL>0 QTY>1]: %NAME% %WHITE%×%QTY%%CONTINUE%				// appends quantity
+
+// Descriptions for Stacked Gems
+ItemDisplay[gzvs]: %NAME%{%WHITE%Shields: +24 Defense%NL%Armors: +8 to Strength%NL%Weapons: +100 to Attack Rating%NL%}%CONTINUE%
+ItemDisplay[gpvs]: %NAME%{%WHITE%Shields: +30 Defense%NL%Armors: +10 to Strength%NL%Weapons: +150 to Attack Rating%NL%}%CONTINUE%
+ItemDisplay[glws]: %NAME%{%WHITE%Shields: All Resistances +14%NL%Armors: +80 to Attack Rating%NL%Weapons: +54% Damage to Undead%NL%}%CONTINUE%
+ItemDisplay[gpws]: %NAME%{%WHITE%Shields: All Resistances +19%NL%Armors: +100 to Attack Rating%NL%Weapons: +68% Damage to Undead%NL%}%CONTINUE%
+ItemDisplay[glgs]: %NAME%{%WHITE%Shields: Poison Resist +28%%NL%Armors: +8 to Dexterity%NL%Weapons: +60 poison damage over 6 seconds%NL%}%CONTINUE%
+ItemDisplay[gpgs]: %NAME%{%WHITE%Shields: Poison Resist +40%%NL%Armors: +10 to Dexterity%NL%Weapons: +100 poison damage over 7 seconds%NL%}%CONTINUE%
+ItemDisplay[glrs]: %NAME%{%WHITE%Shields: Fire Resist +28%%NL%Armors: +31 to Life%NL%Weapons: Adds 10-16 fire damage%NL%}%CONTINUE%
+ItemDisplay[gprs]: %NAME%{%WHITE%Shields: Fire Resist +40%%NL%Armors: +38 to Life%NL%Weapons: Adds 15-20 fire damage%NL%}%CONTINUE%
+ItemDisplay[glbs]: %NAME%{%WHITE%Shields: Cold Resist +28%%NL%Armors: +31 to Mana%NL%Weapons: Adds 6-10 cold damage%NL%}%CONTINUE%
+ItemDisplay[gpbs]: %NAME%{%WHITE%Shields: Cold Resist +40%%NL%Armors: +38 to Mana%NL%Weapons: Adds 10-14 cold damage%NL%}%CONTINUE%
+ItemDisplay[glys]: %NAME%{%WHITE%Shields: Lightning Resist +28%%NL%Armors: 20% Better Chance of Getting Magic Items%NL%Weapons: Adds 1-30 lightning damage%NL%}%CONTINUE%
+ItemDisplay[gpys]: %NAME%{%WHITE%Shields: Lightning Resist +40%%NL%Armors: 24% Better Chance of Getting Magic Items%NL%Weapons: Adds 1-40 lightning damage%NL%}%CONTINUE%
+ItemDisplay[skls]: %NAME%{%WHITE%Shields: Attacker Takes Damage of 16%NL%Armors: Regenerate Mana 12%, Replenish Life +4%NL%Weapons: 3% Life stolen per hit, 3% Mana stolen per hit%NL%}%CONTINUE%
+ItemDisplay[skzs]: %NAME%{%WHITE%Shields: Attacker Takes Damage of 20%NL%Armors: Regenerate Mana 19%, Replenish Life +5%NL%Weapons: 4% Life stolen per hit, 3% Mana stolen per hit%NL%}%CONTINUE%
+
+// Hiding: Chipped, Flawed, & Standard Gems (not in town)
+ItemDisplay[FILTLVL>0 CLVL>29 DIFF>0 GEMLEVEL=1 !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109)]: {%NAME%}	// level 30 - hides chipped gems in Nightmare/Hell
+ItemDisplay[FILTLVL>0 CLVL>39 DIFF>0 GEMLEVEL=2 !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109)]: {%NAME%}	// level 40 - hides flawed gems in Nightmare/Hell
+ItemDisplay[FILTLVL>0 CLVL>59 DIFF>1 GEMLEVEL=3 !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109)]: {%NAME%}	// level 60 - hides standard gems in Hell
+
+
+// +-------+
+//-¦ Runes ¦-------------------------------------------------------------------------------------------------------------
+// +-------+
+// Name Modification
+ItemDisplay[RUNE>0]: %NAME% %TAN%(%WHITE%%RUNENUM%%TAN%)%WHITE%%CONTINUE%	// appends rune number
+ItemDisplay[RUNE>0 QTY>1]: %NAME% %WHITE%×%QTY%%CONTINUE%			// appends quantity
+
+// Descriptions for Stacked Runes
+ItemDisplay[r01s]: %NAME%{%WHITE%Others: +15 Defense, +1 to Light Radius%NL%Weapons: +50 to Attack Rating, +1 to Light Radius%NL%}%CONTINUE%
+ItemDisplay[r02s]: %NAME%{%WHITE%Shields: +7% Increased Chance of Blocking%NL%Armors: 15% Slower Stamina Drain%NL%Weapons: +75% Damage to Undead, +50 to Attack Rating against Undead%NL%}%CONTINUE%
+ItemDisplay[r03s]: %NAME%{%WHITE%Items: +2 to Mana after each Kill%NL%}%CONTINUE%
+ItemDisplay[r04s]: %NAME%{%WHITE%Others: +30 Defense vs. Missile%NL%Weapons: Knockback%NL%}%CONTINUE%
+ItemDisplay[r05s]: %NAME%{%WHITE%Others: Regenerate Mana 15%%NL%Weapons: -25% Target Defense%NL%}%CONTINUE%
+ItemDisplay[r06s]: %NAME%{%WHITE%Others: 15% Damage Taken Gained as Mana when Hit%NL%Weapons: +9 to Maximum Damage%NL%}%CONTINUE%
+ItemDisplay[r07s]: %NAME%{%WHITE%Shields: Poison Resist +35%%NL%Armors: Poison Resist +30%%NL%Weapons: +75 poison damage over 5 seconds%NL%}%CONTINUE%
+ItemDisplay[r08s]: %NAME%{%WHITE%Shields: Fire Resist +35%%NL%Armors: Fire Resist +30%%NL%Weapons: Adds 5-30 fire damage%NL%}%CONTINUE%
+ItemDisplay[r09s]: %NAME%{%WHITE%Shields: Lightning Resist +35%%NL%Armors: Lightning Resist +30%%NL%Weapons: Adds 1-50 lightning damage%NL%}%CONTINUE%
+ItemDisplay[r10s]: %NAME%{%WHITE%Shields: Cold Resist +35%%NL%Armors: Cold Resist +30%%NL%Weapons: Adds 3-14 cold damage%NL%}%CONTINUE%
+ItemDisplay[r11s]: %NAME%{%WHITE%Others: Attacker Takes Damage of 14%NL%Weapons: 7% Life stolen per hit%NL%}%CONTINUE%
+ItemDisplay[r12s]: %NAME%{%WHITE%Others: Physical Damage Taken Reduced by 7%NL%Weapons: +9 to Minimum Damage%NL%}%CONTINUE%
+ItemDisplay[r13s]: %NAME%{%WHITE%Shields: +20% Faster Block Rate%NL%Armors: +20% Faster Hit Recovery%NL%Weapons: +20% Increased Attack Speed%NL%}%CONTINUE%
+ItemDisplay[r14s]: %NAME%{%WHITE%Others: Replenish Life +10%NL%Weapons: +20% Enhanced Damage%NL%}%CONTINUE%
+ItemDisplay[r15s]: %NAME%{%WHITE%Others: Requirements -15%%NL%Weapons: Requirements -20%%NL%}%CONTINUE%
+ItemDisplay[r16s]: %NAME%{%WHITE%Items: +10 to Vitality%NL%}%CONTINUE%
+ItemDisplay[r17s]: %NAME%{%WHITE%Items: +10 to Energy%NL%}%CONTINUE%
+ItemDisplay[r18s]: %NAME%{%WHITE%Items: +10 to Dexterity%NL%}%CONTINUE%
+ItemDisplay[r19s]: %NAME%{%WHITE%Items: +10 to Strength%NL%}%CONTINUE%
+ItemDisplay[r20s]: %NAME%{%WHITE%Others: 50% Extra Gold from Monsters%NL%Weapons: 75% Extra Gold from Monsters%NL%}%CONTINUE%
+ItemDisplay[r21s]: %NAME%{%WHITE%Others: +30% Enhanced Defense%NL%Weapons: +75% Damage & +100 Attack Rating vs. Demons%NL%}%CONTINUE%
+ItemDisplay[r22s]: %NAME%{%WHITE%Shields: All Resistances +22%NL%Armors: All Resistances +15%NL%Weapons: 10% Chance of Open Wounds, +120 Open Wounds Damage per Second%NL%}%CONTINUE%
+ItemDisplay[r23s]: %NAME%{%WHITE%Others: Magic Damage Taken Reduced by 7%NL%Weapons: Prevent Monster Heal%NL%}%CONTINUE%
+ItemDisplay[r24s]: %NAME%{%WHITE%Items: 30% Better Chance of Getting Magic Items%NL%}%CONTINUE%
+ItemDisplay[r25s]: %NAME%{%WHITE%Others: +4% to Maximum Poison Resist%NL%Weapons: 20% Bonus to Attack Rating%NL%}%CONTINUE%
+ItemDisplay[r26s]: %NAME%{%WHITE%Others: +4% to Maximum Fire Resist%NL%Weapons: 7% Mana stolen per hit%NL%}%CONTINUE%
+ItemDisplay[r27s]: %NAME%{%WHITE%Others: +4% to Maximum Cold Resist%NL%Weapons: +45% Enhanced Damage%NL%}%CONTINUE%
+ItemDisplay[r28s]: %NAME%{%WHITE%Others: +4% to Maximum Lightning Resist%NL%Weapons: 20% Deadly Strike%NL%}%CONTINUE%
+ItemDisplay[r29s]: %NAME%{%WHITE%Shields: +50 to Mana%NL%Armors: Increase Maximum Mana 5%%NL%Weapons: +4 Life after Each Kill%NL%}%CONTINUE%
+ItemDisplay[r30s]: %NAME%{%WHITE%Others: Physical Damage Taken Reduced by 5%%NL%Weapons: 20% Chance of Crushing Blow%NL%}%CONTINUE%
+ItemDisplay[r31s]: %NAME%{%WHITE%Shields: +75 to Life%NL%Armors: Increase Maximum Life 5%%NL%Weapons: Ignore Target's Defense%NL%}%CONTINUE%
+ItemDisplay[r32s]: %NAME%{%WHITE%Others: Cannot Be Frozen%NL%Weapons: Freezes target +3%NL%}%CONTINUE%
+ItemDisplay[r33s]: %NAME%{%WHITE%Items: Indestructible%NL%}%CONTINUE%
+
+// Highlighting: Individual Rules  (rules for runes #1-23 are disabled and covered collectively below, all enabled rules add notifications)
+//    Lowest Runes
+//ItemDisplay[RUNE=1]:	%PX-60%%TIER-9%%NAME%{%NAME%}						// El
+//ItemDisplay[RUNE=2]:	%PX-60%%TIER-9%%NAME%{%NAME%}						// Eld
+//ItemDisplay[RUNE=3]:	%PX-60%%TIER-9%%NAME%{%NAME%}						// Tir
+//ItemDisplay[RUNE=4]:	%PX-60%%TIER-9%%NAME%{%NAME%}						// Nef
+//ItemDisplay[RUNE=5]:	%PX-60%%TIER-9%%NAME%{%NAME%}						// Eth
+//ItemDisplay[RUNE=6]:	%PX-60%%TIER-9%%NAME%{%NAME%}						// Ith
+//ItemDisplay[RUNE=7]:	%PX-60%%TIER-9%%NAME%{%NAME%}						// Tal
+//ItemDisplay[RUNE=8]:	%PX-60%%TIER-9%%NAME%{%NAME%}						// Ral
+//ItemDisplay[RUNE=9]:	%PX-60%%TIER-9%%NAME%{%NAME%}						// Ort
+//    Upper Low Runes
+//ItemDisplay[RUNE=10]:	%PX-60%%TIER-9%%NAME%{%NAME%}						// Thul
+//ItemDisplay[RUNE=11]:	%PX-60%%TIER-9%%NAME%{%NAME%}						// Amn
+//ItemDisplay[RUNE=12]:	%PX-60%%TIER-9%%NAME%{%NAME%}						// Sol
+//ItemDisplay[RUNE=13]:	%PX-60%%TIER-9%%NAME%{%NAME%}						// Shael
+//ItemDisplay[RUNE=14]:	%PX-60%%TIER-9%%NAME%{%NAME%}						// Dol
+//ItemDisplay[RUNE=15]:	%DOT-60%%TIER-9% %NAME% {%NAME%}					// Hel
+//ItemDisplay[RUNE=16]:	%DOT-60%%TIER-9% %NAME% {%NAME%}					// Io
+//ItemDisplay[RUNE=17]:	%DOT-60%%TIER-9% %NAME% {%NAME%}					// Lum
+//ItemDisplay[RUNE=18]:	%DOT-60%%TIER-9% %NAME% {%NAME%}					// Ko
+//ItemDisplay[RUNE=19]:	%DOT-60%%TIER-9% %NAME% {%NAME%}					// Fal
+//    Mid Runes
+//ItemDisplay[RUNE=20]:	%MAP-60%%TIER-9%  %NAME%  {%NAME%}					// Lem
+//ItemDisplay[RUNE=21]:	%MAP-60%%TIER-9%  %NAME%  {%NAME%}					// Pul
+//ItemDisplay[RUNE=22]:	%MAP-60%%TIER-9%   %NAME%   {%NAME%}					// Um
+//ItemDisplay[RUNE=23]:	%MAP-60%%TIER-9%   %NAME%   {%NAME%}					// Mal
+ItemDisplay[RUNE=24]:	%MAP-60%%TIER-9%    %NAME%    {%NAME%}					// Ist
+ItemDisplay[RUNE=25]:	%MAP-60%%TIER-9%     %NAME%     {%NAME%}				// Gul
+//    High Runes
+ItemDisplay[RUNE=26]:	%BORDER-60%%TIER-9%       %NAME%       {%NAME%}				// Vex
+ItemDisplay[RUNE=27]:	%BORDER-60%%TIER-9%        %NAME%        {%NAME%}			// Ohm
+ItemDisplay[RUNE=28]:	%BORDER-60%%TIER-9%          %NAME%          {%NAME%}			// Lo
+ItemDisplay[RUNE=29]:	%BORDER-60%%TIER-9%           %NAME%           {%NAME%}			// Sur
+ItemDisplay[RUNE=31]:	%BORDER-60%%TIER-9%            %NAME%            {%NAME%}		// Jah
+ItemDisplay[RUNE=32]:	%BORDER-60%%TIER-9%             %NAME%             {%NAME%}		// Cham
+ItemDisplay[RUNE=33]:	%BORDER-60%%TIER-9%              %NAME%              {%NAME%}		// Zod
+ItemDisplay[RUNE=30]:	%BORDER-60%%TIER-9%                %NAME%                {%NAME%}	// Ber
+
+// Highlighting: Collective Rules  (notifications for runes #10-23, higher runes are covered individually above)
+ItemDisplay[RUNE>0 RUNE<10 (CLVL<80 OR DIFF<2)]: %PX-60%%TIER-9%%NAME%%CONTINUE%		// notifications for lowest runes when in Normal/Nightmare or below level 80
+ItemDisplay[RUNE>0 RUNE<10]:		%PX-60%%TIER-2%%NAME%{%NAME%}				// map icons without text notifications
+ItemDisplay[RUNE>9 RUNE<15]:		%PX-60%%TIER-9%%NAME%{%NAME%}
+ItemDisplay[RUNE>14 RUNE<20]:		%DOT-60%%TIER-9% %NAME% {%NAME%}
+ItemDisplay[(RUNE=20 OR RUNE=21)]:	%MAP-60%%TIER-9%  %NAME%  {%NAME%}
+ItemDisplay[(RUNE=22 OR RUNE=23)]:	%MAP-60%%TIER-9%   %NAME%   {%NAME%}
+
+
+// +-----------------+
+//-¦ Jewels & Charms ¦---------------------------------------------------------------------------------------------------
+// +-----------------+
+// Name Modification
+ItemDisplay[jew MAG]:		%BLUE%%NAME%%CONTINUE%						// sets jewel color (magic)
+ItemDisplay[jew RARE]:		%YELLOW%%NAME%%CONTINUE%					// sets jewel color (rare)
+ItemDisplay[jew UNI]:		%GOLD%%NAME%%CONTINUE%						// sets jewel color (unique)
+ItemDisplay[jewf]:		%WHITE%Jewel Fragment%CONTINUE%					// changes name of Jewel Fragments from plural to singular
+ItemDisplay[jewf QTY>1]:	%NAME% %WHITE%×%QTY%%CONTINUE%					// appends quantity
+ItemDisplay[jewf FILTLVL=1]:	%NAME%{%WHITE%Stackable %BLUE%Jewel %WHITE%ingredient}%CONTINUE%// description for jewel fragments (alternative rule)
+ItemDisplay[(jew OR jewf)]:	{%NAME%}%ORANGE%{%DARK_GREEN%O%ORANGE%} %NAME%%CONTINUE%	// prepends "jewel" symbol
+ItemDisplay[jew STAT477=4]:	%NAME%{%PURPLE%Black}%CONTINUE%					// marks mirrored "black" jewels
+ItemDisplay[jew STAT477=21]:	%NAME%{%PURPLE%White}%CONTINUE%					// marks mirrored "White" jewels
+ItemDisplay[(cm1 OR cm2 OR cm3) MAG]: %TEAL%%NAME%%CONTINUE%					// sets charm color
+
+// Jewels
+ItemDisplay[jew RARE !ID]:								%DOT-6D%%TIER-9%  %NAME%  {%NAME%}%WHITE%		// highlighting for unid rare jewels (also adds notifications)
+ItemDisplay[jew RARE ILVL>64 STAT477=0]:						%YELLOW%%NAME%{%WHITE%Item Level: %ILVL%}%CONTINUE%	// adds ilvl description to rare jewels if high enough to consider rerolling
+ItemDisplay[jew MAG !ID]:								%DOT-97%%TIER-2%%NAME%{%NAME%}%WHITE%			// map icons without text notifications for unidentified magic jewels 
+
+// Charms
+ItemDisplay[MAG ID ((cm1 ALVL>89) OR (cm2 ALVL>73) OR (cm3 ALVL>90))]:			%NAME%{%WHITE%Item Level: %TAN%%ILVL%}%WHITE%		// charms (top ilvl for rerolling - capable of getting any affix, colored tan)
+ItemDisplay[MAG ID ((cm1 ALVL>47) OR (cm2 ALVL>41) OR (cm3 ALVL>49))]:			%NAME%{%WHITE%Item Level: %ILVL%}%WHITE%		// charms (okay ilvl for rerolling)
+ItemDisplay[MAG !ID ((cm1 ALVL>47) OR (cm2 ALVL>41) OR (cm3 ALVL>49))]:			%DOT-9F%%TIER-2%%NAME%{%NAME%}%WHITE%			// map icons without text notifications for unidentified magic charms that are capable of getting okay affixes
+
+
+// +-------------------------+
+//-¦ Amulets, Rings, Quivers ¦-------------------------------------------------------------------------------------------
+// +-------------------------+
+// Hidden: Regular Arrows/Bolts - level 5
+ItemDisplay[FILTLVL>0 CLVL>4 NMAG (aqv OR cqv) !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109) !EQUIPPED]:	// except in town
+
+// Hidden (stricter): Magic Arrows/Bolts - level 70, 90
+ItemDisplay[((FILTLVL>2 CLVL>69) OR (FILTLVL>4 CLVL>49)) MAG (aqv OR cqv) !ID !AMAZON]:				// level 70 - hides unid magic quivers for non-amazons (also at lower levels for stricter filter levels)
+ItemDisplay[((FILTLVL>2 CLVL>89) OR (FILTLVL>4 CLVL>69) OR (FILTLVL>5 CLVL>49)) MAG (aqv OR cqv) !ID]:		// level 90 - hides unid magic quivers for all characters (also at lower levels for stricter filter levels)
+
+// Highlighting for Quivers
+ItemDisplay[RARE (aqv OR cqv) !ID AMAZON]:	%DOT-6D%%TIER-6% %NAME% %WHITE%		// highlight unid rare quivers for amazons (with notifications for lower filter levels)
+
+// Amulets/Rings
+ItemDisplay[rin ID !EQUIPPED STAT486=0 CRAFTALVL>76 ((MAG ILVL>61) OR (RARE !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109))) !MAPID=181 !MAPID=182]:						%NAME%{%DARK_GREEN%$%PRICE%%NL%%WHITE%Item Level: %ILVL%%NL%Affix Level if Crafted: %TAN%%CRAFTALVL%%NL%%ORANGE%[%RED%O%ORANGE%]%TAN%(%WHITE%12%TAN%), %ORANGE%[%PURPLE%O%ORANGE%]%TAN%(%WHITE%11%TAN%), %ORANGE%[%BLUE%O%ORANGE%]%TAN%(%WHITE%11%TAN%), %ORANGE%[%GREEN%O%ORANGE%]%TAN%(%WHITE%11%TAN%), %ORANGE%[%GRAY%O%ORANGE%]%TAN%(%WHITE%15%TAN%), %ORANGE%[%YELLOW%O%ORANGE%]%TAN%(%WHITE%17%TAN%)%NL%%WHITE%Crafting Recipes use %ORANGE%(%DARK_GREEN%O%ORANGE%) %WHITE%and:}%CONTINUE%	// crafting recipes for rings - can get all affixes, alvl colored tan
+ItemDisplay[rin ID !EQUIPPED STAT486=0 CRAFTALVL<77 ((MAG ILVL>61) OR (RARE !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109))) !MAPID=181 !MAPID=182]:						%NAME%{%DARK_GREEN%$%PRICE%%NL%%WHITE%Item Level: %ILVL%%NL%Affix Level if Crafted: %CRAFTALVL%%NL%%ORANGE%[%RED%O%ORANGE%]%TAN%(%WHITE%12%TAN%), %ORANGE%[%PURPLE%O%ORANGE%]%TAN%(%WHITE%11%TAN%), %ORANGE%[%BLUE%O%ORANGE%]%TAN%(%WHITE%11%TAN%), %ORANGE%[%GREEN%O%ORANGE%]%TAN%(%WHITE%11%TAN%), %ORANGE%[%GRAY%O%ORANGE%]%TAN%(%WHITE%15%TAN%), %ORANGE%[%YELLOW%O%ORANGE%]%TAN%(%WHITE%17%TAN%)%NL%%WHITE%Crafting Recipes use %ORANGE%(%DARK_GREEN%O%ORANGE%) %WHITE%and:}%CONTINUE%		// crafting recipes for rings
+ItemDisplay[amu ID !EQUIPPED STAT486=0 CRAFTALVL>89 ((MAG CRAFTALVL>89 ILVL>81 !(LVLREQ>44 PRICE>9000)) OR (RARE !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109))) !MAPID=181 !MAPID=182]:		%NAME%{%DARK_GREEN%$%PRICE%%NL%%WHITE%Item Level: %ILVL%%NL%Affix Level if Crafted: %TAN%%CRAFTALVL%%NL%%ORANGE%[%RED%O%ORANGE%]%TAN%(%WHITE%11%TAN%), %ORANGE%[%PURPLE%O%ORANGE%]%TAN%(%WHITE%8%TAN%), %ORANGE%[%BLUE%O%ORANGE%]%TAN%(%WHITE%10%TAN%), %ORANGE%[%GREEN%O%ORANGE%]%TAN%(%WHITE%10%TAN%), %ORANGE%[%GRAY%O%ORANGE%]%TAN%(%WHITE%14%TAN%), %ORANGE%[%YELLOW%O%ORANGE%]%TAN%(%WHITE%18%TAN%)%NL%%WHITE%Crafting Recipes use %ORANGE%(%DARK_GREEN%O%ORANGE%) %WHITE%and:}%CONTINUE%		// crafting recipes for amulets - can get all affixes, alvl colored tan	(not shown on high-price amulets that require level 45+ such as +3 skill amulets)
+ItemDisplay[amu ID !EQUIPPED STAT486=0 CRAFTALVL<90 ((MAG CRAFTALVL<90 ILVL>81 !(LVLREQ>44 PRICE>9000)) OR (RARE !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109))) !MAPID=181 !MAPID=182]:		%NAME%{%DARK_GREEN%$%PRICE%%NL%%WHITE%Item Level: %ILVL%%NL%Affix Level if Crafted: %CRAFTALVL%%NL%%ORANGE%[%RED%O%ORANGE%]%TAN%(%WHITE%11%TAN%), %ORANGE%[%PURPLE%O%ORANGE%]%TAN%(%WHITE%8%TAN%), %ORANGE%[%BLUE%O%ORANGE%]%TAN%(%WHITE%10%TAN%), %ORANGE%[%GREEN%O%ORANGE%]%TAN%(%WHITE%10%TAN%), %ORANGE%[%GRAY%O%ORANGE%]%TAN%(%WHITE%14%TAN%), %ORANGE%[%YELLOW%O%ORANGE%]%TAN%(%WHITE%18%TAN%)%NL%%WHITE%Crafting Recipes use %ORANGE%(%DARK_GREEN%O%ORANGE%) %WHITE%and:}%CONTINUE%		// crafting recipes for amulets 					(not shown on high-price amulets that require level 45+ such as +3 skill amulets)
+ItemDisplay[amu ID MAG !EQUIPPED]:			%NAME%{%DARK_GREEN%$%PRICE%}%CONTINUE%	// shows price for other unequipped amulets
+ItemDisplay[amu !ID MAG ILVL>89]:			 %NAME% %CONTINUE%			// highlight unid ilvl 90+ amulets
+ItemDisplay[(amu OR rin) !ID RARE]:	%DOT-6D%%TIER-9%  %NAME%  %CONTINUE%			// highlight unid rare amulets/rings (also adds notifications)
+
+// Hidden (stricter): Magic rings/amulets in Hell difficulty (they can be gambled easily at high enough levels)
+ItemDisplay[((FILTLVL>3 CLVL>79) OR (FILTLVL>5 CLVL>69)) DIFF=2 MAG rin !ID !(MAPID=181 OR MAPID=182)]: {%NAME%}	// level 80 - hides rings (also at lower levels for stricter filter levels)
+ItemDisplay[FILTLVL>6 CLVL>91 DIFF=2 MAG amu !ID !(MAPID=181 OR MAPID=182)]: {%NAME%}					// level 92 - hides amulets
+
+
+// +-------------------+
+//-¦ General Equipment ¦-------------------------------------------------------------------------------------------------
+// +-------------------+
+// Catchall - Non-Equipment
+ItemDisplay[(ILVL>1 OR QTY>0 OR PRICE>1) !(ARMOR OR WEAPON OR amu OR rin OR aqv OR cqv OR jew OR jewf OR cm1 OR cm2 OR cm3 OR ram OR RUNE>0 OR GEMTYPE>0 OR rvs OR rvl OR hp1 OR hp2 OR hp3 OR hp4 OR hp5 OR mp1 OR mp2 OR mp3 OR mp4 OR mp5 OR yps OR wms OR vps OR bks OR bkd OR box OR tr1 OR ass OR j34 OR g34 OR xyz OR bbb OR qbr OR qey OR qhr OR mss OR ice OR tr2 OR tes OR ceh OR bet OR fed OR toa OR pk1 OR pk2 OR pk3 OR dhn OR bey OR mbr OR tbk OR ibk OR tsc OR isc OR key OR ear OR std OR wss OR lbox OR lpp OR lmal OR ubtm OR dcma OR rtma OR dcso OR dcho OR dcbl OR rtmv OR rtmo OR rtmf OR cwss OR rtp OR rid OR lsvl OR llmr OR rkey OR uba OR ubaa OR ubab OR ubac OR imma OR imra OR upma OR scou OR rera OR upmp OR fort OR scrb OR irma OR irra OR rrra OR urma OR MAPTIER>-1 OR pvpp OR iwss OR cm2f)]: %BORDER-62%%TIER-9%%NAME%{%NAME%}%WHITE%	// notifications for unknown items (future-proofing)
+ItemDisplay[!(ARMOR OR (WEAPON !(THROWING !(AXE OR DAGGER OR JAV))) OR ((amu OR rin) (UNI OR SET OR CRAFT)) OR ((jew OR cm1 OR cm2 OR cm3) UNI) OR ram)]: %NAME%{%NAME%}%WHITE%	// displays most non-equipment items as normal
+
+// Modification: Sockets (regular items are handled in their own category)
+ItemDisplay[!NMAG SOCK>0]: %NAME% %GRAY%[%SOCKETS%]%CONTINUE%
+
+// Modification: Ethereal
+ItemDisplay[STAT73>0 STAT72=0]: %RED%%NAME%%CONTINUE%			// broken items are red like vanilla
+ItemDisplay[MAG ETH]: %BLUE%%NAME%%CONTINUE%
+ItemDisplay[UNI ETH]: %GOLD%%NAME%%CONTINUE%
+ItemDisplay[RARE ETH]: %YELLOW%%NAME%%CONTINUE%
+ItemDisplay[CRAFT ETH]: %ORANGE%%NAME%%CONTINUE%
+ItemDisplay[NMAG !ETH]: %WHITE%%NAME%%CONTINUE%
+ItemDisplay[NMAG ETH]: %GRAY%%NAME%%CONTINUE%
+ItemDisplay[!NMAG ETH  (REPAIR>0 OR STAT152>0 OR THROWING OR 7cr OR (UNI ((7ba LVLREQ=74) OR (7bl LVLREQ=66) OR 7cs)) OR (UNI !ID (xla OR xpl OR uul OR uvb OR 9la OR 9cr OR 9st OR 7gd OR 7b7 OR 7wh OR 7ba OR 7bl)))]: %WHITE%eth %NAME%%CONTINUE%	// Ethereal (unbreakable)
+ItemDisplay[!NMAG ETH !(REPAIR>0 OR STAT152>0 OR THROWING OR 7cr OR (UNI ((7ba LVLREQ=74) OR (7bl LVLREQ=66) OR 7cs)) OR (UNI !ID (xla OR xpl OR uul OR uvb OR 9la OR 9cr OR 9st OR 7gd OR 7b7 OR 7wh OR 7ba OR 7bl)))]: %GRAY%eth %NAME%%CONTINUE%	// Ethereal (not unbreakable)
+
+// Modification: Repair Recipe
+ItemDisplay[STAT486=0 STAT73>0 (STAT72=0 OR (STAT72<2 REPAIR=0)) !INF !ETH ARMOR]:					%NAME%{%WHITE%Repair Recipe: %TAN%(%WHITE%8%TAN%)}%WHITE%
+ItemDisplay[STAT486=0 STAT73>0 (STAT72=0 OR (STAT72<2 REPAIR=0)) !INF !ETH WEAPON !THROWING !7cr !(NMAG SOCK=0)]:	%NAME%{%WHITE%Repair Recipe: %TAN%(%WHITE%9%TAN%)}%WHITE%
+ItemDisplay[STAT486=0 STAT73>0 (STAT72=0 OR (STAT72<2 REPAIR=0)) !INF ETH !THROWING !7cr !(NMAG SOCK=0)]:		%NAME%{%WHITE%Repair Recipe: %ORANGE%[%GRAY%O%ORANGE%]%GRAY%+%TAN%(%WHITE%33%TAN%)}%WHITE%
+
+// Possible Feature - Weapon Speed, Melee Range, Item Tier (Runewords)
+
+// Runewords
+ItemDisplay[RW]: %NAME%{%NAME%}%WHITE%
+
+
+// +-------------------------------------------+
+//-¦ Identified Magic+ (Magic/Rare/Set/Unique) ¦-------------------------------------------------------------------------
+// +-------------------------------------------+
+// Descriptions for Price
+ItemDisplay[ID (MAG OR RARE OR CRAFT) !EQUIPPED]: %NAME%{%DARK_GREEN%$%PRICE%}%CONTINUE%
+
+// Descriptions for ilvl and alvl on some rare/crafted items
+ItemDisplay[RARE ID !EQUIPPED ((ci0 ILVL>86) OR (ci1 ILVL>81) OR (ci2 ILVL>76) OR (ci3 ILVL>71)) STAT360=0 STAT486=0]: %NAME%{%NAME%%NL%%WHITE%Item Level: %ILVL%}%CONTINUE%					// adds ilvl to rare circlets if it's high enough to consider rerolling
+ItemDisplay[CRAFT !EQUIPPED (ALVL<71 OR (amu ALVL<90) OR (rin ALVL<77) OR (WEAPON !SOR !NEC ALVL<77) OR ((CHEST OR SHIELD) ALVL<85) OR (HELM ALVL<81))]: %NAME%{%NAME%%NL%%WHITE%Affix Level: %ALVL%}%CONTINUE%	// adds alvl to crafted items if it's less than ideal
+ItemDisplay[CRAFT (amu OR rin) !((amu ALVL<90) OR (rin ALVL<77))]: %NAME%%WHITE%																// shows other crafted amulets/rings without price or alvl
+
+// Crafting Recipes Shown for Magic Items and Freshly-Found Rares
+ItemDisplay[ID !EQUIPPED !SHOP STAT486=0 (ILVL>35 OR leg) (MAG OR (RARE !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109))) !MAPID=181 !MAPID=182 (WEAPON OR (ARMOR !CIRC))]:	%NAME%{%NAME%%NL%%WHITE%Item Level: %ILVL%%NL%Affix Level if Crafted: }%CONTINUE%							// ilvl (and crafting alvl) shown alongside crafting recipes
+ItemDisplay[ID !EQUIPPED !SHOP STAT486=0 (ILVL>35 OR leg) (MAG OR (RARE !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109))) !MAPID=181 !MAPID=182 (WEAPON OR (ARMOR !CIRC)) !(CRAFTALVL<71 OR (WEAPON !SOR !NEC CRAFTALVL<77) OR ((CHEST OR SHIELD) CRAFTALVL<85) OR (HELM CRAFTALVL<81))]:	%NAME%{%NAME%%TAN%}%CONTINUE%	// alvl colored tan if it's high enough for any affix
+ItemDisplay[ID !EQUIPPED !SHOP STAT486=0 (ILVL>35 OR leg) (MAG OR (RARE !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109))) !MAPID=181 !MAPID=182 WEAPON !(BOW OR XBOW)]:	%NAME%{%NAME%%CRAFTALVL%%NL%%ORANGE%[%RED%O%ORANGE%]%TAN%(%WHITE%9%TAN%), %ORANGE%[%PURPLE%O%ORANGE%]%TAN%(%WHITE%3%TAN%), %ORANGE%[%BLUE%O%ORANGE%]%TAN%(%WHITE%3%TAN%), %ORANGE%[%GRAY%O%ORANGE%]%TAN%(%WHITE%13%TAN%), %ORANGE%[%YELLOW%O%ORANGE%]%TAN%(%WHITE%13%TAN%)%NL%%WHITE%Crafting Recipes use %ORANGE%(%DARK_GREEN%O%ORANGE%) %WHITE%and:}%CONTINUE%
+ItemDisplay[ID !EQUIPPED !SHOP STAT486=0 ILVL>35 (MAG OR (RARE !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109))) !MAPID=181 !MAPID=182 (BOW OR XBOW)]:			%NAME%{%NAME%%CRAFTALVL%%NL%%ORANGE%[%RED%O%ORANGE%]%TAN%(%WHITE%9%TAN%), %ORANGE%[%PURPLE%O%ORANGE%]%TAN%(%WHITE%3%TAN%), %ORANGE%[%BLUE%O%ORANGE%]%TAN%(%WHITE%3%TAN%), %ORANGE%[%GREEN%O%ORANGE%]%TAN%(%WHITE%12%TAN%), %ORANGE%[%GRAY%O%ORANGE%]%TAN%(%WHITE%13%TAN%), %ORANGE%[%YELLOW%O%ORANGE%]%TAN%(%WHITE%13%TAN%)%NL%%WHITE%Crafting Recipes use %ORANGE%(%DARK_GREEN%O%ORANGE%) %WHITE%and:}%CONTINUE%
+ItemDisplay[ID !EQUIPPED !SHOP STAT486=0 ILVL>35 (MAG OR (RARE !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109))) !MAPID=181 !MAPID=182 SHIELD]:				%NAME%{%NAME%%CRAFTALVL%%NL%%ORANGE%[%RED%O%ORANGE%]%TAN%(%WHITE%6%TAN%), %ORANGE%[%PURPLE%O%ORANGE%]%TAN%(%WHITE%5%TAN%), %ORANGE%[%BLUE%O%ORANGE%]%TAN%(%WHITE%5%TAN%), %ORANGE%[%GREEN%O%ORANGE%]%TAN%(%WHITE%4%TAN%), %ORANGE%[%GRAY%O%ORANGE%]%TAN%(%WHITE%12%TAN%), %ORANGE%[%YELLOW%O%ORANGE%]%TAN%(%WHITE%14%TAN%)%NL%%WHITE%Crafting Recipes use %ORANGE%(%DARK_GREEN%O%ORANGE%) %WHITE%and:}%CONTINUE%
+ItemDisplay[ID !EQUIPPED !SHOP STAT486=0 ILVL>35 (MAG OR (RARE !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109))) !MAPID=181 !MAPID=182 HELM]:				%NAME%{%NAME%%CRAFTALVL%%NL%%ORANGE%[%RED%O%ORANGE%]%TAN%(%WHITE%8%TAN%), %ORANGE%[%PURPLE%O%ORANGE%]%TAN%(%WHITE%4%TAN%), %ORANGE%[%BLUE%O%ORANGE%]%TAN%(%WHITE%6%TAN%), %ORANGE%[%GREEN%O%ORANGE%]%TAN%(%WHITE%6%TAN%), %ORANGE%[%GRAY%O%ORANGE%]%TAN%(%WHITE%17%TAN%), %ORANGE%[%YELLOW%O%ORANGE%]%TAN%(%WHITE%3%TAN%)%NL%%WHITE%Crafting Recipes use %ORANGE%(%DARK_GREEN%O%ORANGE%) %WHITE%and:}%CONTINUE%
+ItemDisplay[ID !EQUIPPED !SHOP STAT486=0 ILVL>35 (MAG OR (RARE !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109))) !MAPID=181 !MAPID=182 CHEST]:				%NAME%{%NAME%%CRAFTALVL%%NL%%ORANGE%[%RED%O%ORANGE%]%TAN%(%WHITE%10%TAN%), %ORANGE%[%PURPLE%O%ORANGE%]%TAN%(%WHITE%7%TAN%), %ORANGE%[%BLUE%O%ORANGE%]%TAN%(%WHITE%4%TAN%), %ORANGE%[%GREEN%O%ORANGE%]%TAN%(%WHITE%5%TAN%), %ORANGE%[%GRAY%O%ORANGE%]%TAN%(%WHITE%3%TAN%), %ORANGE%[%YELLOW%O%ORANGE%]%TAN%(%WHITE%2%TAN%)%NL%%WHITE%Crafting Recipes use %ORANGE%(%DARK_GREEN%O%ORANGE%) %WHITE%and:}%CONTINUE%
+ItemDisplay[ID !EQUIPPED !SHOP STAT486=0 ILVL>35 (MAG OR (RARE !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109))) !MAPID=181 !MAPID=182 GLOVES]:				%NAME%{%NAME%%CRAFTALVL%%NL%%ORANGE%[%RED%O%ORANGE%]%TAN%(%WHITE%4%TAN%), %ORANGE%[%PURPLE%O%ORANGE%]%TAN%(%WHITE%9%TAN%), %ORANGE%[%BLUE%O%ORANGE%]%TAN%(%WHITE%9%TAN%), %ORANGE%[%GREEN%O%ORANGE%]%TAN%(%WHITE%8%TAN%), %ORANGE%[%GRAY%O%ORANGE%]%TAN%(%WHITE%16%TAN%), %ORANGE%[%YELLOW%O%ORANGE%]%TAN%(%WHITE%15%TAN%)%NL%%WHITE%Crafting Recipes use %ORANGE%(%DARK_GREEN%O%ORANGE%) %WHITE%and:}%CONTINUE%
+ItemDisplay[ID !EQUIPPED !SHOP STAT486=0 ILVL>35 (MAG OR (RARE !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109))) !MAPID=181 !MAPID=182 BOOTS]:				%NAME%{%NAME%%CRAFTALVL%%NL%%ORANGE%[%RED%O%ORANGE%]%TAN%(%WHITE%5%TAN%), %ORANGE%[%PURPLE%O%ORANGE%]%TAN%(%WHITE%10%TAN%), %ORANGE%[%BLUE%O%ORANGE%]%TAN%(%WHITE%8%TAN%), %ORANGE%[%GREEN%O%ORANGE%]%TAN%(%WHITE%9%TAN%), %ORANGE%[%GRAY%O%ORANGE%]%TAN%(%WHITE%1%TAN%), %ORANGE%[%YELLOW%O%ORANGE%]%TAN%(%WHITE%16%TAN%)%NL%%WHITE%Crafting Recipes use %ORANGE%(%DARK_GREEN%O%ORANGE%) %WHITE%and:}%CONTINUE%
+ItemDisplay[ID !EQUIPPED !SHOP STAT486=0 ILVL>35 (MAG OR (RARE !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109))) !MAPID=181 !MAPID=182 BELT]:				%NAME%{%NAME%%CRAFTALVL%%NL%%ORANGE%[%RED%O%ORANGE%]%TAN%(%WHITE%7%TAN%), %ORANGE%[%PURPLE%O%ORANGE%]%TAN%(%WHITE%6%TAN%), %ORANGE%[%BLUE%O%ORANGE%]%TAN%(%WHITE%7%TAN%), %ORANGE%[%GREEN%O%ORANGE%]%TAN%(%WHITE%7%TAN%), %ORANGE%[%GRAY%O%ORANGE%]%TAN%(%WHITE%2%TAN%), %ORANGE%[%YELLOW%O%ORANGE%]%TAN%(%WHITE%1%TAN%)%NL%%WHITE%Crafting Recipes use %ORANGE%(%DARK_GREEN%O%ORANGE%) %WHITE%and:}%CONTINUE%
+
+// Possible Feature - Descriptions for Maximum Corruptable Sockets
+
+// Force Display
+ItemDisplay[(hdm OR msf OR hst OR g33 OR qf1 OR qf2 OR hfh)]: %NAME%{%NAME%}%WHITE%		// quest weapons - stopped here since they can be corrupted for sockets but cannot be upgraded
+
+// Upgrading Recipes
+ItemDisplay[(UNI OR SET) ID (ARMOR OR WEAPON) (NORM OR EXC) SOCK=0 STAT360=0 STAT486=0 (HELM OR CIRC OR CHEST OR SHIELD OR (WEAPON !THROWING)) !(EQUIPPED OR SOR OR (WAND !(SOCK=0 (wnd OR ywn OR 9wn))))]: %NAME%{%NAME%%NL%}%CONTINUE%	// Adds new line for items that already have something in their description (unique/set items with max corruptable sockets)
+ItemDisplay[(UNI OR SET) ID !EQUIPPED STAT486=0 ARMOR NORM]: %NAME%{%NAME%%WHITE%Upgrade Recipe: %ORANGE%[%WHITE%O%ORANGE%]%GRAY%+%TAN%(%WHITE%7%TAN%)%GRAY%+%TAN%(%WHITE%13%TAN%)}%CONTINUE%							// Upgrade Unique/Set Armor (Normal)
+ItemDisplay[(UNI OR SET) ID !EQUIPPED STAT486=0 ARMOR EXC]: %NAME%{%NAME%%WHITE%Upgrade Recipe: %ORANGE%[%WHITE%O%ORANGE%]%GRAY%+%TAN%(%WHITE%18%TAN%)%GRAY%+%TAN%(%WHITE%20%TAN%)}%CONTINUE%							// Upgrade Unique/Set Armor (Exceptional)
+ItemDisplay[(UNI OR SET) ID !EQUIPPED STAT486=0 WEAPON NORM !(SOR OR (WAND !(SOCK=0 (wnd OR ywn))))]: %NAME%{%NAME%%WHITE%Upgrade Recipe: %ORANGE%[%GREEN%O%ORANGE%]%GRAY%+%TAN%(%WHITE%8%TAN%)%GRAY%+%TAN%(%WHITE%12%TAN%)}%CONTINUE%		// Upgrade Unique/Set Weapon (Normal)
+ItemDisplay[(UNI OR SET) ID !EQUIPPED STAT486=0 WEAPON EXC !(SOR OR (WAND !(SOCK=0 9wn)))]: %NAME%{%NAME%%WHITE%Upgrade Recipe: %ORANGE%[%GREEN%O%ORANGE%]%GRAY%+%TAN%(%WHITE%17%TAN%)%GRAY%+%TAN%(%WHITE%21%TAN%)}%CONTINUE%			// Upgrade Unique/Set Weapon (Exceptional)
+ItemDisplay[(RARE OR CRAFT) ID !EQUIPPED STAT486=0 ARMOR NORM]: %NAME%{%NAME%%NL%%WHITE%Upgrade Recipe: %ORANGE%[%PURPLE%O%ORANGE%]%GRAY%+%TAN%(%WHITE%8%TAN%)%GRAY%+%TAN%(%WHITE%10%TAN%)}%CONTINUE%						// Upgrade Rare/Crafted Armor (Normal)
+ItemDisplay[(RARE OR CRAFT) ID !EQUIPPED STAT486=0 ARMOR EXC]: %NAME%{%NAME%%NL%%WHITE%Upgrade Recipe: %ORANGE%[%PURPLE%O%ORANGE%]%GRAY%+%TAN%(%WHITE%18%TAN%)%GRAY%+%TAN%(%WHITE%21%TAN%)}%CONTINUE%						// Upgrade Rare/Crafted Armor (Exceptional)
+ItemDisplay[(RARE OR CRAFT) ID !EQUIPPED STAT486=0 WEAPON NORM !(SOR OR (WAND !(SOCK=0 (wnd OR ywn))))]: %NAME%{%NAME%%NL%%WHITE%Upgrade Recipe: %ORANGE%[%BLUE%O%ORANGE%]%GRAY%+%TAN%(%WHITE%9%TAN%)%GRAY%+%TAN%(%WHITE%11%TAN%)}%CONTINUE%	// Upgrade Rare/Crafted Weapon (Normal)
+ItemDisplay[(RARE OR CRAFT) ID !EQUIPPED STAT486=0 WEAPON EXC !(SOR OR (WAND !(SOCK=0 9wn)))]: %NAME%{%NAME%%NL%%WHITE%Upgrade Recipe: %ORANGE%[%BLUE%O%ORANGE%]%GRAY%+%TAN%(%WHITE%19%TAN%)%GRAY%+%TAN%(%WHITE%22%TAN%)}%CONTINUE%		// Upgrade Rare/Crafted Weapon (Exceptional)
+
+// Possible Feature - Descriptions for Upgraded Item Requirements
+
+// Possible Feature - Descriptions for Assassin Kick Damage on Set Boots (it's not normally displayed on them for Assassins unlike other boots)
+
+// Class items with 4+ of any skill  (highlighting in shops or when freshly dropped)
+ItemDisplay[(MAG OR RARE OR CRAFT) ID !EQUIPPED (SHOP OR !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109)) ZON ((TABSK0>3 OR TABSK2>3) OR (CLSK0>0 (TABSK0>2 OR TABSK2>2)) OR (CLSK0>1 (TABSK0>1 OR TABSK2>1)))]: %NAME% %ORANGE%4+ Skills{%ORANGE%##############################}
+ItemDisplay[(MAG OR RARE OR CRAFT) ID !EQUIPPED (SHOP OR !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109)) SIN (((CLSK6>0 OR TABSK48>0) (SK251>2 OR SK256>2 OR SK257>2 OR SK261>2 OR SK262>2 OR SK266>2 OR SK271>2 OR SK272>2 OR SK276>2 OR SK277>2 OR SK366>2)) OR (TABSK48>2 (SK251>0 OR SK256>0 OR SK257>0 OR SK261>0 OR SK262>0 OR SK266>0 OR SK271>0 OR SK272>0 OR SK276>0 OR SK277>0 OR SK366>0)) OR ((CLSK6>1 OR TABSK48>1) (SK251>1 OR SK256>1 OR SK257>1 OR SK261>1 OR SK262>1 OR SK266>1 OR SK271>1 OR SK272>1 OR SK276>1 OR SK277>1 OR SK366>1)))]: %NAME% %ORANGE%4+ (Traps){%ORANGE%##############################}
+ItemDisplay[(MAG OR RARE OR CRAFT) ID !EQUIPPED (SHOP OR !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109)) SIN (((CLSK6>0 OR TABSK49>0) (SK252>2 OR SK253>2 OR SK258>2 OR SK263>2 OR SK264>2 OR SK267>2 OR SK268>2 OR SK273>2 OR SK278>2 OR SK279>2)) OR (TABSK49>2 (SK252>0 OR SK253>0 OR SK258>0 OR SK263>0 OR SK264>0 OR SK267>0 OR SK268>0 OR SK273>0 OR SK278>0 OR SK279>0)) OR ((CLSK6>1 OR TABSK49>1) (SK252>1 OR SK253>1 OR SK258>1 OR SK263>1 OR SK264>1 OR SK267>1 OR SK268>1 OR SK273>1 OR SK278>1 OR SK279>1)))]: %NAME% %ORANGE%4+ (Shadow Disciplines){%ORANGE%##############################}
+ItemDisplay[(MAG OR RARE OR CRAFT) ID !EQUIPPED (SHOP OR !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109)) SIN (((CLSK6>0 OR TABSK50>0) (SK254>2 OR SK255>2 OR SK259>2 OR SK260>2 OR SK265>2 OR SK269>2 OR SK270>2 OR SK274>2 OR SK275>2 OR SK280>2)) OR (TABSK50>2 (SK254>0 OR SK255>0 OR SK259>0 OR SK260>0 OR SK265>0 OR SK269>0 OR SK270>0 OR SK274>0 OR SK275>0 OR SK280>0)) OR ((CLSK6>1 OR TABSK50>1) (SK254>1 OR SK255>1 OR SK259>1 OR SK260>1 OR SK265>1 OR SK269>1 OR SK270>1 OR SK274>1 OR SK275>1 OR SK280>1)))]: %NAME% %ORANGE%4+ (Martial Arts){%ORANGE%##############################}
+ItemDisplay[(MAG OR RARE OR CRAFT) ID !EQUIPPED (SHOP OR !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109)) BAR (((CLSK4>0 OR TABSK32>0) (SK126>2 OR SK132>2 OR SK133>2 OR SK139>2 OR SK140>2 OR SK143>2 OR SK144>2 OR SK147>2 OR SK151>2 OR SK152>2)) OR (TABSK32>2 (SK126>0 OR SK132>0 OR SK133>0 OR SK139>0 OR SK140>0 OR SK143>0 OR SK144>0 OR SK147>0 OR SK151>0 OR SK152>0)) OR ((CLSK4>1 OR TABSK32>1) (SK126>1 OR SK132>1 OR SK133>1 OR SK139>1 OR SK140>1 OR SK143>1 OR SK144>1 OR SK147>1 OR SK151>1 OR SK152>1)))]: %NAME% %ORANGE%4+ (Combat){%ORANGE%##############################}
+ItemDisplay[(MAG OR RARE OR CRAFT) ID !EQUIPPED (SHOP OR !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109)) BAR (((CLSK4>0 OR TABSK33>0) (SK127>2 OR SK128>2 OR SK129>2 OR SK134>2 OR SK135>2 OR SK136>2 OR SK141>2 OR SK145>2 OR SK148>2 OR SK153>2 OR SK368>2)) OR (TABSK33>2 (SK127>0 OR SK128>0 OR SK129>0 OR SK134>0 OR SK135>0 OR SK136>0 OR SK141>0 OR SK145>0 OR SK148>0 OR SK153>0 OR SK368>0)) OR ((CLSK4>1 OR TABSK33>1) (SK127>1 OR SK128>1 OR SK129>1 OR SK134>1 OR SK135>1 OR SK136>1 OR SK141>1 OR SK145>1 OR SK148>1 OR SK153>1 OR SK368>1)))]: %NAME% %ORANGE%4+ (Masteries){%ORANGE%##############################}
+ItemDisplay[(MAG OR RARE OR CRAFT) ID !EQUIPPED (SHOP OR !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109)) BAR (((CLSK4>0 OR TABSK34>0) (SK130>2 OR SK131>2 OR SK137>2 OR SK138>2 OR SK142>2 OR SK146>2 OR SK149>2 OR SK150>2 OR SK154>2 OR SK155>2)) OR (TABSK34>2 (SK130>0 OR SK131>0 OR SK137>0 OR SK138>0 OR SK142>0 OR SK146>0 OR SK149>0 OR SK150>0 OR SK154>0 OR SK155>0)) OR ((CLSK4>1 OR TABSK34>1) (SK130>1 OR SK131>1 OR SK137>1 OR SK138>1 OR SK142>1 OR SK146>1 OR SK149>1 OR SK150>1 OR SK154>1 OR SK155>1)))]: %NAME% %ORANGE%4+ (Warcries){%ORANGE%##############################}
+ItemDisplay[(MAG OR RARE OR CRAFT) ID !EQUIPPED (SHOP OR !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109)) (DRU OR CLUB) (((CLSK5>0 OR TABSK40>0) (SK221>2 OR SK222>2 OR SK226>2 OR SK227>2 OR SK231>2 OR SK236>2 OR SK237>2 OR SK241>2 OR SK246>2 OR SK247>2)) OR (TABSK40>2 (SK221>0 OR SK222>0 OR SK226>0 OR SK227>0 OR SK231>0 OR SK236>0 OR SK237>0 OR SK241>0 OR SK246>0 OR SK247>0)) OR ((CLSK5>1 OR TABSK40>1) (SK221>1 OR SK222>1 OR SK226>1 OR SK227>1 OR SK231>1 OR SK236>1 OR SK237>1 OR SK241>1 OR SK246>1 OR SK247>1)))]: %NAME% %ORANGE%4+ (Summoning){%ORANGE%##############################}
+ItemDisplay[(MAG OR RARE OR CRAFT) ID !EQUIPPED (SHOP OR !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109)) (DRU OR CLUB) (((CLSK5>0 OR TABSK41>0) (SK223>2 OR SK224>2 OR SK228>2 OR SK232>2 OR SK233>2 OR SK238>2 OR SK239>2 OR SK242>2 OR SK243>2 OR SK248>2)) OR (TABSK41>2 (SK223>0 OR SK224>0 OR SK228>0 OR SK232>0 OR SK233>0 OR SK238>0 OR SK239>0 OR SK242>0 OR SK243>0 OR SK248>0)) OR ((CLSK5>1 OR TABSK41>1) (SK223>1 OR SK224>1 OR SK228>1 OR SK232>1 OR SK233>1 OR SK238>1 OR SK239>1 OR SK242>1 OR SK243>1 OR SK248>1)))]: %NAME% %ORANGE%4+ (Shapeshifting){%ORANGE%##############################}
+ItemDisplay[(MAG OR RARE OR CRAFT) ID !EQUIPPED (SHOP OR !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109)) (DRU OR CLUB) (((CLSK5>0 OR TABSK42>0) (SK225>2 OR SK229>2 OR SK230>2 OR SK234>2 OR SK235>2 OR SK240>2 OR SK244>2 OR SK245>2 OR SK249>2 OR SK250>2 OR SK370>2)) OR (TABSK42>2 (SK225>0 OR SK229>0 OR SK230>0 OR SK234>0 OR SK235>0 OR SK240>0 OR SK244>0 OR SK245>0 OR SK249>0 OR SK250>0 OR SK370>0)) OR ((CLSK5>1 OR TABSK42>1) (SK225>1 OR SK229>1 OR SK230>1 OR SK234>1 OR SK235>1 OR SK240>1 OR SK244>1 OR SK245>1 OR SK249>1 OR SK250>1 OR SK370>1)))]: %NAME% %ORANGE%4+ (Elemental){%ORANGE%##############################}
+ItemDisplay[(MAG OR RARE OR CRAFT) ID !EQUIPPED (SHOP OR !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109)) (NEC OR WAND) (((CLSK2>0 OR TABSK16>0) (SK66>2 OR SK71>2 OR SK72>2 OR SK76>2 OR SK77>2 OR SK81>2 OR SK82>2 OR SK86>2 OR SK87>2 OR SK91>2 OR SK374>2 OR SK381>2)) OR (TABSK16>2 (SK66>0 OR SK71>0 OR SK72>0 OR SK76>0 OR SK77>0 OR SK81>0 OR SK82>0 OR SK86>0 OR SK87>0 OR SK91>0 OR SK374>0 OR SK381>0)) OR ((CLSK2>1 OR TABSK16>1) (SK66>1 OR SK71>1 OR SK72>1 OR SK76>1 OR SK77>1 OR SK81>1 OR SK82>1 OR SK86>1 OR SK87>1 OR SK91>1 OR SK374>1 OR SK381>1)))]: %NAME% %ORANGE%4+ (Curses){%ORANGE%##############################}
+ItemDisplay[(MAG OR RARE OR CRAFT) ID !EQUIPPED (SHOP OR !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109)) (NEC OR WAND) (((CLSK2>0 OR TABSK17>0) (SK67>2 OR SK68>2 OR SK73>2 OR SK74>2 OR SK78>2 OR SK83>2 OR SK84>2 OR SK88>2 OR SK92>2 OR SK93>2)) OR (TABSK17>2 (SK67>0 OR SK68>0 OR SK73>0 OR SK74>0 OR SK78>0 OR SK83>0 OR SK84>0 OR SK88>0 OR SK92>0 OR SK93>0)) OR ((CLSK2>1 OR TABSK17>1) (SK67>1 OR SK68>1 OR SK73>1 OR SK74>1 OR SK78>1 OR SK83>1 OR SK84>1 OR SK88>1 OR SK92>1 OR SK93>1)))]: %NAME% %ORANGE%4+ (Poison & Bone){%ORANGE%##############################}
+ItemDisplay[(MAG OR RARE OR CRAFT) ID !EQUIPPED (SHOP OR !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109)) (NEC OR WAND) (((CLSK2>0 OR TABSK18>0) (SK69>2 OR SK70>2 OR SK75>2 OR SK79>2 OR SK80>2 OR SK85>2 OR SK89>2 OR SK90>2 OR SK94>2 OR SK95>2 OR SK367>2)) OR (TABSK18>2 (SK69>0 OR SK70>0 OR SK75>0 OR SK79>0 OR SK80>0 OR SK85>0 OR SK89>0 OR SK90>0 OR SK94>0 OR SK95>0 OR SK367>0)) OR ((CLSK2>1 OR TABSK18>1) (SK69>1 OR SK70>1 OR SK75>1 OR SK79>1 OR SK80>1 OR SK85>1 OR SK89>1 OR SK90>1 OR SK94>1 OR SK95>1 OR SK367>1)))]: %NAME% %ORANGE%4+ (Summoning){%ORANGE%##############################}
+ItemDisplay[(MAG OR RARE OR CRAFT) ID !EQUIPPED (SHOP OR !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109)) SCEPTER (((CLSK3>0 OR TABSK24>0) (SK96>2 OR SK97>2 OR SK101>2 OR SK106>2 OR SK107>2 OR SK111>2 OR SK112>2 OR SK116>2 OR SK117>2 OR SK121>2 OR SK364>2 OR SK371>2 OR SK378>2)) OR (TABSK24>2 (SK96>0 OR SK97>0 OR SK101>0 OR SK106>0 OR SK107>0 OR SK111>0 OR SK112>0 OR SK116>0 OR SK117>0 OR SK121>0 OR SK364>0 OR SK371>0 OR SK378>0)) OR ((CLSK3>1 OR TABSK24>1) (SK96>1 OR SK97>1 OR SK101>1 OR SK106>1 OR SK107>1 OR SK111>1 OR SK112>1 OR SK116>1 OR SK117>1 OR SK121>1 OR SK364>1 OR SK371>1 OR SK378>1)))]: %NAME% %ORANGE%4+ (Combat){%ORANGE%##############################}
+ItemDisplay[(MAG OR RARE OR CRAFT) ID !EQUIPPED (SHOP OR !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109)) SCEPTER (((CLSK3>0 OR TABSK26>0) (SK99>2 OR SK100>2 OR SK104>2 OR SK105>2 OR SK109>2 OR SK110>2 OR SK115>2 OR SK120>2 OR SK124>2 OR SK125>2)) OR (TABSK26>2 (SK99>0 OR SK100>0 OR SK104>0 OR SK105>0 OR SK109>0 OR SK110>0 OR SK115>0 OR SK120>0 OR SK124>0 OR SK125>0)) OR ((CLSK3>1 OR TABSK26>1) (SK99>1 OR SK100>1 OR SK104>1 OR SK105>1 OR SK109>1 OR SK110>1 OR SK115>1 OR SK120>1 OR SK124>1 OR SK125>1)))]: %NAME% %ORANGE%4+ (Defensive Auras){%ORANGE%##############################}
+ItemDisplay[(MAG OR RARE OR CRAFT) ID !EQUIPPED (SHOP OR !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109)) SCEPTER (((CLSK3>0 OR TABSK25>0) (SK98>2 OR SK102>2 OR SK103>2 OR SK108>2 OR SK113>2 OR SK114>2 OR SK118>2 OR SK119>2 OR SK122>2 OR SK123>2)) OR (TABSK25>2 (SK98>0 OR SK102>0 OR SK103>0 OR SK108>0 OR SK113>0 OR SK114>0 OR SK118>0 OR SK119>0 OR SK122>0 OR SK123>0)) OR ((CLSK3>1 OR TABSK25>1) (SK98>1 OR SK102>1 OR SK103>1 OR SK108>1 OR SK113>1 OR SK114>1 OR SK118>1 OR SK119>1 OR SK122>1 OR SK123>1)))]: %NAME% %ORANGE%4+ (Offensive Auras){%ORANGE%##############################}
+ItemDisplay[(MAG OR RARE OR CRAFT) ID !EQUIPPED (SHOP OR !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109)) (SOR OR STAFF) (((CLSK1>0 OR TABSK8>0) (SK36>2 OR SK37>2 OR SK41>2 OR SK46>2 OR SK47>2 OR SK51>2 OR SK52>2 OR SK56>2 OR SK61>2 OR SK62>2 OR SK376>2 OR SK383>2)) OR (TABSK8>2 (SK36>0 OR SK37>0 OR SK41>0 OR SK46>0 OR SK47>0 OR SK51>0 OR SK52>0 OR SK56>0 OR SK61>0 OR SK62>0 OR SK376>0 OR SK383>0)) OR ((CLSK1>1 OR TABSK8>1) (SK36>1 OR SK37>1 OR SK41>1 OR SK46>1 OR SK47>1 OR SK51>1 OR SK52>1 OR SK56>1 OR SK61>1 OR SK62>1 OR SK376>1 OR SK383>1)))]: %NAME% %ORANGE%4+ (Fire){%ORANGE%##############################}
+ItemDisplay[(MAG OR RARE OR CRAFT) ID !EQUIPPED (SHOP OR !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109)) (SOR OR STAFF) (((CLSK1>0 OR TABSK9>0) (SK38>2 OR SK42>2 OR SK43>2 OR SK48>2 OR SK49>2 OR SK53>2 OR SK54>2 OR SK57>2 OR SK58>2 OR SK63>2)) OR (TABSK9>2 (SK38>0 OR SK42>0 OR SK43>0 OR SK48>0 OR SK49>0 OR SK53>0 OR SK54>0 OR SK57>0 OR SK58>0 OR SK63>0)) OR ((CLSK1>1 OR TABSK9>1) (SK38>1 OR SK42>1 OR SK43>1 OR SK48>1 OR SK49>1 OR SK53>1 OR SK54>1 OR SK57>1 OR SK58>1 OR SK63>1)))]: %NAME% %ORANGE%4+ (Lightning){%ORANGE%##############################}
+ItemDisplay[(MAG OR RARE OR CRAFT) ID !EQUIPPED (SHOP OR !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109)) (SOR OR STAFF) (((CLSK1>0 OR TABSK10>0) (SK39>2 OR SK40>2 OR SK44>2 OR SK45>2 OR SK50>2 OR SK55>2 OR SK59>2 OR SK60>2 OR SK64>2 OR SK65>2 OR SK369>2)) OR (TABSK10>2 (SK39>0 OR SK40>0 OR SK44>0 OR SK45>0 OR SK50>0 OR SK55>0 OR SK59>0 OR SK60>0 OR SK64>0 OR SK65>0 OR SK369>0)) OR ((CLSK1>1 OR TABSK10>1) (SK39>1 OR SK40>1 OR SK44>1 OR SK45>1 OR SK50>1 OR SK55>1 OR SK59>1 OR SK60>1 OR SK64>1 OR SK65>1 OR SK369>1)))]: %NAME% %ORANGE%4+ (Cold){%ORANGE%##############################}
+// Class items with 4+ of any skill  (displayed normally in town to override crafting recipes)
+ItemDisplay[MAG ID !EQUIPPED ZON ((TABSK0>3 OR TABSK2>3) OR (CLSK0>0 (TABSK0>2 OR TABSK2>2)) OR (CLSK0>1 (TABSK0>1 OR TABSK2>1)))]: %NAME%{%DARK_GREEN%$%PRICE%}%CONTINUE%
+ItemDisplay[MAG ID !EQUIPPED SIN (((CLSK6>0 OR TABSK48>0) (SK251>2 OR SK256>2 OR SK257>2 OR SK261>2 OR SK262>2 OR SK266>2 OR SK271>2 OR SK272>2 OR SK276>2 OR SK277>2 OR SK366>2)) OR (TABSK48>2 (SK251>0 OR SK256>0 OR SK257>0 OR SK261>0 OR SK262>0 OR SK266>0 OR SK271>0 OR SK272>0 OR SK276>0 OR SK277>0 OR SK366>0)) OR ((CLSK6>1 OR TABSK48>1) (SK251>1 OR SK256>1 OR SK257>1 OR SK261>1 OR SK262>1 OR SK266>1 OR SK271>1 OR SK272>1 OR SK276>1 OR SK277>1 OR SK366>1)) OR ((CLSK6>0 OR TABSK49>0) (SK252>2 OR SK253>2 OR SK258>2 OR SK263>2 OR SK264>2 OR SK267>2 OR SK268>2 OR SK273>2 OR SK278>2 OR SK279>2)) OR (TABSK49>2 (SK252>0 OR SK253>0 OR SK258>0 OR SK263>0 OR SK264>0 OR SK267>0 OR SK268>0 OR SK273>0 OR SK278>0 OR SK279>0)) OR ((CLSK6>1 OR TABSK49>1) (SK252>1 OR SK253>1 OR SK258>1 OR SK263>1 OR SK264>1 OR SK267>1 OR SK268>1 OR SK273>1 OR SK278>1 OR SK279>1)) OR ((CLSK6>0 OR TABSK50>0) (SK254>2 OR SK255>2 OR SK259>2 OR SK260>2 OR SK265>2 OR SK269>2 OR SK270>2 OR SK274>2 OR SK275>2 OR SK280>2)) OR (TABSK50>2 (SK254>0 OR SK255>0 OR SK259>0 OR SK260>0 OR SK265>0 OR SK269>0 OR SK270>0 OR SK274>0 OR SK275>0 OR SK280>0)) OR ((CLSK6>1 OR TABSK50>1) (SK254>1 OR SK255>1 OR SK259>1 OR SK260>1 OR SK265>1 OR SK269>1 OR SK270>1 OR SK274>1 OR SK275>1 OR SK280>1)))]: %NAME%{%DARK_GREEN%$%PRICE%}%CONTINUE%
+ItemDisplay[MAG ID !EQUIPPED BAR (((CLSK4>0 OR TABSK32>0) (SK126>2 OR SK132>2 OR SK133>2 OR SK139>2 OR SK140>2 OR SK143>2 OR SK144>2 OR SK147>2 OR SK151>2 OR SK152>2)) OR (TABSK32>2 (SK126>0 OR SK132>0 OR SK133>0 OR SK139>0 OR SK140>0 OR SK143>0 OR SK144>0 OR SK147>0 OR SK151>0 OR SK152>0)) OR ((CLSK4>1 OR TABSK32>1) (SK126>1 OR SK132>1 OR SK133>1 OR SK139>1 OR SK140>1 OR SK143>1 OR SK144>1 OR SK147>1 OR SK151>1 OR SK152>1)) OR ((CLSK4>0 OR TABSK34>0) (SK130>2 OR SK131>2 OR SK137>2 OR SK138>2 OR SK142>2 OR SK146>2 OR SK149>2 OR SK150>2 OR SK154>2 OR SK155>2)) OR (TABSK34>2 (SK130>0 OR SK131>0 OR SK137>0 OR SK138>0 OR SK142>0 OR SK146>0 OR SK149>0 OR SK150>0 OR SK154>0 OR SK155>0)) OR ((CLSK4>1 OR TABSK34>1) (SK130>1 OR SK131>1 OR SK137>1 OR SK138>1 OR SK142>1 OR SK146>1 OR SK149>1 OR SK150>1 OR SK154>1 OR SK155>1)) OR ((CLSK4>0 OR TABSK33>0) (SK127>2 OR SK128>2 OR SK129>2 OR SK134>2 OR SK135>2 OR SK136>2 OR SK141>2 OR SK145>2 OR SK148>2 OR SK153>2 OR SK368>2)) OR (TABSK33>2 (SK127>0 OR SK128>0 OR SK129>0 OR SK134>0 OR SK135>0 OR SK136>0 OR SK141>0 OR SK145>0 OR SK148>0 OR SK153>0 OR SK368>0)) OR ((CLSK4>1 OR TABSK33>1) (SK127>1 OR SK128>1 OR SK129>1 OR SK134>1 OR SK135>1 OR SK136>1 OR SK141>1 OR SK145>1 OR SK148>1 OR SK153>1 OR SK368>1)))]: %NAME%{%DARK_GREEN%$%PRICE%}%CONTINUE%
+ItemDisplay[MAG ID !EQUIPPED (DRU OR CLUB) (((CLSK5>0 OR TABSK40>0) (SK221>2 OR SK222>2 OR SK226>2 OR SK227>2 OR SK231>2 OR SK236>2 OR SK237>2 OR SK241>2 OR SK246>2 OR SK247>2)) OR (TABSK40>2 (SK221>0 OR SK222>0 OR SK226>0 OR SK227>0 OR SK231>0 OR SK236>0 OR SK237>0 OR SK241>0 OR SK246>0 OR SK247>0)) OR ((CLSK5>1 OR TABSK40>1) (SK221>1 OR SK222>1 OR SK226>1 OR SK227>1 OR SK231>1 OR SK236>1 OR SK237>1 OR SK241>1 OR SK246>1 OR SK247>1)) OR ((CLSK5>0 OR TABSK41>0) (SK223>2 OR SK224>2 OR SK228>2 OR SK232>2 OR SK233>2 OR SK238>2 OR SK239>2 OR SK242>2 OR SK243>2 OR SK248>2)) OR (TABSK41>2 (SK223>0 OR SK224>0 OR SK228>0 OR SK232>0 OR SK233>0 OR SK238>0 OR SK239>0 OR SK242>0 OR SK243>0 OR SK248>0)) OR ((CLSK5>1 OR TABSK41>1) (SK223>1 OR SK224>1 OR SK228>1 OR SK232>1 OR SK233>1 OR SK238>1 OR SK239>1 OR SK242>1 OR SK243>1 OR SK248>1)) OR ((CLSK5>0 OR TABSK42>0) (SK225>2 OR SK229>2 OR SK230>2 OR SK234>2 OR SK235>2 OR SK240>2 OR SK244>2 OR SK245>2 OR SK249>2 OR SK250>2 OR SK370>2)) OR (TABSK42>2 (SK225>0 OR SK229>0 OR SK230>0 OR SK234>0 OR SK235>0 OR SK240>0 OR SK244>0 OR SK245>0 OR SK249>0 OR SK250>0 OR SK370>0)) OR ((CLSK5>1 OR TABSK42>1) (SK225>1 OR SK229>1 OR SK230>1 OR SK234>1 OR SK235>1 OR SK240>1 OR SK244>1 OR SK245>1 OR SK249>1 OR SK250>1 OR SK370>1)))]: %NAME%{%DARK_GREEN%$%PRICE%}%CONTINUE%
+ItemDisplay[MAG ID !EQUIPPED (NEC OR WAND) (((CLSK2>0 OR TABSK18>0) (SK69>2 OR SK70>2 OR SK75>2 OR SK79>2 OR SK80>2 OR SK85>2 OR SK89>2 OR SK90>2 OR SK94>2 OR SK95>2 OR SK367>2)) OR (TABSK18>2 (SK69>0 OR SK70>0 OR SK75>0 OR SK79>0 OR SK80>0 OR SK85>0 OR SK89>0 OR SK90>0 OR SK94>0 OR SK95>0 OR SK367>0)) OR ((CLSK2>1 OR TABSK18>1) (SK69>1 OR SK70>1 OR SK75>1 OR SK79>1 OR SK80>1 OR SK85>1 OR SK89>1 OR SK90>1 OR SK94>1 OR SK95>1 OR SK367>1)) OR ((CLSK2>0 OR TABSK17>0) (SK67>2 OR SK68>2 OR SK73>2 OR SK74>2 OR SK78>2 OR SK83>2 OR SK84>2 OR SK88>2 OR SK92>2 OR SK93>2)) OR (TABSK17>2 (SK67>0 OR SK68>0 OR SK73>0 OR SK74>0 OR SK78>0 OR SK83>0 OR SK84>0 OR SK88>0 OR SK92>0 OR SK93>0)) OR ((CLSK2>1 OR TABSK17>1) (SK67>1 OR SK68>1 OR SK73>1 OR SK74>1 OR SK78>1 OR SK83>1 OR SK84>1 OR SK88>1 OR SK92>1 OR SK93>1)) OR ((CLSK2>0 OR TABSK16>0) (SK66>2 OR SK71>2 OR SK72>2 OR SK76>2 OR SK77>2 OR SK81>2 OR SK82>2 OR SK86>2 OR SK87>2 OR SK91>2 OR SK374>2 OR SK381>2)) OR (TABSK16>2 (SK66>0 OR SK71>0 OR SK72>0 OR SK76>0 OR SK77>0 OR SK81>0 OR SK82>0 OR SK86>0 OR SK87>0 OR SK91>0 OR SK374>0 OR SK381>0)) OR ((CLSK2>1 OR TABSK16>1) (SK66>1 OR SK71>1 OR SK72>1 OR SK76>1 OR SK77>1 OR SK81>1 OR SK82>1 OR SK86>1 OR SK87>1 OR SK91>1 OR SK374>1 OR SK381>1)))]: %NAME%{%DARK_GREEN%$%PRICE%}%CONTINUE%
+ItemDisplay[MAG ID !EQUIPPED SCEPTER (((CLSK3>0 OR TABSK24>0) (SK96>2 OR SK97>2 OR SK101>2 OR SK106>2 OR SK107>2 OR SK111>2 OR SK112>2 OR SK116>2 OR SK117>2 OR SK121>2 OR SK364>2 OR SK371>2 OR SK378>2)) OR (TABSK24>2 (SK96>0 OR SK97>0 OR SK101>0 OR SK106>0 OR SK107>0 OR SK111>0 OR SK112>0 OR SK116>0 OR SK117>0 OR SK121>0 OR SK364>0 OR SK371>0 OR SK378>0)) OR ((CLSK3>1 OR TABSK24>1) (SK96>1 OR SK97>1 OR SK101>1 OR SK106>1 OR SK107>1 OR SK111>1 OR SK112>1 OR SK116>1 OR SK117>1 OR SK121>1 OR SK364>1 OR SK371>1 OR SK378>1)) OR ((CLSK3>0 OR TABSK25>0) (SK98>2 OR SK102>2 OR SK103>2 OR SK108>2 OR SK113>2 OR SK114>2 OR SK118>2 OR SK119>2 OR SK122>2 OR SK123>2)) OR (TABSK25>2 (SK98>0 OR SK102>0 OR SK103>0 OR SK108>0 OR SK113>0 OR SK114>0 OR SK118>0 OR SK119>0 OR SK122>0 OR SK123>0)) OR ((CLSK3>1 OR TABSK25>1) (SK98>1 OR SK102>1 OR SK103>1 OR SK108>1 OR SK113>1 OR SK114>1 OR SK118>1 OR SK119>1 OR SK122>1 OR SK123>1)) OR ((CLSK3>0 OR TABSK26>0) (SK99>2 OR SK100>2 OR SK104>2 OR SK105>2 OR SK109>2 OR SK110>2 OR SK115>2 OR SK120>2 OR SK124>2 OR SK125>2)) OR (TABSK26>2 (SK99>0 OR SK100>0 OR SK104>0 OR SK105>0 OR SK109>0 OR SK110>0 OR SK115>0 OR SK120>0 OR SK124>0 OR SK125>0)) OR ((CLSK3>1 OR TABSK26>1) (SK99>1 OR SK100>1 OR SK104>1 OR SK105>1 OR SK109>1 OR SK110>1 OR SK115>1 OR SK120>1 OR SK124>1 OR SK125>1)))]: %NAME%{%DARK_GREEN%$%PRICE%}%CONTINUE%
+ItemDisplay[MAG ID !EQUIPPED (SOR OR STAFF) (((CLSK1>0 OR TABSK8>0) (SK36>2 OR SK37>2 OR SK41>2 OR SK46>2 OR SK47>2 OR SK51>2 OR SK52>2 OR SK56>2 OR SK61>2 OR SK62>2 OR SK376>2 OR SK383>2)) OR (TABSK8>2 (SK36>0 OR SK37>0 OR SK41>0 OR SK46>0 OR SK47>0 OR SK51>0 OR SK52>0 OR SK56>0 OR SK61>0 OR SK62>0 OR SK376>0 OR SK383>0)) OR ((CLSK1>1 OR TABSK8>1) (SK36>1 OR SK37>1 OR SK41>1 OR SK46>1 OR SK47>1 OR SK51>1 OR SK52>1 OR SK56>1 OR SK61>1 OR SK62>1 OR SK376>1 OR SK383>1)) OR ((CLSK1>0 OR TABSK9>0) (SK38>2 OR SK42>2 OR SK43>2 OR SK48>2 OR SK49>2 OR SK53>2 OR SK54>2 OR SK57>2 OR SK58>2 OR SK63>2)) OR (TABSK9>2 (SK38>0 OR SK42>0 OR SK43>0 OR SK48>0 OR SK49>0 OR SK53>0 OR SK54>0 OR SK57>0 OR SK58>0 OR SK63>0)) OR ((CLSK1>1 OR TABSK9>1) (SK38>1 OR SK42>1 OR SK43>1 OR SK48>1 OR SK49>1 OR SK53>1 OR SK54>1 OR SK57>1 OR SK58>1 OR SK63>1)) OR ((CLSK1>0 OR TABSK10>0) (SK39>2 OR SK40>2 OR SK44>2 OR SK45>2 OR SK50>2 OR SK55>2 OR SK59>2 OR SK60>2 OR SK64>2 OR SK65>2 OR SK369>2)) OR (TABSK10>2 (SK39>0 OR SK40>0 OR SK44>0 OR SK45>0 OR SK50>0 OR SK55>0 OR SK59>0 OR SK60>0 OR SK64>0 OR SK65>0 OR SK369>0)) OR ((CLSK1>1 OR TABSK10>1) (SK39>1 OR SK40>1 OR SK44>1 OR SK45>1 OR SK50>1 OR SK55>1 OR SK59>1 OR SK60>1 OR SK64>1 OR SK65>1 OR SK369>1)))]: %NAME%{%DARK_GREEN%$%PRICE%}%CONTINUE%
+
+// Other notable items  (highlighting in shops or when freshly dropped)
+ItemDisplay[(MAG OR RARE OR CRAFT) ID !EQUIPPED (SHOP OR !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109)) GLOVES (TABSK0>2 OR TABSK2>2 OR TABSK50>2) IAS>10]: %NAME% %ORANGE%+3{%ORANGE%##############################}										// Gloves: +3/20
+ItemDisplay[(MAG OR RARE OR CRAFT) ID !EQUIPPED (SHOP OR !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109)) GLOVES ((TABSK0>2 OR TABSK2>2) OR ((TABSK0>1 OR TABSK1>2 OR TABSK2>1) IAS>0) OR ((TABSK0>0 OR TABSK1>1 OR TABSK2>0) IAS>10))]: %NAME% %TAN%+{%ORANGE%##############################}	// Gloves: close to +3/20
+ItemDisplay[(MAG OR RARE OR CRAFT) ID !EQUIPPED (SHOP OR !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109)) 1H TABSK34>2]: %NAME% %ORANGE%+3 Warcries{%ORANGE%##############################}													// 1-Handed Weapons with +3 Warcries
+ItemDisplay[(MAG OR RARE OR CRAFT) ID !EQUIPPED (SHOP OR !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109)) SIN TABSK48>2]: %NAME% %TAN%+3 Traps{%ORANGE%##############################}														// Claws with +3 Traps
+ItemDisplay[(MAG OR RARE OR CRAFT) ID !EQUIPPED (SHOP OR !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109)) MACE TABSK40>2]: %NAME% %TAN%+3 Summoning{%ORANGE%##############################}													// Clubs with +3 Summoning
+ItemDisplay[(MAG OR RARE OR CRAFT) ID !EQUIPPED (SHOP OR !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109)) WEAPON (SUFFIX=594 OR SUFFIX=595)]: %NAME% %TAN%(Lower Resist){%ORANGE%##############################}											// Weapons with Lower Resist charges
+ItemDisplay[(MAG OR RARE OR CRAFT) ID !EQUIPPED (SHOP OR !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109)) 1H (SUFFIX=578 OR SUFFIX=579)]: %NAME% %TAN%(Life Tap){%ORANGE%##############################}												// 1-Handed Weapons with Life Tap charges
+ItemDisplay[(MAG OR RARE OR CRAFT) ID !EQUIPPED (SHOP OR !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109)) STAFF (CHSK54>0 OR SUFFIX=532 OR SUFFIX=533)]: %NAME% %TAN%(Teleport){%ORANGE%##############################}										// Staves with Teleport charges
+ItemDisplay[(MAG OR RARE OR CRAFT) ID !EQUIPPED (SHOP OR !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109)) SHIELD SOCK=4 (FBR>0 OR FHR>10 OR LIFE>40)]: %NAME% %TAN%+{%ORANGE%##############################}											// Jeweller's Monarch of Deflecting (JMoD) and similar
+ItemDisplay[(MAG OR RARE OR CRAFT) ID !EQUIPPED (SHOP OR !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109)) CHEST SOCK=4 LIFE>80]: %NAME% %TAN%+{%ORANGE%##############################}														// Jeweller's Armor of the Whale
+ItemDisplay[(MAG OR RARE OR CRAFT) ID !EQUIPPED (SHOP OR !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109)) CIRC SOCK=3 (FRW>20 OR STAT34>15)]: %NAME% %TAN%+{%ORANGE%##############################}												// Artisan's Circlet of Speed/Life Everlasting
+ItemDisplay[(MAG OR RARE OR CRAFT) ID !EQUIPPED ((GLOVES (TABSK0>2 OR TABSK2>2 OR TABSK50>2) IAS>10) OR (GLOVES ((TABSK0>2 OR TABSK2>2) OR ((TABSK0>1 OR TABSK1>2 OR TABSK2>1) IAS>0) OR ((TABSK0>0 OR TABSK1>1 OR TABSK2>0) IAS>10))) OR (1H TABSK34>2) OR (SIN TABSK48>2) OR (MACE TABSK40>2) OR (WEAPON (SUFFIX=594 OR SUFFIX=595)) OR (1H (SUFFIX=578 OR SUFFIX=579)) OR (STAFF (CHSK54>0 OR SUFFIX=532 OR SUFFIX=533)) OR (SHIELD SOCK=4 (FBR>0 OR FHR>10 OR LIFE>40)) OR (CHEST SOCK=4 LIFE>80) OR (CIRC SOCK=3 (FRW>20 OR STAT34>15)))]: %NAME%{%DARK_GREEN%$%PRICE%}%CONTINUE%	// Other notable items displayed normally in town to override crafting recipes
+
+// Other merchant items
+ItemDisplay[!NMAG ID SHOP]: %NAME%%GRAY%	// removes description and makes price gray
+
+// Possible Feature - Weapon Speed, Melee Range, Item Tier (Magic+)
+// Possible Feature - Set Bonuses
+
+// Catchall - Identified Magic+ Items
+ItemDisplay[!NMAG ID]: %NAME%{%NAME%}%WHITE%
+
+
+// +----------------------------------+
+//-¦ Unique/Set Items  (unidentified) ¦----------------------------------------------------------------------------------
+// +----------------------------------+
+
+// Possible Feature - Full names shown for unidentified versions
+// Possible Feature - Shared Bases marked
+// Possible Feature - Natural Sockets
+
+// Highlighting & Notifications - Uniques				...reference table of highlights: https://tinyurl.com/d2filterhighlighting																																	...Note: the notifying keywords here also apply to identified versions since these rules don't include !ID (notification keywords like %MAP-53% bypass the normal priority system)
+ItemDisplay[UNI ((ETH (xh9 OR (7gm ILVL>84) OR usk OR 7gd)) OR (!ETH (jew OR cm1 OR cm2 OR (uar ILVL>86) OR (7gm ILVL>84) OR xh9 OR uap OR usk OR ci3 OR baa OR dra OR xea OR ulc OR 6lw OR 7gw OR obf OR obc OR 7cr OR uhm OR urn OR 7gd)) OR utb OR uhl OR 7bs OR 7qr OR uth OR ((amu OR ram) ILVL=99 (!ID OR SOCK>0)) OR (utc OR rbe) OR (uhn OR rar))]:	%BORDER-53%%TIER-9%         %NAME%         %WHITE%	// Highlighting - 9 spaces
+ItemDisplay[UNI ((ETH (7gw OR obc OR obf OR 6ws OR xhn OR uar OR 7wa)) OR (!ETH ((amu ILVL>83 (!ID OR AR>0)) OR (rin ILVL>83 (!ID OR (ALLSK>0 OR STAT87>0))) OR pa9 OR xtb OR zhb OR nea OR ulm OR bae OR 6ws OR uui OR uit)))]:	%BORDER-53%%TIER-9%       %NAME%       %WHITE%																	// Highlighting - 7 spaces
+ItemDisplay[UNI ((ETH (ama OR (7wh ILVL>82) OR 7s8 OR xrs OR 7wc)) OR (!ETH ((amu ILVL>79 (!ID OR (ALLSK>1 RES>10))) OR (rin ILVL>65 !ID) OR cm3 OR (7wh ILVL>82) OR (uar ILVL<87) OR dre OR uld OR oba OR bac OR xvb OR 6sw OR xhn OR xhb OR ztb)))]:	%MAP-53%%TIER-9%     %NAME%     %WHITE%																// Highlighting - 5 spaces
+ItemDisplay[UNI ((ETH (amf OR (uhm ILVL>76) OR oba OR uvb OR 7pa OR 9bs OR 7kr OR 9gm OR am5 OR 9ar OR utp)) OR (!ETH ((amu ILVL>72 (!ID OR TABSK26>0 OR STAT363>0 OR STAT250>0)) OR (rin ILVL>38) OR (7gm ILVL<85) OR tgl OR xmb OR zlb OR zvb OR umc OR 7s8 OR xrs OR upl OR xsh OR uvb OR 7wa OR ama OR xtp OR nee OR 7wc)))]:	%MAP-53%%TIER-9%    %NAME%    %WHITE%						// Highlighting - 4 spaces
+ItemDisplay[UNI ((ETH (ci3 OR (7fl ILVL>85) OR (7fl ILVL<86) OR 7bk OR ulc OR bae OR 7ws OR xtg OR uvg OR uvc OR xpl OR xld OR utu OR 9bs OR 8ls OR 7gi OR uul OR ztb OR ob6 OR 9gw OR 7b8 OR 7ts OR 7p7 OR 7fb OR ame OR 6bs OR 7qs OR 7tw OR 8ws)) OR (!ETH ((amu ILVL>54 (!ID OR STAT360>0 OR STAT57>1000 OR STAT362>0 OR FRW>20 OR ED>30 OR ALLSK>0)) OR (7fl ILVL>85) OR xhm OR utu OR uhb OR 9ws OR 7ws OR amf OR 6l7 OR 8hx OR 7gi OR am7 OR 8lw OR nef OR xpl OR ci2 OR drb OR drd OR uts OR pac OR hgl OR xlg OR umb OR xth OR uvg OR 7kr OR 6hx OR 9gm OR ne6 OR ba6 OR am5 OR pa3 OR 9ar OR ob6 OR dr2 OR 9gw OR xar OR utg OR ned OR 6bs OR 7qs OR baf OR utp OR drf OR 8ws)))]:	%DOT-53%%TIER-9%   %NAME%   %WHITE%		// Highlighting - 3 spaces
+ItemDisplay[UNI ((ETH (uap OR (uhm ILVL<77) OR (7gm ILVL<85) OR (7wh ILVL<83) OR 7sc OR baa OR dra OR uui OR dgr OR 9fc OR 9ws OR xlt OR 7m7 OR 6cs OR 7cs OR ulm OR dre OR xea OR pa9 OR nea OR xtb OR 7s7 OR 7gl OR 7bw OR xsh OR xmg OR lbt OR tbt OR xlb OR xhb OR umb OR zlb OR zhb OR umc OR xrn OR rng OR scl OR gth OR ltp OR xui OR xul OR upl OR 9ta OR 7ha OR 7ga OR 9tw OR 7lw OR 9cr OR 7gs OR 9ga OR 92a OR 7wb OR 9st OR 9wh OR stu OR pac OR drd OR 9bw OR ne6 OR ba6 OR pa3 OR dr2 OR 9wc OR amd OR wsc OR xtp OR 7bt OR 7o7 OR 7bl OR nef OR 7sp OR 7ls OR 9fb OR utg OR ulb OR ned OR 7qs OR baf OR drf OR cst OR 7st OR 7cm OR 9la)) OR (!ETH (7sc OR (7wh ILVL<83) OR (7fl ILVL<86) OR umg OR uvc OR 8lb OR 9fc OR 7pa OR pae OR dgr OR tbl OR mgl OR uh9 OR bad OR plt OR ltp OR xui OR xow OR xts OR upk OR uow OR uhg OR 92a OR 9ga OR 7m7 OR 9ls OR 7gs OR 7b7 OR 7ts OR 8cb OR amb OR 8rx OR 6cs OR 9tw OR 7lw OR aar OR xvg OR xmg OR lbt OR tbt OR xlb OR 7ga OR 7dg OR 8ls OR 7bw OR xtg OR xrn OR xlt OR xld OR xul OR 9ax OR 7bk OR uul OR 9bw OR 9wc OR wsc OR xhg OR 7b8 OR 7o7 OR 7p7 OR lbl OR rng OR 7sp OR 7ls OR 9fb OR 8mx OR 7fb OR ame OR ulb OR 7tw OR cst OR xcl OR 7st OR 7cm)))]:	%DOT-53%%TIER-9%  %NAME%  %WHITE%	// Highlighting - 2 spaces
+ItemDisplay[UNI ((ETH (9tk OR xkp OR xlm OR bac OR 9wn OR xhm OR zvb OR uhb OR xmb OR upk OR xvb OR 7ta OR bwn OR 9yw OR uh9 OR 72a OR uow OR tgl OR xlg OR xvg OR uhg OR brs OR plt OR fld OR aar OR xla OR xcl OR xth OR xar OR uts OR 9ma OR 9sp OR gma OR mau OR 9fl OR 9m9 OR 9gi OR 9qs OR gsd OR 9sb OR 9ls OR 92h OR 9gs OR 9kr OR 9s8 OR 9pa OR 7sr OR 7br OR am9 OR 9mt OR 7mp OR nee OR xhg)) OR (!ETH (amu OR rin OR skp OR xap OR xkp OR xlm OR xsk OR stu OR vgl OR 9gi OR mau OR 9sp OR 9m9 OR 9sb OR 7sr OR am9 OR 9wn OR 7wb OR 9gs OR 7b7 OR gma OR 9fl OR 9qs OR 9cr OR 9kr OR 9s8 OR 7bt OR 9pa OR 92h OR gsd OR 7br OR cap OR bhm OR crn OR scl OR spl OR xng OR kit OR xuc OR ush OR lgl OR vbt OR hbt OR vbl OR zmb OR 9ma OR amd OR 7s7 OR bwn OR 9yw OR gth OR tow OR xrg OR uml OR 9wh OR 9mt OR xhl OR 7mp OR lwb OR 9sr OR 6rx OR 8sw OR sbw OR xtu)))]:	 %NAME% %CONTINUE%	// Highlighting - 1 space
+// Highlighting & Notifications - Sets
+ItemDisplay[SET (uar OR uth)]:	%BORDER-84%%TIER-9%         %NAME%         %WHITE%																																									// Highlighting - 9 spaces
+ItemDisplay[SET ((amu ILVL>25 (!ID OR STAT360>0 OR ALLSK>0 OR CLSK1>0)) OR xhm OR xtb OR xmg OR 7m7)]:	%MAP-84%%TIER-9%    %NAME%    %WHITE%																																		// Highlighting - 4 spaces
+ItemDisplay[SET (7qr OR xap OR ulg OR dr8 OR uul OR xar OR amc OR uld OR oba OR ne9)]:	%DOT-84%%TIER-9%   %NAME%   %WHITE%																																				// Highlighting - 3 spaces
+ItemDisplay[SET ((rin ILVL>49 ((!ID FILTLVL<6) OR STAT360>0 OR ED>0)) OR ult OR xhb OR ci3 OR zvb OR xmb OR utc OR xsk OR (vbt ((ILVL>27 ILVL<32) OR (ILVL>63 ILVL<68) OR (ILVL>80 ILVL<85))) OR uts OR urn OR ucl OR xul OR stu OR paf OR ba5 OR 7ws OR 7gd OR 7fb OR xvg OR uhm OR 6cs OR 9mt OR zhb OR xhg OR xtg OR xh9 OR zmb OR uh9)]:	%DOT-84%%TIER-9%  %NAME%  %WHITE%					// Highlighting - 2 spaces (stricter filter levels don't notify for set rings)
+ItemDisplay[SET ((amu ILVL>16) OR xhl OR vbt OR dgr OR bwn OR 7ls OR ci0 OR xrs OR uui OR xlb OR ztb OR 7ma)]:	 %NAME% %CONTINUE%																																			// Highlighting - 1 space
+
+// Catchall - Unique/Set Items
+ItemDisplay[UNI !ID !(CLVL>69 DIFF=2 FILTLVL>2)]: %PX-53%%TIER-9%%NAME%%WHITE%		// notifications for all other unidentified uniques except for level 70+ characters in Hell difficulty on stricter filter levels
+ItemDisplay[SET !ID !(CLVL>69 DIFF=2 FILTLVL>2)]: %PX-84%%TIER-9%%NAME%%WHITE%		// notifications for all other unidentified sets except for level 70+ characters in Hell difficulty on stricter filter levels
+ItemDisplay[UNI !ID (ukp OR uea OR ula OR ung OR ucl OR urs OR ult OR uuc OR urg OR ulg OR uhc OR ci0 OR ci1 OR dr1 OR dr3 OR dr4 OR dr5 OR dr6 OR dr7 OR dr8 OR dr9 OR drc OR ba1 OR ba2 OR ba3 OR ba4 OR ba5 OR ba7 OR ba8 OR ba9 OR bab OR pa1 OR pa2 OR pa4 OR pa5 OR pa6 OR pa7 OR pa8 OR paa OR pab OR pad OR paf OR ne1 OR ne2 OR ne3 OR ne4 OR ne5 OR ne7 OR ne8 OR ne9 OR neb OR neg OR 7ax OR 7la OR 7ma OR crs OR 7ss OR 7fc OR 7wd OR 72h OR 7cm OR 7di OR tkf OR tax OR bkf OR bal OR 9bk OR 9b8 OR 7tk OR jav OR pil OR ssp OR glv OR tsp OR 9ja OR 9pi OR 9s9 OR 9gl OR 9ts OR 7ja OR 7pi OR 7tr OR 7vo OR 7h7 OR 6sb OR 6hb OR 6lb OR 6cb OR 6s7 OR 6lx OR 6mx OR 6ss OR 6ls OR 7wn OR 7yw OR ktr OR wrb OR axf OR ces OR clw OR btl OR skr OR 9wb OR 9xf OR 9cs OR 9lw OR 9qr OR 7ar OR 7xf OR ob1 OR ob2 OR ob3 OR ob4 OR ob5 OR ob7 OR ob8 OR ob9 OR obb OR obd OR obe OR am1 OR am2 OR am3 OR am4 OR am6 OR am8 OR amc)]:	%BORDER-53%%TIER-9%%NAME%%WHITE%	// notifications for unknown unique equipment items (future-proofing)
+ItemDisplay[SET !ID !(rin OR amu OR cap OR skp OR hlm OR fhl OR msk OR bhm OR ghm OR crn OR xap OR xhl OR xsk OR xh9 OR xhm OR xrn OR uh9 OR uhm OR urn OR qui OR lea OR stu OR rng OR chn OR brs OR spl OR gth OR ltp OR ful OR aar OR xcl OR xrs OR xul OR xar OR uui OR ucl OR upl OR ult OR uld OR uth OR uul OR uar OR buc OR sml OR lrg OR kit OR tow OR gts OR xml OR uts OR lgl OR vgl OR mgl OR tgl OR hgl OR xvg OR xmg OR xtg OR xhg OR ulg OR lbt OR vbt OR mbt OR tbt OR hbt OR xlb OR xmb OR xtb OR xhb OR zmb OR ztb OR zhb OR lbl OR vbl OR mbl OR tbl OR hbl OR zvb OR zmb OR ztb OR zhb OR umc OR utc OR ci0 OR ci3 OR dr8 OR ba5 OR paf OR ne9 OR 2ax OR mpi OR 9mt OR 7ma OR 7m7 OR sbr OR bsd OR lsd OR wsd OR 7ls OR 7fb OR 7gd OR dgr OR 9vo OR lbb OR swb OR bst OR wst OR 6cs OR bwn OR gsc OR wsp OR 7ws OR 7qr OR oba OR amc)]:	 %BORDER-84%%TIER-9%%NAME%%WHITE%											// notifications for unknown set equipment items (future-proofing)
+ItemDisplay[(UNI OR SET)]: %NAME%%WHITE%
+
+
+// +----------------------------+
+//-¦ Rare Items  (unidentified) ¦----------------------------------------------------------------------------------------
+// +----------------------------+
+
+// Highlighting (includes notifications)
+ItemDisplay[RARE !ID ((GLOVES ILVL>42) OR (BOOTS ILVL>36))]:					 %NAME% %WHITE%		// gloves, boots
+ItemDisplay[RARE !ID ((ci0 ILVL>86) OR (ci1 ILVL>81) OR (ci2 ILVL>76) OR ci3)]:	%DOT-6D%%TIER-9% %NAME% %WHITE%		// +2-skill-capable circlets
+ItemDisplay[RARE !ID ILVL>70 ETH (crs OR 9cr)]:					%DOT-6D%%TIER-4% %NAME% %WHITE%		// eth Crystal Sword, eth Dimensional Blade
+
+// Class-Specific Highlighting (includes notifications)
+ItemDisplay[RARE !ID ILVL>49 AMAZON ELT BOW (ZON OR 6lw)]:			%DOT-6D%%TIER-9% %NAME% %WHITE%		// Amazon - elite Amazon bows and Hydra bow
+ItemDisplay[RARE !ID ILVL>49 AMAZON ZON ELT ETH (SPEAR OR JAV)]:		%DOT-6D%%TIER-9% %NAME% %WHITE%		// Amazon - elite eth Amazon spears/javelins
+ItemDisplay[RARE !ID ILVL>49 ASSASSIN ELT ETH SIN]:				%DOT-6D%%TIER-9% %NAME% %WHITE%		// Assassin - elite eth claws
+ItemDisplay[RARE !ID ILVL>49 BARBARIAN ETH (72a OR 7wa OR 7bt OR 7gi OR 7fl OR 7wh OR 7m7 OR 7gm OR 7gs OR 7b7 OR 7fb OR 7gd OR 7p7)]:	%DOT-6D%%TIER-9% %NAME% %WHITE%	// Barbarian - best elite eth melee weapon bases
+ItemDisplay[RARE !ID ILVL>49 BARBARIAN ELT ETH THROWING !ZON]:			%DOT-6D%%TIER-9% %NAME% %WHITE%		// Barbarian - elite eth throwing weapons
+ItemDisplay[RARE !ID ILVL>49 BARBARIAN BAR]:					%DOT-6D%%TIER-4% %NAME% %WHITE%		// Barbarian - helms
+ItemDisplay[RARE !ID ILVL>49 DRUID ELT ETH (CLUB OR 7la OR 7ga OR 7s8 OR 7wc)]:	%DOT-6D%%TIER-9% %NAME% %WHITE%		// Druid - elite eth clubs and fastest melee bases for shape shifting (Feral Axe, Champion Axe, Thresher, Giant Thresher)
+ItemDisplay[RARE !ID ILVL>49 DRUID DRU]:					%DOT-6D%%TIER-4% %NAME% %WHITE%		// Druid - helms
+ItemDisplay[RARE !ID ILVL>49 NECROMANCER (bwn OR gwn OR 9yw OR 9bw OR 9gw)]:	%DOT-6D%%TIER-9% %NAME% %WHITE%		// Necromancer - wands (versions that have a magic level and can get 2 sockets)
+ItemDisplay[RARE !ID ILVL>49 NECROMANCER WAND]:					%DOT-6D%%TIER-4% %NAME% %WHITE%		// Necromancer - wands
+ItemDisplay[RARE !ID ILVL>49 NECROMANCER NEC]:					%DOT-6D%%TIER-4% %NAME% %WHITE%		// Necromancer - shields
+ItemDisplay[RARE !ID ILVL>49 PALADIN ETH (7ws OR 7b7 OR 7fb OR 7gd)]:		%DOT-6D%%TIER-9% %NAME% %WHITE%		// Paladin - eth Caduceus and best 2-handed sword bases (Champion Sword, Colossus Sword, Colossus Blade)
+ItemDisplay[RARE !ID ILVL>49 PALADIN DIN]:					%DOT-6D%%TIER-4% %NAME% %WHITE%		// Paladin - shields
+ItemDisplay[RARE !ID ILVL>49 SORCERESS SOR (ob5 OR oba OR obf)]:		%DOT-6D%%TIER-9% %NAME% %WHITE%		// Sorceress - orbs (versions that can get 3 sockets)
+ItemDisplay[RARE !ID ILVL>49 SORCERESS STAFF (wst OR 8ws OR 6ws)]:		%DOT-6D%%TIER-4% %NAME% %WHITE%		// Sorceress - staves (versions that can get 6 sockets)
+
+// Catchall
+ItemDisplay[RARE]: %NAME%%WHITE%
+
+
+// +-----------------------------+
+//-¦ Magic Items  (unidentified) ¦---------------------------------------------------------------------------------------
+// +-----------------------------+
+
+// Highlighting
+ItemDisplay[MAG !ID ETH (crs OR 9cr) ILVL>43]:		%DOT-97%%TIER-9%  %NAME%  %WHITE%	// eth Crystal Sword, eth Dimensional Blade (also adds notifications)
+ItemDisplay[MAG !ID ETH ((THROWING !ZON ELT) OR glv OR 9gl) ILVL>43]:	  %NAME%  %WHITE%	// eth elite throwing weapons, eth Glaive, eth Spiculum
+
+// Force Display
+ItemDisplay[MAG !ID (MAPID=181 OR MAPID=182) (ELT OR CLASS OR STAFF OR WAND OR SCEPTER OR CLUB)]: %NAME%{%NAME%}%WHITE%		// Always show these unidentified magic items in Stygian Caverns: elite items, class items
+
+// Hidden (stricter): Worst non-class items at each tier - levels 40, 60, 80				...socketable armors incapable of 3os (after upgrades), strictly-worse armors, high strength-requirement helms, final 3 lines of gloves/boots/belts (excluding ilvl 91+ chests/shields)		...1-handed socketable weapons incapable of 4os, 2-handed socketable weapons incapable of 5os, bows/crossbows except the final 2 lines from each								...blank spaces are for those items which aren't counted among the "worst" and are excluded so that the others line up vertically with their corresponding normal/exceptional/elite versions
+ItemDisplay[FILTLVL>2 CLVL>39 MAG !ID !(CRAFTALVL>84 (CHEST OR SHIELD)) ILVL<92 !ETH NORM ((cap OR skp OR hlm OR fhl OR ghm OR crn) OR (       rng OR scl OR chn OR        spl OR plt OR fld OR gth OR ful) OR (buc OR sml OR lrg OR spk OR        gts) OR (mgl OR tgl OR hgl) OR (mbt OR tbt OR hbt) OR (mbl OR tbl OR hbl) OR (hax OR lax OR mac OR mst OR ssd OR scm OR sbr OR flc OR wsd OR 2hs OR clm OR gis OR bsw OR dgr OR dir OR bld OR spr OR tri OR bar OR vou OR sbw OR hbw OR lbw OR cbw OR sbb OR lbb OR lxb OR mxb))]:	// 	...excluded blanks: Studded Leather, Breast Plate, Kite Shield
+ItemDisplay[FILTLVL>2 CLVL>59 MAG !ID !(CRAFTALVL>84 (CHEST OR SHIELD)) ILVL<92 !ETH EXC  ((xap OR xkp OR xlm OR xhl OR xhm OR xrn) OR (xtu OR xng OR xcl OR xhn OR xrs OR xpl OR xlt OR xld OR xth OR xul) OR (xuc OR xml OR xrg OR xpk OR xit OR xts) OR (xmg OR xtg OR xhg) OR (xmb OR xtb OR xhb) OR (zmb OR ztb OR zhb) OR (9ha OR 9la OR 9ma OR 9mt OR 9ss OR 9sm OR 9sb OR 9fc OR 9wd OR 92h OR 9cm OR 9gs OR 9b9 OR 9dg OR 9di OR 9bl OR 9sr OR 9tr OR 9b7 OR 9vo OR 8sb OR 8hb OR 8lb OR 8cb OR 8s8 OR 8l8 OR 8lx OR 8mx))]:
+ItemDisplay[FILTLVL>2 CLVL>79 MAG !ID !(CRAFTALVL>84 (CHEST OR SHIELD)) ILVL<92 !ETH ELT  ((       ukp OR ulm OR uhl OR uhm OR urn) OR (utu OR ung OR ucl OR uhn OR urs OR upl OR        uld              ) OR (uuc OR uml OR        upk              ) OR (umg OR utg OR uhg) OR (umb OR utb OR uhb) OR (umc OR utc OR uhc) OR (7ha OR 7la OR 7ma OR 7mt OR 7ss OR 7sm OR 7sb OR 7fc OR 7wd OR 72h OR 7cm OR 7gs OR 7b7 OR 7dg OR 7di OR 7bl OR 7sr OR 7tr OR 7o7 OR 7vo OR 6sb OR 6hb OR 6lb OR 6cb OR 6s7 OR 6l7 OR 6lx       ))]:	// 	...excluded blanks: Shako, Hellforge Plate, Lacquered Plate, Shadow Plate, Hyperion, Ward, Monarch, Gorgon Crossbow
+
+// Hidden (stricter): Worst staves (non-eth staves that aren't elite or capable of 6 sockets) - level 70
+ItemDisplay[FILTLVL>3 MAG !ID CLVL>69 STAFF !ETH !(ELT OR wst OR 8ws)]:
+
+// Hidden (stricter): Most non-class non-elite items - levels 60, 80
+ItemDisplay[FILTLVL>3 CLVL>59 MAG !ID NORM !ETH !(CLASS OR STAFF OR WAND OR SCEPTER OR CLUB) !(qui OR ltp OR aar OR bsh OR tow OR vgl OR vbt OR bhm OR msk OR wax OR gix OR fla OR gma OR gsd OR pik OR wsc OR lwb OR hxb OR rxb)]:				// normal non-class non-eth items (they can be purchased from merchants relatively easily)
+ItemDisplay[((FILTLVL>4 CLVL>79) OR (FILTLVL>5 CLVL>69)) DIFF=2 MAG !ID EXC !ETH !(CLASS OR STAFF OR WAND OR SCEPTER OR CLUB) !(xui OR xtp OR xar OR xsh OR xvg OR xvb OR xh9 OR xsk OR 9wa OR 9gi OR 9fl OR 9gm OR 9gd OR 9p9 OR 9ws OR 8lw OR 8hx OR 8rx)]:	// exceptional non-class non-eth items (they can be purchased from merchants relatively easily)
+
+// Hidden (stricter): Unworthy non-class items
+ItemDisplay[((FILTLVL>4 CLVL>84 NORM) OR (FILTLVL>5 CLVL>79 !ELT) OR (FILTLVL>6 CLVL>74)) DIFF=2 MAG !ID !CRAFTALVL>84 ILVL<92 !ETH CHEST !(qui OR xui OR uui OR ltp OR xtp OR utp OR aar OR xar OR uar OR uui OR uea)]:	// chests except "Dusk Shroud", "Archon Plate", & "Sacred Armor" lines, Wyrmhide, Scarab Husk
+ItemDisplay[((FILTLVL>4 CLVL>84 NORM) OR (FILTLVL>5 CLVL>79 !ELT) OR (FILTLVL>6 CLVL>74)) DIFF=2 MAG !ID !CRAFTALVL>84 ILVL<92 !ETH SHIELD !(CLASS OR bsh OR xsh OR ush OR urg OR upk OR tow)]:					// shields except "Troll Nest" line, Hyperion
+ItemDisplay[((FILTLVL>4 CLVL>84 NORM) OR (FILTLVL>5 CLVL>79 !ELT) OR (FILTLVL>6 CLVL>74)) DIFF=2 MAG !ID ILVL<92 !ETH (HELM OR CIRC) !(CLASS OR bhm OR xh9 OR uh9 OR usk OR uap OR ci3)]:					// helms except "Bone Visage" line, Demonhead, Shako
+ItemDisplay[((FILTLVL>4 CLVL>84 NORM) OR (FILTLVL>5 CLVL>79 !ELT) OR (FILTLVL>6 CLVL>74)) DIFF=2 MAG !ID ILVL<92 !ETH (GLOVES OR BOOTS OR BELT) !(ulg OR uvg OR xlb OR ulb OR ulc OR uvc)]:					// gloves, boots, and belts except the best bases of each
+
+// Hidden (stricter): Additional magic items - levels 50, 70, 80
+ItemDisplay[FILTLVL>4 CLVL>49 DIFF=2 MAG !ID NORM THROWING !ETH !ZON]:			// normal non-class non-eth throwing weapons
+ItemDisplay[FILTLVL>5 CLVL>69 DIFF=2 MAG !ID EXC THROWING !ETH !ZON]:			// exceptional non-class non-eth throwing weapons
+ItemDisplay[FILTLVL>6 CLVL>79 DIFF=2 MAG !ID !ETH !ELT ((ZON !AMAZON !am2 !am7 !am1 !am6 !am5 !ama) OR (SIN !ASSASSIN !axf !9xf !btl !9tw) OR (BAR !BARBARIAN !ba1 !ba6) OR ((DRU OR CLUB) !DRUID !dr1 !dr6) OR ((NEC OR WAND) !NECROMANCER !gwn !9gw !ne1 !ne6) OR ((DIN OR SCEPTER) !PALADIN !wsp !9ws !pa1 !pa6) OR ((SOR OR STAFF) !SORCERESS !ob5 !oba !wst !8ws)) !(ETH WEAPON)]:		// non-elite non-eth class items that don't match the character's class except for a few of each type and eth weapons
+
+// Catchall
+ItemDisplay[MAG]: %NAME%%WHITE%
+
+
+// +---------------+
+//-¦ Regular Items ¦-----------------------------------------------------------------------------------------------------
+// +---------------+
+// Gambling Items
+ItemDisplay[NMAG !ID]: %NAME%
+
+// Descriptions for Item Prices
+ItemDisplay[NMAG !SHOP !EQUIPPED]: %NAME%{%DARK_GREEN%$%PRICE%}%CONTINUE%
+
+// Possible Feature - Descriptions for Available Runewords
+// Possible Feature - Runeword Combinations for Available Runewords
+// Possible Feature - Descriptions for Reforging Recipes
+
+// Descriptions for Socketing Recipes (for 3+ socket-capable items above level 25)
+ItemDisplay[NMAG SOCK=0 !INF !SUP !SHOP !EQUIPPED STAT486=0 ILVL>25 (HELM OR CIRC) (DRU OR BAR OR (ILVL>40 (ci2 OR ci3 OR msk OR xsk OR usk OR ghm OR xhm OR uhm OR crn OR xrn OR urn OR uh9)))]: %NAME%{%NAME%%NL%%WHITE%Socketing Recipe: %ORANGE%[%BLUE%O%ORANGE%]%GRAY%+%TAN%(%WHITE%8%TAN%)%GRAY%+%TAN%(%WHITE%10%TAN%)}%CONTINUE%
+ItemDisplay[NMAG SOCK=0 !INF !SUP !SHOP !EQUIPPED STAT486=0 ILVL>25 CHEST (ELT OR gth OR xth OR ful OR xul OR aar OR xar OR rng OR xng OR brs OR xrs OR ltp OR xtp OR xcl OR xhn OR xpl OR xlt OR xld)]: %NAME%{%NAME%%NL%%WHITE%Socketing Recipe: %ORANGE%[%YELLOW%O%ORANGE%]%GRAY%+%TAN%(%WHITE%7%TAN%)%GRAY%+%TAN%(%WHITE%10%TAN%)}%CONTINUE%
+ItemDisplay[NMAG SOCK=0 !INF !SUP !SHOP !EQUIPPED STAT486=0 ILVL>25 SHIELD (DIN OR (NEC !NORM) OR upk OR ush OR lrg OR xrg OR urg OR kit OR xit OR uit OR tow OR xow OR uow OR gts OR xts OR uts)]: %NAME%{%NAME%%NL%%WHITE%Socketing Recipe: %ORANGE%[%RED%O%ORANGE%]%GRAY%+%TAN%(%WHITE%7%TAN%)%GRAY%+%TAN%(%WHITE%11%TAN%)}%CONTINUE%
+ItemDisplay[NMAG SOCK=0 !INF !SUP !SHOP !EQUIPPED STAT486=0 ILVL>25 WEAPON !(THROWING OR WAND OR SOR OR (DAGGER !THROWING !kri !9kr !7kr) OR hax OR clb OR mac OR spc OR ssd OR scm OR sbr OR flc OR sst OR scp OR ktr OR wrb OR axf OR ces)]: %NAME%{%NAME%%NL%%WHITE%Socketing Recipe: %ORANGE%[%PURPLE%O%ORANGE%]%GRAY%+%TAN%(%WHITE%8%TAN%)%GRAY%+%TAN%(%WHITE%11%TAN%)}%CONTINUE%
+
+// Possible Feature - Descriptions for Maximum Possible Sockets
+// Possible Feature - Weapon Speed, Melee Range, Item Tier (Regular Items)
+// Possible Feature - Descriptions for Base Defense (Chests/Helms/Shields)
+
+// Name Modification: Superior/Sockets
+ItemDisplay[NMAG SUP ED>0]: %NAME% %BLUE%+%ED%{%NAME%}%CONTINUE%
+ItemDisplay[NMAG SOCK>0]: %NAME% %GRAY%[%SOCKETS%]{%NAME%}%CONTINUE%
+
+// Highlighting & Notifications
+ItemDisplay[NMAG !RW !ETH ((((SOCK=0 OR SOCK>3) ED>0) (7cr OR 7wa)) OR (SOCK=4 ED>0 6rx) OR (SOCK=4 ED>0 6hx) OR (SOCK=3 ED>0 utp) OR (7gm SOCK>4 ED>0))]:		%DOT-20%%TIER-9%  %NAME%{%NAME%}  %WHITE%	// valuable non-eth bases: sup 5s Phase Blade, sup 4s Demon Crossbow, sup 4s Colossus Crossbow, sup 3s Archon Plate...
+ItemDisplay[NMAG !RW ETH (((SOCK=5 OR (!SOCK=1 ED>0)) (7wa OR 72a)) OR ((SOCK>4 OR (SOCK=0 ED>0)) 2H ELT AXE))]:							%DOT-1D%%TIER-9%  %NAME%{%NAME%}  %WHITE%	// valuable eth bases: 5s Berserker Axe, sup 5s Ettin Axe, 5/6s Glorious Axe...
+ItemDisplay[NMAG !RW ETH (((SOCK=4 OR SOCK=6) 7p7) OR ((SOCK=0 OR SOCK=4) ED>0 7tr) OR (SOCK=4 ED>0 7br) OR ((SOCK=4 OR SOCK=5) (7s8 OR 7wc OR (7o7 ED>0))))]:		%DOT-1D%%TIER-9%  %NAME%{%NAME%}  %WHITE%	// valuable eth bases: 4/6s War Pike, sup 0/4s Stygian Pike, sup 4s Mancatcher, 4/5s Thresher, 4s Giant Thresher
+ItemDisplay[NMAG !RW ETH (((SOCK>4 OR (!SOCK=1 ED>0)) (7gm OR 7m7)) OR (SOCK>4 ED>0 (7fb OR 7gd)))]:									%DOT-1D%%TIER-9%  %NAME%{%NAME%}  %WHITE%	// valuable eth bases: 2/5/6s Thunder Maul, sup 2s Ogre Maul, sup 5s Colossus Blade...
+ItemDisplay[NMAG !RW ((CLVL<31 DIFF<2 ((SWORD OR POLEARM OR SPEAR) SOCK=4)) OR (SOCK=5 7cr)) !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109)]:		%PX-20%%TIER-4% %NAME% {%NAME%}%WHITE%		// 4s swords and 4s spears/polearms for characters below level 30 in normal/nightmare or 5s phase blades outside of town (only for less strict filter levels, not stricter levels)
+
+// Highlighting
+ItemDisplay[NMAG ETH CHEST ((DEF>649 !(utp OR urs OR ula OR uea OR uui)) OR (DEF>599 (utp OR urs OR ula OR uea OR uui)))]:	 %NAME% {%NAME%}%WHITE%		// eth chests with high defense ("light" 600+, others 650+)
+ItemDisplay[NMAG ELT ETH ED>0 (AXE OR MACE OR SWORD OR POLEARM OR SPEAR) !THROWING !ZON !CLUB]:					 %NAME% {%NAME%}%WHITE%		// sup & eth non-class elite melee weapons
+ItemDisplay[NMAG !SUP !ETH ((usk DEF>151) OR (uh9 DEF>154) OR (uui DEF>461) OR (uea DEF>464) OR (ula DEF>468) OR (utu DEF>475) OR (urs DEF>495) OR (utp DEF>518) OR (uar DEF>594) OR (uit DEF>147) OR (upk DEF>162) OR (ush DEF>172))]:	 %NAME% {%NAME%}%WHITE%		// good elite armor with top 5% defense
+
+// Force Display
+ItemDisplay[NMAG leg]: %NAME%{%NAME%}%WHITE%	// displays Wirt's Leg here to prevent pointmod info from being added
+ItemDisplay[NMAG (EQUIPPED OR GEMMED OR SHOP OR MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109 OR (INF SOCK>0)) !(CLASS OR STAFF OR WAND OR SCEPTER OR CLUB)]: %NAME%{%NAME%}%WHITE%		// always show regular non-class items when equipped, gemmed, or in town
+ItemDisplay[ELT !ETH !SUP ((uap DEF>140) OR (ukp DEF>144) OR (ulm DEF>148) OR (uhl DEF>153) OR (usk DEF>153) OR (uh9 DEF>156) OR (uhm DEF>158) OR (urn DEF>164) OR (uui DEF>466) OR (uea DEF>469) OR (ula DEF>473) OR (utu DEF>480) OR (ung DEF>488) OR (ucl DEF>495) OR (uhn DEF>504) OR (urs DEF>500) OR (upl DEF>516) OR (ult DEF>529) OR (uld DEF>522) OR (uth DEF>540) OR (utp DEF>523) OR (uul DEF>556) OR (uar DEF>599) OR (uuc DEF>109) OR (uml DEF>122) OR (urg DEF>134) OR (upk DEF>162) OR (uit DEF>147) OR (ush DEF>172) OR (uow DEF>240) OR (uts DEF>206))]: %NAME%{%NAME%}%WHITE%	// always show elite non-eth non-superior socketable armors which have max defense
+
+// Hidden: Regular non-class items with little or no runeword useability - level 15
+ItemDisplay[FILTLVL>0 CLVL>14 NMAG (GLOVES OR BOOTS OR BELT)]: {%NAME%}									// gloves, boots, belts
+ItemDisplay[FILTLVL>0 CLVL>14 NMAG ((SOCK=1 !(CLASS OR STAFF OR WAND OR SCEPTER OR CLUB)) OR (dgr OR dir OR buc OR xuc))]: {%NAME%}	// 1-socket items & items that can only get 1 socket (daggers, shields)
+ItemDisplay[FILTLVL>0 CLVL>14 NMAG THROWING !ZON NORM !(ETH BARBARIAN)]: {%NAME%}							// normal throwable weapons (except eth versions for Barbarians)
+ItemDisplay[FILTLVL>0 CLVL>14 NMAG INF SOCK=0 !(CLASS OR STAFF OR WAND OR SCEPTER OR CLUB) !utp]: {%NAME%}				// inferior items (except Archon Plate)
+
+// Hidden: Regular non-class throwable weapons - level 50, 80
+ItemDisplay[FILTLVL>0 CLVL>49 NMAG THROWING !ZON !(7tk OR 7ta OR 7bk OR (ETH ELT)) !(ETH BARBARIAN)]: {%NAME%}					// non-class throwable weapons worth less than 5000 gold per inventory space, except elite eth versions (for imbuing); all eth versions shown for Barbarians
+ItemDisplay[((FILTLVL>0 CLVL>79) OR (FILTLVL>4 CLVL>69)) NMAG THROWING !ZON !(ETH (7gl OR 7ts OR 7bk OR 7b8)) !(ETH BARBARIAN)]: {%NAME%}	// all non-class throwable weapons, except eth versions of the fastest/slowest elite bases: Ghost Glaive, Winged Harpoon, Winged Knife, Flying Axe (for imbuing); all eth versions shown for Barbarians
+
+// Hidden (stricter): Worst non-class plain items at each tier (excluding any ethereal, superior, or 3+ socket items) - levels 40, 60, 80		...socketable armors incapable of 3os (after upgrades), strictly-worse armors, high strength-requirement helms		...1-handed socketable weapons incapable of 4os, 2-handed socketable weapons incapable of 5os, bows/crossbows except the final 2 lines from each											...blank spaces are for those items which aren't counted among the "worst" and are excluded so that the others line up vertically with their corresponding normal/exceptional/elite versions
+ItemDisplay[FILTLVL>2 CLVL>39 NMAG NORM !(ETH OR ED>0 OR ((WEAPON SOCK>2) OR (ARMOR SOCK>1)))                            ((cap OR skp OR hlm OR fhl OR ghm OR crn) OR (       rng OR scl OR chn OR        spl OR plt OR fld OR gth OR ful) OR (buc OR sml OR lrg OR spk OR        gts) OR (hax OR lax OR mac OR mst OR ssd OR scm OR sbr OR flc OR wsd OR 2hs OR clm OR gis OR bsw OR dgr OR dir OR bld OR spr OR tri OR bar OR vou OR sbw OR hbw OR lbw OR cbw OR sbb OR lbb OR lxb OR mxb))]: {%NAME%}		// 							...excluded blanks: Studded Leather, Breast Plate, Kite Shield
+ItemDisplay[FILTLVL>2 CLVL>59 NMAG EXC  !(ETH OR ED>0 OR ((WEAPON SOCK>2) OR (ARMOR SOCK>1)))                            ((xap OR xkp OR xlm OR xhl OR xhm OR xrn) OR (xtu OR xng OR xcl OR xhn OR xrs OR xpl OR xlt OR xld OR xth OR xul) OR (xuc OR xml OR xrg OR xpk OR xit OR xts) OR (9ha OR 9la OR 9ma OR 9mt OR 9ss OR 9sm OR 9sb OR 9fc OR 9wd OR 92h OR 9cm OR 9gs OR 9b9 OR 9dg OR 9di OR 9bl OR 9sr OR 9tr OR 9b7 OR 9vo OR 8sb OR 8hb OR 8lb OR 8cb OR 8s8 OR 8l8 OR 8lx OR 8mx))]: {%NAME%}
+ItemDisplay[((FILTLVL>2 CLVL>79) OR (FILTLVL>4 CLVL>69)) NMAG ELT  !(ETH OR ED>0 OR ((WEAPON SOCK>2) OR (ARMOR SOCK>1))) ((       ukp OR ulm OR uhl OR uhm OR urn) OR (utu OR ung OR ucl OR uhn OR urs OR upl OR        uld              ) OR (uuc OR uml OR        upk              ) OR (7ha OR 7la OR 7ma OR 7mt OR 7ss OR 7sm OR 7sb OR 7fc OR 7wd OR 72h OR 7cm OR 7gs OR 7b7 OR 7dg OR 7di OR 7bl OR 7sr OR 7tr OR 7o7 OR 7vo OR 6sb OR 6hb OR 6lb OR 6cb OR 6s7 OR 6l7 OR 6lx       )) !(DEF>479)]: {%NAME%}	// also excludes armor with 480+ defense		...excluded blanks: Shako, Hellforge Plate, Lacquered Plate, Shadow Plate, Hyperion, Ward, Monarch, Gorgon Crossbow
+
+// Hidden (stricter): Worst non-class items (excluding any with at least 2 of: ethereal, superior, 3+ sockets) - level 85				...socketable armors incapable of 3os (after upgrades), strictly-worse armors, high strength-requirement helms		...1-handed socketable weapons incapable of 4os, 2-handed socketable weapons incapable of 5os, bows/crossbows except the final 2 lines from each
+ItemDisplay[((FILTLVL>3 CLVL>84) OR (FILTLVL>5 CLVL>74)) NMAG NORM !((ETH (ED>0 OR SOCK>2)) OR (ED>0 SOCK>2))            ((cap OR skp OR hlm OR fhl OR ghm OR crn) OR (       rng OR scl OR chn OR        spl OR plt OR fld OR gth OR ful) OR (buc OR sml OR lrg OR spk OR        gts) OR (hax OR lax OR mac OR mst OR ssd OR scm OR sbr OR flc OR wsd OR 2hs OR clm OR gis OR bsw OR dgr OR dir OR bld OR spr OR tri OR bar OR vou OR sbw OR hbw OR lbw OR cbw OR sbb OR lbb OR lxb OR mxb))]: {%NAME%}
+ItemDisplay[((FILTLVL>3 CLVL>84) OR (FILTLVL>5 CLVL>74)) NMAG EXC  !((ETH (ED>0 OR SOCK>2)) OR (ED>0 SOCK>2))            ((xap OR xkp OR xlm OR xhl OR xhm OR xrn) OR (xtu OR xng OR xcl OR xhn OR xrs OR xpl OR xlt OR xld OR xth OR xul) OR (xuc OR xml OR xrg OR xpk OR xit OR xts) OR (9ha OR 9la OR 9ma OR 9mt OR 9ss OR 9sm OR 9sb OR 9fc OR 9wd OR 92h OR 9cm OR 9gs OR 9b9 OR 9dg OR 9di OR 9bl OR 9sr OR 9tr OR 9b7 OR 9vo OR 8sb OR 8hb OR 8lb OR 8cb OR 8s8 OR 8l8 OR 8lx       ))]: {%NAME%}
+ItemDisplay[((FILTLVL>3 CLVL>84) OR (FILTLVL>5 CLVL>74)) NMAG ELT  !((ETH (ED>0 OR SOCK>1)) OR (ED>0 SOCK>1)) (uuc OR uml OR 7ha OR 7ma OR 7mt OR 7ss OR 7sm OR 7sb OR 7fc OR 7wd OR 72h OR 7dg OR 7di OR 7kr OR 7bl OR 7sr) !((ETH 72h) OR (ED>0 7kr))]: {%NAME%}	// only applies to weapons that are incapable of 4+ sockets and armors that are incapable of 3+ sockets (also more lenient with sockets than corresponding normal/exceptional rules) except for eth Legend Sword and superior Fanged Knife
+
+// Hidden (stricter): Additional non-class items
+ItemDisplay[((FILTLVL>3 CLVL>79) OR (FILTLVL>4 CLVL>69)) NMAG ((CIRC !ci3) OR ((uit OR uow OR uts) SOCK>0 SOCK<4))]: {%NAME%}				// filter level 4 - hides non-diadem circlets, 4-socket-capable shields (monarch, aegis, ward) that can't ever get 4 sockets
+
+// Hidden (stricter): Plain non-class items - level 80
+ItemDisplay[((FILTLVL>4 CLVL>79) OR (FILTLVL>6 CLVL>69)) DIFF=2 NMAG !ETH ED=0 SOCK=0 NORM !(CLASS OR STAFF OR WAND OR SCEPTER OR CLUB)]: {%NAME%}	// filter level 5 - hides regular non-class normal plain items
+ItemDisplay[((FILTLVL>5 CLVL>79) OR (FILTLVL>6 CLVL>69)) DIFF=2 NMAG !ETH ED=0 SOCK=0 EXC !(CLASS OR STAFF OR WAND OR SCEPTER OR CLUB)]: {%NAME%}	// filter level 6 - hides regular non-class exceptional plain items
+ItemDisplay[FILTLVL>6 CLVL>79 DIFF=2 NMAG !ETH ED=0 SOCK=0 !(CLASS OR STAFF OR WAND OR SCEPTER OR CLUB)]: {%NAME%}					// filter level 7 - hides regular non-class plain items
+
+// Hidden (stricter): 2-socket non-class items  - level 80
+ItemDisplay[((FILTLVL>4 CLVL>79) OR (FILTLVL>5 CLVL>69)) DIFF=2 NMAG !ETH ED=0 SOCK=2 NORM !(CLASS OR STAFF OR WAND OR SCEPTER OR CLUB) !(bhm OR xh9 OR uap OR usk OR ltp OR xtp OR utp OR uui OR bsh OR xsh OR ush)]: {%NAME%}	// filter level 5 - hides normal regular non-class 2-socket items except for the most optimal bases
+ItemDisplay[((FILTLVL>5 CLVL>79) OR (FILTLVL>6 CLVL>69)) DIFF=2 NMAG !ETH ED=0 SOCK=2 !ELT !(CLASS OR STAFF OR WAND OR SCEPTER OR CLUB) !(bhm OR xh9 OR uap OR usk OR ltp OR xtp OR utp OR uui OR bsh OR xsh OR ush)]: {%NAME%}	// filter level 6 - hides non-elite regular non-class 2-socket items except for the most optimal bases
+ItemDisplay[FILTLVL>6 CLVL>79 DIFF=2 NMAG !ETH ED=0 SOCK=2 !(CLASS OR STAFF OR WAND OR SCEPTER OR CLUB) !(bhm OR xh9 OR uap OR usk OR ltp OR xtp OR utp OR uui OR bsh OR xsh OR ush)]: {%NAME%}					// filter level 7 - hides regular non-class 2-socket items except for the most optimal bases
+
+// Catchall - Regular Non-Class-Related Items
+ItemDisplay[NMAG !(CLASS OR STAFF OR WAND OR SCEPTER OR CLUB)]: %NAME%{%NAME%}%WHITE%
+
+
+// +---------------------+
+//-¦ Regular Class Items ¦-----------------------------------------------------------------------------------------------
+// +---------------------+
+// Modification: Amazon Weapons & Paladin Shields
+ItemDisplay[NMAG ZON (TABSK0=3 OR TABSK2=3)]: %NAME% %TAN%+3{%NAME%}%CONTINUE%
+ItemDisplay[NMAG ZON (TABSK0=2 OR TABSK2=2)]: %NAME% %TAN%+2{%NAME%}%CONTINUE%
+ItemDisplay[NMAG DIN ED>0 SOCK=0]: %NAME% %GRAY%|{%NAME%}%CONTINUE%			// Divider to help visually separate superior ED from automods (takes the place of the socket count when there are no sockets)
+ItemDisplay[NMAG DIN RES>0]: %NAME% %BLUE%+%RES%{%NAME%}%CONTINUE%			// All Res
+ItemDisplay[NMAG DIN EDAM>0 AR>0]: %NAME% %BLUE%+%EDAM%/+%AR%{%NAME%}%CONTINUE%		// ED & AR
+
+// Possible Feature - Pointmod Amplitude (value of highest pointmod, if above +1)
+// Possible Feature - Pointmod Amount (one tally per pointmod, if more than one)
+
+// Highlighting & Notifications
+ItemDisplay[NMAG !RW (DRU OR CLUB) !SOCK=1 (((SK227>2 OR SK237>2 OR SK247>2) (SK226>2 OR SK236>2 OR SK249>0 OR SK250>0 OR (SK235>0 SK370>0))) OR (SK227>2 SK237>2) OR (SK227>2 SK247>2) OR (SK237>2 SK247>2))]:	%DOT-20%%TIER-9%  %NAME%  {%NAME%}%WHITE%	// Druid	pelts/clubs (summoning)
+ItemDisplay[NMAG !RW (DRU OR CLUB) !SOCK=1 (((SK229>2 OR SK244>2) (SK249>2 OR SK226>0 OR SK247>0)) OR ((SK240>2 OR SK245>2) (SK250>2 OR SK226>0 OR SK247>0)) OR (SK229>2 SK244>2) OR (SK240>2 OR SK245>2))]:	%DOT-20%%TIER-9%  %NAME%  {%NAME%}%WHITE%	// Druid	pelts/clubs (elemental)
+ItemDisplay[NMAG !RW STAFF (SOCK=4 OR (SOCK=0 (cst OR 8cs OR 6cs OR bst OR 8bs OR 6bs)) OR SOCK=5) (SK58>2 (SK50>0 OR SK60>0 OR SK40>2 OR SK52>2))]:				%DOT-20%%TIER-9%  %NAME%  {%NAME%}%WHITE%	// Sorceress	staves (for Memory & Call to Arms)
+ItemDisplay[NMAG !RW STAFF (SOCK=2 OR (SOCK=0 sst)) (SK36>2 OR SK37>2 OR SK41>2 OR SK46>2 OR SK47>2 OR SK51>2 OR SK52>2 OR SK56>2 OR SK62>2) (SK50>0 OR SK60>0 OR SK58>0)]:	%DOT-20%%TIER-9%  %NAME%  {%NAME%}%WHITE%	// Sorceress	staves (for Leaf)
+ItemDisplay[NMAG !RW SIN !(ktr OR wrb OR axf OR ces) (SOCK>2 OR SOCK=0) (SK262>2 OR SK271>2) (SK275>0 OR SK268>0 OR SK279>0 OR SK276>2)]:					%DOT-20%%TIER-9%  %NAME%  {%NAME%}%WHITE%	// Assassin	claws (sentry utility)
+ItemDisplay[NMAG !RW SIN !(ktr OR wrb OR axf OR ces) (SOCK>2 OR SOCK=0) ELT ETH ED>0 (SK254>2 OR SK260>2 OR SK270>2 OR SK277>0 OR SK278>0 OR SK275>0 OR SK268>0 OR SK279>0)]:	%DOT-20%%TIER-9%  %NAME%  {%NAME%}%WHITE%	// Assassin	claws (physical utility)
+ItemDisplay[NMAG !RW ((amb SOCK=4 ED>0) OR (amc (SOCK=4 OR (SOCK=5 ED>0)))) TABSK0>2]:												%DOT-20%%TIER-9%  %NAME%  {%NAME%}%WHITE%	// Amazon	bows
+ItemDisplay[NMAG !RW DIN (((ELT OR pa8 OR pa9 OR paa) (((RES>24 OR EDAM>59) !SOCK=1) OR (ETH (RES>19 OR EDAM>49) (SOCK=0 OR SOCK=4)))) OR (RES>28 OR EDAM>63))]:		%DOT-20%%TIER-9%  %NAME%  {%NAME%}%WHITE%	// Paladin	shields
+ItemDisplay[NMAG !RW ETH ED>0 (SOCK=0 OR SOCK=6) 6ws]:																%DOT-20%%TIER-9%  %NAME%  {%NAME%}%WHITE%	// eth superior 6s-capable Archon Staff (for Breath of the Dying or Last Wish - Leap Attack doesn't use durability)
+ItemDisplay[NMAG !RW CLVL<31 ((STAFF OR SCEPTER) SOCK=4) !DIFF=2 !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109)]:							%PX-20%%TIER-4% %NAME% {%NAME%}%WHITE%		// 4s staves and 4s scepters for characters below level 30 in normal/nightmare outside of town (only for less strict filter levels, not stricter levels)
+
+// Highlighting: Potentially Valuable Pointmod Items
+ItemDisplay[NMAG !RW SIN !(ktr OR wrb OR axf OR ces) (SOCK>2 OR SOCK=0) (SK262>2 OR SK266>2 OR SK267>2 OR SK271>2 OR SK273>2 OR SK276>2 OR SK277>2 OR SK278>2)]:	  %NAME%  {%NAME%}%WHITE%				// Assassin	claws
+ItemDisplay[NMAG !RW BAR !SOCK=1 (SK128>2 OR SK140>2 OR SK141>2 OR SK146>2 OR SK147>2 OR SK149>2 OR SK151>2 OR SK152>2 OR SK154>2 OR SK368>2)]:	  %NAME%  {%NAME%}%WHITE%							// Barbarian	helms
+ItemDisplay[NMAG !RW (NEC OR (WAND !(wnd OR ywn OR 9wn))) !SOCK=1 (SK67>2 OR SK69>2 OR SK73>2 OR SK75>2 OR SK79>2 OR SK83>2 OR SK84>2 OR SK85>2 OR SK92>2 OR SK94>2)]:	  %NAME%  {%NAME%}%WHITE%				// Necromancer	wands/shields
+ItemDisplay[NMAG !RW SCEPTER (SOCK>2 OR (SOCK=0 !scp)) (SK117>2 OR SK112>2 OR SK121>2 OR (SOCK=4 (DIFF<2 OR SK118>2 OR (ELT (SK106>2 OR SK107>2 OR SK123>2 OR SK125>2)))))]:	  %NAME%  {%NAME%}%WHITE%			// Paladin	scepters
+ItemDisplay[NMAG !RW SOR (SOCK>2 OR (SOCK=0 (ob5 OR oba OR obf))) (SK38>2 OR SK40>2 OR SK44>2 OR SK48>2 OR SK50>2 OR SK52>2 OR SK53>2 OR SK57>2 OR SK58>2 OR SK60>2 OR SK62>2 OR SK64>2)]:	  %NAME%  {%NAME%}%WHITE%	// Sorceress	orbs
+ItemDisplay[NMAG !RW STAFF (SOCK=4 OR (SOCK=0 (cst OR 8cs OR 6cs OR bst OR 8bs OR 6bs))) (SK38>2 OR SK48>2 OR SK49>2 OR SK53>2) (SK63>0 OR SK50>0 OR SK57>2 OR SK58>2 OR SK37>2)]:	  %NAME%  {%NAME%}%WHITE%		// Sorceress	staves (for Infinity)
+ItemDisplay[NMAG !RW STAFF (SOCK=5 OR (SOCK=0 (wst OR 8ws OR 6ws))) (SK44>2 OR SK59>2 OR SK64>2 OR SK369>2) (SK65>0 OR SK58>2 OR SK37>2)]:	  %NAME%  {%NAME%}%WHITE%							// Sorceress	staves (for Doom)
+
+// Force Display
+ItemDisplay[NMAG (EQUIPPED OR GEMMED OR SHOP OR MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109 OR (INF SOCK>0))]: %NAME%{%NAME%}%WHITE%		// always show regular class items when equipped, gemmed, or in town
+
+// Hidden: 1-socket items - levels 30, 80
+ItemDisplay[FILTLVL>0 CLVL>29 NMAG SOCK=1 !(PRICE=35000 OR WAND OR sst OR 8ss OR 6ss OR (SCEPTER !wsp !9ws !7ws) OR SIN OR SOR OR (DIN (RES>9 OR EDAM>29)) OR (ZON (TABSK0>1 OR TABSK2>1)))]: {%NAME%}	// 1-socket items larger than 3 inventory spaces, except: items worth 35000 gold, paladin shields with 30+ ed or 10+ all res, amazon weapons with 2+ skills
+ItemDisplay[((FILTLVL>0 CLVL>79) OR (FILTLVL>4 CLVL>69)) NMAG SOCK=1]: {%NAME%}																// all 1-socket items
+
+// Hidden: Skill-Capable Items without skills (excluding merchant items) - level 5 (ilvl 10+)
+ItemDisplay[FILTLVL>0 CLVL>4 NMAG ILVL>9 SIN !(ELT (SOCK=0 OR SOCK>1) (ETH OR ED>0)) (SK251=0 SK252=0 SK253=0 SK254=0 SK255=0 SK256=0 SK257=0 SK258=0 SK259=0 SK260=0 SK261=0 SK262=0 SK263=0 SK264=0 SK265=0 SK266=0 SK267=0 SK268=0 SK269=0 SK270=0 SK271=0 SK272=0 SK273=0 SK274=0 SK275=0 SK276=0 SK277=0 SK278=0 SK279=0 SK280=0 SK366=0)]: {%NAME%}					// Assassin	Claws		...except: 0/2+ socket eth/ed elite
+ItemDisplay[FILTLVL>0 CLVL>4 NMAG ILVL>9 BAR (SK126=0 SK127=0 SK128=0 SK129=0 SK130=0 SK131=0 SK132=0 SK133=0 SK134=0 SK135=0 SK136=0 SK137=0 SK138=0 SK139=0 SK140=0 SK141=0 SK142=0 SK143=0 SK144=0 SK145=0 SK146=0 SK147=0 SK148=0 SK149=0 SK150=0 SK151=0 SK152=0 SK153=0 SK154=0 SK155=0 SK368=0)]: {%NAME%}										// Barbarian	Helms
+ItemDisplay[FILTLVL>0 CLVL>4 NMAG ILVL>9 (DRU OR CLUB) !(SOCK>1 (7cl OR 7sp) (ETH OR ED>0)) (SK221=0 SK222=0 SK223=0 SK224=0 SK225=0 SK226=0 SK227=0 SK228=0 SK229=0 SK230=0 SK231=0 SK232=0 SK233=0 SK234=0 SK235=0 SK236=0 SK237=0 SK238=0 SK239=0 SK240=0 SK241=0 SK242=0 SK243=0 SK244=0 SK245=0 SK246=0 SK247=0 SK248=0 SK249=0 SK250=0 SK370=0)]: {%NAME%}				// Druid	Pelts & Clubs	...except: 2+ socket eth/ed elite clubs
+ItemDisplay[FILTLVL>0 CLVL>4 NMAG ILVL>9 (WAND OR NEC) (SK66=0 SK67=0 SK68=0 SK69=0 SK70=0 SK71=0 SK72=0 SK73=0 SK74=0 SK75=0 SK76=0 SK77=0 SK78=0 SK79=0 SK80=0 SK81=0 SK82=0 SK83=0 SK84=0 SK85=0 SK86=0 SK87=0 SK88=0 SK89=0 SK90=0 SK91=0 SK92=0 SK93=0 SK94=0 SK95=0 SK367=0 SK374=0 SK381=0)]: {%NAME%}											// Necromancer	Shields & Wands
+ItemDisplay[FILTLVL>0 CLVL>4 NMAG ILVL>9 SCEPTER !(SOCK>3 OR (SOCK=0 (wsp OR 9ws OR 7ws))) !(SOCK>1 ELT) (SK96=0 SK97=0 SK98=0 SK99=0 SK100=0 SK101=0 SK102=0 SK103=0 SK104=0 SK105=0 SK106=0 SK107=0 SK108=0 SK109=0 SK110=0 SK111=0 SK112=0 SK113=0 SK114=0 SK115=0 SK116=0 SK117=0 SK118=0 SK119=0 SK120=0 SK121=0 SK122=0 SK123=0 SK124=0 SK125=0 SK364=0 SK371=0 SK378=0)]: {%NAME%}	// Paladin	Scepters	...except: 4+ socket-capable, 2+ socket elite
+ItemDisplay[FILTLVL>0 CLVL>4 NMAG ILVL>9 (SOR OR (STAFF !((6cs OR 6bs OR 6ws) (SOCK=0 OR SOCK>3)) !(SOCK=2 ELT))) (SK36=0 SK37=0 SK38=0 SK39=0 SK40=0 SK41=0 SK42=0 SK43=0 SK44=0 SK45=0 SK46=0 SK47=0 SK48=0 SK49=0 SK50=0 SK51=0 SK52=0 SK53=0 SK54=0 SK55=0 SK56=0 SK57=0 SK58=0 SK59=0 SK60=0 SK61=0 SK62=0 SK63=0 SK64=0 SK65=0 SK369=0 SK376=0 SK383=0)]: {%NAME%}			// Sorceress	Orbs & Staves	...except: 4+ socket-capable elite, 2-socket elite staves
+
+// Hidden (stricter): Unworthy class items - level 80
+ItemDisplay[((FILTLVL>2 CLVL>79) OR (FILTLVL>4 CLVL>69)) NMAG DIN (RES<10 EDAM<30 (SOCK>0 SOCK<3))]: {%NAME%}	// paladin shields with 1-2 sockets that also lack 30+ ed or 10+ all res
+ItemDisplay[((FILTLVL>2 CLVL>79) OR (FILTLVL>4 CLVL>69)) NMAG !ETH THROWING ZON TABSK2<3]: {%NAME%}		// non-eth javelins without +2 skills or better
+
+// Hidden (stricter): Inferior class items - level 80
+ItemDisplay[((FILTLVL>2 CLVL>79) OR (FILTLVL>4 CLVL>69)) INF !(RES>9 OR EDAM>29)]: {%NAME%}
+
+// Hidden (stricter): Additional class items - level 85
+ItemDisplay[FILTLVL>5 CLVL>84 DIFF=2 NMAG !ELT ((ZON !AMAZON) OR (SIN !ASSASSIN) OR (BAR !BARBARIAN) OR ((DRU OR CLUB) !DRUID) OR ((NEC OR WAND) !NECROMANCER) OR (((DIN RES<20 EDAM<50) OR (SCEPTER !SOCK=4)) !PALADIN) OR ((SOR OR STAFF) !SORCERESS)) (TABSK0<2 TABSK2<2) (SK251<2 SK252<2 SK253<2 SK254<2 SK255<2 SK256<2 SK257<2 SK258<2 SK259<2 SK260<2 SK261<2 SK262<2 SK263<2 SK264<2 SK265<2 SK266<2 SK267<2 SK268<2 SK269<2 SK270<2 SK271<2 SK272<2 SK273<2 SK274<2 SK275<2 SK276<2 SK277<2 SK278<2 SK279<2 SK280<2 SK366<2) (SK126<2 SK127<2 SK128<2 SK129<2 SK130<2 SK131<2 SK132<2 SK133<2 SK134<2 SK135<2 SK136<2 SK137<2 SK138<2 SK139<2 SK140<2 SK141<2 SK142<2 SK143<2 SK144<2 SK145<2 SK146<2 SK147<2 SK148<2 SK149<2 SK150<2 SK151<2 SK152<2 SK153<2 SK154<2 SK155<2 SK368<2) (SK221<2 SK222<2 SK223<2 SK224<2 SK225<2 SK226<2 SK227<2 SK228<2 SK229<2 SK230<2 SK231<2 SK232<2 SK233<2 SK234<2 SK235<2 SK236<2 SK237<2 SK238<2 SK239<2 SK240<2 SK241<2 SK242<2 SK243<2 SK244<2 SK245<2 SK246<2 SK247<2 SK248<2 SK249<2 SK250<2 SK370<2) (SK66<2 SK67<2 SK68<2 SK69<2 SK70<2 SK71<2 SK72<2 SK73<2 SK74<2 SK75<2 SK76<2 SK77<2 SK78<2 SK79<2 SK80<2 SK81<2 SK82<2 SK83<2 SK84<2 SK85<2 SK86<2 SK87<2 SK88<2 SK89<2 SK90<2 SK91<2 SK92<2 SK93<2 SK94<2 SK95<2 SK367<2 SK374<2 SK381<2) (SK96<2 SK97<2 SK98<2 SK99<2 SK100<2 SK101<2 SK102<2 SK103<2 SK104<2 SK105<2 SK106<2 SK107<2 SK108<2 SK109<2 SK110<2 SK111<2 SK112<2 SK113<2 SK114<2 SK115<2 SK116<2 SK117<2 SK118<2 SK119<2 SK120<2 SK121<2 SK122<2 SK123<2 SK124<2 SK125<2 SK364<2 SK371<2 SK378<2) (SK36<2 SK37<2 SK38<2 SK39<2 SK40<2 SK41<2 SK42<2 SK43<2 SK44<2 SK45<2 SK46<2 SK47<2 SK48<2 SK49<2 SK50<2 SK51<2 SK52<2 SK53<2 SK54<2 SK55<2 SK56<2 SK57<2 SK58<2 SK59<2 SK60<2 SK61<2 SK62<2 SK63<2 SK64<2 SK65<2 SK369<2 SK376<2 SK383<2)]: {%NAME%}		// non-elite class items that don't match the character's class, unless they have +2 to a skill or are one of the following: 20+ res or 50+ ed paladin shields, 4-socket scepters
+ItemDisplay[FILTLVL>6 CLVL>84 DIFF=2 NMAG !ELT ((ZON !AMAZON) OR (SIN !ASSASSIN) OR (BAR !BARBARIAN) OR ((DRU OR CLUB) !DRUID) OR ((NEC OR WAND) !NECROMANCER) OR (((DIN RES<20 EDAM<50) OR (SCEPTER !SOCK=4)) !PALADIN) OR ((SOR OR STAFF) !SORCERESS)) (TABSK0<3 TABSK2<3) (SK251<3 SK252<3 SK253<3 SK254<3 SK255<3 SK256<3 SK257<3 SK258<3 SK259<3 SK260<3 SK261<3 SK262<3 SK263<3 SK264<3 SK265<3 SK266<3 SK267<3 SK268<3 SK269<3 SK270<3 SK271<3 SK272<3 SK273<3 SK274<3 SK275<3 SK276<3 SK277<3 SK278<3 SK279<3 SK280<3 SK366<3) (SK126<3 SK127<3 SK128<3 SK129<3 SK130<3 SK131<3 SK132<3 SK133<3 SK134<3 SK135<3 SK136<3 SK137<3 SK138<3 SK139<3 SK140<3 SK141<3 SK142<3 SK143<3 SK144<3 SK145<3 SK146<3 SK147<3 SK148<3 SK149<3 SK150<3 SK151<3 SK152<3 SK153<3 SK154<3 SK155<3 SK368<3) (SK221<3 SK222<3 SK223<3 SK224<3 SK225<3 SK226<3 SK227<3 SK228<3 SK229<3 SK230<3 SK231<3 SK232<3 SK233<3 SK234<3 SK235<3 SK236<3 SK237<3 SK238<3 SK239<3 SK240<3 SK241<3 SK242<3 SK243<3 SK244<3 SK245<3 SK246<3 SK247<3 SK248<3 SK249<3 SK250<3 SK370<3) (SK66<3 SK67<3 SK68<3 SK69<3 SK70<3 SK71<3 SK72<3 SK73<3 SK74<3 SK75<3 SK76<3 SK77<3 SK78<3 SK79<3 SK80<3 SK81<3 SK82<3 SK83<3 SK84<3 SK85<3 SK86<3 SK87<3 SK88<3 SK89<3 SK90<3 SK91<3 SK92<3 SK93<3 SK94<3 SK95<3 SK367<3 SK374<3 SK381<3) (SK96<3 SK97<3 SK98<3 SK99<3 SK100<3 SK101<3 SK102<3 SK103<3 SK104<3 SK105<3 SK106<3 SK107<3 SK108<3 SK109<3 SK110<3 SK111<3 SK112<3 SK113<3 SK114<3 SK115<3 SK116<3 SK117<3 SK118<3 SK119<3 SK120<3 SK121<3 SK122<3 SK123<3 SK124<3 SK125<3 SK364<3 SK371<3 SK378<3) (SK36<3 SK37<3 SK38<3 SK39<3 SK40<3 SK41<3 SK42<3 SK43<3 SK44<3 SK45<3 SK46<3 SK47<3 SK48<3 SK49<3 SK50<3 SK51<3 SK52<3 SK53<3 SK54<3 SK55<3 SK56<3 SK57<3 SK58<3 SK59<3 SK60<3 SK61<3 SK62<3 SK63<3 SK64<3 SK65<3 SK369<3 SK376<3 SK383<3)]: {%NAME%}		// non-elite class items that don't match the character's class, unless they have +3 to a skill or are one of the following: 20+ res or 50+ ed paladin shields, 4-socket scepters
+ItemDisplay[FILTLVL>6 CLVL>84 DIFF=2 NMAG !ETH !ED>0 ((ZON !AMAZON) OR (SIN !ASSASSIN) OR (BAR !BARBARIAN) OR ((DRU OR CLUB) !DRUID) OR ((NEC OR WAND) !NECROMANCER) OR ((SCEPTER !SOCK=4) !PALADIN) OR ((SOR OR (STAFF !SOCK=4 !SOCK=6)) !SORCERESS)) (TABSK0<2 TABSK2<2) (SK251<2 SK252<2 SK253<2 SK254<2 SK255<2 SK256<2 SK257<2 SK258<2 SK259<2 SK260<2 SK261<2 SK262<2 SK263<2 SK264<2 SK265<2 SK266<2 SK267<2 SK268<2 SK269<2 SK270<2 SK271<2 SK272<2 SK273<2 SK274<2 SK275<2 SK276<2 SK277<2 SK278<2 SK279<2 SK280<2 SK366<2) (SK126<2 SK127<2 SK128<2 SK129<2 SK130<2 SK131<2 SK132<2 SK133<2 SK134<2 SK135<2 SK136<2 SK137<2 SK138<2 SK139<2 SK140<2 SK141<2 SK142<2 SK143<2 SK144<2 SK145<2 SK146<2 SK147<2 SK148<2 SK149<2 SK150<2 SK151<2 SK152<2 SK153<2 SK154<2 SK155<2 SK368<2) (SK221<2 SK222<2 SK223<2 SK224<2 SK225<2 SK226<2 SK227<2 SK228<2 SK229<2 SK230<2 SK231<2 SK232<2 SK233<2 SK234<2 SK235<2 SK236<2 SK237<2 SK238<2 SK239<2 SK240<2 SK241<2 SK242<2 SK243<2 SK244<2 SK245<2 SK246<2 SK247<2 SK248<2 SK249<2 SK250<2 SK370<2) (SK66<2 SK67<2 SK68<2 SK69<2 SK70<2 SK71<2 SK72<2 SK73<2 SK74<2 SK75<2 SK76<2 SK77<2 SK78<2 SK79<2 SK80<2 SK81<2 SK82<2 SK83<2 SK84<2 SK85<2 SK86<2 SK87<2 SK88<2 SK89<2 SK90<2 SK91<2 SK92<2 SK93<2 SK94<2 SK95<2 SK367<2 SK374<2 SK381<2) (SK96<2 SK97<2 SK98<2 SK99<2 SK100<2 SK101<2 SK102<2 SK103<2 SK104<2 SK105<2 SK106<2 SK107<2 SK108<2 SK109<2 SK110<2 SK111<2 SK112<2 SK113<2 SK114<2 SK115<2 SK116<2 SK117<2 SK118<2 SK119<2 SK120<2 SK121<2 SK122<2 SK123<2 SK124<2 SK125<2 SK364<2 SK371<2 SK378<2) (SK36<2 SK37<2 SK38<2 SK39<2 SK40<2 SK41<2 SK42<2 SK43<2 SK44<2 SK45<2 SK46<2 SK47<2 SK48<2 SK49<2 SK50<2 SK51<2 SK52<2 SK53<2 SK54<2 SK55<2 SK56<2 SK57<2 SK58<2 SK59<2 SK60<2 SK61<2 SK62<2 SK63<2 SK64<2 SK65<2 SK369<2 SK376<2 SK383<2)]: {%NAME%}		// skill-capable class-restricted non-eth non-superior items that don't match the character's class, unless they have +2 to a skill or are one of the following: 4-socket scepters, 4/6-socket staves
+
+// Catchall - Regular Class Items
+ItemDisplay[NMAG]: %NAME%{%NAME%}%WHITE%
