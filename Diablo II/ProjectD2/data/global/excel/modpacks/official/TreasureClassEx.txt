@@ -941,9 +941,9 @@ BR Arena Potions			1						hp4	1	hp5	1	mp4	1	mp5	1																0
 BR Arena Chests N		30	1	1600	1000	1400	500	10	Act 5 Uitem C	48	BR Arena misc	13	BR Arena Flawless Gem	2	BR Arena Perfect Gem	1	BR Arena Runes 6	4	BR Arena jewerly	8												0
 BR Arena Chests NM		60	1	1600	1000	1400	500	10	Act 5 (N) Uitem C	48	BR Arena misc	13	BR Arena Flawless Gem	2	BR Arena Perfect Gem	1	BR Arena Runes 14	4	BR Arena jewerly	8												0
 BR Arena Chests H		90	1	1600	1000	1400	500	10	Act 5 (H) Uitem C	48	BR Arena misc	13	BR Arena Flawless Gem	2	BR Arena Perfect Gem	1	BR Arena Runes 17	4	BR Arena jewerly	8												0
-BR Arena Bodies N		30	1	1000	850	1400	800	0	Act 5 Equip C	48	BR Arena misc	5	BR Arena Flawless Gem	4	Ammo	2	BR Arena Potions	7	BR Arena Perfect Gem	2	BR Arena Runes 6	4	BR Arena jewerly	2								0
-BR Arena Bodies NM		60	1	1000	850	1400	800	0	Act 5 (N) Equip C	48	BR Arena misc	5	BR Arena Flawless Gem	4	Ammo	2	BR Arena Potions	7	BR Arena Perfect Gem	2	BR Arena Runes 14	4	BR Arena jewerly	2								0
-BR Arena Bodies H		90	1	1000	850	1400	800	0	Act 5 (H) Equip C	48	BR Arena misc	5	BR Arena Flawless Gem	4	Ammo	2	BR Arena Potions	7	BR Arena Perfect Gem	2	BR Arena Runes 17	4	BR Arena jewerly	2								0
+BR Arena Bodies N		30	1	1000	850	1400	800	0	Act 5 Equip C	48	BR Arena misc	5	BR Arena Flawless Gem	4	Ammo	2	BR Arena Perfect Gem	2	BR Arena Runes 6	4	BR Arena jewerly	2										0
+BR Arena Bodies NM		60	1	1000	850	1400	800	0	Act 5 (N) Equip C	48	BR Arena misc	5	BR Arena Flawless Gem	4	Ammo	2	BR Arena Perfect Gem	2	BR Arena Runes 14	4	BR Arena jewerly	2										0
+BR Arena Bodies H		90	1	1000	850	1400	800	0	Act 5 (H) Equip C	48	BR Arena misc	5	BR Arena Flawless Gem	4	Ammo	2	BR Arena Perfect Gem	2	BR Arena Runes 17	4	BR Arena jewerly	2										0
 BR Arena Zomb N		30	3	9000	9000	1	1	0	Act 5 Uitem C	30	BR Arena jewerly	8																				0
 BR Arena Zomb NM		60	3	9000	9000	1	1	0	Act 5 (N) Uitem C	30	BR Arena jewerly	8																				0
 BR Arena Zomb H		90	3	9000	9000	1	1	0	Act 5 (H) Uitem C	30	BR Arena jewerly	8																				0
