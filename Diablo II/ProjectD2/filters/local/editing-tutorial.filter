@@ -16,9 +16,9 @@
 // Progress
 //	Filter Levels		...done
 //	Gold and Potions	...done
-//	Other Basic Items	...needs more comments but is otherwise done
+//	Other Basic Items	...needs more comments but is otherwise mostly done
 //	Gems			...needs more comments but is otherwise done
-//	Runes			...needs more comments but is otherwise mostly done
+//	Runes			...needs more comments but is otherwise done
 //	Jewels & Charms		...not reviewed yet
 //	Amulets, Rings, Quivers	...not reviewed yet
 //	General Equipment	...not reviewed yet
@@ -30,7 +30,7 @@
 //	Regular Class Items	...not reviewed yet
 
 // General Info
-// Spaces between rule conditions are assumed to be "AND" operators (both conditions need to be true) so "AND" never actually needs to be spelled out
+// Spaces between rule conditions are assumed to be "AND" operators so they never actually need to be spelled out
 // If both OR/AND are used together, parentheses should always be used to separate them and clarify which conditions each operator applies to
 // The "NOT" operator is indicated by putting "!" in front of the condition or group of conditions
 // Any item without a name will be hidden, but hidden items can still have tooltip descriptions
@@ -146,16 +146,14 @@ ItemDisplay[(rvl OR rvs OR hp1 OR mp1 OR hp2 OR mp2 OR hp3 OR mp3 OR hp4 OR mp4 
 
 // Name Modification
 ItemDisplay[wss]:	%RED%Worldstone Shard%CONTINUE%				// sets color for Worldstone Shard
+ItemDisplay[cwss]:	%RED%Tainted Worldstone Shard%CONTINUE%			// sets color for Tainted Worldstone Shard
 ItemDisplay[lbox]:	%GOLD%Larzuk's Puzzlebox%CONTINUE%			// sets color for Larzuk's Puzzlebox
 ItemDisplay[lpp]:	%GOLD%Larzuk's Puzzlepyramid%CONTINUE%			// sets color for Larzuk's Puzzlepiece (and name)
-ItemDisplay[cwss]:	%RED%Tainted Worldstone Shard%CONTINUE%			// sets color for Tainted Worldstone Shard
 ItemDisplay[iwss]:	%GOLD%Catalyst Shard%CONTINUE%				// sets color for Catalyst Shard
-ItemDisplay[t51]:	Zhar's Sanctum%CONTINUE%				// fixes name for "Zhar's Sanctum" unique map
-ItemDisplay[t52]:	Stygian Caverns%CONTINUE%				// fixes name for "Warlord of Blood" unique map
-ItemDisplay[t53]:	Fallen Gardens%CONTINUE%				// fixes name for "Fallen Gardens" unique map
-ItemDisplay[MAPTIER=5 !ID]:	%NAME% Map%CONTINUE%				// standardizes fixed maps (unid)
-ItemDisplay[MAPTIER=5 ID]:	Map%NL%%NAME%%CONTINUE%				// standardizes fixed maps (id)
 ItemDisplay[QTY>1 !(WEAPON OR aqv OR cqv OR tbk OR ibk OR key OR MAPTIER>-1 OR GEMLEVEL>0 OR RUNE>0 OR jewf)]: %NAME% %WHITE%×%QTY%%CONTINUE%	// appends quantity
+
+
+// Some rules, like those below for tomes and quest items, are disabled and only included as a reference for those who want to change their appearance
 
 // Common Vanilla Items
 ItemDisplay[key]:	%GRAY%%NAME%%CONTINUE%											// Key
@@ -168,7 +166,7 @@ ItemDisplay[isc]:	%RED%- %WHITE%Identify{%WHITE%Scroll of Identify}%CONTINUE%			
 //ItemDisplay[(bks OR bkd OR box OR tr1 OR ass OR j34 OR g34 OR xyz OR bbb OR qbr OR qey OR qhr OR mss OR ice OR tr2)]: %NAME%	// quest non-equipment
 
 // Hiding: Keys, Scrolls (not in town)
-ItemDisplay[FILTLVL>0 key (CLVL>19 OR ASSASSIN) !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109)]: {%NAME%}		// level 20 - hides keys; also hidden for Assassins at all levels
+ItemDisplay[FILTLVL>0 key (CLVL>19 OR ASSASSIN) !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109)]: {%NAME%}		// level 20 - hides keys; also hidden for Assassins at all levels (they don't need keys to open locked chests)
 ItemDisplay[FILTLVL>0 (tsc OR isc) CLVL>19 !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109)]: {%NAME%}		// level 20 - hides scrolls
 
 // Endgame Vanilla Items  (includes notifications)
@@ -227,22 +225,23 @@ ItemDisplay[scou]:	%NAME%{%WHITE%Lowers Map Rarity to Common}%WHITE%										//
 ItemDisplay[upmp]:	%NAME%{%WHITE%Combines three maps to create one of a higher tier}%WHITE%							// Cartographer's Orb	  (3 T1 Maps -> 1 T2 Map or 3 T2 Maps -> 1 T3 Map)
 ItemDisplay[fort]:	%GOLD%%NAME%{%WHITE%Fortified monsters have doubled life and deal 20% extra damage%NL%Halves number of map monsters and doubles loot/experience gained from them}%WHITE%	// Orb of Fortification
 // Maps
-ItemDisplay[MAPTIER>0 NMAG]:	%WHITE%%NAME%%CONTINUE%										// maps - regular
-ItemDisplay[MAPTIER>0 MAG]:	%BLUE%%MAP%%TIER-9%%NAME%%CONTINUE%								// maps - magic (adds blue minimap border)
-ItemDisplay[MAPTIER>0 RARE]:	%YELLOW%%MAP%%TIER-9%%NAME%%CONTINUE%								// maps - rare (adds yellow minimap border)
-ItemDisplay[MAPTIER=1]:		%MAP-77%%DOT-53%%TIER-9%%NAME% %DARK_GREEN%(%GOLD%T1%DARK_GREEN%)%CONTINUE%			// maps - T1 (Horazon's Memory, Bastion Keep, Ruined Cistern, Phlegethon, Torajan Jungle, Arreat Battlefield)
-ItemDisplay[MAPTIER=2]:		%MAP-77%%DOT-53%%TIER-9%%NAME% %DARK_GREEN%(%GOLD%T2%DARK_GREEN%)%CONTINUE%			// maps - T2 (Ruins of Viz-Jun, Sanatorium, Royal Crypts, Ancestral Trial, Fall of Caldeum, Shadows of Westmarch)
-ItemDisplay[MAPTIER=3]:		%MAP-77%%DOT-53%%TIER-9%%NAME% %DARK_GREEN%(%GOLD%T3%DARK_GREEN%)%CONTINUE%			// maps - T3 (Tomb of Zultan Kulle, Sewers of Harrogath, River of Blood, Throne of Insanity, Lost Temple, Blood Moon, Pandemonium Citadel, Canyon of Sescheron, Kehjistan Marketplace, Ashen Plains)
-ItemDisplay[MAPTIER=4]:		%MAP-77%%DOT-53%%PX-62%%TIER-9%%NAME% %DARK_GREEN%(%GOLD%Dungeon%DARK_GREEN%)%CONTINUE%		// dungeons  (Cathedral of Light, Plains of Torment, Sanctuary of Sin)
-ItemDisplay[t53]:		%BORDER-53%%MAP-77%%DOT-53%%PX-62%%TIER-9%%NAME% %DARK_GREEN%(%GOLD%T2%DARK_GREEN%)%CONTINUE%	// maps - T2 uniques (Fallen Gardens)
-ItemDisplay[(t51 OR t52)]:	%BORDER-53%%MAP-77%%DOT-53%%PX-62%%TIER-9%%NAME% %DARK_GREEN%(%GOLD%T3%DARK_GREEN%)%CONTINUE%	// maps - T3 uniques (Zhar's Sanctum, Stygian Caverns)
+ItemDisplay[t51]:		Zhar's Sanctum%CONTINUE%									// unique map standardization - sets name for "Zhar's Sanctum"
+ItemDisplay[t52]:		Stygian Caverns%CONTINUE%									// unique map standardization - sets name for "Warlord of Blood"
+ItemDisplay[t53]:		Fallen Gardens%CONTINUE%									// unique map standardization - sets name for "Fallen Gardens"
+ItemDisplay[MAPTIER=5 !ID]:	%NAME% Map%CONTINUE%										// unique map standardization - formatting (unid)
+ItemDisplay[MAPTIER=5 ID]:	Map%NL%%NAME%%CONTINUE%										// unique map standardization - formatting (id)
+ItemDisplay[MAPTIER=1]:		%MAP-77%%PX-53%%TIER-9%%NAME% %DARK_GREEN%(%GOLD%T1%DARK_GREEN%)%CONTINUE%			// maps - T1
+ItemDisplay[MAPTIER=2]:		%MAP-77%%PX-53%%TIER-9%%NAME% %DARK_GREEN%(%GOLD%T2%DARK_GREEN%)%CONTINUE%			// maps - T2
+ItemDisplay[MAPTIER=3]:		%MAP-77%%PX-53%%TIER-9%%NAME% %DARK_GREEN%(%GOLD%T3%DARK_GREEN%)%CONTINUE%			// maps - T3
+ItemDisplay[MAPTIER=4]:		%BORDER-77%%DOT-53%%PX-6D%%TIER-9%%NAME% %DARK_GREEN%(%GOLD%Dungeon%DARK_GREEN%)%CONTINUE%	// maps - Dungeons
+ItemDisplay[t53]:		%BORDER-77%%DOT-53%%PX-62%%TIER-9%%NAME% %DARK_GREEN%(%GOLD%T2%DARK_GREEN%)%CONTINUE%		// maps - T2 uniques
+ItemDisplay[(t51 OR t52)]:	%BORDER-77%%DOT-53%%PX-62%%TIER-9%%NAME% %DARK_GREEN%(%GOLD%T3%DARK_GREEN%)%CONTINUE%		// maps - T3 uniques
 ItemDisplay[MAPTIER>-1 QTY>1]:			%NAME% %WHITE%×%QTY%%CONTINUE%							// maps - appends quantity
-ItemDisplay[MAPTIER=1 !(ID (RARE OR UNI))]:	 %NAME% %CONTINUE%								// maps - T1 highlighting
-ItemDisplay[MAPTIER=2 !(ID (RARE OR UNI))]:	  %NAME%  %CONTINUE%								// maps - T2 highlighting
-ItemDisplay[MAPTIER=3 !(ID (RARE OR UNI))]:	   %NAME%   %CONTINUE%								// maps - T3 highlighting
-ItemDisplay[MAPTIER=4 !(ID (RARE OR UNI))]:	    %NAME%    %CONTINUE%							// maps - T4 highlighting
-ItemDisplay[MAPTIER=5 UNI !ID]:			         %NAME%         %CONTINUE%						// maps - unique highlighting
-//ItemDisplay[(t61 OR t62)]:	%NAME%{%NAME%}%WHITE%										// Desert/Moor Duel Arenas
+ItemDisplay[MAPTIER=1 !(ID (RARE OR UNI))]:	 %NAME% %CONTINUE%								// map highlighting - T1
+ItemDisplay[MAPTIER=2 !(ID (RARE OR UNI))]:	  %NAME%  %CONTINUE%								// map highlighting - T2
+ItemDisplay[MAPTIER=3 !(ID (RARE OR UNI))]:	   %NAME%   %CONTINUE%								// map highlighting - T3
+ItemDisplay[MAPTIER=5 UNI !ID]:			         %NAME%         %CONTINUE%						// map highlighting - Unique
+//ItemDisplay[(t61 OR t62)]:			%NAME%{%NAME%}%WHITE%								// Desert/Moor Duel Arenas
 
 // Possible Feature - Maps can include a list of monster resistances (immunes) in their description
 
@@ -341,11 +340,11 @@ ItemDisplay[r33s]: %NAME%{%WHITE%Items: Indestructible%NL%}%CONTINUE%
 //ItemDisplay[RUNE=8]:	%PX-60%%TIER-9%%NAME%{%NAME%}						// Ral
 //ItemDisplay[RUNE=9]:	%PX-60%%TIER-9%%NAME%{%NAME%}						// Ort
 //    Upper Low Runes
-//ItemDisplay[RUNE=10]:	%PX-60%%TIER-9%%NAME%{%NAME%}						// Thul
-//ItemDisplay[RUNE=11]:	%PX-60%%TIER-9%%NAME%{%NAME%}						// Amn
-//ItemDisplay[RUNE=12]:	%PX-60%%TIER-9%%NAME%{%NAME%}						// Sol
-//ItemDisplay[RUNE=13]:	%PX-60%%TIER-9%%NAME%{%NAME%}						// Shael
-//ItemDisplay[RUNE=14]:	%PX-60%%TIER-9%%NAME%{%NAME%}						// Dol
+//ItemDisplay[RUNE=10]:	%DOT-60%%TIER-9%%NAME%{%NAME%}						// Thul
+//ItemDisplay[RUNE=11]:	%DOT-60%%TIER-9%%NAME%{%NAME%}						// Amn
+//ItemDisplay[RUNE=12]:	%DOT-60%%TIER-9%%NAME%{%NAME%}						// Sol
+//ItemDisplay[RUNE=13]:	%DOT-60%%TIER-9%%NAME%{%NAME%}						// Shael
+//ItemDisplay[RUNE=14]:	%DOT-60%%TIER-9%%NAME%{%NAME%}						// Dol
 //ItemDisplay[RUNE=15]:	%DOT-60%%TIER-9% %NAME% {%NAME%}					// Hel
 //ItemDisplay[RUNE=16]:	%DOT-60%%TIER-9% %NAME% {%NAME%}					// Io
 //ItemDisplay[RUNE=17]:	%DOT-60%%TIER-9% %NAME% {%NAME%}					// Lum
@@ -366,21 +365,21 @@ ItemDisplay[RUNE=29]:	%BORDER-60%%TIER-9%           %NAME%           {%NAME%}			
 ItemDisplay[RUNE=31]:	%BORDER-60%%TIER-9%            %NAME%            {%NAME%}		// Jah
 ItemDisplay[RUNE=32]:	%BORDER-60%%TIER-9%             %NAME%             {%NAME%}		// Cham
 ItemDisplay[RUNE=33]:	%BORDER-60%%TIER-9%              %NAME%              {%NAME%}		// Zod
-ItemDisplay[RUNE=30]:	%BORDER-60%%TIER-9%                %NAME%                {%NAME%}	// Ber
+ItemDisplay[RUNE=30]:	%BORDER-60%%TIER-9%                %NAME%                {%NAME%}	// Ber (breaks the trend in terms of trade value, so it has the most highlighting)
 
 // Highlighting: Collective Rules  (notifications for runes #10-23, higher runes are covered individually above)
-ItemDisplay[RUNE>0 RUNE<10 (CLVL<80 OR DIFF<2)]: %PX-60%%TIER-9%%NAME%%CONTINUE%		// notifications for lowest runes when in Normal/Nightmare or below level 80
-ItemDisplay[RUNE>0 RUNE<10]:		%PX-60%%TIER-2%%NAME%{%NAME%}				// map icons without text notifications
-ItemDisplay[RUNE>9 RUNE<15]:		%PX-60%%TIER-9%%NAME%{%NAME%}
-ItemDisplay[RUNE>14 RUNE<20]:		%DOT-60%%TIER-9% %NAME% {%NAME%}
-ItemDisplay[(RUNE=20 OR RUNE=21)]:	%MAP-60%%TIER-9%  %NAME%  {%NAME%}
-ItemDisplay[(RUNE=22 OR RUNE=23)]:	%MAP-60%%TIER-9%   %NAME%   {%NAME%}
+ItemDisplay[RUNE>0 RUNE<10 (CLVL<80 OR DIFF<2)]:	%PX-60%%TIER-9%%NAME%{%NAME%}		// notifications for lowest runes when in Normal/Nightmare or below level 80
+ItemDisplay[RUNE>0 RUNE<10]:				%PX-60%%TIER-2%%NAME%{%NAME%}		// map icons without text notifications
+ItemDisplay[RUNE>9 RUNE<15]:				%DOT-60%%TIER-9%%NAME%{%NAME%}
+ItemDisplay[RUNE>14 RUNE<20]:				%DOT-60%%TIER-9% %NAME% {%NAME%}
+ItemDisplay[(RUNE=20 OR RUNE=21)]:			%MAP-60%%TIER-9%  %NAME%  {%NAME%}
+ItemDisplay[(RUNE=22 OR RUNE=23)]:			%MAP-60%%TIER-9%   %NAME%   {%NAME%}
 
 
 // +-----------------+
 //-¦ Jewels & Charms ¦---------------------------------------------------------------------------------------------------
 // +-----------------+
-// Name Modification
+// Modification
 ItemDisplay[jew MAG]:		%BLUE%%NAME%%CONTINUE%						// sets jewel color (magic)
 ItemDisplay[jew RARE]:		%YELLOW%%NAME%%CONTINUE%					// sets jewel color (rare)
 ItemDisplay[jew UNI]:		%GOLD%%NAME%%CONTINUE%						// sets jewel color (unique)
