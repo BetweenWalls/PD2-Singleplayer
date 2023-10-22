@@ -483,8 +483,8 @@ ItemDisplay[!NMAG SOCK>0]:	%NAME% %GRAY%[%SOCKETS%]%CONTINUE%	// adds sockets (r
 
 // Repair Recipe
 ItemDisplay[STAT486=0 STAT73>0 STAT72<2 REPAIR=0 !EQUIPPED !SHOP !INF !ETH ARMOR]:			%NAME%{%WHITE%Repair Recipe: %TAN%(%WHITE%8%TAN%)}%WHITE%
-ItemDisplay[STAT486=0 STAT73>0 STAT72<0 REPAIR=0 !EQUIPPED !SHOP !INF !ETH WEAPON !THROWING !7cr]:	%NAME%{%WHITE%Repair Recipe: %TAN%(%WHITE%9%TAN%)}%WHITE%
-ItemDisplay[STAT486=0 STAT73>0 STAT72<0 REPAIR=0 !EQUIPPED !SHOP !INF ETH !THROWING !7cr]:		%NAME%{%WHITE%Repair Recipe: %ORANGE%[%GRAY%O%ORANGE%]%GRAY%+%TAN%(%WHITE%33%TAN%)}%WHITE%
+ItemDisplay[STAT486=0 STAT73>0 STAT72<2 REPAIR=0 !EQUIPPED !SHOP !INF !ETH WEAPON !THROWING !7cr]:	%NAME%{%WHITE%Repair Recipe: %TAN%(%WHITE%9%TAN%)}%WHITE%
+ItemDisplay[STAT486=0 STAT73>0 STAT72<2 REPAIR=0 !EQUIPPED !SHOP !INF ETH !THROWING !7cr]:		%NAME%{%WHITE%Repair Recipe: %ORANGE%[%GRAY%O%ORANGE%]%GRAY%+%TAN%(%WHITE%33%TAN%)}%WHITE%
 
 // Possible Feature - differentiate between ethereal items which are breakable and those that are not breakable
 // Possible Feature - Weapon Speed, Melee Range, Item Tier (Runewords)
