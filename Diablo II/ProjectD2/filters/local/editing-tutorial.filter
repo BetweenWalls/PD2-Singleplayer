@@ -1,6 +1,6 @@
 //-----------------------------------------------------------------------------------------------------------------------
 // "Editing Tutorial" Item Filter for Project Diablo II	  (work-in-progress)
-//	Date Updated:	2023-10-18
+//	Date Updated:	2023-10-22
 //-----------------------------------------------------------------------------------------------------------------------
 // Description:
 //	This filter is primarily meant as an example of how a filter can be structured
@@ -421,7 +421,7 @@ ItemDisplay[jew !ID UNI]:	%BORDER-53%%TIER-9%         %NAME%         %WHITE%			/
 // To help distinguish magic charms from other magic items, they're colored teal instead of blue
 
 // Charms
-ItemDisplay[MAG (cm1 OR cm2 OR cm3)]:		%TEAL%%NAME%{%WHITE%Item Level: %ILVL%}%WHITE%		// sets color for magic charms and adds ilvl
+ItemDisplay[MAG (cm1 OR cm2 OR cm3)]:		%TEAL%%NAME%{%WHITE%Item Level: %ILVL%}%CONTINUE%	// sets color for magic charms and adds ilvl
 ItemDisplay[MAG !ID (cm1 OR cm2 OR cm3)]:	%DOT-9F%%TIER-2%%NAME%%WHITE%				// minimap icons without text notifications above filter level 2 for unidentified magic charms
 ItemDisplay[UNI ID (cm1 OR cm2 OR cm3)]:	%NAME%{%NAME%}%WHITE%					// showing identified unique charms (this prevents the next rules from messing up their names by applying highlighting to them)
 ItemDisplay[UNI cm3]:				%MAP-53%%TIER-9%     %NAME%     %WHITE%			// highlighting for unid Gheed's Fortune (also adds notifications for both id and unid versions)
@@ -460,7 +460,7 @@ ItemDisplay[SET (amu ILVL>16 (!ID OR ALLSK>0))]:							%PX-84%%TIER-4% %NAME% %W
 ItemDisplay[(amu OR rin) !ID (MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109 OR MAPID=181 OR MAPID=182)]: %NAME%%WHITE%	// always show unid amulets and rings in town or the Stygian Caverns map
 // Hiding: Amulets & Rings
 ItemDisplay[((FILTLVL>3 CLVL>79) OR (FILTLVL>5 CLVL>69)) DIFF=2 MAG rin !ID]: {%NAME%}	// hides unid magic rings at level 80 (filter level 4+) or at level 70 (filter level 6+) in Hell
-ItemDisplay[FILTLVL>6 CLVL>91 DIFF=2 MAG amu !ID ILVL<90]: {%NAME%}			// hides most unid magic amulets at level 90 (filter level 7+) in Hell
+ItemDisplay[FILTLVL>6 CLVL>89 DIFF=2 MAG amu !ID ILVL<90]: {%NAME%}			// hides most unid magic amulets at level 90 (filter level 7+) in Hell
 
 
 // +-------------------+
