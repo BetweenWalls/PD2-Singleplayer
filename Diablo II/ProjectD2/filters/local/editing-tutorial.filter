@@ -133,7 +133,7 @@ ItemDisplay[FILTLVL>0 wms CLVL>29]: {%NAME%}								// level 30 - hides thawing 
 ItemDisplay[((FILTLVL>0 CLVL>89) OR (FILTLVL>1 CLVL>74) OR (FILTLVL>2 CLVL>59)) yps]: {%NAME%}		// level 90 - hides antidote potions; also hidden at 75 (filter level 2+) or at level 60 (filter level 3+)
 
 // Catchall: Potions
-ItemDisplay[(rvl OR rvs OR hp1 OR mp1 OR hp2 OR mp2 OR hp3 OR mp3 OR hp4 OR mp4 OR hp5 OR mp5 OR (THROWING STAT160=0) OR vps OR wms OR yps)]: %NAME%{%NAME%}%WHITE%	// Show any potions that aren't hidden above (this isn't strictly necessary here, as a catchall rule for all non-equipment items will be used later)
+ItemDisplay[(hp1 OR mp1 OR hp2 OR mp2 OR hp3 OR mp3 OR hp4 OR mp4 OR hp5 OR mp5 OR pvpp OR rvs OR rvl OR (THROWING STAT160=0) OR vps OR wms OR yps)]: %NAME%{%NAME%}%WHITE%	// Show any potions that aren't hidden above (this isn't strictly necessary here, as a catchall rule for all non-equipment items will be used later)
 
 
 // +-------------------+
@@ -263,9 +263,7 @@ ItemDisplay[MAPTIER>3]:				%BORDER-77%%DOT-53%%PX-62%%TIER-9%       %NAME%      
 //-¦ Gems ¦--------------------------------------------------------------------------------------------------------------
 // +------+
 // To help distinguish gems from regular equipment items, "gem icons" are added to each which match the gem color
-// Multiple rules may be used to add a single feature - the first 12 rules below all contribute to creating "gem icons" (7 GEMTYPE rules set different colors and 5 GEMLEVEL rules set different symbols for 35 distinct icons)
-
-written across multiple lines 
+// Multiple rules may be used to add a single feature - the first 12 rules below all contribute to creating "gem icons" (7 GEMTYPE rules set different colors and 5 GEMLEVEL rules set different symbols for a total of 35 distinct icons)
 
 // Name Modification
 ItemDisplay[GEMTYPE=1]: %NAME% %ORANGE%[%PURPLE%%CONTINUE%				// amethyst (multi-line feature which continues in the next 11 rules)
@@ -528,7 +526,6 @@ ItemDisplay[(RARE OR CRAFT) ID !EQUIPPED STAT486=0 WEAPON NORM !(SOR OR (WAND !(
 ItemDisplay[(RARE OR CRAFT) ID !EQUIPPED STAT486=0 WEAPON EXC !(SOR OR (WAND !(SOCK=0 9wn)))]: %NAME%{%NAME%%NL%%WHITE%Upgrade Recipe: %ORANGE%[%BLUE%O%ORANGE%]%GRAY%+%TAN%(%WHITE%19%TAN%)%GRAY%+%TAN%(%WHITE%22%TAN%)}%CONTINUE%		// Upgrade Rare/Crafted Weapon (Exceptional)
 
 // Possible Feature - Descriptions for Upgraded Item Requirements
-
 // Possible Feature - Descriptions for Assassin Kick Damage on Set Boots (it's not normally displayed on them for Assassins unlike other boots)
 
 // Class items with 4+ of any skill  (highlighting in shops or when freshly dropped)
