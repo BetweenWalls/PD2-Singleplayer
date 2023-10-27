@@ -1,6 +1,6 @@
 //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 // "Editing Tutorial" Item Filter for Project Diablo II	  (work-in-progress)
-//	Date Updated:	2023-10-22
+//	Date Updated:	2023-10-26
 //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 // Description:
 //	This filter is primarily meant as an example of how a filter can be structured
@@ -26,7 +26,7 @@
 //	General Equipment	...needs more comments but is otherwise done
 //	Identified Magic+	...mostly done
 //	Unique/Set Items (unid)	...mostly done
-//	Rare Items (unid)	...probably fine as-is, but should add comments
+//	Rare Items (unid)	...done
 //	Magic Items (unid)	...need to review filter levels and add comments
 //	Regular Items		...basic structure seems fine, not reviewed in-depth
 //	Regular Class Items	...basic structure seems fine, not reviewed in-depth
@@ -64,7 +64,6 @@ ItemDisplayFilterName[]:	Extreme Strictness	// level 6 - 																				...
 
 // Gold can only be shown or hidden; the name can't be modified
 // Gold will be automatically picked up (even when hidden) but the pickup range is quite small so it's still useful to see where larger piles are
-// Possible Feature - Smaller gold piles can be hidden based on the zone level to reduce clutter while still preserving some of the original aesthetic of vanilla zones (they often have gold piles scattered around)
 
 // Hiding: Smaller Gold Piles
 ItemDisplay[FILTLVL>0 CLVL>24 GOLD>0 GOLD<100]:		// level 25 - hides gold piles below 100
@@ -72,6 +71,8 @@ ItemDisplay[FILTLVL>0 CLVL>39 DIFF>0 GOLD>0 GOLD<200]:	// level 40 - hides gold 
 ItemDisplay[FILTLVL>0 CLVL>69 DIFF>1 GOLD>0 GOLD<300]:	// level 70 - hides gold piles below 300 in Hell
 ItemDisplay[FILTLVL>1 CLVL>69 DIFF=2 GOLD>0 GOLD<500]:	// hides gold piles below 500 at level 70+ in Hell for filter level 2+
 ItemDisplay[FILTLVL>1 GOLD>0 GOLD<1000 MAPID>132]:	// hides gold piles below 1000 in endgame zones (maps, ubers, pvp arenas) for filter level 2+
+
+// Possible Feature - Smaller gold piles can be hidden based on the zone level to reduce clutter while still preserving some of the original aesthetic of vanilla zones (they often have gold piles scattered around)
 
 // Catchall: Gold
 ItemDisplay[GOLD>0]: %NAME%				// any gold that isn't hidden gets displayed normally
@@ -222,8 +223,8 @@ ItemDisplay[rtmf]:	%DOT-60%%NAME%{%WHITE%Jawbone Recipe: 2 Ancient Bone Fragment
 
 
 // By default, text notifications apply at all filter levels - the "TIER" keyword can be used to limit them (if it isn't used, %TIER-9% is assumed)
-// For example, %TIER-2% would prevent any accompanying notification rules from giving text notifications above filter level 2
 // This limit only affects the text notifications, not the minimap icons
+// For example, %TIER-2% would prevent any accompanying notification rules from giving text notifications above filter level 2
 
 // Map-Related Items  (includes notifications)
 ItemDisplay[std]:	%DOT-53%  %NAME%  {%WHITE%Adds Heroic bonuses to Maps & Dungeons}%WHITE%			// Standard of Heroes	 (Adds 20% Density, 20% MF/GF, 10% Experience; drops from Uber Tristram)
@@ -242,10 +243,7 @@ ItemDisplay[rera]:	%PX-53%%TIER-2%%NAME%{%GOLD%Orb %WHITE%+ %YELLOW%Map %WHITE%+
 ItemDisplay[fort]:	%PX-53%%TIER-2%%GOLD%%NAME%{%WHITE%Fortified monsters have doubled life and deal 20% extra damage%NL%Halves number of map monsters and doubles loot/experience gained from them}%WHITE%	// Orb of Fortification
 
 
-// Notification keywords aren't restricted by the normal item-checking process - the game checks the entire filter for them rather than halting after the first non-continue rule
-// This can be useful for making rules add notifications to all versions of specific items while simultaneously modifying the appearance of only some of those items (for example, the below rules add notifications to all maps but only add highlighting to maps with a single-line name)
-
-// Maps  (includes notifications)
+// Maps
 ItemDisplay[t51]:				Zhar's Sanctum%CONTINUE%						// unique map standardization - sets name for "Zhar's Sanctum"
 ItemDisplay[t52]:				Stygian Caverns%CONTINUE%						// unique map standardization - sets name for "Warlord of Blood"
 ItemDisplay[t53]:				Fallen Gardens%CONTINUE%						// unique map standardization - sets name for "Fallen Gardens"
@@ -256,12 +254,13 @@ ItemDisplay[(MAPTIER=2 OR t53)]:		%NAME% %DARK_GREEN%(%GOLD%T2%DARK_GREEN%){%NAM
 ItemDisplay[(MAPTIER=3 OR t51 OR t52)]:		%NAME% %DARK_GREEN%(%GOLD%T3%DARK_GREEN%){%NAME%}%CONTINUE%		// map tier - T3
 ItemDisplay[MAPTIER=4]:				%NAME% %DARK_GREEN%(%GOLD%Dungeon%DARK_GREEN%){%NAME%}%CONTINUE%	// map tier - T4 (Dungeons)
 ItemDisplay[MAPTIER>-1 QTY>1]:			%NAME% %WHITE%×%QTY%{%NAME%}%CONTINUE%					// quantity
-//ItemDisplay[MAPTIER=0]:			%NAME%{%NAME%}%WHITE%							// pvp arenas
-ItemDisplay[MAPTIER>0 ID (RARE OR UNI)]:	%NAME%{%NAME%}%WHITE%							// showing identified rare/unique maps (this prevents the next rules from applying highlighting to them, but doesn't prevent them from using the same notifications)
-ItemDisplay[MAPTIER=1]:				%MAP-77%%PX-53%%TIER-9% %NAME% {%NAME%}%WHITE%				// map highlighting - T1
-ItemDisplay[MAPTIER=2]:				%MAP-77%%PX-53%%TIER-9%  %NAME%  {%NAME%}%WHITE%			// map highlighting - T2
-ItemDisplay[MAPTIER=3]:				%MAP-77%%PX-53%%TIER-9%   %NAME%   {%NAME%}%WHITE%			// map highlighting - T3
-ItemDisplay[MAPTIER>3]:				%BORDER-77%%DOT-53%%PX-62%%TIER-9%       %NAME%       {%NAME%}%WHITE%	// map highlighting - Uniques & Dungeons
+//ItemDisplay[MAPTIER=0]:			%NAME%{%NAME%}%CONTINUE%						// pvp arenas
+ItemDisplay[MAPTIER=1 !(ID (RARE OR UNI))]:	 %NAME% {%NAME%}%CONTINUE%						// map highlighting - T1
+ItemDisplay[MAPTIER=2 !(ID (RARE OR UNI))]:	  %NAME%  {%NAME%}%CONTINUE%						// map highlighting - T2
+ItemDisplay[MAPTIER=3 !(ID (RARE OR UNI))]:	   %NAME%   {%NAME%}%CONTINUE%						// map highlighting - T3
+ItemDisplay[MAPTIER>3 !(ID (RARE OR UNI))]:	       %NAME%       {%NAME%}%CONTINUE%					// map highlighting - Uniques & Dungeons
+ItemDisplay[MAPTIER>0 MAPTIER<4]:		%MAP-77%%PX-53%%TIER-9%%NAME%{%NAME%}%CONTINUE%				// map notifications - T1, T2, T3
+ItemDisplay[MAPTIER>3]:				%BORDER-77%%DOT-53%%PX-62%%TIER-9%%NAME%{%NAME%}%CONTINUE%		// map notifications - Uniques & Dungeons
 
 // Possible Feature - Maps can include a list of monster resistances (immunes) in their description
 
@@ -280,9 +279,9 @@ ItemDisplay[GEMTYPE=4]: %NAME% %ORANGE%[%RED%{%NAME%}%CONTINUE%					// ruby
 ItemDisplay[GEMTYPE=5]: %NAME% %ORANGE%[%BLUE%{%NAME%}%CONTINUE%				// sapphire
 ItemDisplay[GEMTYPE=6]: %NAME% %ORANGE%[%YELLOW%{%NAME%}%CONTINUE%				// topaz
 ItemDisplay[GEMTYPE=7]: %NAME% %ORANGE%[%GRAY%{%NAME%}%CONTINUE%				// skull
-ItemDisplay[GEMLEVEL=1]: %GRAY%%NAME%~%ORANGE%]%WHITE%{%NAME%}%CONTINUE%			// chipped
-ItemDisplay[GEMLEVEL=2]: %GRAY%%NAME%+%ORANGE%]%WHITE%{%NAME%}%CONTINUE%			// flawed
-ItemDisplay[GEMLEVEL=3]: %GRAY%%NAME%×%ORANGE%]%WHITE%{%NAME%}%CONTINUE%			// standard
+ItemDisplay[GEMLEVEL=1]: %LIGHT_GRAY%%NAME%~%ORANGE%]%WHITE%{%NAME%}%CONTINUE%			// chipped
+ItemDisplay[GEMLEVEL=2]: %LIGHT_GRAY%%NAME%+%ORANGE%]%WHITE%{%NAME%}%CONTINUE%			// flawed
+ItemDisplay[GEMLEVEL=3]: %LIGHT_GRAY%%NAME%×%ORANGE%]%WHITE%{%NAME%}%CONTINUE%			// standard
 ItemDisplay[GEMLEVEL=4]: %NAME%Ø%ORANGE%]%WHITE%%PX-60%%TIER-2%{%NAME%}%CONTINUE%		// flawless (adds minimap icons without text notifications above filter level 2)
 ItemDisplay[GEMLEVEL=5]: %NAME%O%ORANGE%]%WHITE%%MAP-60%%DOT-20%%TIER-9%{%NAME%}%CONTINUE%	// perfect (adds notifications; end of multi-line "gem icon" feature)
 ItemDisplay[GEMLEVEL>0 QTY>1]: %NAME% %WHITE%×%QTY%{%NAME%}%CONTINUE%				// appends quantity
@@ -394,7 +393,7 @@ ItemDisplay[RUNE=30]:	%BORDER-60%%TIER-9%                %NAME%                {
 
 // Highlighting: Collective Rules  (notifications for runes #10-23, higher runes are covered individually above)
 ItemDisplay[RUNE>0 RUNE<10 (CLVL<80 OR DIFF<2)]:	%PX-60%%TIER-9%%NAME%{%NAME%}		// notifications for lowest runes when in Normal/Nightmare or below level 80
-ItemDisplay[RUNE>0 RUNE<10]:				%PX-60%%TIER-2%%NAME%{%NAME%}		// minimap icons without text notifications above filter level 2
+ItemDisplay[RUNE>0 RUNE<10]:				%PX-60%%TIER-4%%NAME%{%NAME%}		// minimap icons without text notifications above filter level 4
 ItemDisplay[RUNE>9 RUNE<15]:				%DOT-60%%TIER-9%%NAME%{%NAME%}
 ItemDisplay[RUNE>14 RUNE<20]:				%DOT-60%%TIER-9% %NAME% {%NAME%}
 ItemDisplay[(RUNE=20 OR RUNE=21)]:			%MAP-60%%TIER-9%  %NAME%  {%NAME%}
@@ -418,9 +417,9 @@ ItemDisplay[jew STAT477=21]:	%NAME%{%PURPLE%White}%CONTINUE%						// adds descri
 
 // Highlighting & Notifying
 ItemDisplay[jew !ID MAG]:	%DOT-97%%TIER-2%%NAME%%WHITE%						// minimap icons without text notifications above filter level 2 for unidentified magic jewels
-ItemDisplay[jew !ID RARE]:	%DOT-6D%%TIER-9%  %NAME%  %WHITE%					// highlighting for unid rare jewels (also adds notifications)
-ItemDisplay[jew ID UNI]:	%NAME%{%NAME%}%WHITE%							// showing identified Rainbow Facets (this prevents the next rule from messing up their names by applying highlighting to them)
-ItemDisplay[jew !ID UNI]:	%BORDER-53%%TIER-9%         %NAME%         %WHITE%			// highlighting for unid Rainbow Facets (also adds notifications for both id and unid versions)
+ItemDisplay[jew !ID RARE]:	%DOT-6D%%TIER-9%  %NAME%  %WHITE%					// highlighting/notifications for unid rare jewels
+ItemDisplay[jew !ID UNI]:	         %NAME%         %WHITE%						// highlighting for unid Rainbow Facets
+ItemDisplay[jew UNI]:		%BORDER-53%%TIER-9%%NAME%{%NAME%}%WHITE%				// notifications for Rainbow Facets
 
 
 // +--------+
@@ -436,9 +435,10 @@ ItemDisplay[MAG (cm1 OR cm2 OR cm3)]:		%NAME%{%WHITE%Item Level: %ILVL%}%CONTINU
 
 // Highlighting & Notifying
 ItemDisplay[MAG !ID (cm1 OR cm2 OR cm3)]:	%DOT-9F%%TIER-2%%NAME%%WHITE%				// minimap icons without text notifications above filter level 2 for unidentified magic charms
-ItemDisplay[UNI ID (cm1 OR cm2 OR cm3)]:	%NAME%{%NAME%}%WHITE%					// showing identified unique charms (this prevents the next rules from messing up their names by applying highlighting to them)
-ItemDisplay[UNI cm3]:				%MAP-53%%TIER-9%     %NAME%     %WHITE%			// highlighting for unid Gheed's Fortune (also adds notifications for both id and unid versions)
-ItemDisplay[UNI (cm1 OR cm2)]:			%BORDER-53%%TIER-9%         %NAME%         %WHITE%	// highlighting for unid Hellfire Torch and Annihilus (also adds notifications for both id and unid versions)
+ItemDisplay[UNI !ID cm3]:			     %NAME%     %WHITE%					// highlighting for unid Gheed's Fortune
+ItemDisplay[UNI !ID (cm1 OR cm2)]:		         %NAME%         %WHITE%				// highlighting for unid Hellfire Torch and Annihilus
+ItemDisplay[UNI cm3]:				%MAP-53%%TIER-9%%NAME%%WHITE%				// notifications for Gheed's Fortune
+ItemDisplay[UNI (cm1 OR cm2)]:			%BORDER-53%%TIER-9%%NAME%%WHITE%			// notifications for Hellfire Torch and Annihilus
 
 
 // +---------+
@@ -446,13 +446,13 @@ ItemDisplay[UNI (cm1 OR cm2)]:			%BORDER-53%%TIER-9%         %NAME%         %WHI
 // +---------+
 
 // Highlighting & Notifying
-ItemDisplay[RARE (aqv OR cqv) !ID AMAZON]:	%DOT-6D%%TIER-6% %NAME% {%NAME%}%WHITE%		// highlight unid rare quivers for amazons (with notifications up to filter level 6)
+ItemDisplay[RARE (aqv OR cqv) !ID AMAZON]:	%DOT-6D%%TIER-6% %NAME% {%NAME%}%WHITE%		// highlight unid rare quivers for amazons (with notifications up through filter level 6)
 
 // Showing: Unid Quivers
 ItemDisplay[(aqv OR cqv) !ID (MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109 OR MAPID=181 OR MAPID=182)]: %NAME%%WHITE%	// always show unid quivers in town or the Stygian Caverns map
 
-// Hiding: Unid Quivers
-ItemDisplay[FILTLVL>0 CLVL>4 NMAG (aqv OR cqv) !EQUIPPED !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109)]:	// level  5 - hides regular quivers (except when equipped or in town)
+// Hiding: Regular & Unid Quivers
+ItemDisplay[FILTLVL>0 CLVL>4 NMAG (aqv OR cqv) !EQUIPPED !(MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109)]:	// level 5 - hides regular quivers (except when equipped or in town)
 ItemDisplay[((FILTLVL>2 CLVL>89) OR (FILTLVL>4 CLVL>69) OR (FILTLVL>5 CLVL>49)) MAG (aqv OR cqv) !ID]:			// hides unid magic quivers for all classes at level 90 (filter level 3+) or at level 70 (filter level 5+) or at level 50 (filter level 6+)
 ItemDisplay[((FILTLVL>2 CLVL>69) OR (FILTLVL>4 CLVL>49) OR (FILTLVL>5 CLVL>29)) MAG (aqv OR cqv) !ID !AMAZON]:		// hides unid magic quivers for non-amazons at level 70 (filter level 3+) or at level 50 (filter level 5+) or at level 30 (filter level 6+)
 
@@ -476,6 +476,10 @@ ItemDisplay[FILTLVL=0 rin ID (MAG OR RARE) ILVL>43]:	%NAME%{%NAME%%CRAFTALVL%%NL
 ItemDisplay[FILTLVL=0 amu ID (MAG OR RARE) ILVL>43]:	%NAME%{%NAME%%CRAFTALVL%%NL%%ORANGE%[%RED%O%ORANGE%]%TAN%(%WHITE%11%TAN%), %ORANGE%[%PURPLE%O%ORANGE%]%TAN%(%WHITE%8%TAN%), %ORANGE%[%BLUE%O%ORANGE%]%TAN%(%WHITE%10%TAN%), %ORANGE%[%GREEN%O%ORANGE%]%TAN%(%WHITE%10%TAN%), %ORANGE%[%GRAY%O%ORANGE%]%TAN%(%WHITE%14%TAN%), %ORANGE%[%YELLOW%O%ORANGE%]%TAN%(%WHITE%18%TAN%)%NL%%WHITE%Crafting Recipes use %ORANGE%(%DARK_GREEN%O%ORANGE%) %WHITE%and:}%CONTINUE%	// crafting alvl & recipes for amulets (end of multi-line feature, but the feature is overridden in some cases in the next rule)
 // Override Crafting Info
 ItemDisplay[FILTLVL=0 (amu OR rin) ID (MAG OR RARE) ILVL>43 (MAPID=181 OR MAPID=182 OR (RARE (MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109)))]:	%NAME%{%WHITE%Sell Value: %PRICE%}%CONTINUE%	// overrides previous "crafting info" rules by making the following versions show with price only: any in Stygian Caverns map, rares in town (this could also be achieved by making exceptions for these items in the previous 4 rules)
+
+// Notification keywords aren't restricted by the normal item-checking process - the game checks the entire filter for them rather than halting after the first non-continue rule
+// This can be useful for making rules add notifications to all versions of specific items while simultaneously modifying the appearance of only some of those items
+// For example, the below rules add notifications to unique/set amulets & rings of both unid and id versions but only add highlighting to unid versions (previous highlighting & notifying rules for maps/jewels/charms were separated)
 
 // Highlighting & Notifying
 ItemDisplay[(amu OR rin) !ID RARE]:									%DOT-6D%%TIER-9%  %NAME%  %CONTINUE%		// highlight unid rare amulets/rings (also adds notifications)
@@ -510,18 +514,18 @@ ItemDisplay[STAT73>0 STAT72=0]:	%RED%%NAME%%CONTINUE%			// broken items are red
 ItemDisplay[ETH NMAG]:		%GRAY%%NAME%%CONTINUE%			// regular eth items are gray
 ItemDisplay[!ETH NMAG]:		%WHITE%%NAME%%CONTINUE%			// regular non-eth items are white
 ItemDisplay[ETH MAG]:		%BLUE%%NAME%%CONTINUE%
-ItemDisplay[ETH UNI]:		%GOLD%%NAME%%CONTINUE%
 ItemDisplay[ETH RARE]:		%YELLOW%%NAME%%CONTINUE%
 ItemDisplay[ETH CRAFT]:		%ORANGE%%NAME%%CONTINUE%
+ItemDisplay[ETH UNI]:		%GOLD%%NAME%%CONTINUE%
 ItemDisplay[ETH !NMAG]:		%GRAY%eth %NAME%%CONTINUE%		// labels eth magic+ items
 ItemDisplay[!NMAG SOCK>0]:	%NAME% %GRAY%[%SOCKETS%]%CONTINUE%	// adds sockets (regular items are handled in their own category)
 
 // Possible Feature - differentiate between ethereal items which are breakable and those that are not breakable (for example, breakable eth items could remain gray and unbreakable versions could be white instead)
 
 // Repair Recipe
-ItemDisplay[STAT486=0 STAT73>0 STAT72<2 REPAIR=0 !EQUIPPED !SHOP !INF !ETH ARMOR]:			%NAME%{%WHITE%Repair Recipe: %TAN%(%WHITE%8%TAN%)}%WHITE%					// shows repair recipe (armor)
-ItemDisplay[STAT486=0 STAT73>0 STAT72<2 REPAIR=0 !EQUIPPED !SHOP !INF !ETH WEAPON !THROWING !7cr]:	%NAME%{%WHITE%Repair Recipe: %TAN%(%WHITE%9%TAN%)}%WHITE%					// shows repair recipe (weapon)
-ItemDisplay[STAT486=0 STAT73>0 STAT72<2 REPAIR=0 !EQUIPPED !SHOP !INF ETH !THROWING !7cr]:		%NAME%{%WHITE%Repair Recipe: %ORANGE%[%GRAY%O%ORANGE%]%GRAY%+%TAN%(%WHITE%33%TAN%)}%WHITE%	// shows repair recipe (ethereal)
+ItemDisplay[STAT73>0 STAT72<2 REPAIR=0 !EQUIPPED !SHOP STAT486=0 !INF !ETH ARMOR]:			%NAME%{%WHITE%Repair Recipe: %TAN%(%WHITE%8%TAN%)}%WHITE%					// shows repair recipe (armor)
+ItemDisplay[STAT73>0 STAT72<2 REPAIR=0 !EQUIPPED !SHOP STAT486=0 !INF !ETH WEAPON !THROWING !7cr]:	%NAME%{%WHITE%Repair Recipe: %TAN%(%WHITE%9%TAN%)}%WHITE%					// shows repair recipe (weapon)
+ItemDisplay[STAT73>0 STAT72<2 REPAIR=0 !EQUIPPED !SHOP STAT486=0 !INF ETH !THROWING !7cr]:		%NAME%{%WHITE%Repair Recipe: %ORANGE%[%GRAY%O%ORANGE%]%GRAY%+%TAN%(%WHITE%33%TAN%)}%WHITE%	// shows repair recipe (ethereal)
 
 // Quest Weapons
 ItemDisplay[(hdm OR msf OR hst OR g33 OR qf1 OR qf2 OR hfh)]: %NAME%{%NAME%}%WHITE%		// Quest weapons shown without any additional modifications
@@ -597,10 +601,10 @@ ItemDisplay[FILTLVL=0 ID (RARE OR CRAFT) WEAPON EXC]:		%NAME%{%NAME%%NL%%WHITE%U
 // Override Upgrading Recipes
 ItemDisplay[FILTLVL=0 ID (UNI OR SET OR RARE OR CRAFT) (NORM OR EXC) (SOR OR (WAND !(SOCK=0 (wnd OR ywn OR 9wn))))]:	%NAME%{%WHITE%Sell Value: %PRICE%}%CONTINUE%	// overrides previous "upgrade recipe" rules by making the following versions show with price only: orbs, wands except versions that can get more sockets after being upgraded (this also removes crafting info for those rares)
 
-// Possible Feature - Descriptions for Maximum Corruptable Sockets
 // Possible Feature - Descriptions for Upgraded Item Requirements
-// Possible Feature - Descriptions for Assassin Kick Damage on Set Boots (it's not normally displayed on them for Assassins unlike other boots)
+// Possible Feature - Descriptions for Maximum Corruptable Sockets
 // Possible Feature - Weapon Speed, Melee Range, Item Tier (Magic+)
+// Possible Feature - Descriptions for Assassin Kick Damage on Set Boots (it's not normally displayed on them for Assassins unlike other boots)
 // Possible Feature - Set Bonuses
 
 // Catchall - Identified Magic+ Items
@@ -644,6 +648,7 @@ ItemDisplay[(UNI OR SET)]: %NAME%%WHITE%
 // +----------------------------+
 //-¦ Rare Items  (unidentified) ¦-----------------------------------------------------------------------------------------------------------------------------------------------
 // +----------------------------+
+// Rare items are rare - even on the most strict filter levels for this filter, these are still uncommon enough that they're never hidden
 
 // Highlighting (includes notifications)
 ItemDisplay[RARE !ID ((GLOVES ILVL>42) OR (BOOTS ILVL>36))]:					 %NAME% %WHITE%		// gloves, boots
@@ -654,13 +659,13 @@ ItemDisplay[RARE !ID ILVL>70 ETH (crs OR 9cr)]:					%DOT-6D%%TIER-4% %NAME% %WHI
 ItemDisplay[RARE !ID ILVL>49 AMAZON ELT BOW (ZON OR 6lw)]:			%DOT-6D%%TIER-9% %NAME% %WHITE%		// Amazon - elite Amazon bows and Hydra bow
 ItemDisplay[RARE !ID ILVL>49 AMAZON ZON ELT ETH (SPEAR OR JAV)]:		%DOT-6D%%TIER-9% %NAME% %WHITE%		// Amazon - elite eth Amazon spears/javelins
 ItemDisplay[RARE !ID ILVL>49 ASSASSIN ELT ETH SIN]:				%DOT-6D%%TIER-9% %NAME% %WHITE%		// Assassin - elite eth claws
-ItemDisplay[RARE !ID ILVL>49 BARBARIAN ETH (72a OR 7wa OR 7bt OR 7gi OR 7fl OR 7wh OR 7m7 OR 7gm OR 7gs OR 7b7 OR 7fb OR 7gd OR 7p7)]:	%DOT-6D%%TIER-9% %NAME% %WHITE%	// Barbarian - best elite eth melee weapon bases
+ItemDisplay[RARE !ID ILVL>49 BARBARIAN ETH (7wa OR 7gm OR 7fb OR 7gd OR 7p7)]:	%DOT-6D%%TIER-9% %NAME% %WHITE%		// Barbarian - some of the best elite eth melee weapon bases (Berserker Axe, Thunder Maul, Colossus Sword, Colossus Blade, War Pike)
 ItemDisplay[RARE !ID ILVL>49 BARBARIAN ELT ETH THROWING !ZON]:			%DOT-6D%%TIER-9% %NAME% %WHITE%		// Barbarian - elite eth throwing weapons
 ItemDisplay[RARE !ID ILVL>49 BARBARIAN BAR]:					%DOT-6D%%TIER-4% %NAME% %WHITE%		// Barbarian - helms
-ItemDisplay[RARE !ID ILVL>49 DRUID ELT ETH (CLUB OR 7la OR 7ga OR 7s8 OR 7wc)]:	%DOT-6D%%TIER-9% %NAME% %WHITE%		// Druid - elite eth clubs and fastest melee bases for shape shifting (Feral Axe, Champion Axe, Thresher, Giant Thresher)
+ItemDisplay[RARE !ID ILVL>49 DRUID ELT ETH (CLUB OR 7la OR 7ga OR 7s8 OR 7wc)]:	%DOT-6D%%TIER-9% %NAME% %WHITE%		// Druid - elite eth clubs and fastest elite melee bases for shape shifting (Feral Axe, Champion Axe, Thresher, Giant Thresher)
 ItemDisplay[RARE !ID ILVL>49 DRUID DRU]:					%DOT-6D%%TIER-4% %NAME% %WHITE%		// Druid - helms
 ItemDisplay[RARE !ID ILVL>49 NECROMANCER (bwn OR gwn OR 9yw OR 9bw OR 9gw)]:	%DOT-6D%%TIER-9% %NAME% %WHITE%		// Necromancer - wands (versions that have a magic level and can get 2 sockets)
-ItemDisplay[RARE !ID ILVL>49 NECROMANCER WAND]:					%DOT-6D%%TIER-4% %NAME% %WHITE%		// Necromancer - wands
+ItemDisplay[RARE !ID ILVL>49 NECROMANCER WAND]:					%DOT-6D%%TIER-4% %NAME% %WHITE%		// Necromancer - wands (all versions)
 ItemDisplay[RARE !ID ILVL>49 NECROMANCER NEC]:					%DOT-6D%%TIER-4% %NAME% %WHITE%		// Necromancer - shields
 ItemDisplay[RARE !ID ILVL>49 PALADIN ETH (7ws OR 7b7 OR 7fb OR 7gd)]:		%DOT-6D%%TIER-9% %NAME% %WHITE%		// Paladin - eth Caduceus and best 2-handed sword bases (Champion Sword, Colossus Sword, Colossus Blade)
 ItemDisplay[RARE !ID ILVL>49 PALADIN DIN]:					%DOT-6D%%TIER-4% %NAME% %WHITE%		// Paladin - shields
@@ -733,13 +738,12 @@ ItemDisplay[FILTLVL=0 NMAG SOCK=0 !INF !SUP ILVL>25 !EQUIPPED !SHOP CHEST (ELT O
 ItemDisplay[FILTLVL=0 NMAG SOCK=0 !INF !SUP ILVL>25 !EQUIPPED !SHOP SHIELD (DIN OR (NEC !NORM) OR lrg OR xrg OR urg OR kit OR xit OR uit OR tow OR xow OR uow OR gts OR xts OR uts OR upk OR ush)]:	%NAME%{%NAME%%NL%%WHITE%Socketing Recipe: %ORANGE%[%RED%O%ORANGE%]%GRAY%+%TAN%(%WHITE%7%TAN%)%GRAY%+%TAN%(%WHITE%11%TAN%)}%CONTINUE%							// socketing recipes for shields (ilvl 25+ 3+ socket-capable)
 ItemDisplay[FILTLVL=0 NMAG SOCK=0 !INF !SUP ILVL>25 !EQUIPPED !SHOP WEAPON !(THROWING OR WAND OR (SOR !ob5 !oba !obf) OR (DAGGER !kri !9kr !7kr) OR hax OR clb OR spc OR mac OR ssd OR scm OR sbr OR flc OR sst OR scp OR ktr OR wrb OR axf OR ces)]: %NAME%{%NAME%%NL%%WHITE%Socketing Recipe: %ORANGE%[%PURPLE%O%ORANGE%]%GRAY%+%TAN%(%WHITE%8%TAN%)%GRAY%+%TAN%(%WHITE%11%TAN%)}%CONTINUE%	// socketing recipes for weapons (ilvl 25+ 3+ socket-capable)
 
-// Possible Feature - Descriptions for Possible Uniques for Gheed Map Event
-// Possible Feature - Descriptions for Available Runewords
-// Possible Feature - Runeword Combinations for Available Runewords
-// Possible Feature - Descriptions for Reforging Recipes
 // Possible Feature - Descriptions for Maximum Possible Sockets
 // Possible Feature - Weapon Speed, Melee Range, Item Tier (Regular Items)
-// Possible Feature - Descriptions for Base Defense (Chests/Helms/Shields)
+// Possible Feature - Descriptions for Base Defense (mostly useful for Chests/Helms/Shields)
+// Possible Feature - Descriptions for Reforging Recipes
+// Possible Feature - Descriptions for Available Runewords (or Runeword Combinations for them)
+// Possible Feature - Descriptions for Possible Uniques for Gheed Map Event
 
 // Highlighting & Notifications
 ItemDisplay[NMAG !RW !ETH ((((SOCK=0 OR SOCK>3) ED>0) (7cr OR 7wa)) OR (SOCK=4 ED>0 6rx) OR (SOCK=4 ED>0 6hx) OR (SOCK=3 ED>0 utp) OR (7gm SOCK>4 ED>0))]:		%DOT-20%%TIER-9%  %NAME%{%NAME%}  %WHITE%	// valuable non-eth bases: sup 5s Phase Blade, sup 4s Demon Crossbow, sup 4s Colossus Crossbow, sup 3s Archon Plate...
@@ -859,3 +863,6 @@ ItemDisplay[FILTLVL>6 CLVL>84 DIFF=2 NMAG !ETH !ED>0 ((ZON !AMAZON) OR (SIN !ASS
 
 // Catchall - Regular Class Items
 ItemDisplay[NMAG]: %NAME%{%NAME%}%WHITE%
+
+// Catchall - Everything
+ItemDisplay[]: %NAME%{%NAME%}	// the game essentially adds this at the bottom of the filter automatically (writing it out like this isn't necessary)
