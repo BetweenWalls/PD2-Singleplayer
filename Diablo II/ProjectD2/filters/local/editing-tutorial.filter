@@ -1,6 +1,6 @@
 //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 // "Editing Tutorial" Item Filter for Project Diablo II	  (work-in-progress)
-//	Date Updated:	2023 November 7
+//	Date Updated:	2023 November 14
 //------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 // Description:
 //	This filter is primarily meant as an example of how a filter can be structured
@@ -118,23 +118,23 @@ ItemDisplay[yps]:	%DARK_GREEN%(%LIGHT_GRAY%a%DARK_GREEN%){%WHITE%Antidote Potion
 // Using both "Showing" and "Hiding" types of rules (instead of focusing on just one type along with a "Catchall" rule) is useful for simplification as it allows you to approach strictness from whichever side makes the most sense for each situation
 
 // Showing: Potions (in town)
-ItemDisplay[(hp1 OR mp1 OR hp2 OR mp2 OR hp3 OR mp3 OR hp4 OR mp4 OR hp5 OR mp5 OR pvpp OR rvs OR rvl OR (THROWING STAT160=0) OR vps OR wms OR yps) (MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109 OR (MAPID>160 MAPID<164))]: %NAME%{%NAME%}%WHITE%	// potions are always displayed in town or in Necropolis zones (this could instead be achieved by excluding the MAPIDs from each of the below rules with the "NOT" operator)
+ItemDisplay[(hp1 OR mp1 OR hp2 OR mp2 OR hp3 OR mp3 OR hp4 OR mp4 OR hp5 OR mp5 OR pvpp OR rvs OR rvl OR (THROWING STAT160=0) OR vps OR wms OR yps) (MAPID=1 OR MAPID=40 OR MAPID=75 OR MAPID=103 OR MAPID=109 OR (MAPID>160 MAPID<164) OR MAPID=157 OR MAPID=159)]: %NAME%{%NAME%}%WHITE%	// potions are always displayed in town, Necropolis zones, and PvP arenas (this could instead be achieved by excluding the MAPIDs from each of the below rules with the "NOT" operator)
 
 // Hiding: Recovery Potions
 ItemDisplay[FILTLVL>0 CLVL>17 (hp1 OR mp1)]: {%NAME%}							// level 18 - hides minor potions
 ItemDisplay[FILTLVL>0 CLVL>29 (hp2 OR mp2)]: {%NAME%}							// level 30 - hides lesser potions
 ItemDisplay[FILTLVL>0 CLVL>39 (hp3 OR mp3)]: {%NAME%}							// level 40 - hides standard potions
 ItemDisplay[FILTLVL>0 CLVL>74 (hp4 OR mp4)]: {%NAME%}							// level 75 - hides greater potions
-ItemDisplay[((FILTLVL>4 CLVL>89) OR (FILTLVL>5 CLVL>74)) (hp5 OR mp5)]: {%NAME%}			// hides super potions at level 90 (filter level 6+) or at level 75 (filter level 7+)
-ItemDisplay[FILTLVL>5 CLVL>79 rvs]: {%NAME%}								// hides "small" rejuvenation potions at level 80 (filter level 7+)
+ItemDisplay[((FILTLVL>4 CLVL>89) OR (FILTLVL>5 CLVL>74)) (hp5 OR mp5)]: {%NAME%}			// hides super potions at level 90 (filter level 5+) or at level 75 (filter level 6+)
+ItemDisplay[FILTLVL>5 CLVL>79 rvs]: {%NAME%}								// hides "small" rejuvenation potions at level 80 (filter level 6+)
 // Hiding: Throwing Potions
 ItemDisplay[FILTLVL>0 CLVL>14 (tpfs OR tpgs OR tpcs OR tpls)]: {%NAME%}					// level 15 - hides low throwing potions
 ItemDisplay[FILTLVL>0 CLVL>29 (tpfm OR tpgm OR tpcm OR tplm)]: {%NAME%}					// level 30 - hides mid throwing potions
-ItemDisplay[((FILTLVL>0 CLVL>74) OR (FILTLVL>3 CLVL>59)) (tpfl OR tpgl OR tpcl OR tpll)]: {%NAME%}	// level 75 - hides high throwing potions; also hidden at level 60 (filter level 5+)
+ItemDisplay[((FILTLVL>0 CLVL>74) OR (FILTLVL>3 CLVL>59)) (tpfl OR tpgl OR tpcl OR tpll)]: {%NAME%}	// level 75 - hides high throwing potions; also hidden at level 60 (filter level 4+)
 ItemDisplay[FILTLVL>0 (opl OR gpl OR opm OR gpm OR ops OR gps)]: {%NAME%}				// hides legacy throwing potions (won't drop in the game anymore)
 // Hiding: Misc Potions
-ItemDisplay[FILTLVL>0 vps CLVL>14]: {%NAME%}								// level 15 - hides stamina potions
-ItemDisplay[FILTLVL>0 wms CLVL>29]: {%NAME%}								// level 30 - hides thawing potions
+ItemDisplay[FILTLVL>0 CLVL>14 vps]: {%NAME%}								// level 15 - hides stamina potions
+ItemDisplay[FILTLVL>0 CLVL>29 wms]: {%NAME%}								// level 30 - hides thawing potions
 ItemDisplay[((FILTLVL>0 CLVL>89) OR (FILTLVL>1 CLVL>74) OR (FILTLVL>2 CLVL>59)) yps]: {%NAME%}		// level 90 - hides antidote potions; also hidden at 75 (filter level 2+) or at level 60 (filter level 3+)
 
 // Catchall: Potions
@@ -396,7 +396,7 @@ ItemDisplay[RUNE=30]:	%BORDER-60%%TIER-9%                %NAME%                {
 // Instead of using many nearly-identical rules for different items, it's useful to consolidate similar items and use a single rule for them
 // This kind of consolidation generally makes editing easier and faster while also improving performance and filter load times
 
-// Highlighting: Collective Rules  (notifications for runes #10-23, higher runes are covered individually above)
+// Highlighting: Collective Rules  (notifications for runes #1-23, higher runes are covered individually above)
 ItemDisplay[RUNE>0 RUNE<10 (CLVL<80 OR DIFF<2)]:	%PX-60%%TIER-9%%NAME%{%NAME%}		// notifications for lowest runes when in Normal/Nightmare or below level 80
 ItemDisplay[RUNE>0 RUNE<10]:				%PX-60%%TIER-3%%NAME%{%NAME%}		// minimap icons without text notifications above filter level 3
 ItemDisplay[RUNE>9 RUNE<15]:				%DOT-60%%TIER-9%%NAME%{%NAME%}
@@ -449,7 +449,7 @@ ItemDisplay[UNI (cm1 OR cm2)]:			%BORDER-53%%TIER-9%%NAME%%WHITE%			// notificat
 // +-------------------+
 //-¦ General Equipment ¦--------------------------------------------------------------------------------------------------------------------------------------------------------
 // +-------------------+
-// This category acts as the division between weapons/armor and everything else
+// This category acts as the divider between non-equipment and equipment
 
 // Notifying for Unknown Items (future proofing)
 ItemDisplay[(ILVL>1 OR QTY>0 OR PRICE>1) !(ARMOR OR WEAPON OR amu OR rin OR aqv OR cqv OR cm1 OR cm2 OR cm3 OR jew OR jewf OR RUNE>0 OR GEMTYPE>0 OR MAPTIER>-1 OR hp1 OR mp1 OR hp2 OR mp2 OR hp3 OR mp3 OR hp4 OR mp4 OR hp5 OR mp5 OR pvpp OR rvs OR rvl OR vps OR wms OR yps OR key OR tsc OR isc OR tbk OR ibk OR ear OR bks OR bkd OR box OR tr1 OR ass OR j34 OR g34 OR xyz OR bbb OR qbr OR qey OR qhr OR mss OR ice OR tr2 OR toa OR tes OR ceh OR bet OR fed OR dhn OR bey OR mbr OR pk1 OR pk2 OR pk3 OR std OR wss OR cwss OR lpp OR lbox OR lmal OR rtp OR rid OR rkey OR lsvl OR llmr OR ubtm OR uba OR ubaa OR ubab OR ubac OR dcma OR dcso OR dcho OR dcbl OR rtma OR rtmv OR rtmo OR cm2f OR rtmf OR iwss OR scrb OR upmp OR scou OR irma OR irra OR urma OR rrra OR imma OR imra OR upma OR rera OR fort OR ram)]: %BORDER-62%%TIER-9%%NAME%{%NAME%}%WHITE%	// notifications for unknown items (the first group of conditions including ilvl/qty/price is a workaround for !GOLD>0 since that doesn't work like other conditions)
@@ -702,7 +702,9 @@ ItemDisplay[FILTLVL=0 NMAG SOCK=0 !INF !SUP ILVL>25 !EQUIPPED !SHOP SHIELD (DIN 
 ItemDisplay[FILTLVL=0 NMAG SOCK=0 !INF !SUP ILVL>25 !EQUIPPED !SHOP WEAPON !(THROWING OR WAND OR (SOR !ob5 !oba !obf) OR (DAGGER !kri !9kr !7kr) OR hax OR clb OR spc OR mac OR ssd OR scm OR sbr OR flc OR sst OR scp OR ktr OR wrb OR axf OR ces)]: %NAME%{%NAME%%NL%%WHITE%Socketing Recipe: %ORANGE%[%PURPLE%O%ORANGE%]%GRAY%+%TAN%(%WHITE%8%TAN%)%GRAY%+%TAN%(%WHITE%11%TAN%)}%CONTINUE%	// socketing recipes for weapons (ilvl 25+ 3+ socket-capable)
 
 // Possible Feature - Descriptions for Maximum Possible Sockets
-// Possible Feature - Weapon Speed, Melee Range, Item Tier (Regular Items)
+// Possible Feature - Descriptions for Weapon Speed
+// Possible Feature - Descriptions for Melee Range
+// Possible Feature - Descriptions for Item Tier
 // Possible Feature - Descriptions for Base Defense (mostly useful for Chests/Helms/Shields)
 // Possible Feature - Descriptions for Reforging Recipes
 // Possible Feature - Descriptions for Available Runewords (or Runeword Combinations for them)
@@ -726,7 +728,7 @@ ItemDisplay[NMAG (EQUIPPED OR GEMMED OR SHOP OR MAPID=1 OR MAPID=40 OR MAPID=75 
 ItemDisplay[ELT !ETH !SUP ((uap DEF>140) OR (ukp DEF>144) OR (ulm DEF>148) OR (uhl DEF>153) OR (usk DEF>153) OR (uh9 DEF>156) OR (uhm DEF>158) OR (urn DEF>164) OR (uui DEF>466) OR (uea DEF>469) OR (ula DEF>473) OR (utu DEF>480) OR (ung DEF>488) OR (ucl DEF>495) OR (uhn DEF>504) OR (urs DEF>500) OR (upl DEF>516) OR (ult DEF>529) OR (uld DEF>522) OR (uth DEF>540) OR (utp DEF>523) OR (uul DEF>556) OR (uar DEF>599) OR (uuc DEF>109) OR (uml DEF>122) OR (urg DEF>134) OR (upk DEF>162) OR (uit DEF>147) OR (ush DEF>172) OR (uow DEF>240) OR (uts DEF>206))]: %NAME%{%NAME%}%WHITE%	// always show elite non-eth non-superior socketable armors which have max defense
 
 // Hiding: Regular non-class items with little or no runeword useability
-ItemDisplay[FILTLVL>0 CLVL>4 NMAG (aqv OR cqv)]:											// level 5  - hides quivers
+ItemDisplay[FILTLVL>0 CLVL>4 NMAG (aqv OR cqv)]: {%NAME%}										// level 5  - hides quivers
 ItemDisplay[FILTLVL>0 CLVL>14 NMAG (GLOVES OR BOOTS OR BELT)]: {%NAME%}									// level 15 - hides gloves, boots, belts
 ItemDisplay[FILTLVL>0 CLVL>14 NMAG THROWING !ZON NORM !(ETH BARBARIAN)]: {%NAME%}							// level 15 - hides normal throwable weapons (except eth versions for Barbarians)
 ItemDisplay[FILTLVL>0 CLVL>14 NMAG ((SOCK=1 !(CLASS OR STAFF OR WAND OR SCEPTER OR CLUB)) OR (dgr OR dir OR buc OR xuc))]: {%NAME%}	// level 15 - hides 1-socket items & items that can only get 1 socket (daggers, shields)
